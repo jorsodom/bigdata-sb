@@ -1,15 +1,113 @@
-<div class="index-container">
-  <h1>Índice de la Asignatura: Sistemas de Gestión de Bases de Datos (SGB)</h1>
-  <ul>
-    <li *ngFor="let tema of temas">
-      <div class="tema-header" (click)="toggleSubtemas(tema)">
-        <span [class.expanded]="tema.expandido">{{ tema.titulo }}</span>
-      </div>
-      <ul *ngIf="tema.expandido" class="subtemas-lista">
-        <li *ngFor="let subtema of tema.subtemas">
-          {{ subtema }}
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Web con Menú de Índice y Buscador</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    /* Barra lateral de menú */
+    .sidebar {
+      width: 250px;
+      background-color: #2C3E50;
+      color: #FFF;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding-top: 20px;
+    }
+
+    /* Enlaces del menú */
+    .sidebar a {
+      display: block;
+      color: #FFF;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .sidebar a:hover {
+      background-color: #34495E;
+    }
+
+    /* Contenido principal */
+    .main-content {
+      margin-left: 250px;
+      padding: 20px;
+      flex: 1;
+    }
+
+    /* Estilo del buscador */
+    .search-container {
+      background-color: #3498DB;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-container input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    /* Encabezados de sección */
+    h2 {
+      color: #2C3E50;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra lateral de menú -->
+  <div class="sidebar">
+    <h2>Índice de Contenidos</h2>
+    <a href="#seccion1">Sección 1: Introducción</a>
+    <a href="#seccion2">Sección 2: Temas Principales</a>
+    <a href="#seccion3">Sección 3: Ejemplos</a>
+    <a href="#seccion4">Sección 4: Conclusiones</a>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="main-content">
+    <!-- Buscador -->
+    <div class="search-container">
+      <input type="text" placeholder="Buscar en el sitio...">
+    </div>
+
+    <!-- Contenido de las secciones -->
+    <section id="seccion1">
+      <h2>Sección 1: Introducción</h2>
+      <p>Esta es la sección de introducción. Aquí puedes incluir información general sobre el tema.</p>
+    </section>
+
+    <section id="seccion2">
+      <h2>Sección 2: Temas Principales</h2>
+      <p>Aquí se discutirán los temas principales. Puedes agregar más detalles en cada subsección.</p>
+    </section>
+
+    <section id="seccion3">
+      <h2>Sección 3: Ejemplos</h2>
+      <p>En esta sección, se presentan ejemplos prácticos para ilustrar los conceptos tratados.</p>
+    </section>
+
+    <section id="seccion4">
+      <h2>Sección 4: Conclusiones</h2>
+      <p>Esta es la sección de conclusiones, donde se resumen los puntos clave del contenido.</p>
+    </section>
+  </div>
+
+</body>
+</html>
