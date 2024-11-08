@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Web con Menú de Índice y Buscador</title>
+  <title>SGB: Sistemas Big Data. ETL. NiFi</title>
   <style>
     /* Estilos generales */
     body {
@@ -23,6 +23,15 @@
       top: 0;
       left: 0;
       padding-top: 20px;
+      text-align: center;
+    }
+
+    /* Imagen del ícono/logo */
+    .sidebar img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 50%;
     }
 
     /* Enlaces del menú */
@@ -49,10 +58,11 @@
     .search-container {
       background-color: #3498DB;
       padding: 10px;
-      position: sticky;
-      top: 0;
       display: flex;
       align-items: center;
+      gap: 10px;
+      position: sticky;
+      top: 0;
     }
 
     .search-container input[type="text"] {
@@ -61,6 +71,20 @@
       font-size: 16px;
       border: none;
       border-radius: 4px;
+    }
+
+    .search-container button {
+      padding: 10px 15px;
+      background-color: #2C3E50;
+      color: #FFF;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .search-container button:hover {
+      background-color: #1A242F;
     }
 
     /* Encabezados de sección */
@@ -73,8 +97,11 @@
 
   <!-- Barra lateral de menú -->
   <div class="sidebar">
+    <!-- Ícono/logo -->
+    <img src="https://via.placeholder.com/100" alt="Icono del sitio">
+    
     <h2>Índice de Contenidos</h2>
-    <a href="#seccion1">Sección 1: Introducción</a>
+    <a href="#seccion1">1: ¿Qué es NiFi?</a>
     <a href="#seccion2">Sección 2: Temas Principales</a>
     <a href="#seccion3">Sección 3: Ejemplos</a>
     <a href="#seccion4">Sección 4: Conclusiones</a>
@@ -84,13 +111,27 @@
   <div class="main-content">
     <!-- Buscador -->
     <div class="search-container">
-      <input type="text" placeholder="Buscar en el sitio...">
+      <input type="text" placeholder="Buscar en el sitio..." id="search-input">
+      <button onclick="realizarBusqueda()">Buscar</button>
     </div>
 
     <!-- Contenido de las secciones -->
     <section id="seccion1">
-      <h2>Sección 1: Introducción</h2>
-      <p>Esta es la sección de introducción. Aquí puedes incluir información general sobre el tema.</p>
+      <h2>¿Que es NiFi?</h2>
+      <p>Apache NiFi da soporte a la potencialidad y escalabilidad de manera gráfica a enrutar los datos, transformarlos y aplicarlos lógicas.​ Fué construido para automatizar flujos de datos entre sistemas. Este puede propagarse para cualquier contenido desde un origen a un destino.</p>
+	  <p>Plataforma distribuida de ETL.​
+
+		Flexible con soporte de formatos variados.​
+
+		Escalable y tolerante a fallos​
+
+		Con conectores a múltiples fuentes y destinos.​
+
+		Open Source​
+
+		ETL visual con interfaz sencilla.​
+
+		+300 conectores externos.</p>
     </section>
 
     <section id="seccion2">
@@ -109,5 +150,13 @@
     </section>
   </div>
 
+  <script>
+    // Función de ejemplo para el botón de búsqueda
+    function realizarBusqueda() {
+      const query = document.getElementById('search-input').value;
+      alert(`Buscando: ${query}`);
+      // Aquí puedes implementar una funcionalidad de búsqueda real.
+    }
+  </script>
 </body>
 </html>
