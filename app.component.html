@@ -1,0 +1,15 @@
+<div class="index-container">
+  <h1>Índice de la Asignatura: Sistemas de Gestión de Bases de Datos (SGB)</h1>
+  <ul>
+    <li *ngFor="let tema of temas">
+      <div class="tema-header" (click)="toggleSubtemas(tema)">
+        <span [class.expanded]="tema.expandido">{{ tema.titulo }}</span>
+      </div>
+      <ul *ngIf="tema.expandido" class="subtemas-lista">
+        <li *ngFor="let subtema of tema.subtemas">
+          {{ subtema }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
