@@ -1,0 +1,6 @@
+site_name: CES Sistemes de Big Data
+nav:
+  - Inicio: index.md
+  - Nifi: nifi.md
+  - Nifi Prácticas: nifiPracticas.md
+theme: material
