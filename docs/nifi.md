@@ -20,7 +20,7 @@ Aunque se pueda considerar una herramienta ETL, NiFi no está realmente optimiza
 
 Para acelerar el rendimiento del sistema, el flowfile no contiene el propio dato, sino que apunta al dato en el almacenamiento local. Muchas de las operaciones que se realizan en NiFi no alteran el propio dato ni necesitan cargarlo en memoria. En concreto, el dato se encuentra en el llamado repositorio de contenido (Content Repository)
 
-<img src="https://aprenderbigdata.com/wp-content/uploads/estructura-flowfile-nifi.png" alt="NiFi" style="width:300px;height:300px;">
+![NiFi](img\estructura-flowfile-nifi.png)
 
 **Processor**: Los procesadores son los componentes principales de NiFi. Se encargan de ejecutar el proceso de extracción, transformación o carga de datos. NiFi permite realizar operaciones diversas en los processors, así como distribuir y programar su ejecución. Estos componentes también proporcionan una interfaz para acceder a los flowfiles y sus propiedades. Se pueden implementar nuevos processors personalizados mediante una api de programación en Java o bien usar los más de 280 processors existentes.
 
