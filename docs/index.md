@@ -17,3 +17,15 @@ Los sistemas de Big Data se refieren al conjunto de herramientas, tecnologías y
 **Profesor titular**: Sergio Rey
 
 **Profesor especialista**: [Jorge Soro](https://www.linkedin.com/in/jorsodom/)
+
+## Curso
+
+Curso de Especialización en Inteligencia Artificial y Big Data (Acceso GS)
+
+[CE IA Big Data](https://todofp.es/que-estudiar/familias-profesionales/informatica-comunicaciones/ce-inteligencia-artificial-bigdata.html)
+
+## Instituto
+
+[IES Dr. Lluís Simarro](https://portal.edu.gva.es/ieslluissimarro/)
+
+
