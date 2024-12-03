@@ -134,7 +134,7 @@ Para los casos de uso de Streaming, Apache NiFi es una tecnología con sus limit
 Una de las maneras de tratar los casos de uso de streaming es escribir los registros en un clúster de Apache Kafka. Una vez en Kafka, se podrán procesar fácilmente com **Kafka Streams** o **Apache Flink**.
 ## Ejemplo
 
-![NiFi](img\NiFiP1.11.png) 
+![NiFi](img/NiFiP1.11.png) 
 
 En la imagen a continuación podemos ver un ejemplo de un flujo en Apache NiFi. Este flujo se compone de dos processors: GetFile y PutFile.
 
