@@ -198,13 +198,13 @@ Nos descargamos en binario de la web oficial.​ Ocupa más de 1GB porque contie
 3.  Nos **situamos** en la carpeta */bin/*
 4.  Vamos a /conf/ y modificamos el nifi.propierties las siguientes propiedades:
     
-    nifi.remote.input.secure=false
+        nifi.remote.input.secure=false
 
-    nifi.web.http.host= ip de tu maquina
-    nifi.web.http.host= puerto de tu maquina, p.e. 8443
-    nifi.web.https.host=
-    nifi.web.https.port=
-    
+        nifi.web.http.host= ip de tu maquina
+        nifi.web.http.host= puerto de tu maquina, p.e. 8443
+        nifi.web.https.host=
+        nifi.web.https.port=
+
 5.  **Iniciamos** por primera vez NiFi. Ejecutamos:
 
         ./bin/nifi.sh start (Unix)
