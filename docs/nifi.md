@@ -196,12 +196,21 @@ Nos descargamos en binario de la web oficial.​ Ocupa más de 1GB porque contie
     [NiFi](https://www.apache.org/dyn/closer.lua?path=/nifi/2.0.0/nifi-2.0.0-bin.zip)
 2.  **Descomprimimos** el zip en el directorio */opt/*
 3.  Nos **situamos** en la carpeta */bin/*
-4.  **Iniciamos** por primera vez NiFi. Ejecutamos:
+4.  Vamos a /conf/ y modificamos el nifi.propierties las siguientes propiedades:
+    
+    nifi.remote.input.secure=false
+
+    nifi.web.http.host= ip de tu maquina
+    nifi.web.http.host= puerto de tu maquina, p.e. 8443
+    nifi.web.https.host=
+    nifi.web.https.port=
+    
+5.  **Iniciamos** por primera vez NiFi. Ejecutamos:
 
         ./bin/nifi.sh start (Unix)
         ./bin/nifi.bat start (MSDOS)
     
-5.  **Acceso**. Utiliza por defecto el puerto 8443 (Linux)​
+6.  **Acceso**. Utiliza por defecto el puerto 8443 (Linux)​
 
     *[https://localhost:8443/nifi](https://localhost:8443/nifi)* (Puede tardar)​
 
