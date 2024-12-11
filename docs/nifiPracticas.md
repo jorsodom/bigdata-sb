@@ -297,8 +297,8 @@ lo siguiente a la fecha son horas, minutos y segundos:
 ## Práctica 4: Process group, Input-Output port
 En NiFi uno o más processor son conectados en un process group. Podemos añadir un 
 process group arrastrando el icono de la barra de herramientas .
-Partiendo de la practica 3. Cogemos y añadimos un nuevo process group y le ponemos 
-como nombre “CSV to JSON”.
+Partiendo de la practica 3. 
+Cogemos y añadimos un nuevo process group y le ponemos como nombre “CSV to JSON” (*es posible obviar este paso, si ya se ha puesto la anterior practica en un process group, duplicandolo y renombrandolo a CSV to JSON*)
 Para decirle como usar los processor’s, debemos seleccionar todos los processor (con 
 la tecla shift) y arrastrarlos sobre el process group
 
