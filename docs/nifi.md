@@ -225,3 +225,11 @@ Si queremos **personalizar el usuario**:​
             
         /bin/nifi.sh set-single-user-credentials USERNAME PASSWORD
             
+Instalar como servicio NiFi
+
+        bin/nifi.sh install dataflow.
+
+Una vez instalado, puedes hacer "start" o "stop" con los comandos apropiados. También consultar el estado actual.
+        sudo service nifi start
+        sudo service nifi stop
+        service nifi status
