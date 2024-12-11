@@ -357,6 +357,8 @@ port*”.*
 
 ## Práctica 5: Templates
 
+                *Esta práctica queda descartada. Dado que en la versión M2 NiFi ya no se trabaja con los Templates si no con el Registry, exportando los trabajos a través de un Processor Group, pero si en versiones anteriores. Tenedlo en cuenta dado que si trabajais en versiones anteriores es la forma de guardar y exportar el trabajo realizado.*        
+
 Para guardar el trabajo realizado, exportarlo, etc usaremos los “Templates”.
 Para ello debemos seleccionar todos los componentes a guardar en el template, y 
 buscar el icono crear template que encontrareis en la izquierda.
