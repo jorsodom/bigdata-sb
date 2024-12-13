@@ -1,5 +1,3 @@
-## Caso de uso con Hadoop
-
 **Traspaso de archivos FS y volcado a HDFS**
 
 Debemos transferir una gran cantidad de archivos del sistema de la máquina virtual Linux al sistema de archivos de Hadoop HDFS, también localizado en la misma máquina virtual. Para evitar generar un script con muchas instrucciones como `hdfs dfs -put ...`, lo cual podría ser tedioso, implementaremos un proceso en NiFi que automatice esta tarea. Una vez que los archivos estén en el sistema HDFS, será necesario implementar un proceso para devolver estos archivos desde el sistema de archivos HDFS al sistema de archivos local. Este proceso permitirá automatizar esta tarea y realizarla periódicamente.
