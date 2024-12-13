@@ -1,7 +1,3 @@
-# NiFi Prácticas
-
-<img src="https://nifi.apache.org/images/apache-nifi-drop-logo.svg" alt="NiFi" style="width:100px;height:100px;" >
-
 ## Práctica 2: Atributos y contenido
 
 Generaremos primero un fichero aleatorio o con contenido personalizado, le aplicaremos 

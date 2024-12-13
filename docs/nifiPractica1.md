@@ -1,7 +1,3 @@
-# NiFi Prácticas
-
-<img src="https://nifi.apache.org/images/apache-nifi-drop-logo.svg" alt="NiFi" style="width:100px;height:100px;" >
-
 ## Práctica 1: Mover un fichero de un origen a un destino
 
 **Iniciamos** NiFi. Ejecutamos:

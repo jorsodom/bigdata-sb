@@ -1,7 +1,3 @@
-# NiFi Prácticas
-
-<img src="https://nifi.apache.org/images/apache-nifi-drop-logo.svg" alt="NiFi" style="width:100px;height:100px;" >
-
 ## Práctica 4: Process group, Input-Output port
 En NiFi uno o más processor son conectados en un process group. Podemos añadir un 
 process group arrastrando el icono de la barra de herramientas .

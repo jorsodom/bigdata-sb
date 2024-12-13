@@ -1,7 +1,3 @@
-# NiFi Prácticas
-
-<img src="https://nifi.apache.org/images/apache-nifi-drop-logo.svg" alt="NiFi" style="width:100px;height:100px;" >
-
 ## Práctica 3: Expression Language
 
 Partimos del resultado de la anterior practica 2, trabajando con atributos y contenido dónde 

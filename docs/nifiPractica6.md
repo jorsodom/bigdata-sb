@@ -1,7 +1,3 @@
-# NiFi Prácticas
-
-<img src="https://nifi.apache.org/images/apache-nifi-drop-logo.svg" alt="NiFi" style="width:100px;height:100px;" >
-
 ## Práctica 6: Funnel
 
 Combinar datos de varias conexiones en una sola
