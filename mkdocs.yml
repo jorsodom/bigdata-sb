@@ -1,9 +1,12 @@
 site_name: CES Sistemes de Big Data
 site_url: https://jorsodom.github.io/bigdata-sb/
+
+
 nav:
   - Inicio: index.md
-  - Nifi: nifi.md
-  - Nifi Prácticas: nifiPracticas.md
+  - NiFi: 
+    - Introducción: nifiIntroduccion.md
+    - Prácticas: nifiPracticas.md
 theme:
   name: material
   language: es
