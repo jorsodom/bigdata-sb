@@ -6,12 +6,11 @@ nav:
   - Inicio: index.md
   - NiFi: 
     - Introducción: nifiIntroduccion.md
-    - Prácticas: nifiPracticas.md
-      - Practica 1: nifiPractica1.md
-      - Practica 2: nifiPractica2.md
-      - Practica 3: nifiPractica3.md
-      - Practica 4: nifiPractica4.md
-      - Practica 5: nifiPractica5.md
-      - Practica 6: nifiPractica6.md
+    - Practica 1: nifiPractica1.md
+    - Practica 2: nifiPractica2.md
+    - Practica 3: nifiPractica3.md
+    - Practica 4: nifiPractica4.md
+    - Practica 5: nifiPractica5.md
+    - Practica 6: nifiPractica6.md
 theme:
   name: material
