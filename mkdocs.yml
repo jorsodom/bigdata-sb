@@ -5,7 +5,7 @@ nav:
   - Nifi: nifi.md
   - Nifi Prácticas: nifiPracticas.md
 theme: material
-   features:
+  features:
     - content.code.copy
 markdown_extensions:
   - pymdownx.highlight:
