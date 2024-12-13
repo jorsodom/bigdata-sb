@@ -1,4 +1,4 @@
-## Práctica 2: Atributos y contenido
+## Atributos y contenido
 
 Generaremos primero un fichero aleatorio o con contenido personalizado, le aplicaremos 
 alguna transformación y luego alteraremos en este sus propiedades. También veremos por los 

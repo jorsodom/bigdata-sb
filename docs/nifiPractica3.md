@@ -1,4 +1,4 @@
-## Práctica 3: Expression Language
+## Expression Language
 
 Partimos del resultado de la anterior practica 2, trabajando con atributos y contenido dónde 
 generaremos primero un fichero aleatorio o con contenido personalizado, le aplicaremos 

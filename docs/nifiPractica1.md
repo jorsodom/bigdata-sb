@@ -1,4 +1,4 @@
-## Práctica 1: Mover un fichero de un origen a un destino
+## Mover un fichero de un origen a un destino
 
 **Iniciamos** NiFi. Ejecutamos:
 

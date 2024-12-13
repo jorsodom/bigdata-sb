@@ -1,4 +1,5 @@
-## Práctica 4: Process group, Input-Output port
+## Process group, Input-Output port
+
 En NiFi uno o más processor son conectados en un process group. Podemos añadir un 
 process group arrastrando el icono de la barra de herramientas .
 Partiendo de la practica 3. 

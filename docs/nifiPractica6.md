@@ -1,4 +1,4 @@
-## Práctica 6: Funnel
+## Funnel
 
 Combinar datos de varias conexiones en una sola
 Vamos a revisarlo de forma rápida, se trata de como coger varias fuentes de datos y 
