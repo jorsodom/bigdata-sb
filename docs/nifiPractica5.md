@@ -42,6 +42,8 @@ template descargado y veréis que aparece un nuevo Process Group.
 El cual, si hacemos doble clic, nos aparecerán todos los processor que tiene este 
 Process Group. 
 
-**ENTREGABLE:** Hay que exportar la practica con un Processor Group que genera un .json y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P5_NomAlumnoApellidos.xml*
+## ENTREGABLE 
+
+Hay que exportar la practica con un Processor Group que genera un .json y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P5_NomAlumnoApellidos.xml*
 
 ![NiFi](img/NiFiP5.6.png) 

@@ -59,4 +59,6 @@ correctamente.
 *Nota: Dentro de un mismo Process Group no es posible conectar un “*Output port*” a un “*Input 
 port*”.*
 
-**ENTREGABLE:** Hay que exportar la practica con un Processor Group que genera un .json y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P4_NomAlumnoApellidos.xml*
+## ENTREGABLE 
+
+Hay que exportar la practica con un Processor Group que genera un .json y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P4_NomAlumnoApellidos.xml*

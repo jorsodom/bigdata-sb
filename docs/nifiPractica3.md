@@ -91,4 +91,6 @@ lo siguiente a la fecha son horas, minutos y segundos:
 
 ![NiFi](img/NiFiP3.10.png)
 
-**ENTREGABLE:** Hay que exportar la practica con un Processor Group que genera un .json y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P3_NomAlumnoApellidos.xml*
+## ENTREGABLE 
+
+Hay que exportar la practica con un Processor Group que genera un .json y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P3_NomAlumnoApellidos.xml*

@@ -122,4 +122,6 @@ insertando
 
 ![NiFi](img/NiFiP7.19.png) 
 
-**ENTREGABLE:** Hay que exportar el template del proyecto y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P7_NomAlumnoApellidos.xml*
+## ENTREGABLE 
+
+Hay que exportar la practica con un Processor Group que genera un .json y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P7_NomAlumnoApellidos.xml*

@@ -73,4 +73,6 @@ Se referencian de la misma manera que las que se cargan con NiFi.
 reiniciar NiFi, además que ayuda a corregir posibles errores de manera rápida y también 
 evitarlos.*
 
-**ENTREGABLE:** Hay que exportar el template del proyecto y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P8_NomAlumnoApellidos.xml*
+## ENTREGABLE 
+
+Hay que exportar la practica con un Processor Group que genera un .json y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P8_NomAlumnoApellidos.xml*

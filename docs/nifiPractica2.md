@@ -114,5 +114,6 @@ aplicado, ya que el contenido en este caso no se ha visto modificado.
 
 ![NiFi](img/NiFiP2.19.png) 
 
+## ENTREGABLE 
 
-**ENTREGABLE:** Hay que exportar la practica con un Processor Group que genera un .json y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P2_NomAlumnoApellidos.xml*
+Hay que exportar la practica con un Processor Group que genera un .json y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P2_NomAlumnoApellidos.xml*
