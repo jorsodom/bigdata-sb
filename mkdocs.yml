@@ -4,14 +4,41 @@ nav:
   - Inicio: index.md
   - Nifi: nifi.md
   - Nifi Prácticas: nifiPracticas.md
-theme: material
+theme:
+  name: material
+  language: es
   features:
-    - content.code.copy
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - toc.follow
+    - navigation.top              # Muestra el botón para volver al principio
+    - content.code.copy           # Botón de copiar en bloques de código
+
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  # los siguientes son para los bloques de código
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  # Tabs para códigos de dos lenguajes o más
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true  
+
+plugins:
+  - glightbox
+  - search
