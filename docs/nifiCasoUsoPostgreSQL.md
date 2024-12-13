@@ -1,8 +1,8 @@
-## Caso de uso con PostgreSQL
-
 Dadas las intensas temperaturas que se están dando estos últimos meses de 2022, 
 necesitamos analizar y comparar con los años 2020 y 2021 de manera mensual la temperatura 
-media y la acumulación de lluvia. Para ello vamos a necesitar obtener como fuentes de 
+media y la acumulación de lluvia. 
+
+Para ello vamos a necesitar obtener como fuentes de 
 información del INE la relación de provincias y municipios de España, del AEMET la relación de 
 datos meteorológicos de todas las estaciones de España y generar un catálogo de fechas.
 Los datos que obtenemos de las diferentes fuentes de datos, los vamos a volcar en una base 
@@ -36,6 +36,6 @@ Es necesario pedir una Api Key
 Herramientas para desarrolladores 
 Servicio web datos diarios estación meteorológica de todas las estaciones, entre ellas, Xativa.
 
-![NiFi](img\casousoapinifi.png) 
+![NiFi](img/casousoapinifi.png) 
 
 Nos devuelve un JSON.

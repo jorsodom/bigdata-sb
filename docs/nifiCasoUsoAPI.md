@@ -1,5 +1,3 @@
-## Caso de uso con API
-
 **Consulta de una API con NiFi**
 
 En la práctica anterior sobre la API del INE, consultamos la encuesta de población activa. Vamos a continuar con esta práctica leyendo los datos con NiFi.
