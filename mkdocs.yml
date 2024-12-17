@@ -4,7 +4,7 @@ site_url: https://jorsodom.github.io/bigdata-sb/
 
 nav:
   - Inicio: index.md
-  - NiFi: 
+  - Ingesta con NiFi: 
     - Introducción: nifiIntroduccion.md
     - Práctica 1: nifiPractica1.md
     - Práctica 2: nifiPractica2.md
@@ -18,5 +18,6 @@ nav:
     #- Caso uso Hadoop: nifiCasoUsoHadoop.md
     #- Caso uso MongoDB: nifiCasoUsoMongoDB.md
     #- Caso uso PostgreSQL: nifiCasoUsoPostgreSQL.md
+  #- ETL con ODI: 
 theme:
   name: material
