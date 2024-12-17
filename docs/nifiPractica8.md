@@ -30,10 +30,11 @@ width="80%" />
 *Nota: Si tenemos más de un fichero de configuración, lo pondríamos separado por “,”.*
 
 Ahora para aplicar los cambios, es necesario reiniciar la instancia de NiFi. *Control + c* para cerrar la ventana de lanzamiento del proceso. Si se trata de sistema operativo 
-```console
+
+```bash
+```
 Linux /nifi.sh stop , /nifi.sh start
 ```
-
 <div align="center">
 <img src="../img/NiFiP8.3.png" alt="Práctica 8" 
 width="80%" />

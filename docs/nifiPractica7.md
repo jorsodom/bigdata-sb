@@ -11,7 +11,7 @@ Añadimos un nuevo processor “*FlowFileGenerator*”. Lo configuramos para que
 un fichero cada 10 segundos y en propiedades en el CustomText le ponemos lo 
 siguiente:
 
-```js
+```json
 {
 "title": "mr",
 "first": "John ${random():mod(10):plus(1)}",

@@ -3,6 +3,7 @@
 **Iniciamos** NiFi. Ejecutamos:
 
         ./bin/nifi.sh start (Unix)
+        
         ./bin/nifi.bat start (MSDOS)
 
 **Accedemos** a la siguiente url que se levantará en el ordenador (*o la que indica el 
