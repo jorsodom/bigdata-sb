@@ -156,38 +156,26 @@ El propósito del flujo es conseguir flowfiles en el primer processor de un orig
 ## Ventajas
 
 -Facilidad de uso mediante UI
-
 -Escalable horizontalmente
-
 -Gran cantidad de componentes out-of-the-box (processors y conectores)
-
 -Es posible implementar nuevos componentes y procesadores (programando con la API de Java)
-
 -Se encuentra en constante evolución y con una gran comunidad
-
 -Incorpora auditoría del dato
-
 -Tiene integrada la validación de configuraciones
-
 -Política de Usuarios (LDAP)
-
 -Software multiplataforma
-
 -Linaje de datos integrada, de cara a cumplir regulaciones.
-
 -Uso para enrutar mensajes a microservicios
-
--Integrado en Cloudera Data Platform (CDP) – Cloudera Flow Management (CDF)
+-Integrado en Cloudera Data Platform (CDP) / Cloudera Flow Management (CDF)
 
 ## Inconvenientes
 
 -Consumo de recursos de hardware muy elevado en función de la carga de procesamiento
-
 -Otras herramientas como Apache Flume son más ligeras y adecuadas para realizar transformaciones de datos simples
 
 ## Alternativas
 
-!!! note "Existen alternativas a Apache NiFi"
+Existen alternativas a Apache NiFi:
     Como soluciones para gestionar dataflows, cada una con sus particularidades:
 
     Streamsets
@@ -231,20 +219,20 @@ Nos descargamos en binario de la web oficial.​ Ocupa más de 1GB porque contie
 
 Para terminar. **Obtenemos el usuario**. El usuario se puede crear vía comandos por cmd, o se puede coger el que genera automáticamente en el log NiFi en el fichero *nifi-app.log*:	​
 
-       ```bash
+       ```
         Generated Username [80e91118-b222-4b47-8dab-63a8deb7905d]​
         Generated Password [zavwbGlRcYeky51Bxc0zbVN8hj2bE61u]​
        ```
 
 Si queremos **personalizar el usuario**:​
             
-        ```bash
+        ```
         /bin/nifi.sh set-single-user-credentials USERNAME PASSWORD
         ```
             
 Instalar como servicio NiFi
 
-        ```bash
+        ```
         bin/nifi.sh install dataflow.
         ```
 
