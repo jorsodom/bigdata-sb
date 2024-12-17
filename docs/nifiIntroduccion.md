@@ -24,7 +24,17 @@ Para acelerar el rendimiento del sistema, el flowfile no contiene el propio dato
 ![NiFi](img/estructura-flowfile-nifi.png)
 
 <div align="center">
-<img src="img/estructura-flowfile-nifi.png" alt="FlowFile" 
+<img src="../img/estructura-flowfile-nifi.png" alt="FlowFile" 
+width="50%" />
+</div>
+
+<div align="center">
+<img src="../../img/estructura-flowfile-nifi.png" alt="FlowFile" 
+width="50%" />
+</div>
+
+<div align="center">
+<img src="../../../img/estructura-flowfile-nifi.png" alt="FlowFile" 
 width="50%" />
 </div>
 
