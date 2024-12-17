@@ -208,20 +208,19 @@ Nos descargamos en binario de la web oficial.​ Ocupa más de 1GB porque contie
 3.  Nos **situamos** en la carpeta */bin/*
 4.  Vamos a /conf/ y modificamos el nifi.propierties las siguientes propiedades:
     
-    ```bash
-            nifi.remote.input.secure=false
-            nifi.web.http.host= ip de tu maquina
-            nifi.web.http.host= puerto de tu maquina, p.e. 8443
-            nifi.web.https.host=
-            nifi.web.https.port=
-    ```
+```
+nifi.remote.input.secure=false
+nifi.web.http.host= ip de tu maquina
+nifi.web.http.host= puerto de tu maquina, p.e. 8443
+nifi.web.https.host=
+nifi.web.https.port=
+```
 
 5.  **Iniciamos** por primera vez NiFi. Ejecutamos:
-
-  ```bash
-        ./bin/nifi.sh start (Unix)
-        ./bin/nifi.bat start (MSDOS)
-  ```
+```
+./bin/nifi.sh start (Unix)
+./bin/nifi.bat start (MSDOS)
+```
     
 6.  **Acceso**. Utiliza por defecto el puerto 8443 (Linux)​
 
@@ -232,26 +231,26 @@ Nos descargamos en binario de la web oficial.​ Ocupa más de 1GB porque contie
 Para terminar. **Obtenemos el usuario**. El usuario se puede crear vía comandos por cmd, o se puede coger el que genera automáticamente en el log NiFi en el fichero *nifi-app.log*:	​
 
 ```bash
-     Generated Username [80e91118-b222-4b47-8dab-63a8deb7905d]​
-     Generated Password [zavwbGlRcYeky51Bxc0zbVN8hj2bE61u]​
+Generated Username [80e91118-b222-4b47-8dab-63a8deb7905d]​
+Generated Password [zavwbGlRcYeky51Bxc0zbVN8hj2bE61u]​
 ```
 
 Si queremos **personalizar el usuario**:​
             
 ```bash
-    /bin/nifi.sh set-single-user-credentials USERNAME PASSWORD
+/bin/nifi.sh set-single-user-credentials USERNAME PASSWORD
 ```
             
 Instalar como servicio NiFi
 
 ```bash
-    bin/nifi.sh install dataflow.
+bin/nifi.sh install dataflow.
 ```
 
 Una vez instalado, puedes hacer "start" o "stop" con los comandos apropiados. También consultar el estado actual.
         
-        sudo service nifi start
+    sudo service nifi start
 
-        sudo service nifi stop
+    sudo service nifi stop
         
-        service nifi status
+    service nifi status
