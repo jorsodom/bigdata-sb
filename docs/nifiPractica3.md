@@ -96,7 +96,6 @@ siguiente:
 
 ```json
 ${filename}-${now():toNumber():format('dd-MM-yy')}.json
-
 ```
 
 <div align="center">

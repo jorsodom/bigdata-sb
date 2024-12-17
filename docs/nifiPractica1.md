@@ -59,7 +59,6 @@ Ahora mismo sólo vamos a indicar el directorio de entrada “*Input Directory*�
 width="80%" />
 </div>
 
-
 Hacemos clic botón derecho en “*PutFile*” en “*Configure*” y vamos a la pestaña 
 “*Properties*”. Dónde podemos ver los diferentes aspectos que son configurables. 
 Ahora mismo sólo vamos a indicar el directorio de entrada “*Directory*”.
@@ -87,7 +86,6 @@ Primero el “*GetFile*” y luego el “*PutFile*”.
 <img src="../img/NiFiP1.9.png" alt="Practica 1" 
 width="80%" />
 </div>
-
 
 Si al realizar la acción no sale la opción en el “*PutFile*” lo que hay que hacer es entrar 
 en este componente en propiedades e indicarle que acción debe hacer en el caso de 

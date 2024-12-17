@@ -1,8 +1,7 @@
 ## Atributos y contenido
 
 Generaremos primero un fichero aleatorio o con contenido personalizado, le aplicaremos 
-alguna transformación y luego alteraremos en este sus propiedades. También veremos por los 
-diferentes estados que pasa la ejecución y cómo ver en cada punto como va evolucionando el 
+alguna transformación y luego alteraremos en este sus propiedades. También veremos por los diferentes estados que pasa la ejecución y cómo ver en cada punto como va evolucionando el 
 proceso.
 
 Una vez hayamos hecho login, nos aparecerá la interfaz de trabajo
