@@ -4,7 +4,7 @@ site_url: https://jorsodom.github.io/bigdata-sb/
 
 nav:
   - Inicio: index.md
-  - Ingesta con NiFi: 
+  - Ingesta de datos con NiFi: 
     - Introducción: nifiIntroduccion.md
     - Práctica 1: nifiPractica1.md
     - Práctica 2: nifiPractica2.md
