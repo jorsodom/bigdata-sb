@@ -14,9 +14,9 @@ nav:
     - Práctica 6: nifiPractica6.md
     #- Práctica 7: nifiPractica7.md
     #- Práctica 8: nifiPractica8.md
-    - Caso uso API: nifiCasoUsoAPI.md
-    - Caso uso Hadoop: nifiCasoUsoHadoop.md
-    - Caso uso MongoDB: nifiCasoUsoMongoDB.md
-    - Caso uso PostgreSQL: nifiCasoUsoPostgreSQL.md
+    #- Caso uso API: nifiCasoUsoAPI.md
+    #- Caso uso Hadoop: nifiCasoUsoHadoop.md
+    #- Caso uso MongoDB: nifiCasoUsoMongoDB.md
+    #- Caso uso PostgreSQL: nifiCasoUsoPostgreSQL.md
 theme:
   name: material
