@@ -22,3 +22,23 @@ nav:
 theme:
   name: material
   language: es
+  
+markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/mastodon 
+      link: https://www.linkedin.com/in/jorsodom/
+      name: Jorge Soro
+  consent:
+    title: Consentimiento Cookie
+    description: >- 
+      Utilizamos cookies para reconocer sus visitas repetidas y preferencias, así como
+      para medir la eficacia de nuestra documentación y si los usuarios
+      encuentran lo que buscan. Con su consentimiento, nos ayuda a
+      mejorar nuestra documentación.
+
+copyright: Copyright &copy; 2022- 2025 Jorge Soro & Sergio Rey
