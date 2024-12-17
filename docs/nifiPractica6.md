@@ -9,8 +9,10 @@ Añadimos un processor “*LogAttribute*”
 Enlazamos los dos processor “*GenerateFlowFile*” al “*Funnel*”
 Y el “*Funnel*” lo enlazamos con el ”*LogAttribute*”
 
-![NiFi](img/NiFiP6.1.png) 
-
+<div align="center">
+<img src="../img/NiFiP6.1.png" alt="Práctica 6" 
+width="80%" />
+</div>
 
 ## ENTREGABLE 
 

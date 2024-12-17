@@ -5,6 +5,8 @@ services.
 
 Vamos a realizar el siguiente caso de uso para validar esta funcionalidad.
 
+*NOTA: Para esta práctica es necesario tener una base de datos PostgreSQL disponible*
+
 Añadimos un nuevo processor “*FlowFileGenerator*”. Lo configuramos para que genere 
 un fichero cada 10 segundos y en propiedades en el CustomText le ponemos lo 
 siguiente:

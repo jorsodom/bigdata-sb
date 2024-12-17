@@ -7,12 +7,18 @@ Cogemos y añadimos un nuevo process group y le ponemos como nombre “CSV to JS
 Para decirle como usar los processor’s, debemos seleccionar todos los processor (con 
 la tecla shift) y arrastrarlos sobre el process group
 
-![NiFi](img/NiFiP4.1.png) 
+<div align="center">
+<img src="../img/NiFiP4.1.png" alt="Práctica 4" 
+width="80%" />
+</div>
 
 Para ver los componentes de un Process Group, hacemos doble click y accedemos al 
 detalle. 
 
-![NiFi](img/NiFiP4.2.png) 
+<div align="center">
+<img src="../img/NiFiP4.2.png" alt="Práctica 4" 
+width="80%" />
+</div>
 
 Para salir fuera del detalle, con botón derecho “*leave group*” saldremos de nuevo 
 fuera.
@@ -20,7 +26,10 @@ fuera.
 *Nota: Es recomendable utilizar los Process Group para lógicas complejas. Es posible duplicar un 
 process group heredando la misma configuración.*
 
-![NiFi](img/NiFiP4.3.png) 
+<div align="center">
+<img src="../img/NiFiP4.3.png" alt="Práctica 4" 
+width="80%" />
+</div>
 
 A veces, un Process Group puede generar una salida para utilizar en otros procesos. 
 Vamos a transferir información des de un Process Group a otro. Para ello vamos a 
@@ -30,34 +39,45 @@ Creamos un nuevo Process Group que se llame “*Write JSON to File System*” d�
 vamos a introduir los processors des de el “*UpdateAttribute*” hasta el último 
 “*LogAttribute*”.
 
-![NiFi](img/NiFiP4.4.png) 
+<div align="center">
+<img src="../img/NiFiP4.4.png" alt="Práctica 4" 
+width="80%" />
+</div>
 
 Cómo ya tenemos un process group principal “*CSV to JSON*”, vamos a sacar el 
 process group “*Write JSON to File System*” fuera para poder ejecutarlos 
 conjuntamente. Para ello hacemos botón derecho sobre “*Write JSON to File 
 System*” y seleccionamos “*Move to parent group*”.
 
-![NiFi](img/NiFiP4.5.png) 
+<div align="center">
+<img src="../img/NiFiP4.5.png" alt="Práctica 4" 
+width="80%" />
+</div>
 
 Ahora el problema está en que los dos processor group es necesario que se 
 comuniquen para que funcionen. Para ello haremos uso del Input/Output port.
 Accedemos al process group “*CSV to JSON*” y añadimos un “*Output port*”.
 
-![NiFi](img/NiFiP4.6.png) 
+<div align="center">
+<img src="../img/NiFiP4.6.png" alt="Práctica 4" 
+width="80%" />
+</div>
 
-Salimos del grupo y accedemos ahora al Process Group “*Write JSON to CSV*” y 
-añadimos un “*Input port*” al inicio
+Salimos del grupo y accedemos ahora al Process Group “*Write JSON to CSV*” y añadimos un “*Input port*” al inicio.
 
-![NiFi](img/NiFiP4.7.png) 
+<div align="center">
+<img src="../img/NiFiP4.7.png" alt="Práctica 4" 
+width="80%" />
+</div>
 
 Salimos al flujo principal, dónde ahora vamos a conectar los dos Process Group. Saldrá 
 el mapeo de entradas y salidas, hay que tenerlo en cuenta cuando tengamos más de 
 una entrada/salida que este bien asociado.
+
 Ahora solo queda arrancar con botón derecho “*start*” y validar que todo funciona 
 correctamente.
 
-*Nota: Dentro de un mismo Process Group no es posible conectar un “*Output port*” a un “*Input 
-port*”.*
+*Nota: Dentro de un mismo Process Group no es posible conectar un “*Output port*” a un “*Input port*”.*
 
 ## ENTREGABLE 
 
