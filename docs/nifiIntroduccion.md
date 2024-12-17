@@ -1,6 +1,6 @@
 # NiFi
 <div align="center">
-<img src="https://nifi.apache.org/images/apache-nifi-drop-logo.svg" alt="NiFi" width="100%" />
+<img src="https://nifi.apache.org/images/apache-nifi-drop-logo.svg" alt="NiFi" width="20%" />
 </div>
 
 ## ¿Qué es Apache NiFi?
@@ -24,7 +24,7 @@ Para acelerar el rendimiento del sistema, el flowfile no contiene el propio dato
 ![NiFi](img/estructura-flowfile-nifi.png)
 
 <div align="center">
-<img src="../../img/estructura-flowfile-nifi.png" alt="FlowFile" 
+<img src="img/estructura-flowfile-nifi.png" alt="FlowFile" 
 width="50%" />
 </div>
 
