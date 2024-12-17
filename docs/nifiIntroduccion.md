@@ -21,20 +21,9 @@ Aunque se pueda considerar una herramienta ETL, NiFi no está realmente optimiza
 
 Para acelerar el rendimiento del sistema, el flowfile no contiene el propio dato, sino que apunta al dato en el almacenamiento local. Muchas de las operaciones que se realizan en NiFi no alteran el propio dato ni necesitan cargarlo en memoria. En concreto, el dato se encuentra en el llamado repositorio de contenido (Content Repository)
 
-![NiFi](img/estructura-flowfile-nifi.png)
 
 <div align="center">
 <img src="../img/estructura-flowfile-nifi.png" alt="FlowFile" 
-width="50%" />
-</div>
-
-<div align="center">
-<img src="../../img/estructura-flowfile-nifi.png" alt="FlowFile" 
-width="50%" />
-</div>
-
-<div align="center">
-<img src="../../../img/estructura-flowfile-nifi.png" alt="FlowFile" 
 width="50%" />
 </div>
 
@@ -141,7 +130,10 @@ Por último el **Provenance Repository** se encarga de almacenar la información
 
 En los sistemas en los que NiFi tiene un volumen de datos muy alto, es posible que el content repository llene el disco, y en el caso de que el flowfile repository se encuentre en el mismo disco, podría corromper su contenido, por lo que es algo a tener en cuenta al diseñar la solución.
 
-<img src="https://static.javatpoint.com/tutorial/nifi/images/nifi-architecture.png" alt="NiFi" style="width:400px;height:300px;">
+<div align="center">
+<img src="https://static.javatpoint.com/tutorial/nifi/images/nifi-architecture.png" alt="Architecture NiFi" 
+width="50%" />
+</div>
 
 ## Streaming en NiFi
 
@@ -150,7 +142,10 @@ Para los casos de uso de Streaming, Apache NiFi es una tecnología con sus limit
 Una de las maneras de tratar los casos de uso de streaming es escribir los registros en un clúster de Apache Kafka. Una vez en Kafka, se podrán procesar fácilmente com **Kafka Streams** o **Apache Flink**.
 ## Ejemplo
 
-![NiFi](img/NiFiP1.11.png) 
+<div align="center">
+<img src="../img/NiFiP1.11.png" alt="Ejemplo 1" 
+width="50%" />
+</div>
 
 En la imagen a continuación podemos ver un ejemplo de un flujo en Apache NiFi. Este flujo se compone de dos processors: GetFile y PutFile.
 
@@ -160,35 +155,35 @@ El propósito del flujo es conseguir flowfiles en el primer processor de un orig
 
 ## Ventajas
 
-Facilidad de uso mediante UI
+-Facilidad de uso mediante UI
 
-Escalable horizontalmente
+-Escalable horizontalmente
 
-Gran cantidad de componentes out-of-the-box (processors y conectores)
+-Gran cantidad de componentes out-of-the-box (processors y conectores)
 
-Es posible implementar nuevos componentes y procesadores (programando con la API de Java)
+-Es posible implementar nuevos componentes y procesadores (programando con la API de Java)
 
-Se encuentra en constante evolución y con una gran comunidad
+-Se encuentra en constante evolución y con una gran comunidad
 
-Incorpora auditoría del dato
+-Incorpora auditoría del dato
 
-Tiene integrada la validación de configuraciones
+-Tiene integrada la validación de configuraciones
 
-Política de Usuarios (LDAP)
+-Política de Usuarios (LDAP)
 
-Software multiplataforma
+-Software multiplataforma
 
-Linaje de datos integrada, de cara a cumplir regulaciones.
+-Linaje de datos integrada, de cara a cumplir regulaciones.
 
-Uso para enrutar mensajes a microservicios
+-Uso para enrutar mensajes a microservicios
 
-Integrado en Cloudera Data Platform (CDP) – Cloudera Flow Management (CDF)
+-Integrado en Cloudera Data Platform (CDP) – Cloudera Flow Management (CDF)
 
 ## Inconvenientes
 
-Consumo de recursos de hardware muy elevado en función de la carga de procesamiento
+-Consumo de recursos de hardware muy elevado en función de la carga de procesamiento
 
-Otras herramientas como Apache Flume son más ligeras y adecuadas para realizar transformaciones de datos simples
+-Otras herramientas como Apache Flume son más ligeras y adecuadas para realizar transformaciones de datos simples
 
 ## Alternativas
 
