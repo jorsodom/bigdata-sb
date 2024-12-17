@@ -18,8 +18,7 @@ width="80%" />
 </div>
 
 Ahora buscamos el fichero de configuración de NiFi llamado “*nifi.properties*” en el 
-directorio “*conf*” y lo editamos. Búscamos “*registry*” y configuramos la variable que 
-estará vacía en la ubicación del fichero que hemos creado “*db.properties*” que lo 
+directorio “*conf*” y lo editamos. Búscamos “*registry*” y configuramos la variable que estará vacía en la ubicación del fichero que hemos creado “*db.properties*” que lo 
 vamos a ubicar en el mismo directorio conf.
 
 <div align="center">
@@ -32,9 +31,9 @@ width="80%" />
 Ahora para aplicar los cambios, es necesario reiniciar la instancia de NiFi. *Control + c* para cerrar la ventana de lanzamiento del proceso. Si se trata de sistema operativo 
 
 ```bash
-```
 Linux /nifi.sh stop , /nifi.sh start
 ```
+
 <div align="center">
 <img src="../img/NiFiP8.3.png" alt="Práctica 8" 
 width="80%" />

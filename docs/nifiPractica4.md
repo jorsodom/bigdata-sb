@@ -23,8 +23,7 @@ width="80%" />
 Para salir fuera del detalle, con botón derecho “*leave group*” saldremos de nuevo 
 fuera.
 
-*Nota: Es recomendable utilizar los Process Group para lógicas complejas. Es posible duplicar un 
-process group heredando la misma configuración.*
+**Nota: Es recomendable utilizar los Process Group para lógicas complejas. Es posible duplicar un process group heredando la misma configuración.**
 
 <div align="center">
 <img src="../img/NiFiP4.3.png" alt="Práctica 4" 

@@ -59,7 +59,7 @@ correctamente debe salir algo similar a la siguiente imagen:
 width="80%" />
 </div>
 
-*Nota: El Expression Language NiFi es muy útil y existen muchas funciones que es posible utilizarlas. Para ello recomendamos visitar la siguiente documentación y dedicarle unos minutos: Apache NiFi Expression Language Guide*
+**Nota: El Expression Language NiFi es muy útil y existen muchas funciones que es posible utilizarlas. Para ello recomendamos visitar la siguiente documentación y dedicarle unos minutos: Apache NiFi Expression Language Guide**
 
 Ahora vamos a continuar con el dataflow que hemos creado.
 
