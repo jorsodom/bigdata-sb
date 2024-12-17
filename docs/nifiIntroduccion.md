@@ -156,21 +156,33 @@ El propósito del flujo es conseguir flowfiles en el primer processor de un orig
 ## Ventajas
 
 -Facilidad de uso mediante UI
+
 -Escalable horizontalmente
+
 -Gran cantidad de componentes out-of-the-box (processors y conectores)
+
 -Es posible implementar nuevos componentes y procesadores (programando con la API de Java)
+
 -Se encuentra en constante evolución y con una gran comunidad
+
 -Incorpora auditoría del dato
+
 -Tiene integrada la validación de configuraciones
+
 -Política de Usuarios (LDAP)
+
 -Software multiplataforma
+
 -Linaje de datos integrada, de cara a cumplir regulaciones.
+
 -Uso para enrutar mensajes a microservicios
+
 -Integrado en Cloudera Data Platform (CDP) / Cloudera Flow Management (CDF)
 
 ## Inconvenientes
 
 -Consumo de recursos de hardware muy elevado en función de la carga de procesamiento
+
 -Otras herramientas como Apache Flume son más ligeras y adecuadas para realizar transformaciones de datos simples
 
 ## Alternativas
