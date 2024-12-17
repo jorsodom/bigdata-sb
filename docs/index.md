@@ -14,9 +14,9 @@ Los sistemas de Big Data se refieren al conjunto de herramientas, tecnologías y
 
 ## Profesores
 
-**Profesor titular**: Sergio Rey
+- **Profesor titular**: Sergio Rey
 
-**Profesor especialista**: [Jorge Soro](https://www.linkedin.com/in/jorsodom/)
+- **Profesor especialista**: [Jorge Soro](https://www.linkedin.com/in/jorsodom/)
 
 ## Curso
 

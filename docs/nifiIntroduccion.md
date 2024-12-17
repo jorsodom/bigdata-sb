@@ -15,9 +15,9 @@ Aunque se pueda considerar una herramienta ETL, NiFi no está realmente optimiza
 
 ##Componentes principales
 ###Básicos
-**Flow**: El workflow o topología es la definición del flujo de datos que se implementa en NiFi e indica la forma en la que se deben gestionar los datos.
+- **Flow**: El workflow o topología es la definición del flujo de datos que se implementa en NiFi e indica la forma en la que se deben gestionar los datos.
 
-**Flowfile**: Es el paquete de datos que viaja por el flow entre los procesadores. Está compuesto por un puntero al propio dato útil o contenido (un array de bytes) y metadatos asociados llamados atributos. Los atributos pares clave-valor editables y NiFi los usa para enriquecer la información de provenance. Los metadatos más importantes son el identificador (uuid), el nombre del fichero (filename) y el path.
+- **Flowfile**: Es el paquete de datos que viaja por el flow entre los procesadores. Está compuesto por un puntero al propio dato útil o contenido (un array de bytes) y metadatos asociados llamados atributos. Los atributos pares clave-valor editables y NiFi los usa para enriquecer la información de provenance. Los metadatos más importantes son el identificador (uuid), el nombre del fichero (filename) y el path.
 
 Para acelerar el rendimiento del sistema, el flowfile no contiene el propio dato, sino que apunta al dato en el almacenamiento local. Muchas de las operaciones que se realizan en NiFi no alteran el propio dato ni necesitan cargarlo en memoria. En concreto, el dato se encuentra en el llamado repositorio de contenido (Content Repository)
 
@@ -27,19 +27,19 @@ Para acelerar el rendimiento del sistema, el flowfile no contiene el propio dato
 width="50%" />
 </div>
 
-**Processor**: Los procesadores son los componentes principales de NiFi. Se encargan de ejecutar el proceso de extracción, transformación o carga de datos. NiFi permite realizar operaciones diversas en los processors, así como distribuir y programar su ejecución. Estos componentes también proporcionan una interfaz para acceder a los flowfiles y sus propiedades. Se pueden implementar nuevos processors personalizados mediante una api de programación en Java o bien usar los más de 280 processors existentes.
+- **Processor**: Los procesadores son los componentes principales de NiFi. Se encargan de ejecutar el proceso de extracción, transformación o carga de datos. NiFi permite realizar operaciones diversas en los processors, así como distribuir y programar su ejecución. Estos componentes también proporcionan una interfaz para acceder a los flowfiles y sus propiedades. Se pueden implementar nuevos processors personalizados mediante una api de programación en Java o bien usar los más de 280 processors existentes.
 
 Los processors permiten abstraer la complejidad de la programación concurrente y pueden ejecutar en varios nodos de forma simultánea o bien en el nodo primario del clúster. Además, es posible programar su ejecución mediante cron, tiempo predefinido o mediante eventos de entrada. Los processors también tienen relaciones de salida (connections) en función de su comportamiento, por ejemplo éxito (success), fallo (failure) o reintento (retry). Llevan incorporado un validador de configuración y gráficas con las estadísticas de uso e indicadores de trazabilidad.
 
 ### Avanzados
 
-**Connection**: Son las tuberías de conexión entre dos Processors que les permiten interactuar. Es la encargada de transmitir los flowfiles entre los componentes y de gestionar las colas y su capacidad. Las conexiones actúan como un buffer para los flowfiles, y tienen un sistema de backpressure en función del número de eventos o del tamaño en disco. También es posible establecer la caducidad para los flowfiles o su prioridad. Mediante los funnels, NiFi permite agrupar varias conexiones en una.
+- **Connection**: Son las tuberías de conexión entre dos Processors que les permiten interactuar. Es la encargada de transmitir los flowfiles entre los componentes y de gestionar las colas y su capacidad. Las conexiones actúan como un buffer para los flowfiles, y tienen un sistema de backpressure en función del número de eventos o del tamaño en disco. También es posible establecer la caducidad para los flowfiles o su prioridad. Mediante los funnels, NiFi permite agrupar varias conexiones en una.
 
-**Process Group**: Agrupación de processors y connections para tratarlos como una unidad lógica independiente dentro del flujo de procesamiento. Para interactuar con el resto de componentes tienen puertos de entrada y de salida que gestionan el envío de flowfiles.
+- **Process Group**: Agrupación de processors y connections para tratarlos como una unidad lógica independiente dentro del flujo de procesamiento. Para interactuar con el resto de componentes tienen puertos de entrada y de salida que gestionan el envío de flowfiles.
 
 NiFi también incorpora los llamados Remote Process Groups (RPGs). Permiten tratar otra instancia o clúster externo de NiFi como un Process Group con el que interactuar. En vez de mover flowfiles entre diferentes process groups, se mueven entre distintos clústers. Los puertos de entrada y de salida actúan como puertas de entrada para los flowfiles.
 
-**Controller Service**: Los controller service o controladores se utilizan para compartir un recurso entre distintos processors. Por ejemplo puede ser una conexión a una base de datos, a S3 o a un contenedor de Azure.
+- **Controller Service**: Los controller service o controladores se utilizan para compartir un recurso entre distintos processors. Por ejemplo puede ser una conexión a una base de datos, a S3 o a un contenedor de Azure.
 
 Apache NiFi también nos permite crear plantillas (templates) con un flow almacenado. Las plantillas resultan muy útiles para añadir de forma rápida un nuevo conjunto de componentes estándar o mover sub-flujos entre distintos entornos de trabajo.
 
@@ -120,13 +120,13 @@ Apache NiFi también nos permite crear plantillas (templates) con un flow almace
 
 Apache NiFi es una aplicación Java que ejecuta en la JVM. En la imagen a continuación podemos ver los componentes más importantes de su arquitectura.
 
-El **Flowfile Repository** o repositorio de flowfiles almacena los atributos y del estado de cada flujo del sistema, junto a las referencias al contenido. También almacena la cola en la que se encuentra en ese momento. Mantiene solamente el estado más actualizado del sistema mediante el Write-Ahead Log, lo que garantiza recuperar el estado más actualizado frente a una caía del sistema.
+- El **Flowfile Repository** o repositorio de flowfiles almacena los atributos y del estado de cada flujo del sistema, junto a las referencias al contenido. También almacena la cola en la que se encuentra en ese momento. Mantiene solamente el estado más actualizado del sistema mediante el Write-Ahead Log, lo que garantiza recuperar el estado más actualizado frente a una caía del sistema.
 
-Los **flowfiles** se almacenan en un Hashmap en memoria. Cuando el número de flowfiles en esta estructura excede el establecido en la propiedad nifi.queue.swap.threshold, NiFi los escribe a un fichero swap en disco según su prioridad.
+- Los **flowfiles** se almacenan en un Hashmap en memoria. Cuando el número de flowfiles en esta estructura excede el establecido en la propiedad nifi.queue.swap.threshold, NiFi los escribe a un fichero swap en disco según su prioridad.
 
-El **Content Repository** mantiene todo el contenido de los flowfiles. Cada vez que un dato se modifica se realiza una copia para no perder el original (copy on write). Pueden existir varios content repositories en un sistema, cada uno de ellos llamado contenedor y a su vez dividido en secciones.
+- El **Content Repository** mantiene todo el contenido de los flowfiles. Cada vez que un dato se modifica se realiza una copia para no perder el original (copy on write). Pueden existir varios content repositories en un sistema, cada uno de ellos llamado contenedor y a su vez dividido en secciones.
 
-Por último el **Provenance Repository** se encarga de almacenar la información de la procedencia y el origen de cada flowfile mediante snapshots a partir de los que se podría restaurar el ciclo de vida de cada uno. Este repositorio añade la dimensión del tiempo.
+- Por último el **Provenance Repository** se encarga de almacenar la información de la procedencia y el origen de cada flowfile mediante snapshots a partir de los que se podría restaurar el ciclo de vida de cada uno. Este repositorio añade la dimensión del tiempo.
 
 En los sistemas en los que NiFi tiene un volumen de datos muy alto, es posible que el content repository llene el disco, y en el caso de que el flowfile repository se encuentre en el mismo disco, podría corromper su contenido, por lo que es algo a tener en cuenta al diseñar la solución.
 
@@ -155,35 +155,35 @@ El propósito del flujo es conseguir flowfiles en el primer processor de un orig
 
 ## Ventajas
 
--Facilidad de uso mediante UI
+- [x] Facilidad de uso mediante UI
 
--Escalable horizontalmente
+- [x] Escalable horizontalmente
 
--Gran cantidad de componentes out-of-the-box (processors y conectores)
+- [x] Gran cantidad de componentes out-of-the-box (processors y conectores)
 
--Es posible implementar nuevos componentes y procesadores (programando con la API de Java)
+- [x] Es posible implementar nuevos componentes y procesadores (programando con la API de Java)
 
--Se encuentra en constante evolución y con una gran comunidad
+- [x] Se encuentra en constante evolución y con una gran comunidad
 
--Incorpora auditoría del dato
+- [x] Incorpora auditoría del dato
 
--Tiene integrada la validación de configuraciones
+- [x] Tiene integrada la validación de configuraciones
 
--Política de Usuarios (LDAP)
+- [x] Política de Usuarios (LDAP)
 
--Software multiplataforma
+- [x] Software multiplataforma
 
--Linaje de datos integrada, de cara a cumplir regulaciones.
+- [x] Linaje de datos integrada, de cara a cumplir regulaciones.
 
--Uso para enrutar mensajes a microservicios
+- [x] Uso para enrutar mensajes a microservicios
 
--Integrado en Cloudera Data Platform (CDP) / Cloudera Flow Management (CDF)
+- [x] Integrado en Cloudera Data Platform (CDP) / Cloudera Flow Management (CDF)
 
 ## Inconvenientes
 
--Consumo de recursos de hardware muy elevado en función de la carga de procesamiento
+- [ ] Consumo de recursos de hardware muy elevado en función de la carga de procesamiento
 
--Otras herramientas como Apache Flume son más ligeras y adecuadas para realizar transformaciones de datos simples
+- [ ] Otras herramientas como Apache Flume son más ligeras y adecuadas para realizar transformaciones de datos simples
 
 ## Alternativas
 
