@@ -4,7 +4,6 @@
 </div>
 
 ## ¿Qué es Apache NiFi?
-
 Apache NiFi es un sistema distribuido dedicado a extraer, transformar y cargar datos (ETL). Es **Open Source** y está desarrollado y mantenido por la Apache Software Foundation.
 
 NiFi (o Ni-Fi) ha sido diseñado para poder automatizar de una manera eficiente y visual los flujos de datos entre distintos sistemas: ingesta, enrutado y gestión. Para ello, cuenta con más de 300 conectores externos ya implementados y además es posible añadir conectores a medida.
@@ -12,40 +11,29 @@ NiFi (o Ni-Fi) ha sido diseñado para poder automatizar de una manera eficiente 
 Uno de los puntos fuertes de NiFi es la capacidad para programar flujos de datos arrastrando y conectando los componentes necesarios sobre los canvas de la web de administración. No es necesario por tanto tener conocimientos de programación específicos, sino entender y configurar correctamente cada uno de los componentes que se quieren usar.
 
 Aunque se pueda considerar una herramienta ETL, NiFi no está realmente optimizado para realizar transformaciones de datos complejas o pesadas. Es posible realizar transformaciones de datos ligeras pero no es un motor de transformaciones batch completo. Aún así es común su uso integrado en sistemas Big Data, ya que ofrece muchas ventajas como herramienta de automatización de ingestas de datos y para realizar transformaciones y limpiezas sencillas.
-
-##Componentes principales
-###Básicos
+## Componentes principales
+### Básicos
 - **Flow**: El workflow o topología es la definición del flujo de datos que se implementa en NiFi e indica la forma en la que se deben gestionar los datos.
 
-- **Flowfile**: Es el paquete de datos que viaja por el flow entre los procesadores. Está compuesto por un puntero al propio dato útil o contenido (un array de bytes) y metadatos asociados llamados atributos. Los atributos pares clave-valor editables y NiFi los usa para enriquecer la información de provenance. Los metadatos más importantes son el identificador (uuid), el nombre del fichero (filename) y el path.
-
-Para acelerar el rendimiento del sistema, el flowfile no contiene el propio dato, sino que apunta al dato en el almacenamiento local. Muchas de las operaciones que se realizan en NiFi no alteran el propio dato ni necesitan cargarlo en memoria. En concreto, el dato se encuentra en el llamado repositorio de contenido (Content Repository)
-
+- **Flowfile**: Es el paquete de datos que viaja por el flow entre los procesadores. Está compuesto por un puntero al propio dato útil o contenido (un array de bytes) y metadatos asociados llamados atributos. Los atributos pares clave-valor editables y NiFi los usa para enriquecer la información de provenance. Los metadatos más importantes son el identificador (uuid), el nombre del fichero (filename) y el path Para acelerar el rendimiento del sistema, el flowfile no contiene el propio dato, sino que apunta al dato en el almacenamiento local. Muchas de las operaciones que se realizan en NiFi no alteran el propio dato ni necesitan cargarlo en memoria. En concreto, el dato se encuentra en el llamado repositorio de contenido (Content Repository)
 
 <div align="center">
 <img src="../img/estructura-flowfile-nifi.png" alt="FlowFile" 
 width="50%" />
 </div>
 
-- **Processor**: Los procesadores son los componentes principales de NiFi. Se encargan de ejecutar el proceso de extracción, transformación o carga de datos. NiFi permite realizar operaciones diversas en los processors, así como distribuir y programar su ejecución. Estos componentes también proporcionan una interfaz para acceder a los flowfiles y sus propiedades. Se pueden implementar nuevos processors personalizados mediante una api de programación en Java o bien usar los más de 280 processors existentes.
-
-Los processors permiten abstraer la complejidad de la programación concurrente y pueden ejecutar en varios nodos de forma simultánea o bien en el nodo primario del clúster. Además, es posible programar su ejecución mediante cron, tiempo predefinido o mediante eventos de entrada. Los processors también tienen relaciones de salida (connections) en función de su comportamiento, por ejemplo éxito (success), fallo (failure) o reintento (retry). Llevan incorporado un validador de configuración y gráficas con las estadísticas de uso e indicadores de trazabilidad.
+- **Processor**: Los procesadores son los componentes principales de NiFi. Se encargan de ejecutar el proceso de extracción, transformación o carga de datos. NiFi permite realizar operaciones diversas en los processors, así como distribuir y programar su ejecución. Estos componentes también proporcionan una interfaz para acceder a los flowfiles y sus propiedades. Se pueden implementar nuevos processors personalizados mediante una api de programación en Java o bien usar los más de 280 processors existentes. Los processors permiten abstraer la complejidad de la programación concurrente y pueden ejecutar en varios nodos de forma simultánea o bien en el nodo primario del clúster. Además, es posible programar su ejecución mediante cron, tiempo predefinido o mediante eventos de entrada. Los processors también tienen relaciones de salida (connections) en función de su comportamiento, por ejemplo éxito (success), fallo (failure) o reintento (retry). Llevan incorporado un validador de configuración y gráficas con las estadísticas de uso e indicadores de trazabilidad.
 
 ### Avanzados
-
 - **Connection**: Son las tuberías de conexión entre dos Processors que les permiten interactuar. Es la encargada de transmitir los flowfiles entre los componentes y de gestionar las colas y su capacidad. Las conexiones actúan como un buffer para los flowfiles, y tienen un sistema de backpressure en función del número de eventos o del tamaño en disco. También es posible establecer la caducidad para los flowfiles o su prioridad. Mediante los funnels, NiFi permite agrupar varias conexiones en una.
 
-- **Process Group**: Agrupación de processors y connections para tratarlos como una unidad lógica independiente dentro del flujo de procesamiento. Para interactuar con el resto de componentes tienen puertos de entrada y de salida que gestionan el envío de flowfiles.
-
-NiFi también incorpora los llamados Remote Process Groups (RPGs). Permiten tratar otra instancia o clúster externo de NiFi como un Process Group con el que interactuar. En vez de mover flowfiles entre diferentes process groups, se mueven entre distintos clústers. Los puertos de entrada y de salida actúan como puertas de entrada para los flowfiles.
+- **Process Group**: Agrupación de processors y connections para tratarlos como una unidad lógica independiente dentro del flujo de procesamiento. Para interactuar con el resto de componentes tienen puertos de entrada y de salida que gestionan el envío de flowfiles. NiFi también incorpora los llamados Remote Process Groups (RPGs). Permiten tratar otra instancia o clúster externo de NiFi como un Process Group con el que interactuar. En vez de mover flowfiles entre diferentes process groups, se mueven entre distintos clústers. Los puertos de entrada y de salida actúan como puertas de entrada para los flowfiles.
 
 - **Controller Service**: Los controller service o controladores se utilizan para compartir un recurso entre distintos processors. Por ejemplo puede ser una conexión a una base de datos, a S3 o a un contenedor de Azure.
 
 Apache NiFi también nos permite crear plantillas (templates) con un flow almacenado. Las plantillas resultan muy útiles para añadir de forma rápida un nuevo conjunto de componentes estándar o mover sub-flujos entre distintos entornos de trabajo.
-
 ### Processor más utilizados
 #### Ingesta del dato
-    
     GenerateFlowFiles​
     GetFile​
     GetFTP​
@@ -63,7 +51,6 @@ Apache NiFi también nos permite crear plantillas (templates) con un flow almace
     ListHDFS / FetchHDFS
 
 #### Transformación del dato
-    
     ConvertRecord​
 	UpdateRecord​
 	ConvertJSONToSQL​
@@ -84,7 +71,6 @@ Apache NiFi también nos permite crear plantillas (templates) con un flow almace
 	QueryRecord
 
 #### Envío del dato
-
     PutEmail​
 	PutFile​
 	PutFTP​
@@ -96,7 +82,6 @@ Apache NiFi también nos permite crear plantillas (templates) con un flow almace
 	PutHDFS
 
 #### Acceso a bases de datos
-    
     ConvertJSONToSQL​
     ExecuteSQL​
     PutSQL​
@@ -105,7 +90,6 @@ Apache NiFi también nos permite crear plantillas (templates) con un flow almace
     ListDatabaseTables
 
 #### Extracción de atributos
-
     EvaluateJsonPath​
     EvaluateXPath​
     EvaluateXQuery​
@@ -117,7 +101,6 @@ Apache NiFi también nos permite crear plantillas (templates) con un flow almace
     LogAttribute
 
 ## Arquitectura
-
 Apache NiFi es una aplicación Java que ejecuta en la JVM. En la imagen a continuación podemos ver los componentes más importantes de su arquitectura.
 
 - El **Flowfile Repository** o repositorio de flowfiles almacena los atributos y del estado de cada flujo del sistema, junto a las referencias al contenido. También almacena la cola en la que se encuentra en ese momento. Mantiene solamente el estado más actualizado del sistema mediante el Write-Ahead Log, lo que garantiza recuperar el estado más actualizado frente a una caía del sistema.
@@ -136,7 +119,6 @@ width="50%" />
 </div>
 
 ## Streaming en NiFi
-
 Para los casos de uso de Streaming, Apache NiFi es una tecnología con sus limitaciones. Por un lado, no está diseñado para realizar joins sobre flowfiles de manera eficiente ni agregaciones de datos en ventanas de procesamiento.
 
 Una de las maneras de tratar los casos de uso de streaming es escribir los registros en un clúster de Apache Kafka. Una vez en Kafka, se podrán procesar fácilmente com **Kafka Streams** o **Apache Flink**.
@@ -154,7 +136,6 @@ También existen 2 conexiones, cada una de ellas se corresponde un un evento par
 El propósito del flujo es conseguir flowfiles en el primer processor de un origen (sftp, localhost,etc) y escribir los datos en el disco local mediante el processor PutFile.
 
 ## Ventajas
-
 - [x] Facilidad de uso mediante UI
 
 - [x] Escalable horizontalmente
@@ -178,15 +159,11 @@ El propósito del flujo es conseguir flowfiles en el primer processor de un orig
 - [x] Uso para enrutar mensajes a microservicios
 
 - [x] Integrado en Cloudera Data Platform (CDP) / Cloudera Flow Management (CDF)
-
 ## Inconvenientes
-
 - [ ] Consumo de recursos de hardware muy elevado en función de la carga de procesamiento
 
 - [ ] Otras herramientas como Apache Flume son más ligeras y adecuadas para realizar transformaciones de datos simples
-
 ## Alternativas
-
 Existen alternativas a Apache NiFi:
     Como soluciones para gestionar dataflows, cada una con sus particularidades:
 
