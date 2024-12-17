@@ -219,22 +219,22 @@ Nos descargamos en binario de la web oficial.​ Ocupa más de 1GB porque contie
 
 Para terminar. **Obtenemos el usuario**. El usuario se puede crear vía comandos por cmd, o se puede coger el que genera automáticamente en el log NiFi en el fichero *nifi-app.log*:	​
 
-       ```
-        Generated Username [80e91118-b222-4b47-8dab-63a8deb7905d]​
-        Generated Password [zavwbGlRcYeky51Bxc0zbVN8hj2bE61u]​
-       ```
+```bash
+     Generated Username [80e91118-b222-4b47-8dab-63a8deb7905d]​
+     Generated Password [zavwbGlRcYeky51Bxc0zbVN8hj2bE61u]​
+```
 
 Si queremos **personalizar el usuario**:​
             
-        ```
-        /bin/nifi.sh set-single-user-credentials USERNAME PASSWORD
-        ```
+```bash
+    /bin/nifi.sh set-single-user-credentials USERNAME PASSWORD
+```
             
 Instalar como servicio NiFi
 
-        ```
-        bin/nifi.sh install dataflow.
-        ```
+```bash
+    bin/nifi.sh install dataflow.
+```
 
 Una vez instalado, puedes hacer "start" o "stop" con los comandos apropiados. También consultar el estado actual.
         
