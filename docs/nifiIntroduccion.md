@@ -1,6 +1,6 @@
 # NiFi
 <div align="center">
-<img src="https://nifi.apache.org/images/apache-nifi-drop-logo.svg" alt="NiFi" width="20%" />
+<img src="https://nifi.apache.org/images/apache-nifi-drop-logo.svg" alt="NiFi" width="10%" />
 </div>
 
 ## ¿Qué es Apache NiFi?
