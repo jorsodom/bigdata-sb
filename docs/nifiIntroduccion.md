@@ -196,6 +196,9 @@ wget https://dlcdn.apache.org/nifi/1.28.1/nifi-1.28.1-bin.zip
 nifi.remote.input.secure=false
 nifi.web.http.host= ip de tu maquina
 nifi.web.http.host= puerto de tu maquina, p.e. 8443
+
+Les opcions en "https..." comentar-les:
+
 nifi.web.https.host=
 nifi.web.https.port=
 ```
