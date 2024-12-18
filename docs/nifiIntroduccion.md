@@ -186,7 +186,9 @@ Nos descargamos en binario de la web oficial.​ Ocupa más de 1GB porque contie
 wget https://www.apache.org/dyn/closer.lua?path=/nifi/1.28.1/nifi-1.28.1-bin.zip
 ```
 2.  **Descomprimimos** el zip en el directorio */opt/*
+
 3.  Nos **situamos** en la carpeta */bin/*
+
 4.  Vamos a /conf/ y modificamos el nifi.propierties las siguientes propiedades:
     
 ```
