@@ -212,26 +212,26 @@ nifi.web.https.port=
 
 > Nota: Si no es el 8443 se puede hacer un grep al log buscando 127.0.0.1
 
-Para terminar. **Obtenemos el usuario**. El usuario se puede crear vía comandos por cmd, o se puede coger el que genera automáticamente en el log NiFi en el fichero *nifi-app.log*:	​
+- Para terminar. **Obtenemos el usuario**. El usuario se puede crear vía comandos por cmd, o se puede coger el que genera automáticamente en el log NiFi en el fichero *nifi-app.log*:	​
 
 ```bash
 Generated Username [80e91118-b222-4b47-8dab-63a8deb7905d]​
 Generated Password [zavwbGlRcYeky51Bxc0zbVN8hj2bE61u]​
 ```
 
-Si queremos **personalizar el usuario**:​
+- Si queremos **personalizar el usuario**:​
             
 ```bash
 /bin/nifi.sh set-single-user-credentials USERNAME PASSWORD
 ```
             
-Instalar como servicio NiFi
+- Instalar como servicio NiFi
 
 ```bash
 bin/nifi.sh install dataflow.
 ```
 
-Una vez instalado, puedes hacer "start" o "stop" con los comandos apropiados. También consultar el estado actual.
+- Una vez instalado, puedes hacer "start" o "stop" con los comandos apropiados. También consultar el estado actual.
         
     sudo service nifi start
 
