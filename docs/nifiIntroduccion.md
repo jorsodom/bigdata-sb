@@ -180,7 +180,11 @@ NiFi puede manejar ficheros de datos mucho más grandes que Apache Kafka. Ademá
 Nos descargamos en binario de la web oficial.​ Ocupa más de 1GB porque contiene todos los procesadores. Además, necesitamos tener Java​ instalado.
 
 1.  **Descargamos** NiFi:
-    [NiFi](https://www.apache.org/dyn/closer.lua?path=/nifi/2.0.0/nifi-2.0.0-bin.zip)
+    [NiFi 1.28.1](https://www.apache.org/dyn/closer.lua?path=/nifi/1.28.1/nifi-1.28.1-bin.zip)
+
+```
+wget https://www.apache.org/dyn/closer.lua?path=/nifi/1.28.1/nifi-1.28.1-bin.zip
+```
 2.  **Descomprimimos** el zip en el directorio */opt/*
 3.  Nos **situamos** en la carpeta */bin/*
 4.  Vamos a /conf/ y modificamos el nifi.propierties las siguientes propiedades:
