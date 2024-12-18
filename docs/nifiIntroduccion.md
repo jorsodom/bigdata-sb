@@ -179,17 +179,18 @@ NiFi puede manejar ficheros de datos mucho más grandes que Apache Kafka. Ademá
 
 Nos descargamos en binario de la web oficial.​ Ocupa más de 1GB porque contiene todos los procesadores. Además, necesitamos tener Java​ instalado.
 
-1.  **Descargamos** NiFi:
+-  **Descargamos** NiFi:
     [NiFi 1.28.1](https://dlcdn.apache.org/nifi/1.28.1/nifi-1.28.1-bin.zip)
 
 ```
 wget https://dlcdn.apache.org/nifi/1.28.1/nifi-1.28.1-bin.zip
 ```
-2.  **Descomprimimos** el zip en el directorio */opt/*
 
-3.  Nos **situamos** en la carpeta */bin/*
+- **Descomprimimos** el zip en el directorio */opt/*
 
-4.  Vamos a /conf/ y modificamos el nifi.propierties las siguientes propiedades:
+- Nos **situamos** en la carpeta */bin/*
+
+- Vamos a /conf/ y modificamos el nifi.propierties las siguientes propiedades:
     
 ```
 nifi.remote.input.secure=false
@@ -199,13 +200,13 @@ nifi.web.https.host=
 nifi.web.https.port=
 ```
 
-5.  **Iniciamos** por primera vez NiFi. Ejecutamos:
+- **Iniciamos** por primera vez NiFi. Ejecutamos:
 ```
 ./bin/nifi.sh start (Unix)
 ./bin/nifi.bat start (MSDOS)
 ```
     
-6.  **Acceso**. Utiliza por defecto el puerto 8443 (Linux)​
+- **Acceso**. Utiliza por defecto el puerto 8443 (Linux)​
 
     *[https://localhost:8443/nifi](https://localhost:8443/nifi)* (Puede tardar)​
 
