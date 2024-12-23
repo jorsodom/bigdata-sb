@@ -7,21 +7,21 @@ Para ello debemos seleccionar todos los componentes a guardar en el template, y
 buscar el icono crear template que encontrareis en la izquierda.
 
 <div align="center">
-<img src="../img/NiFiP5.1.png" alt="Práctica 5" 
+<img src="../../img/NiFiP5.1.png" alt="Práctica 5" 
 width="80%" />
 </div>
 
 Le pondremos por ejemplo “*CSV to JSON*” y lo creamos.
 
 <div align="center">
-<img src="../img/NiFiP5.2.png" alt="Práctica 5" 
+<img src="../../img/NiFiP5.2.png" alt="Práctica 5" 
 width="80%" />
 </div>
 
 Hacemos click en “*Create*”.
 
 <div align="center">
-<img src="../img/NiFiP5.3.png" alt="Práctica 5" 
+<img src="../../img/NiFiP5.3.png" alt="Práctica 5" 
 width="80%" />
 </div>
 
@@ -32,7 +32,7 @@ saldrá un listado. Dónde a la derecha aparece los botones para descargarlos pa
 una futura importación o copia de seguridad.
 
 <div align="center">
-<img src="../img/NiFiP5.4.png" alt="Práctica 5" 
+<img src="../../img/NiFiP5.4.png" alt="Práctica 5" 
 width="80%" />
 </div>
 
@@ -52,7 +52,7 @@ seleccionar “*Add Template*” y arrastrar al espacio de trabajo. Seleccionamo
 template descargado y veréis que aparece un nuevo Process Group.
 
 <div align="center">
-<img src="../img/NiFiP5.5.png" alt="Práctica 5" 
+<img src="../../img/NiFiP5.5.png" alt="Práctica 5" 
 width="80%" />
 </div>
 
@@ -64,6 +64,6 @@ Process Group.
 Hay que exportar la practica con un Processor Group que genera un .json y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P5_NomAlumnoApellidos.xml*
 
 <div align="center">
-<img src="../img/NiFiP5.6.png" alt="Práctica 5" 
+<img src="../../img/NiFiP5.6.png" alt="Práctica 5" 
 width="80%" />
 </div>

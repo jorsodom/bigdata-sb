@@ -15,7 +15,7 @@
 - Y el “*Funnel*” lo enlazamos con el ”*LogAttribute*”.
 
 <div align="center">
-<img src="../img/NiFiP6.1.png" alt="Práctica 6" 
+<img src="../../img/NiFiP6.1.png" alt="Práctica 6" 
 width="80%" />
 </div>
 

@@ -12,7 +12,7 @@ Readme, según la versión funcionara una u otra*):
 [https://localhost:8443/nifi/](https://localhost:8443/nifi/)
 
 <div align="center">
-<img src="../img/NiFiP1.1.png" alt="Practica 1" 
+<img src="../../img/NiFiP1.1.png" alt="Practica 1" 
 width="80%" />
 </div>
 
@@ -22,7 +22,7 @@ al arrancar por primera vez en el fichero de logs que podréis encontrar en: *lo
 Una vez hayamos hecho login, nos aparecerá la interfaz de trabajo.
 
 <div align="center">
-<img src="../img/NiFiP1.2.png" alt="Practica 1" 
+<img src="../../img/NiFiP1.2.png" alt="Practica 1" 
 width="80%" />
 </div>
 
@@ -30,14 +30,14 @@ En la **barra de iconos de herramientas**, hacemos clic en “*Processor*” y a
 hacia el área de trabajo
 
 <div align="center">
-<img src="../img/NiFiP1.3.png" alt="Practica 1" 
+<img src="../../img/NiFiP1.3.png" alt="Practica 1" 
 width="80%" />
 </div>
 
 En la ventana de “*Add Processor*” búscamos *getFile*. Y hacemos clic en “*Add*”.
 
 <div align="center">
-<img src="../img/NiFiP1.4.png" alt="Practica 1" 
+<img src="../../img/NiFiP1.4.png" alt="Practica 1" 
 width="80%" />
 </div>
 

@@ -19,7 +19,7 @@ como resultado algo similar:
 ```
 
 <div align="center">
-<img src="../img/NiFiP3.1.png" alt="Práctica 3" 
+<img src="../../img/NiFiP3.1.png" alt="Práctica 3" 
 width="80%" />
 </div>
 
@@ -28,7 +28,7 @@ ya teníamos configurado para tener la misma configuración. Y lo conectamos ent
 Processor “ExtractText” y terminando en el “LogAttribute”
 
 <div align="center">
-<img src="../img/NiFiP3.2.png" alt="Práctica 3" 
+<img src="../../img/NiFiP3.2.png" alt="Práctica 3" 
 width="80%" />
 </div>
 
@@ -47,7 +47,7 @@ obtener los datos y que estructura va a tener para substituir el anterior conten
 ```
 
 <div align="center">
-<img src="../img/NiFiP3.3.png" alt="Práctica 3" 
+<img src="../../img/NiFiP3.3.png" alt="Práctica 3" 
 width="80%" />
 </div>
 
@@ -55,7 +55,7 @@ Ejecutamos y podemos ver en la cola el resultado del contenido, si ha funcionado
 correctamente debe salir algo similar a la siguiente imagen:
 
 <div align="center">
-<img src="../img/NiFiP3.4.png" alt="Práctica 3" 
+<img src="../../img/NiFiP3.4.png" alt="Práctica 3" 
 width="80%" />
 </div>
 
@@ -71,12 +71,12 @@ Por ejemplo, vamos a añadir un Processor “PutFile” y lo conectaremos entre 
 replaceText y el log. Luego entraremos en las propiedades del PutFile y configuraremos el directorio dónde quedamos que se guarde el fichero.
 
 <div align="center">
-<img src="../img/NiFiP3.5.png" alt="Práctica 3" 
+<img src="../../img/NiFiP3.5.png" alt="Práctica 3" 
 width="80%" />
 </div>
 
 <div align="center">
-<img src="../img/NiFiP3.6.png" alt="Práctica 3" 
+<img src="../../img/NiFiP3.6.png" alt="Práctica 3" 
 width="80%" />
 </div>
 
@@ -85,7 +85,7 @@ log y veamos que pasa en el directorio. Confirmamos que el nombre del fichero lo
 de la propiedad de Filename del FlowFile.
 
 <div align="center">
-<img src="../img/NiFiP3.7.png" alt="Práctica 3" 
+<img src="../../img/NiFiP3.7.png" alt="Práctica 3" 
 width="80%" />
 </div>
 
@@ -99,7 +99,7 @@ ${filename}-${now():toNumber():format('dd-MM-yy')}.json
 ```
 
 <div align="center">
-<img src="../img/NiFiP3.8.png" alt="Práctica 3" 
+<img src="../../img/NiFiP3.8.png" alt="Práctica 3" 
 width="80%" />
 </div>
 
@@ -107,7 +107,7 @@ Ya solo quedaría conectar el Processor antes del PutFile para que le dé tiempo
 cambiarle la propiedad. Y volvamos a revisar la salida a ver qué pasa.
 
 <div align="center">
-<img src="../img/NiFiP3.9.png" alt="Práctica 3" 
+<img src="../../img/NiFiP3.9.png" alt="Práctica 3" 
 width="80%" />
 </div>
 
@@ -115,7 +115,7 @@ Hagamos como ejercicio, que el fichero de salida salga con el siguiente formato 
 lo siguiente a la fecha son horas, minutos y segundos:
 
 <div align="center">
-<img src="../img/NiFiP3.10.png" alt="Práctica 3" 
+<img src="../../img/NiFiP3.10.png" alt="Práctica 3" 
 width="80%" />
 </div>
 

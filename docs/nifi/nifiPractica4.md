@@ -8,7 +8,7 @@ Para decirle como usar los processor’s, debemos seleccionar todos los processo
 la tecla shift) y arrastrarlos sobre el process group
 
 <div align="center">
-<img src="../img/NiFiP4.1.png" alt="Práctica 4" 
+<img src="../../img/NiFiP4.1.png" alt="Práctica 4" 
 width="80%" />
 </div>
 
@@ -16,7 +16,7 @@ Para ver los componentes de un Process Group, hacemos doble click y accedemos al
 detalle. 
 
 <div align="center">
-<img src="../img/NiFiP4.2.png" alt="Práctica 4" 
+<img src="../../img/NiFiP4.2.png" alt="Práctica 4" 
 width="80%" />
 </div>
 
@@ -26,7 +26,7 @@ fuera.
 **Nota: Es recomendable utilizar los Process Group para lógicas complejas. Es posible duplicar un process group heredando la misma configuración.**
 
 <div align="center">
-<img src="../img/NiFiP4.3.png" alt="Práctica 4" 
+<img src="../../img/NiFiP4.3.png" alt="Práctica 4" 
 width="80%" />
 </div>
 
@@ -39,7 +39,7 @@ vamos a introduir los processors des de el “*UpdateAttribute*” hasta el últ
 “*LogAttribute*”.
 
 <div align="center">
-<img src="../img/NiFiP4.4.png" alt="Práctica 4" 
+<img src="../../img/NiFiP4.4.png" alt="Práctica 4" 
 width="80%" />
 </div>
 
@@ -49,7 +49,7 @@ conjuntamente. Para ello hacemos botón derecho sobre “*Write JSON to File
 System*” y seleccionamos “*Move to parent group*”.
 
 <div align="center">
-<img src="../img/NiFiP4.5.png" alt="Práctica 4" 
+<img src="../../img/NiFiP4.5.png" alt="Práctica 4" 
 width="80%" />
 </div>
 
@@ -58,14 +58,14 @@ comuniquen para que funcionen. Para ello haremos uso del Input/Output port.
 Accedemos al process group “*CSV to JSON*” y añadimos un “*Output port*”.
 
 <div align="center">
-<img src="../img/NiFiP4.6.png" alt="Práctica 4" 
+<img src="../../img/NiFiP4.6.png" alt="Práctica 4" 
 width="80%" />
 </div>
 
 Salimos del grupo y accedemos ahora al Process Group “*Write JSON to CSV*” y añadimos un “*Input port*” al inicio.
 
 <div align="center">
-<img src="../img/NiFiP4.7.png" alt="Práctica 4" 
+<img src="../../img/NiFiP4.7.png" alt="Práctica 4" 
 width="80%" />
 </div>
 
@@ -76,7 +76,7 @@ una entrada/salida que este bien asociado.
 Ahora solo queda arrancar con botón derecho “*start*” y validar que todo funciona 
 correctamente.
 
-*Nota: Dentro de un mismo Process Group no es posible conectar un “*Output port*” a un “*Input port*”.*
+**Nota: Dentro de un mismo Process Group no es posible conectar un “*Output port*” a un “*Input port*”.**
 
 ## ENTREGABLE 
 

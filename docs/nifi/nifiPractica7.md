@@ -22,12 +22,12 @@ siguiente:
 ```        
 
 <div align="center">
-<img src="../img/NiFiP7.1.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.1.png" alt="Practica 7" 
 width="80%" />
 </div>
 
 <div align="center">
-<img src="../img/NiFiP7.2.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.2.png" alt="Practica 7" 
 width="80%" />
 </div>
 
@@ -35,7 +35,7 @@ Añadimos un processor “LogAttribute” y conectamos el *FlowFileGenerator* al
 “*LogAttribute*”.
 
 <div align="center">
-<img src="../img/NiFiP7.3.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.3.png" alt="Practica 7" 
 width="80%" />
 </div>
 
@@ -43,7 +43,7 @@ Ahora vamos a ejecutar el proceso y validar que funciona correctamente viendo el
 contenido del fichero generado
 
 <div align="center">
-<img src="../img/NiFiP7.4.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.4.png" alt="Practica 7" 
 width="80%" />
 </div>
 
@@ -57,7 +57,7 @@ Para llegar a tener en formato SQL el contenido del JSON. Antes necesitamos
 convertirlo de formato. Para ello usaremos el processor *ConvertJSONToSQL*.
 
 <div align="center">
-<img src="../img/NiFiP7.5.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.5.png" alt="Practica 7" 
 width="80%" />
 </div>
 
@@ -72,7 +72,7 @@ Aquí es necesario crear un nuevo *Controller Services* seleccionando
 “*DBCPConnectionPool*”.
 
 <div align="center">
-<img src="../img/NiFiP7.6.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.6.png" alt="Practica 7" 
 width="80%" />
 </div>
 
@@ -81,12 +81,12 @@ que hemos creado para introducir los datos de la conexión a la base de
 datos. Haciendo clic en la flecha que sale a la derecha.
 
 <div align="center">
-<img src="../img/NiFiP7.7.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.7.png" alt="Practica 7" 
 width="80%" />
 </div>
 
 <div align="center">
-<img src="../img/NiFiP7.8.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.8.png" alt="Practica 7" 
 width="80%" />
 </div>
 
@@ -100,26 +100,26 @@ propiedades y rellenamos las siguientes propiedades:
         o Password: xxxxxxxxx
 
 <div align="center">
-<img src="../img/NiFiP7.9.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.9.png" alt="Practica 7" 
 width="80%" />
 </div>
 
 Aplicamos cambios y activamos la conexión
 
 <div align="center">
-<img src="../img/NiFiP7.10.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.10.png" alt="Practica 7" 
 width="80%" />
 </div>
 
 <div align="center">
-<img src="../img/NiFiP7.11.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.11.png" alt="Practica 7" 
 width="80%" />
 </div>
 
 La estructura de la tabla destino es la siguiente
 
 <div align="center">
-<img src="../img/NiFiP7.12.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.12.png" alt="Practica 7" 
 width="80%" />
 </div>
 
@@ -127,7 +127,7 @@ Volvemos al espacio de trabajo y conectamos el processor “*ConverJSONtoSQL*”
 “*PutSQL*” y configuramos el tipo de relación que tendrán, en este caso “*sql*”
 
 <div align="center">
-<img src="../img/NiFiP7.13.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.13.png" alt="Practica 7" 
 width="80%" />
 </div>
 
@@ -138,12 +138,12 @@ processor “*ConverJSONToSQL*” es necesario configurar la relación que cuand
 termine en ese punto.
 
 <div align="center">
-<img src="../img/NiFiP7.14.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.14.png" alt="Practica 7" 
 width="80%" />
 </div>
 
 <div align="center">
-<img src="../img/NiFiP7.15.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.15.png" alt="Practica 7" 
 width="80%" />
 </div>
 
@@ -154,12 +154,12 @@ en las siguientes imágenes ya que los valores del FlowFile generado (JSON) los 
 los atributos para que puedan ser usados
 
 <div align="center">
-<img src="../img/NiFiP7.16.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.16.png" alt="Practica 7" 
 width="80%" />
 </div>
 
 <div align="center">
-<img src="../img/NiFiP7.17.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.17.png" alt="Practica 7" 
 width="80%" />
 </div>
 
@@ -170,7 +170,7 @@ Sobre el mismo connector “*PutSQL*” establecer una relación de que vuelva a
 si falla “*Retry*”.
 
 <div align="center">
-<img src="../img/NiFiP7.18.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.18.png" alt="Practica 7" 
 width="80%" />
 </div>
 
@@ -179,7 +179,7 @@ comprobación, revisamos la tabla de la base de datos y veamos que los datos se 
 insertando
 
 <div align="center">
-<img src="../img/NiFiP7.19.png" alt="Practica 7" 
+<img src="../../img/NiFiP7.19.png" alt="Practica 7" 
 width="80%" />
 </div>
 

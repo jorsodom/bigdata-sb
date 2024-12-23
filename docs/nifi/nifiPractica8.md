@@ -13,7 +13,7 @@ Controller Service con la base de datos.
         o postgres.password=nifi
 
 <div align="center">
-<img src="../img/NiFiP8.1.png" alt="Práctica 8" 
+<img src="../../img/NiFiP8.1.png" alt="Práctica 8" 
 width="80%" />
 </div>
 
@@ -22,7 +22,7 @@ directorio “*conf*” y lo editamos. Búscamos “*registry*” y configuramos
 vamos a ubicar en el mismo directorio conf.
 
 <div align="center">
-<img src="../img/NiFiP8.2.png" alt="Práctica 8" 
+<img src="../../img/NiFiP8.2.png" alt="Práctica 8" 
 width="80%" />
 </div>
 
@@ -35,7 +35,7 @@ Linux /nifi.sh stop , /nifi.sh start
 ```
 
 <div align="center">
-<img src="../img/NiFiP8.3.png" alt="Práctica 8" 
+<img src="../../img/NiFiP8.3.png" alt="Práctica 8" 
 width="80%" />
 </div>
 
@@ -44,7 +44,7 @@ propiedades y vamos con la flecha a la configuración del JDBC Connection Pool d
 debemos deshabilitar el Controller Service
 
 <div align="center">
-<img src="../img/NiFiP8.4.png" alt="Práctica 8" 
+<img src="../../img/NiFiP8.4.png" alt="Práctica 8" 
 width="80%" />
 </div>
 
@@ -62,12 +62,12 @@ Aplicamos los cambios y volvemos a activar el Contoller Service para validar que
 funciona todo correctamente.
 
 <div align="center">
-<img src="../img/NiFiP8.5.png" alt="Práctica 8" 
+<img src="../../img/NiFiP8.5.png" alt="Práctica 8" 
 width="80%" />
 </div>
 
 <div align="center">
-<img src="../img/NiFiP8.6.png" alt="Práctica 8" 
+<img src="../../img/NiFiP8.6.png" alt="Práctica 8" 
 width="80%" />
 </div>
 
@@ -76,7 +76,7 @@ llegamos a insertar en la base de datos, por ejemplo, revisando la fecha de crea
 Cómo hemos comentado hay dos opciones de utilizar variables. Ya hemos visto la primera que es utilizando ficheros de propiedades que se cargan cuando arranca NiFi. Ahora vamos a ver la otra opción.
 
 <div align="center">
-<img src="../img/NiFiP8.7.png" alt="Práctica 8" 
+<img src="../../img/NiFiP8.7.png" alt="Práctica 8" 
 width="80%" />
 </div>
 
@@ -85,7 +85,7 @@ Básicamente se hace en la hoja de trabajo, con botón derecho aparece la opció
 son definidas directamente.
 
 <div align="center">
-<img src="../img/NiFiP8.8.png" alt="Práctica 8" 
+<img src="../../img/NiFiP8.8.png" alt="Práctica 8" 
 width="80%" />
 </div>
 
