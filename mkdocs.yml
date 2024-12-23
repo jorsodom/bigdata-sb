@@ -5,19 +5,19 @@ site_url: https://jorsodom.github.io/bigdata-sb/
 nav:
   - Inicio: index.md
   - Ingesta de datos con NiFi: 
-    - Introducción: nifiIntroduccion.md
-    - Práctica 1: nifiPractica1.md
-    - Práctica 2: nifiPractica2.md
-    - Práctica 3: nifiPractica3.md
-    - Práctica 4: nifiPractica4.md
-    - Práctica 5: nifiPractica5.md
-    - Práctica 6: nifiPractica6.md
-    - Práctica 7: nifiPractica7.md
-    - Práctica 8: nifiPractica8.md
-    #- Caso uso API: nifiCasoUsoAPI.md
-    #- Caso uso Hadoop: nifiCasoUsoHadoop.md
-    #- Caso uso MongoDB: nifiCasoUsoMongoDB.md
-    #- Caso uso PostgreSQL: nifiCasoUsoPostgreSQL.md
+    - Introducción: nifi/nifiIntroduccion.md
+    - Práctica 1: nifi/nifiPractica1.md
+    - Práctica 2: nifi/nifiPractica2.md
+    - Práctica 3: nifi/nifiPractica3.md
+    - Práctica 4: nifi/nifiPractica4.md
+    - Práctica 5: nifi/nifiPractica5.md
+    - Práctica 6: nifi/nifiPractica6.md
+    - Práctica 7: nifi/nifiPractica7.md
+    - Práctica 8: nifi/nifiPractica8.md
+    #- Caso uso API: nifi/nifiCasoUsoAPI.md
+    #- Caso uso Hadoop: nifi/nifiCasoUsoHadoop.md
+    #- Caso uso MongoDB: nifi/nifiCasoUsoMongoDB.md
+    #- Caso uso PostgreSQL: nifi/nifiCasoUsoPostgreSQL.md
   #- ETL con ODI: 
 theme:
   name: material
