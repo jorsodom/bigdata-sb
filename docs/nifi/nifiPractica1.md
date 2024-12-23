@@ -45,7 +45,7 @@ Repetimos el mismo proceso para añadir el processor “*putFile*”. Quedando a
 a la siguiente imagen.
 
 <div align="center">
-<img src="../img/NiFiP1.5.png" alt="Practica 1" 
+<img src="../../img/NiFiP1.5.png" alt="Practica 1" 
 width="80%" />
 </div>
 
@@ -56,7 +56,7 @@ Ahora, vamos a **configurar** de dónde vamos a coger el fichero *origen* y dón
 Ahora mismo sólo vamos a indicar el directorio de entrada “*Input Directory*”.
 
 <div align="center">
-<img src="../img/NiFiP1.6.png" alt="Practica 1" 
+<img src="../../img/NiFiP1.6.png" alt="Practica 1" 
 width="80%" />
 </div>
 
@@ -65,7 +65,7 @@ Hacemos clic botón derecho en “*PutFile*” en “*Configure*” y vamos a la
 Ahora mismo sólo vamos a indicar el directorio de entrada “*Directory*”.
 
 <div align="center">
-<img src="../img/NiFiP1.7.png" alt="Practica 1" 
+<img src="../../img/NiFiP1.7.png" alt="Practica 1" 
 width="80%" />
 </div>
 
@@ -75,7 +75,7 @@ permitirá arrastrarla hasta el otro componente “*PutFile*”. Quedando como l
 imagen:
 
 <div align="center">
-<img src="../img/NiFiP1.8.png" alt="Practica 1" 
+<img src="../../img/NiFiP1.8.png" alt="Practica 1" 
 width="80%" />
 </div>
 
@@ -84,7 +84,7 @@ componentes con botón derecho y hacer clic en “*Start*”. En los dos compone
 Primero el “*GetFile*” y luego el “*PutFile*”.
 
 <div align="center">
-<img src="../img/NiFiP1.9.png" alt="Practica 1" 
+<img src="../../img/NiFiP1.9.png" alt="Practica 1" 
 width="80%" />
 </div>
 
@@ -93,7 +93,7 @@ en este componente en propiedades e indicarle que acción debe hacer en el caso 
 que falle
 
 <div align="center">
-<img src="../img/NiFiP1.10.png" alt="Practica 1" 
+<img src="../../img/NiFiP1.10.png" alt="Practica 1" 
 width="80%" />
 </div>
 
@@ -102,7 +102,7 @@ del origen configurado al destino. Marcado con verde como que se ha ejecutado
 correctamente
 
 <div align="center">
-<img src="../img/NiFiP1.11.png" alt="Practica 1" 
+<img src="../../img/NiFiP1.11.png" alt="Practica 1" 
 width="80%" />
 </div>
 
