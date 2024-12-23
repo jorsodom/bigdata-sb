@@ -1,4 +1,4 @@
-## Práctica 8: Variables
+## Variables
 Las variables pueden ser usadas de dos formas:
 En la ventana de la interfa de NiFi
 En un fichero de configuración el cual referimos a través de “*nifi.propierties*”.
