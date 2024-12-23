@@ -18,7 +18,7 @@ Aunque se pueda considerar una herramienta ETL, NiFi no está realmente optimiza
 - **Flowfile**: Es el paquete de datos que viaja por el flow entre los procesadores. Está compuesto por un puntero al propio dato útil o contenido (un array de bytes) y metadatos asociados llamados atributos. Los atributos pares clave-valor editables y NiFi los usa para enriquecer la información de provenance. Los metadatos más importantes son el identificador (uuid), el nombre del fichero (filename) y el path Para acelerar el rendimiento del sistema, el flowfile no contiene el propio dato, sino que apunta al dato en el almacenamiento local. Muchas de las operaciones que se realizan en NiFi no alteran el propio dato ni necesitan cargarlo en memoria. En concreto, el dato se encuentra en el llamado repositorio de contenido (Content Repository)
 
 <div align="center">
-<img src="../img/estructura-flowfile-nifi.png" alt="FlowFile" 
+<img src="../../img/estructura-flowfile-nifi.png" alt="FlowFile" 
 width="50%" />
 </div>
 
@@ -125,7 +125,7 @@ Una de las maneras de tratar los casos de uso de streaming es escribir los regis
 ## Ejemplo
 
 <div align="center">
-<img src="../img/NiFiP1.11.png" alt="Ejemplo 1" 
+<img src="../../img/NiFiP1.11.png" alt="Ejemplo 1" 
 width="50%" />
 </div>
 
