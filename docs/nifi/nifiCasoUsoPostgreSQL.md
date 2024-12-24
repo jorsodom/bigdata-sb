@@ -1,6 +1,6 @@
-### Análisis y comparativa de temperaturas y acumulación de Lluvia (2020-2022)
+### Análisis y comparativa de temperaturas y acumulación de Lluvia (2022-2024)
 ## Objetivo
-Realizar un análisis mensual de las temperaturas medias y la acumulación de lluvia para los años 2020, 2021 y 2022, aprovechando los datos meteorológicos de España para obtener conclusiones a través de una herramienta de reporting.
+Realizar un análisis mensual de las temperaturas medias y la acumulación de lluvia para los años 2022, 2023 y 2024, aprovechando los datos meteorológicos de España para obtener conclusiones a través de una herramienta de reporting.
 Este caso de uso proporciona una solución automatizada y eficiente para la integración, procesamiento y análisis de datos meteorológicos, ayudando en la toma de decisiones y en la creación de informes precisos y oportunos.
 
 ## Flujo de Datos
@@ -23,16 +23,16 @@ Este caso de uso proporciona una solución automatizada y eficiente para la inte
 4. **Carga a Capa Final en la Base de Datos:**
    Una vez procesados los datos, se cargan en las capas finales del modelo multidimensional:
      - **Catálogos/Dimensiones:** Información jerárquica y descriptiva (por ejemplo, provincias, municipios, estaciones).
-     - **Modelo Estrella (ODS):** Factos y medidas agregadas (temperatura media, acumulación de lluvia) por mes.
+     - **Modelo estrella (ODS):** Factos y medidas agregadas (temperatura media, acumulación de lluvia) por mes.
 
 5. **Cálculo de KPIs:**
    Según los requisitos de tiempo, se tienen dos opciones para los KPIs:
      - **Opción 1: Agregado en la capa ODS:** Se realizan los cálculos de KPIs (por ejemplo, temperatura media anual, acumulación de lluvia mensual) directamente sobre la capa ODS para facilitar y agilizar las consultas.
      - **Opción 2: Cálculos en la herramienta de reporting:** Los KPIs se calculan directamente en la herramienta de reporting, lo que permite mayor flexibilidad, aunque a costa de tiempos de carga más largos.
 
-6. **Análisis de los Datos (esta parte la haremos al final cuando veamos PowerBI):**
-   - **Herramienta de Reporting:** Utilizando una herramienta de reporting (como Power BI, Tableau, etc.), los usuarios podrán generar informes, tablas y gráficos que permitirán comparar los datos de temperatura y lluvia de los años 2020, 2021 y 2022.  
-   - A través de los KPIs y visualizaciones, se podrán sacar conclusiones y hacer predicciones o recomendaciones sobre el comportamiento del clima en las diferentes provincias y municipios de España.
+6. **Análisis de los datos (esta parte la haremos al final cuando veamos PowerBI):**
+    - Herramienta de reporting: Utilizando una herramienta de reporting (como Power BI, Tableau, etc.), los usuarios podrán generar informes, tablas y gráficos que permitirán comparar los datos de temperatura y lluvia de los años 2020, 2021 y 2022.  
+    - A través de los KPIs y visualizaciones, se podrán sacar conclusiones y hacer predicciones o recomendaciones sobre el comportamiento del clima en las diferentes provincias y municipios de España.
 
 ## Tecnologías Utilizadas
 - **Apache NiFi:** Orquestación de la integración de datos desde las fuentes hasta la base de datos, garantizando un flujo controlado de los datos.
@@ -43,7 +43,7 @@ Este caso de uso proporciona una solución automatizada y eficiente para la inte
 
 **Catálogo de fechas**
 
--   Añadir fuente/consulta sql para añadir datos del catálogo fecha.  <a href="../assets/Proc Data Cataleg.sql" download="Descargar fichero sql generación catálogo de fechas"> </a>
+-   [Descargar fichero sql generación catálogo de fechas](../assets/Proc Data Cataleg.sql)
 
 
 **INE**
