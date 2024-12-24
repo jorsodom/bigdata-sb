@@ -12,13 +12,13 @@ En la práctica que hicimos sobre la API del INE, consultamos la encuesta de pob
      `http://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/<cod serie>?nult=<num dades>`
    - **Método HTTP:** `GET`
    - **Propiedades adicionales:**  
-     Asegúrate de que se configuró correctamente el manejo de errores (por ejemplo, reintentos y tiempo de espera).
+     Asegúrate de que se ha configurado correctamente el manejo de errores (por ejemplo, reintentos y tiempo de espera).
 
 2. **Guardar el JSON en un archivo con `PutFile`**:
    - **Directorio de destino:** Elige la carpeta donde deseas almacenar los archivos JSON.
    - **Nombre del archivo:** Puede ser dinámico o fijo (por ejemplo, `datos.json`).
 
-Este paso tomará la respuesta de la API y la almacenará como un archivo JSON en el sistema de archivos.
+Este paso recogerá la respuesta de la API y la almacenará como un archivo JSON en el sistema de archivos.
 
 ## Aplanar el JSON y guardarlo como CSV
 
@@ -45,40 +45,40 @@ Este paso tomará la respuesta de la API y la almacenará como un archivo JSON e
      Esto extrae los datos necesarios del JSON y los coloca en un formato más adecuado para la conversión.
 
 2. **Convertir el JSON a CSV con `ConvertRecord`**:
-   - **Record Reader:** `JsonTreeReader` (configurado para leer JSON).
-   - **Record Writer:** `CSVRecordSetWriter` (configurado para generar archivos CSV).
-   - Este paso toma los datos JSON aplanados y los convierte en un formato CSV.
+    - **Record Reader:** `JsonTreeReader` (configurado para leer JSON).
+    - **Record Writer:** `CSVRecordSetWriter` (configurado para generar archivos CSV).
+    - Este paso toma los datos JSON aplanados y los convierte en un formato CSV.
 
 3. **Guardar el archivo CSV con `PutFile`**:
-   - Similar al paso anterior, puedes guardar el archivo CSV en el sistema de archivos local.
+    - Similar al paso anterior, puedes guardar el archivo CSV en el sistema de archivos local.
 
 ## Guardar los datos en una base de datos PostgreSQL
 
 **Processor a usar:** `PutDatabaseRecord`
 
 1. **Configurar `PutDatabaseRecord`**:
-   - **JDBC Connection Pooling Service**: Debes configurar un servicio de conexión JDBC, como `DBCPConnectionPool`, para conectarte a tu base de datos PostgreSQL.
-   - **Configuración de la base de datos PostgreSQL**:
-     - **JDBC URL:** `jdbc:postgresql://<host>:<port>/<database>`
-     - **Usuario:** El usuario para conectarse a la base de datos.
-     - **Contraseña:** La contraseña correspondiente.
+    - **JDBC Connection Pooling Service**: Debes configurar un servicio de conexión JDBC, como `DBCPConnectionPool`, para conectarte a tu base de datos PostgreSQL.
+    - **Configuración de la base de datos PostgreSQL**:
+        - **JDBC URL:** `jdbc:postgresql://<host>:<port>/<database>`
+        - **Usuario:** El usuario para conectarse a la base de datos.
+        - **Contraseña:** La contraseña correspondiente.
    
 2. **Especificar el esquema de la base de datos**:
-   - **Schema**: Define un esquema adecuado para insertar los datos del archivo CSV.
-   - **Tabla**: Selecciona o crea una tabla en PostgreSQL para almacenar los datos. La estructura de la tabla debe coincidir con los datos CSV que estamos insertando.
+    - **Schema**: Define un esquema adecuado para insertar los datos del archivo CSV.
+    - **Tabla**: Selecciona o crea una tabla en PostgreSQL para almacenar los datos. La estructura de la tabla debe coincidir con los datos CSV que estamos insertando.
 
 3. **Configurar `PutDatabaseRecord`**:
-   - **Record Reader:** `CSVReader` (configurado para leer los datos del archivo CSV).
-   - **Record Writer:** No es necesario, ya que los datos se insertan directamente en la base de datos.
+    - **Record Reader:** `CSVReader` (configurado para leer los datos del archivo CSV).
+    - **Record Writer:** No es necesario, ya que los datos se insertan directamente en la base de datos.
    
-Este paso tomará los datos CSV y los insertará en la base de datos PostgreSQL.
+Este paso leerá los datos CSV y los insertará en la base de datos PostgreSQL.
 
 ## Guardar este pipeline como plantilla
 
 1. **Guardar la plantilla**:
-   - Después de configurar todos los processors, selecciona todos los processors y haz clic en el botón derecho para elegir la opción "Create Template".
-   - Nombra tu plantilla (por ejemplo, "API_to_PostgreSQL_Template").
-   - Guarda la plantilla y podrás reutilizarla en futuros proyectos.
+    - Después de configurar todos los processors, selecciona todos los processors y haz clic en el botón derecho para elegir la opción "Create Template".
+    - Nombra tu plantilla (por ejemplo, "API_to_PostgreSQL_Template").
+    - Guarda la plantilla y podrás reutilizarla en futuros proyectos.
 
 ## Resumen de los processors a utilizar:
 
@@ -89,6 +89,6 @@ Este paso tomará los datos CSV y los insertará en la base de datos PostgreSQL.
 5. **`PutDatabaseRecord`**: Para insertar los datos en PostgreSQL.
 6. **`DBCPConnectionPool`**: Para configurar la conexión JDBC a PostgreSQL.
 
-## Anexo
+## Anexos
 
-[http://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/<cod serie>?nult=<num dades>](http://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/<cod serie>?nult=<num dades>)
+    [INE API](http://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/<cod serie>?nult=<num dades>)
