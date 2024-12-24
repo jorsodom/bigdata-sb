@@ -1,12 +1,12 @@
 # ODI
 <div align="center">
-<img src="https://blog.mp3monster.org/wp-content/uploads/2020/09/oracle-data-integrator.png" alt="Oracle Data Integrator" width="10%" />
+<img src="https://blog.mp3monster.org/wp-content/uploads/2020/09/oracle-data-integrator.png" alt="Oracle Data Integrator" width="50%" />
 </div>
 
 ## ¿Qué es Oracle Data Integrator (ODI)?
-es una plataforma de integración de datos que facilita la transferencia, transformación y carga de datos (ETL: Extract, Transform, Load) entre diferentes fuentes de datos. Está diseñada para manejar grandes volúmenes de datos y facilitar la integración en entornos de múltiples bases de datos, aplicaciones y sistemas.
+Es una plataforma de integración de datos que facilita la transferencia, transformación y carga de datos (ETL: Extract, Transform, Load) entre diferentes fuentes de datos. Está diseñada para manejar grandes volúmenes de datos y facilitar la integración en entornos de múltiples bases de datos, aplicaciones y sistemas.
 
-### Características principales de Oracle Data Integrator:
+### Características principales:
 
 1. **Integración de datos en tiempo real y batch**:
    ODI permite realizar integraciones tanto en tiempo real como por lotes (batch). Esta flexibilidad es clave en escenarios donde los datos deben procesarse en tiempo real para análisis inmediatos o cuando los procesos pueden esperar un procesamiento más programado.
@@ -32,7 +32,7 @@ es una plataforma de integración de datos que facilita la transferencia, transf
 8. **Integración con Oracle Ecosystem**:
    ODI se integra de manera nativa con el ecosistema de Oracle, lo que significa que se puede utilizar de forma eficiente con otras soluciones de Oracle como Oracle Exadata, Oracle Warehouse Builder y Oracle Business Intelligence.
 
-### Usos comunes de Oracle Data Integrator:
+### Usos comunes:
 
 - **ETL en proyectos de Data Warehousing**: ODI se utiliza ampliamente en la integración de grandes volúmenes de datos desde diversas fuentes hacia un Data Warehouse.
 - **Migración de datos**: Es ideal para mover datos entre plataformas diferentes, ya sea para la actualización de sistemas o la migración a la nube.
@@ -47,24 +47,28 @@ Descargar la máquina virtual que contiene todo el entorno para hacer el desarro
 
 Contiene:
     -   Oracle Enterprise Linux (64-bit) 2.6.32-300.39.5
+
     -   Oracle EE Database 11.2.0.4
+
     -   Oracle Data Integrator 12.2.1.3.1
+
     -   Oracle GoldenGate 12.1.2.0.0
+
     -   Java Platform (JDK) 1.8.0_60
 
 ## Entorno de ODI
 -   ODI Studio 12c
 -   Mappings
--   Topologia lògica i física
--   Context
+-   Topologia logica y física
+-   Contexto
 -   Operador (agents)
--   Models
--   Plans de Carrega
--   Paquets
--   Escenaris
--   Interpretació logs
+-   Modelos
+-   Planes de carga
+-   Paquetes
+-   Escenarios
+-   Interpretación de logs
 -   Load plans
--   Mòduls de coneixement:
+-   Modulos de conocimiento:
     -   What is a Knowledge Module?
         -   Reverse-Engineering Knowledge Modules (RKM)
         -   Check Knowledge Modules (CKM)
