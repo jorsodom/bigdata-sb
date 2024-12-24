@@ -40,12 +40,18 @@ Este caso de uso proporciona una solución automatizada y eficiente para la inte
 - **Herramienta de Reporting (ej. Power BI, Tableau):** Visualización y análisis de los KPIs generados.
 
 ## Anexo
-Fechas
-- Añadir fuente/consulta sql para añadir datos del catálogo fecha.
 
-[INE: Relación Provincia-Municipio](https://www.ine.es/daco/daco42/codmun/22codmun.xlsx)
+**Catálogo de fechas**
 
-AEMET.
+-   Añadir fuente/consulta sql para añadir datos del catálogo fecha.  <a href="../assets/Proc Data Cataleg.sql" download="Descargar fichero sql generación catálogo de fechas"> </a>
+
+
+**INE**
+
+-   [INE: Relación Provincia-Municipio](https://www.ine.es/daco/daco42/codmun/22codmun.xlsx)
+
+**AEMET**
+
 -   [¿Cómo pedir una API Key?](https://opendata.aemet.es/centrodedescargas/docs/FAQs170621.pdf)
 
 -   [Centro de descargas de Aemet](https://opendata.aemet.es/centrodedescargas/inicio)

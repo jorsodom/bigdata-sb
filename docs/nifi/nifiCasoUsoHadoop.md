@@ -11,6 +11,7 @@ Debemos transferir una gran cantidad de archivos del sistema de la máquina virt
 [root@nodo1 opt]# chown -R hadoop:hadoop nifi
 [root@nodo1 opt]# chmod -R 777 nifi
 ```
+
 - [x]  Si el directorio en HDFS al que enviamos los archivos no existe, el proceso debe crearlo.
 
 - [x]  NiFi debe tener permisos sobre HDFS.
@@ -29,25 +30,27 @@ En la propiedad de Hadoop Configuration Resources hay que poner los siguientes f
 /opt/hadoop/etc/hadoop/hdfs-site.xml,/opt/hadoop/etc/hadoop/core-site.xml
 ```
 3. Implementar y configurar el procesador correspondiente para realizar un `put` de los archivos al sistema HDFS de Hadoop en un directorio llamado `output_hdfs`. Si el directorio no existe, el proceso deberá crearlo con los permisos del usuario que ejecuta (hadoop).
-<div align="center">
-<img src="../../img/nificasousohadoop2.png" alt="Caso de Uso NiFi Hadoop" 
-width="80%" />
-</div>
+    <div align="center">
+    <img src="../../img/nificasousohadoop2.png" alt="Caso de Uso NiFi Hadoop" 
+    width="80%" />
+    </div>
 
 4. Validar mediante el comando:
 ```bash
 hdfs dfs -ls /
 ```
 En el sistema de archivos HDFS que el directorio se ha creado con los permisos correctos y que los archivos han llegado correctamente. También se puede validar utilizando la página web de HDFS: [http://nodo1:9870/explorer.html](http://nodo1:9870/explorer.html).
+
 5. Añadir un nuevo procesador a NiFi que recoja los archivos del sistema HDFS del directorio "output_hdfs" y los traslade a un directorio "output" en el sistema de archivos Linux.
-<div align="center">
-<img src="../../img/nificasousohadoop3.png" alt="Caso de Uso NiFi Hadoop" 
-width="80%" />
-</div>
-<div align="center">
-<img src="../../img/nificasousohadoop4.png" alt="Caso de Uso NiFi Hadoop" 
-width="80%" />
-</div>
+    <div align="center">
+    <img src="../../img/nificasousohadoop3.png" alt="Caso de Uso NiFi Hadoop" 
+    width="80%" />
+    </div>
+    <div align="center">
+    <img src="../../img/nificasousohadoop4.png" alt="Caso de Uso NiFi Hadoop" 
+    width="80%" />
+    </div>
+    
 **Ayuda:** [NiFi Documentation (apache.org)](https://nifi.apache.org/docs.html)
 ## Entregable
 Un PDF con capturas de pantalla de todo lo implementado y de los resultados en los directorios, tanto en HDFS como en el sistema local.
