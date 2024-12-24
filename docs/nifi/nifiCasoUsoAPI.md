@@ -1,9 +1,7 @@
 ### Consulta de una API con NiFi
-
 En la práctica que hicimos sobre la API del INE, consultamos la encuesta de población activa. Vamos a ampliar con esta práctica leyendo y automatizando la lectura de los datos con NiFi.
 
 ## Consulta de la API y guardar el JSON en un archivo
-
 **Processor a usar:** `InvokeHTTP`  
 **Objetivo:** Consultar la API del INE para obtener los datos en formato JSON y luego guardarlos en un archivo local.
 
@@ -21,7 +19,6 @@ En la práctica que hicimos sobre la API del INE, consultamos la encuesta de pob
 Este paso recogerá la respuesta de la API y la almacenará como un archivo JSON en el sistema de archivos.
 
 ## Aplanar el JSON y guardarlo como CSV
-
 **Processor a usar:** `JoltTransformJSON` y `ConvertRecord`
 
 1. **Aplanar el JSON con `JoltTransformJSON`**:
@@ -53,7 +50,6 @@ Este paso recogerá la respuesta de la API y la almacenará como un archivo JSON
     - Similar al paso anterior, puedes guardar el archivo CSV en el sistema de archivos local.
 
 ## Guardar los datos en una base de datos PostgreSQL
-
 **Processor a usar:** `PutDatabaseRecord`
 
 1. **Configurar `PutDatabaseRecord`**:
@@ -74,21 +70,19 @@ Este paso recogerá la respuesta de la API y la almacenará como un archivo JSON
 Este paso leerá los datos CSV y los insertará en la base de datos PostgreSQL.
 
 ## Guardar este pipeline como plantilla
-
-1. **Guardar la plantilla**:
+**Guardar la plantilla**:
     - Después de configurar todos los processors, selecciona todos los processors y haz clic en el botón derecho para elegir la opción "Create Template".
     - Nombra tu plantilla (por ejemplo, "API_to_PostgreSQL_Template").
     - Guarda la plantilla y podrás reutilizarla en futuros proyectos.
 
 ## Resumen de los processors a utilizar:
-
-1. **`InvokeHTTP`**: Para consultar la API del INE y obtener el JSON.
-2. **`JoltTransformJSON`**: Para aplanar el JSON.
-3. **`ConvertRecord`**: Para convertir el JSON a CSV.
-4. **`PutFile`**: Para guardar los archivos JSON y CSV en el sistema de archivos.
-5. **`PutDatabaseRecord`**: Para insertar los datos en PostgreSQL.
-6. **`DBCPConnectionPool`**: Para configurar la conexión JDBC a PostgreSQL.
+-   **`InvokeHTTP`**: Para consultar la API del INE y obtener el JSON.
+-   **`JoltTransformJSON`**: Para aplanar el JSON.
+-   **`ConvertRecord`**: Para convertir el JSON a CSV.
+-   **`PutFile`**: Para guardar los archivos JSON y CSV en el sistema de archivos.
+-   **`PutDatabaseRecord`**: Para insertar los datos en PostgreSQL.
+-   **`DBCPConnectionPool`**: Para configurar la conexión JDBC a PostgreSQL.
 
 ## Anexos
 
-    [INE API](http://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/<cod serie>?nult=<num dades>)
+[INE API](http://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/<cod serie>?nult=<num dades>)
