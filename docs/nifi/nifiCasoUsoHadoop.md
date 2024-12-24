@@ -2,28 +2,28 @@
 
 Debemos transferir una gran cantidad de archivos del sistema de la máquina virtual Linux al sistema de archivos de Hadoop HDFS, también localizado en la misma máquina virtual. Para evitar generar un script con muchas instrucciones como `hdfs dfs -put ...`, lo cual podría ser tedioso, implementaremos un proceso en NiFi que automatice esta tarea. Una vez que los archivos estén en el sistema HDFS, será necesario implementar un proceso para devolver estos archivos desde el sistema de archivos HDFS al sistema de archivos local. Este proceso permitirá automatizar esta tarea y realizarla periódicamente.
 
-**Consideraciones:**
+## Consideraciones 
 
-- NiFi debe ubicarse en el directorio `/opt`, al igual que Hadoop. Como usuario root, copiarlo. Eliminar el archivo zip de NiFi para liberar espacio en el disco duro de la máquina virtual.
+[x] NiFi debe ubicarse en el directorio `/opt`, al igual que Hadoop. Como usuario root, copiarlo. Eliminar el archivo zip de NiFi para liberar espacio en el disco duro de la máquina virtual.
 
 ```bash
 [root@nodo1 opt]# cp -R /home/hadoop/Descargas/nifi-1.23.2 nifi
 ```
  
-- Asegurar que el directorio de NiFi (`/opt/nifi`) tenga permisos de ejecución para que NiFi y Hadoop puedan interactuar.
+[x] Asegurar que el directorio de NiFi (`/opt/nifi`) tenga permisos de ejecución para que NiFi y Hadoop puedan interactuar.
 
 ```bash
 [root@nodo1 opt]# chown -R hadoop:hadoop nifi
 [root@nodo1 opt]# chmod -R 777 nifi
 ```
 
-- Si el directorio en HDFS al que enviamos los archivos no existe, el proceso debe crearlo.
+[x] Si el directorio en HDFS al que enviamos los archivos no existe, el proceso debe crearlo.
 
-- NiFi debe tener permisos sobre HDFS.
+[x] NiFi debe tener permisos sobre HDFS.
 
-- Los directorios en HDFS deben tener permisos para que NiFi pueda escribir en ellos.
+[x] Los directorios en HDFS deben tener permisos para que NiFi pueda escribir en ellos.
 
-**Pasos a seguir:**
+## Pasos a seguir 
 
 1. Crear un directorio llamado `input` en el sistema de archivos de la máquina virtual Linux, donde se ubicarán los archivos que queremos trasladar al sistema HDFS.
 
