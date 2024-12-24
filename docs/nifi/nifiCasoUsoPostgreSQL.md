@@ -38,6 +38,7 @@ Este caso de uso proporciona una solución automatizada y eficiente para la inte
 - **Herramienta de Reporting (ej. Power BI):** Visualización y análisis de los KPIs generados.
 ## Entregable
 **Guardar la plantilla**:
+
     - Después de configurar todos los processors, selecciona todos los processors y haz clic en el botón derecho para elegir la opción "Create Template".
     - Nombra tu plantilla (por ejemplo, "PostgreSQL_Template").
     - Guarda la plantilla y podrás reutilizarla en futuros proyectos.

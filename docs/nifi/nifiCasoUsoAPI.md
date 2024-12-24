@@ -71,6 +71,7 @@ Este paso leerá los datos CSV y los insertará en la base de datos PostgreSQL.
 
 ## Entregable
 **Guardar la plantilla**:
+
     - Después de configurar todos los processors, selecciona todos los processors y haz clic en el botón derecho para elegir la opción "Create Template".
     - Nombra tu plantilla (por ejemplo, "API_to_PostgreSQL_Template").
     - Guarda la plantilla y podrás reutilizarla en futuros proyectos.
