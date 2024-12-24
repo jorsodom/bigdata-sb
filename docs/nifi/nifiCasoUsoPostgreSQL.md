@@ -36,6 +36,12 @@ Este caso de uso proporciona una solución automatizada y eficiente para la inte
 - **Apache NiFi:** Orquestación de la integración de datos desde las fuentes hasta la base de datos, garantizando un flujo controlado de los datos.
 - **PostgreSQL:** Base de datos relacional para almacenamiento de datos procesados y generación del modelo multidimensional.
 - **Herramienta de Reporting (ej. Power BI):** Visualización y análisis de los KPIs generados.
+## Entregable
+**Guardar la plantilla**:
+    - Después de configurar todos los processors, selecciona todos los processors y haz clic en el botón derecho para elegir la opción "Create Template".
+    - Nombra tu plantilla (por ejemplo, "PostgreSQL_Template").
+    - Guarda la plantilla y podrás reutilizarla en futuros proyectos.
+
 ## Anexo
 
 **Catálogo de fechas**
