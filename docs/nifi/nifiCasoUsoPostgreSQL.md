@@ -30,7 +30,7 @@ Este caso de uso proporciona una solución automatizada y eficiente para la inte
      - **Opción 2: Cálculos en la herramienta de reporting:** Los KPIs se calculan directamente en la herramienta de reporting, lo que permite mayor flexibilidad, aunque a costa de tiempos de carga más largos.
 
 6. **Análisis de los datos (esta parte la haremos al final cuando veamos PowerBI):**
-    - Herramienta de reporting: Utilizando una herramienta de reporting (como Power BI, Tableau, etc.), los usuarios podrán generar informes, tablas y gráficos que permitirán comparar los datos de temperatura y lluvia de los años 2020, 2021 y 2022.  
+    - Herramienta de reporting: Utilizando una herramienta de reporting (como Power BI, Tableau, etc.), los usuarios podrán generar informes, tablas y gráficos que permitirán comparar los datos de temperatura y lluvia de los años 2022, 2023 y 2024.  
     - A través de los KPIs y visualizaciones, se podrán sacar conclusiones y hacer predicciones o recomendaciones sobre el comportamiento del clima en las diferentes provincias y municipios de España.
 ## Tecnologías utilizadas
 - **Apache NiFi:** Orquestación de la integración de datos desde las fuentes hasta la base de datos, garantizando un flujo controlado de los datos.
