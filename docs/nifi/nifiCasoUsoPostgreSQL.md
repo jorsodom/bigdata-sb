@@ -40,7 +40,7 @@ Este caso de uso proporciona una solución automatizada y eficiente para la inte
 
 **Catálogo de fechas**
 
--   [Descargar fichero sql generación catálogo de fechas](./assets/Proc Data Cataleg.sql)
+-   [Descargar fichero sql generación catálogo de fechas](../../assets/Proc Data Cataleg.sql)
 
 
 **INE**
