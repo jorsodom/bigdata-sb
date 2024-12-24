@@ -1,26 +1,49 @@
-Dadas las intensas temperaturas que se están dando estos últimos meses de 2022, 
-necesitamos analizar y comparar con los años 2020 y 2021 de manera mensual la temperatura 
-media y la acumulación de lluvia. 
+### Caso de Uso: Análisis y Comparativa de Temperaturas y Acumulación de Lluvia (2020-2022)
+## Objetivo
+Realizar un análisis mensual de las temperaturas medias y la acumulación de lluvia para los años 2020, 2021 y 2022, aprovechando los datos meteorológicos de España para obtener conclusiones a través de una herramienta de reporting.
+Este caso de uso proporciona una solución automatizada y eficiente para la integración, procesamiento y análisis de datos meteorológicos, ayudando en la toma de decisiones y en la creación de informes precisos y oportunos.
 
-Para ello vamos a necesitar obtener como fuentes de 
-información del INE la relación de provincias y municipios de España, del AEMET la relación de 
-datos meteorológicos de todas las estaciones de España y generar un catálogo de fechas.
-Los datos que obtenemos de las diferentes fuentes de datos, los vamos a volcar en una base 
-de datos ‘Definir qué base de datos, p.e. PostgreSQL’ en una capa de tablas Staging, para 
-descargar los sistemas origen. 
+## Flujo de Datos
 
-Luego realizaremos los tratamientos necesarios y los volcaremos 
-a las capas finales en la base de datos, a los catálogos/dimensiones y estrella (ods).
-Ya preparado el modelo multidimensional, tenemos dos opciones según tiempo: generar un
-agregado sobre la capa ods con cálculos (kpi’s) ya hechos para agilizar la lectura de la 
-aplicación de reporting o directamente pasar a la herramienta de reporting a 
-pintar/analizar/calcular kpis.
-Sacar conclusiones a través de la herramienta de reporting con tablas, informes y gráficos.
+1. **Obtención de Datos:**
+   - **Fuentes de Información:**
+     - **INE (Instituto Nacional de Estadística):** Relación de provincias y municipios de España.
+     - **AEMET (Agencia Española de Meteorología):** Datos meteorológicos de todas las estaciones de España.
+   - **Generación de Catálogo de Fechas:** Se crea un catálogo que permita tener las fechas de las mediciones de temperatura y lluvia a nivel mensual para cada estación.
 
-Anexo
+2. **Carga de Datos a Base de Datos (PostgreSQL):**
+   - Los datos obtenidos de las fuentes (INE, AEMET y el catálogo de fechas) se cargarán en una base de datos en una capa de **tablas Staging**. Esta capa intermedia es utilizada para mantener los datos en su formato bruto y poder realizar la limpieza y validación sin afectar a los sistemas fuente.
+
+3. **Transformación de los Datos:**
+   - Se realizarán los tratamientos necesarios en las tablas Staging, tales como:
+     - Limpieza de datos (por ejemplo, valores nulos, duplicados).
+     - Cálculos de agregados de temperatura media y acumulación de lluvia a nivel mensual.
+     - Creación de claves foráneas y relaciones necesarias para el modelo dimensional.
+
+4. **Carga a Capa Final en la Base de Datos:**
+   - Una vez procesados los datos, se cargan en las capas finales del modelo multidimensional:
+     - **Catálogos/Dimensiones:** Información jerárquica y descriptiva (por ejemplo, provincias, municipios, estaciones).
+     - **Modelo Estrella (ODS):** Factos y medidas agregadas (temperatura media, acumulación de lluvia) por mes.
+
+5. **Cálculo de KPIs:**
+   - Según los requisitos de tiempo, se tienen dos opciones para los KPIs:
+     - **Opción 1: Agregado en la capa ODS:** Se realizan los cálculos de KPIs (por ejemplo, temperatura media anual, acumulación de lluvia mensual) directamente sobre la capa ODS para facilitar y agilizar las consultas.
+     - **Opción 2: Cálculos en la herramienta de reporting:** Los KPIs se calculan directamente en la herramienta de reporting, lo que permite mayor flexibilidad, aunque a costa de tiempos de carga más largos.
+
+6. **Análisis de los Datos:**
+   - **Herramienta de Reporting:** Utilizando una herramienta de reporting (como Power BI, Tableau, etc.), los usuarios podrán generar informes, tablas y gráficos que permitirán comparar los datos de temperatura y lluvia de los años 2020, 2021 y 2022.  
+   - A través de los KPIs y visualizaciones, se podrán sacar conclusiones y hacer predicciones o recomendaciones sobre el comportamiento del clima en las diferentes provincias y municipios de España.
+
+## Tecnologías Utilizadas
+- **Apache NiFi:** Orquestación de la integración de datos desde las fuentes hasta la base de datos, garantizando un flujo controlado de los datos.
+- **PostgreSQL:** Base de datos relacional para almacenamiento de datos procesados y generación del modelo multidimensional.
+- **Herramienta de Reporting (ej. Power BI, Tableau):** Visualización y análisis de los KPIs generados.
+  
+
+
+## Anexo
 Fechas
-Añadir fuente/consulta sql para añadir datos del catálogo fecha.
-
+- Añadir fuente/consulta sql para añadir datos del catálogo fecha.
 
 [INE: Relación Provincia-Municipio](https://www.ine.es/daco/daco42/codmun/22codmun.xlsx)
 
@@ -31,11 +54,3 @@ Es necesario pedir una Api Key
 [https://opendata.aemet.es/centrodedescargas/inicio](https://opendata.aemet.es/centrodedescargas/inicio)
 
 [https://opendata.aemet.es/dist/index.html?#!/valoresclimatologicos/Climatolog%C3%ADas_diarias](https://opendata.aemet.es/dist/index.html?#!/valoresclimatologicos/Climatolog%C3%ADas_diarias)
-
-
-Herramientas para desarrolladores 
-Servicio web datos diarios estación meteorológica de todas las estaciones, entre ellas, Xativa.
-
-![NiFi](img/casousoapinifi.png) 
-
-Nos devuelve un JSON.

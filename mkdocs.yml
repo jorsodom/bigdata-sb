@@ -17,7 +17,7 @@ nav:
     - Caso de uso con Hadoop: nifi/nifiCasoUsoHadoop.md
     #- Caso uso API: nifi/nifiCasoUsoAPI.md
     #- Caso uso MongoDB: nifi/nifiCasoUsoMongoDB.md
-    #- Caso uso PostgreSQL: nifi/nifiCasoUsoPostgreSQL.md
+    - Caso de uso con PostgreSQL: nifi/nifiCasoUsoPostgreSQL.md
   #- ETL con ODI: 
 theme:
   name: material
