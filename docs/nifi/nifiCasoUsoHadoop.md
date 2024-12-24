@@ -12,8 +12,11 @@ Debemos transferir una gran cantidad de archivos del sistema de la máquina virt
 [root@nodo1 opt]# chmod -R 777 nifi
 ```
 - [x]  Si el directorio en HDFS al que enviamos los archivos no existe, el proceso debe crearlo.
+
 - [x]  NiFi debe tener permisos sobre HDFS.
+
 - [x]  Los directorios en HDFS deben tener permisos para que NiFi pueda escribir en ellos.
+
 ## Pasos a seguir 
 1. Crear un directorio llamado `input` en el sistema de archivos de la máquina virtual Linux, donde se ubicarán los archivos que queremos trasladar al sistema HDFS.
 2. Implementar y configurar el procesador correspondiente para leer los archivos de este directorio del sistema de archivos de Linux. Este procesador recogerá todos los archivos del sistema de archivos de la máquina virtual en el directorio que hemos creado y los trasladará al sistema HDFS de Hadoop.
@@ -30,6 +33,7 @@ En la propiedad de Hadoop Configuration Resources hay que poner los siguientes f
 <img src="../../img/nificasousohadoop2.png" alt="Caso de Uso NiFi Hadoop" 
 width="80%" />
 </div>
+
 4. Validar mediante el comando:
 ```bash
 hdfs dfs -ls /
