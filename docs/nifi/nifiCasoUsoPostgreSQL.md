@@ -3,7 +3,7 @@
 Realizar un análisis mensual de las temperaturas medias y la acumulación de lluvia para los años 2022, 2023 y 2024, aprovechando los datos meteorológicos de España para obtener conclusiones a través de una herramienta de reporting.
 Este caso de uso proporciona una solución automatizada y eficiente para la integración, procesamiento y análisis de datos meteorológicos, ayudando en la toma de decisiones y en la creación de informes precisos y oportunos.
 
-## Flujo de Datos
+## Flujo de datos
 
 1. **Obtención de Datos:**
     - **Fuentes de Información:**
@@ -34,7 +34,7 @@ Este caso de uso proporciona una solución automatizada y eficiente para la inte
     - Herramienta de reporting: Utilizando una herramienta de reporting (como Power BI, Tableau, etc.), los usuarios podrán generar informes, tablas y gráficos que permitirán comparar los datos de temperatura y lluvia de los años 2020, 2021 y 2022.  
     - A través de los KPIs y visualizaciones, se podrán sacar conclusiones y hacer predicciones o recomendaciones sobre el comportamiento del clima en las diferentes provincias y municipios de España.
 
-## Tecnologías Utilizadas
+## Tecnologías utilizadas
 - **Apache NiFi:** Orquestación de la integración de datos desde las fuentes hasta la base de datos, garantizando un flujo controlado de los datos.
 - **PostgreSQL:** Base de datos relacional para almacenamiento de datos procesados y generación del modelo multidimensional.
 - **Herramienta de Reporting (ej. Power BI, Tableau):** Visualización y análisis de los KPIs generados.
