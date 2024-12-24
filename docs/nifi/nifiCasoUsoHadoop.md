@@ -27,11 +27,25 @@ Debemos transferir una gran cantidad de archivos del sistema de la máquina virt
 
 1. Crear un directorio llamado `input` en el sistema de archivos de la máquina virtual Linux, donde se ubicarán los archivos que queremos trasladar al sistema HDFS.
 
-2. Implementar y configurar el procesador correspondiente para leer los archivos de este directorio del sistema de archivos de Linux.
+2. Implementar y configurar el procesador correspondiente para leer los archivos de este directorio del sistema de archivos de Linux. Este procesador recogerá todos los archivos del sistema de archivos de la máquina virtual en el directorio que hemos creado y los trasladará al sistema HDFS de Hadoop.
 
-   - Este procesador recogerá todos los archivos del sistema de archivos de la máquina virtual en el directorio que hemos creado y los trasladará al sistema HDFS de Hadoop.
+<div align="center">
+<img src="../../img/nificasousohadoop1.png" alt="Caso de Uso NiFi Hadoop" 
+width="80%" />
+</div>
+
+En la propiedad de Hadoop Configuration Resources hay que poner los siguientes ficheros de configuración de Hadoop:
+
+```bash
+/opt/hadoop/etc/hadoop/hdfs-site.xml,/opt/hadoop/etc/hadoop/core-site.xml
+```
 
 3. Implementar y configurar el procesador correspondiente para realizar un `put` de los archivos al sistema HDFS de Hadoop en un directorio llamado `output_hdfs`. Si el directorio no existe, el proceso deberá crearlo con los permisos del usuario que ejecuta (hadoop).
+
+<div align="center">
+<img src="../../img/nificasousohadoop2.png" alt="Caso de Uso NiFi Hadoop" 
+width="80%" />
+</div>
 
 4. Validar mediante el comando:
 
@@ -39,9 +53,19 @@ Debemos transferir una gran cantidad de archivos del sistema de la máquina virt
 hdfs dfs -ls /
 ```
 
-    En el sistema de archivos HDFS que el directorio se ha creado con los permisos correctos y que los archivos han llegado correctamente. También se puede validar utilizando la página web de HDFS: [http://nodo1:9870/explorer.html](http://nodo1:9870/explorer.html).
+En el sistema de archivos HDFS que el directorio se ha creado con los permisos correctos y que los archivos han llegado correctamente. También se puede validar utilizando la página web de HDFS: [http://nodo1:9870/explorer.html](http://nodo1:9870/explorer.html).
 
 5. Añadir un nuevo procesador a NiFi que recoja los archivos del sistema HDFS del directorio "output_hdfs" y los traslade a un directorio "output" en el sistema de archivos Linux.
+
+<div align="center">
+<img src="../../img/nificasousohadoop3.png" alt="Caso de Uso NiFi Hadoop" 
+width="80%" />
+</div>
+
+<div align="center">
+<img src="../../img/nificasousohadoop4.png" alt="Caso de Uso NiFi Hadoop" 
+width="80%" />
+</div>
 
 **Ayuda:** [NiFi Documentation (apache.org)](https://nifi.apache.org/docs.html)
 
