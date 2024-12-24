@@ -1,6 +1,7 @@
 ### Análisis y comparativa de temperaturas y acumulación de Lluvia (2022-2024)
 ## Objetivo
 Realizar un análisis mensual de las temperaturas medias y la acumulación de lluvia para los años 2022, 2023 y 2024, aprovechando los datos meteorológicos de España para obtener conclusiones a través de una herramienta de reporting.
+
 Este caso de uso proporciona una solución automatizada y eficiente para la integración, procesamiento y análisis de datos meteorológicos, ayudando en la toma de decisiones y en la creación de informes precisos y oportunos.
 
 ## Flujo de datos
@@ -37,13 +38,13 @@ Este caso de uso proporciona una solución automatizada y eficiente para la inte
 ## Tecnologías utilizadas
 - **Apache NiFi:** Orquestación de la integración de datos desde las fuentes hasta la base de datos, garantizando un flujo controlado de los datos.
 - **PostgreSQL:** Base de datos relacional para almacenamiento de datos procesados y generación del modelo multidimensional.
-- **Herramienta de Reporting (ej. Power BI, Tableau):** Visualización y análisis de los KPIs generados.
+- **Herramienta de Reporting (ej. Power BI):** Visualización y análisis de los KPIs generados.
 
 ## Anexo
 
 **Catálogo de fechas**
 
--   [Descargar fichero sql generación catálogo de fechas](../assets/Proc Data Cataleg.sql)
+-   [Descargar fichero sql generación catálogo de fechas](/assets/Proc Data Cataleg.sql)
 
 
 **INE**
