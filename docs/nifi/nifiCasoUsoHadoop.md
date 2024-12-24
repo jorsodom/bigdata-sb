@@ -6,16 +6,16 @@ Debemos transferir una gran cantidad de archivos del sistema de la máquina virt
 
 - NiFi debe ubicarse en el directorio `/opt`, al igual que Hadoop. Como usuario root, copiarlo. Eliminar el archivo zip de NiFi para liberar espacio en el disco duro de la máquina virtual.
 
-    ```bash
-    [root@nodo1 opt]# cp -R /home/hadoop/Descargas/nifi-1.23.2 nifi
-    ```
-
+```bash
+[root@nodo1 opt]# cp -R /home/hadoop/Descargas/nifi-1.23.2 nifi
+```
+ 
 - Asegurar que el directorio de NiFi (`/opt/nifi`) tenga permisos de ejecución para que NiFi y Hadoop puedan interactuar.
 
-    ```bash
-    [root@nodo1 opt]# chown -R hadoop:hadoop nifi
-    [root@nodo1 opt]# chmod -R 777 nifi
-    ```
+```bash
+[root@nodo1 opt]# chown -R hadoop:hadoop nifi
+[root@nodo1 opt]# chmod -R 777 nifi
+```
 
 - Si el directorio en HDFS al que enviamos los archivos no existe, el proceso debe crearlo.
 
@@ -35,14 +35,16 @@ Debemos transferir una gran cantidad de archivos del sistema de la máquina virt
 
 4. Validar mediante el comando:
 
-    ```bash
-    hdfs dfs -ls /
-    ```
+```bash
+hdfs dfs -ls /
+```
 
-    en el sistema de archivos HDFS que el directorio se ha creado con los permisos correctos y que los archivos han llegado correctamente. También se puede validar utilizando la página web de HDFS: [http://nodo1:9870/explorer.html](http://nodo1:9870/explorer.html).
+    En el sistema de archivos HDFS que el directorio se ha creado con los permisos correctos y que los archivos han llegado correctamente. También se puede validar utilizando la página web de HDFS: [http://nodo1:9870/explorer.html](http://nodo1:9870/explorer.html).
 
-5. Añadir un nuevo procesador a NiFi que recoja los archivos del sistema HDFS del directorio `output_hdfs` y los traslade a un directorio `output` en el sistema de archivos Linux.
-
-**ENTREGA:**: Un PDF con capturas de pantalla de todo lo implementado y de los resultados en los directorios, tanto en HDFS como en el sistema local.
+5. Añadir un nuevo procesador a NiFi que recoja los archivos del sistema HDFS del directorio "output_hdfs" y los traslade a un directorio "output" en el sistema de archivos Linux.
 
 **Ayuda:** [NiFi Documentation (apache.org)](https://nifi.apache.org/docs.html)
+
+## ENTREGABLE 
+
+Un PDF con capturas de pantalla de todo lo implementado y de los resultados en los directorios, tanto en HDFS como en el sistema local.
