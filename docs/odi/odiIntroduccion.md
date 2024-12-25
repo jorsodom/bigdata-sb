@@ -32,6 +32,53 @@ Es una plataforma de integración de datos que facilita la transferencia, transf
 8. **Integración con Oracle Ecosystem**:
    ODI se integra de manera nativa con el ecosistema de Oracle, lo que significa que se puede utilizar de forma eficiente con otras soluciones de Oracle como Oracle Exadata, Oracle Warehouse Builder y Oracle Business Intelligence.
 
+### Arquitectura de ODI
+**Arquitectura de repositorios**
+
+ODI se basa en repositorios “Master repository” y “Work repository”. 
+
+Existe un solo master repository compartido y como regla general un work repository por departamentos.
+
+Los procesos en entornos Productivos se ejecutan a través de agentes por dominio, normalmente por departamento, pero todo dependerá de quien asuma el coste, el tener o no. Si no asumen costes, ejecutará dichos procesos con el primer agente. 
+
+<div align="center">
+<img src="../../img/odiarchitectura1.png" alt="ODI" 
+width="80%" />
+</div>
+
+Existen “*Work Repository*” de tipo “development” y “execution”. Por eso sólo se despliega en entornos Productivos sólo código compilado. Allí esta desplegado el repositorio de odi como Execution. 
+
+El “*Master Repository*” comparte con todos los Work Repository la información. Es decir: seguridad, conexiones (topología), versionado, etc…
+
+Cada “*Work Repository*” tiene su Código y no podrá ver el código de otro work pero si su seguridad y conexiones.
+
+**Componentes del sistema**
+
+-  *Consola ODI*: componente web que permite realizar el seguimiento de ejecución y parametrización de determinados objetos.
+
+-  *Agente de ODI*: componente que s’encarga de ejecutar los procesos de carga i transformación de datos. Los agentes están ubicados en el weblogic.
+
+-  *ODI Studio*: componente que proporciona la herramienta para el desarrollo y gestion. 
+
+<div align="center">
+<img src="../../img/odiarchitectura2.png" alt="ODI" 
+width="80%" />
+</div>
+
+**Tipos de despliegues**
+
+Smart Export/Import: despliegue que exporta todo objeto y lo más importante, sus dependencias. Cuando se realiza este tipo de despliegue, hay que tener especial cuidado con que objetos se lleva porque puedes machacar configuración de entornos CPD como el agente, conexiones, etc.. Se usaba anteriormente, pero dado la evolución de problemas dada la arquitectura BI CORPORATIVO ha quedado en desuso mayoritariamente. 
+
+Export/Import: exporta objetos de manera individual, con lo que te da el control total de que exportas e importas. Actualmente método de exportación e importación de código a entornos CPD. 
+
+Export Topology, Secutiry, Work Repository, etc: hay muchos tipos más de exports/imports, pero en el día a día no se usarán. Son más para momentos puntuales a nivel administrativo / arquitectura. 
+SIEMPRE se ha de desplegar código compilado, es decir “Scenarios”, “Load Plans”, Objetos de “Topology” e instrucciones para realizar programaciones en entornos CPD. Nada más. Ante la duda, siempre preguntar a arquitectura. 
+
+<div align="center">
+<img src="../../img/odiarchitectura3.png" alt="ODI" 
+width="80%" />
+</div>
+
 ### Usos comunes:
 
 - **ETL en proyectos de Data Warehousing**: ODI se utiliza ampliamente en la integración de grandes volúmenes de datos desde diversas fuentes hacia un Data Warehouse.
