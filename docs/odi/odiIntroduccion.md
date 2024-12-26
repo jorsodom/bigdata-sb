@@ -65,6 +65,11 @@ Cada “*Work Repository*” tiene su Código y no podrá ver el código de otro
 
 **Tipos de despliegues**
 
+<div align="center">
+<img src="../../img/odiarchitectura3.png" alt="ODI" 
+width="80%" />
+</div>
+
 Smart Export/Import: despliegue que exporta todo objeto y lo más importante, sus dependencias. Cuando se realiza este tipo de despliegue, hay que tener especial cuidado con que objetos se lleva porque puedes machacar configuración de entornos CPD como el agente, conexiones, etc.. Se usaba anteriormente, pero dado la evolución de problemas dada la arquitectura BI CORPORATIVO ha quedado en desuso mayoritariamente. 
 
 Export/Import: exporta objetos de manera individual, con lo que te da el control total de que exportas e importas. Actualmente método de exportación e importación de código a entornos CPD. 
@@ -72,12 +77,7 @@ Export/Import: exporta objetos de manera individual, con lo que te da el control
 Export Topology, Secutiry, Work Repository, etc: hay muchos tipos más de exports/imports, pero en el día a día no se usarán. Son más para momentos puntuales a nivel administrativo / arquitectura. 
 SIEMPRE se ha de desplegar código compilado, es decir “Scenarios”, “Load Plans”, Objetos de “Topology” e instrucciones para realizar programaciones en entornos CPD. Nada más. Ante la duda, siempre preguntar a arquitectura. 
 
-<div align="center">
-<img src="../../img/odiarchitectura3.png" alt="ODI" 
-width="80%" />
-</div>
-
-### Usos comunes:
+### Usos comunes
 
 - **ETL en proyectos de Data Warehousing**: ODI se utiliza ampliamente en la integración de grandes volúmenes de datos desde diversas fuentes hacia un Data Warehouse.
 - **Migración de datos**: Es ideal para mover datos entre plataformas diferentes, ya sea para la actualización de sistemas o la migración a la nube.
@@ -101,6 +101,12 @@ Contiene:
 
     -   Java Platform (JDK) 1.8.0_60
 
+## Overview
+
+<video width="640"  controls>
+    <source src="../../vid/ODI12c-Overview-JorgeSoro.mp4" type="video/mp4">
+</video>
+
 ## Entorno
 -   ODI Studio 12c
 -   Mappings
@@ -121,9 +127,3 @@ Contiene:
         -   Integration Knowledge Modules (IKM)
         -   Journalizing Knowledge Modules (JKM)
         -   Service Knowledge Modules (SKM)
-
-## Overview
-
-<video width="640"  controls>
-    <source src="../../vid/ODI12c-Overview-JorgeSoro.mp4" type="video/mp4">
-</video>
