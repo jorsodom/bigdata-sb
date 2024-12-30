@@ -28,15 +28,22 @@ La dimensión temporal se establecerá mediante un enlace a una base de datos SQ
 Además de las dimensiones anteriores, es necesario generar un catálogo para analizar la cantidad de personas que estuvieron afectadas o no por la Covid-19 durante los períodos de estado de alarma. Este catálogo incluirá los siguientes estados:
 
       a. **Declaración del estado de alarma desde el 14 de marzo**: Representa el inicio del estado de alarma en España debido a la pandemia.
+
       b. **Prórroga del estado de alarma desde el 27 de marzo**: Refleja la extensión del estado de alarma inicial.
+
       c. **Prórroga del estado de alarma desde el 10 de abril**: Otra extensión del estado de alarma.
+
       d. **Prórroga del estado de alarma desde el 24 de abril**: Continuación del estado de alarma.
+
       e. **Prórroga del estado de alarma desde el 8 de mayo**: Nueva extensión del estado de alarma.
+
       f. **Prórroga del estado de alarma desde el 22 de mayo**: Continuación del periodo de alarma.
+
       g. **Prórroga del estado de alarma desde el 5 de junio**: Última prórroga del estado de alarma antes de su fin.
+
       h. **99 - Fuera del estado de alarma**: Indica los casos fuera de los períodos de estado de alarma.
 
-### **Objetivo Final**  
+### Objetivo
 El objetivo final de este proceso es que respecto a la información recibida se pueda interpretar y analizar:
 
 - El **número de casos**, el **número de hospitalizaciones**, el **número de ingresos en UCI** y el **número de defunciones** de manera **diaria**.
@@ -138,7 +145,7 @@ Es fundamental planificar y describir detalladamente la metodología Extract, Tr
 
 3. Generar paquete con la carga de todas las ETL para Catálogos LKP (LKP).
 
-### Capa ESTRELA, FETS (ODS)
+### Capa ESTRELLA, HECHOS (ODS)
 - Extraer de la tabla SRC COVID los datos históricos/transaccionales.
 - Extraer solo los códigos, no las descripciones.
 - Generar lookups en el mapeo de ODS.
@@ -154,7 +161,7 @@ Es fundamental planificar y describir detalladamente la metodología Extract, Tr
 
 4.      Generar paquete con la carga del (ODS).
 
-### Final
+### Proceso final
 
 **Pasos a ODI**
 
@@ -201,10 +208,10 @@ Una vez descargada la máquina virtual con todo el entorno preparado, se deben a
 
       - En este paso, se debe incluir un **diagrama multidimensional de la estrella** como anexo, que mostrará cómo las tablas de hechos y dimensiones se relacionan dentro del modelo estrella.
 
-4. **Crear la ingesta de datos con ETL usando ODI según la solución analizada en el modelo anterior**
-      - A continuación, se debe crear el proceso de **ingesta de datos** usando la metodología **ETL (Extract, Transform, Load)**. Esto se llevará a cabo con la herramienta **Oracle Data Integrator (ODI)**, que permite extraer los datos de las fuentes originales (SRC_XXX), transformarlos según las reglas definidas en el modelo (LKP_XXX) y cargarlos en la base de datos de destino (ODS_XXX). 
+4. **Crear la ingesta de datos con ETL usando ODI según la solución analizada**
+      - Se debe crear el proceso de **ingesta de datos** usando **ETL**. Utilizando **Oracle Data Integrator (ODI)**, extraemos los datos de las fuentes originales y los almacenamos en tablas con las transformaciones pertinentes *SRC_XXX*, luego se obtienen también los catálogos *LKP_XXX* y definitivamente generamos la tabla estrella que contiene todo el histórico *ODS_XXX*. 
 
       - El proceso ETL es crucial para garantizar que los datos se carguen correctamente en el sistema de datos multidimensional. ODI facilitará la automatización de este proceso, permitiendo transformar los datos de manera eficiente y almacenarlos de forma estructurada.
 
 5. **WF_XXX**
-      - Finalmente, se hace referencia a la creación de **WF_XXX**, que probablemente se refiere a un **workflow (flujo de trabajo)** asociado al proceso de integración de datos. Este flujo de trabajo es un conjunto de tareas o pasos definidos que se ejecutan en un orden específico para asegurar que el proceso ETL se complete correctamente. El workflow puede incluir tareas como validación de datos, ejecución de transformaciones y carga final de los datos.
+      - Finalmente, se hace referencia a la creación de **WF_XXX** asociado al proceso de integración de datos. Este flujo de trabajo es un conjunto de tareas o pasos definidos que se ejecutan en un orden específico para asegurar que el proceso ETL se complete correctamente. El workflow puede incluir tareas como validación de datos, ejecución de transformaciones y carga final de los datos. Con lo que añadiremos de forma secuencial todos los objetos creados. 
