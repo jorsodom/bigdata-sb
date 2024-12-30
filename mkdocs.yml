@@ -7,7 +7,7 @@ nav:
   - Ingesta de datos con NiFi: 
     - Introducción: nifi/nifiIntroduccion.md
     - Práctica 1: nifi/nifiPractica1.md
-    - Práctica 2: nifi/nifiPractica2.md
+    - Práctica 2: nifi/nifiPracticacd 2.md
     - Práctica 3: nifi/nifiPractica3.md
     - Práctica 4: nifi/nifiPractica4.md
     - Práctica 5: nifi/nifiPractica5.md
@@ -18,10 +18,10 @@ nav:
    # - Caso uso API: nifi/nifiCasoUsoAPI.md
     #- Caso uso MongoDB: nifi/nifiCasoUsoMongoDB.md
    # - Caso de uso con PostgreSQL: nifi/nifiCasoUsoPostgreSQL.md
-  #- ETL con ODI: 
-    #- Introducción: odi/odiIntroduccion.md
-    #- Demo: odi/odiDemo.md
-  #  - Caso de uso: odi/odiCasoDeUso.md
+  - ETL con ODI: 
+    - Introducción: odi/odiIntroduccion.md
+    - Demo: odi/odiDemo.md
+    - Caso de uso: odi/odiCasoDeUso.md
 theme:
   name: material
   language: es

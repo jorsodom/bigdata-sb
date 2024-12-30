@@ -27,14 +27,14 @@ La dimensión temporal se establecerá mediante un enlace a una base de datos SQ
 - **Catálogo del Estado de Alarma**  
 Además de las dimensiones anteriores, es necesario generar un catálogo para analizar la cantidad de personas que estuvieron afectadas o no por la Covid-19 durante los períodos de estado de alarma. Este catálogo incluirá los siguientes estados:
 
-1. **Declaración del estado de alarma desde el 14 de marzo**: Representa el inicio del estado de alarma en España debido a la pandemia.
-2. **Prórroga del estado de alarma desde el 27 de marzo**: Refleja la extensión del estado de alarma inicial.
-3. **Prórroga del estado de alarma desde el 10 de abril**: Otra extensión del estado de alarma.
-4. **Prórroga del estado de alarma desde el 24 de abril**: Continuación del estado de alarma.
-5. **Prórroga del estado de alarma desde el 8 de mayo**: Nueva extensión del estado de alarma.
-6. **Prórroga del estado de alarma desde el 22 de mayo**: Continuación del periodo de alarma.
-7. **Prórroga del estado de alarma desde el 5 de junio**: Última prórroga del estado de alarma antes de su fin.
-8. **99 - Fuera del estado de alarma**: Indica los casos fuera de los períodos de estado de alarma.
+   1. **Declaración del estado de alarma desde el 14 de marzo**: Representa el inicio del estado de alarma en España debido a la pandemia.
+   2. **Prórroga del estado de alarma desde el 27 de marzo**: Refleja la extensión del estado de alarma inicial.
+   3. **Prórroga del estado de alarma desde el 10 de abril**: Otra extensión del estado de alarma.
+   4. **Prórroga del estado de alarma desde el 24 de abril**: Continuación del estado de alarma.
+   5. **Prórroga del estado de alarma desde el 8 de mayo**: Nueva extensión del estado de alarma.
+   6. **Prórroga del estado de alarma desde el 22 de mayo**: Continuación del periodo de alarma.
+   7. **Prórroga del estado de alarma desde el 5 de junio**: Última prórroga del estado de alarma antes de su fin.
+   8. **99 - Fuera del estado de alarma**: Indica los casos fuera de los períodos de estado de alarma.
 
 ### **Objetivo Final**  
 El objetivo final de este proceso es que, en el resultado final, se pueda interpretar y analizar lo siguiente:
@@ -46,16 +46,16 @@ El objetivo final de este proceso es que, en el resultado final, se pueda interp
 
 ### Ficheros
 -     **Histórico**. El archivo contiene información detallada sobre la evolución de la pandemia de Covid-19 hasta el 28 de marzo de 2022. El archivo incluye datos sobre el número de casos confirmados, hospitalizaciones, ingresos en unidades de cuidados intensivos (UCI) y defunciones, segmentados por **sexo**, **edad** y **provincia de residencia**. Los datos abarcan todas las edades desde el inicio de la pandemia.
--  [Descargar casos_hosp_uci_def_sexo_edad_provres.csv](https://www.iso.org/obp/ui/es/#iso:code:3166:ES)
+      -  <a href="../../assets/casos_hosp_uci_def_sexo_edad_provres.csv">Descargar casos COVID</a>
 
 - **Provincias**: **códigos de las provincias** en España. Al descargar los códigos en formato CSV, se ha encontrado un problema de **codificación de caracteres** que debe resolverse durante el proceso de **ETL (Extract, Transform, Load)**.
-   -  [Descargar ISO 3166](https://www.iso.org/obp/ui/es/#iso:code:3166:ES)
+      -  <a href="../../assets/provincies.csv">Descargar ISO 3166</a>
 
 -  **Fechas**: Consulta SQL para generar de forma dinámica el catálogo de fechas. 
-   -  [Descargar SQL](https://www.iso.org/obp/ui/es/#iso:code:3166:ES)
+      -  <a href="../../assets/Proc Data Cataleg.sql">Descargar SQL</a>
 
 - **Tramos**: Representa los diferentes tramos por los que se pasa en el estado de alarma para poder clasificarlos y agruparlos.
--  [Descargar tramos](https://www.iso.org/obp/ui/es/#iso:code:3166:ES) 
+       -  <a href="../../assets/trams.csv">Descargar tramos</a>
 
 ### Diagramas
 
@@ -84,7 +84,7 @@ Un ejemplo de como se quedará el modelo de datos lógico de ODI en vuestro proy
 
 <div align="center">
 <img src="../../img/odiModelTables.png" alt="ODI" 
-width="80%" />
+width="80%"/>
 </div>
 
 ## Obtener y generar modelo multidimensional
@@ -111,47 +111,46 @@ Se prescinde de la creación de un documento formal de Análisis Funcional y Dis
 ## ETL
 
 ### Capa SOURCE (SRC)
--       Carregar fitxer COVID
--       Carregar fitxers propis dels catàlegs
--       Generar procediment ODI amb sql per catàleg temporal: Data
--       Generar procés/paquet de càrrega SRC
+-       Cargar fichero COVID
+-       Cargar ficheros propios para generar los catálogos
+-       Generar procedimiento ODI para el catálogo de fecha
+-       Generar proceso / paquete de carga SRC
+
+**Pasos en ODI**
+
+1. Hacer ingenieria inversa de los ficheros para obtener su estructura.
+
+2. Desarrollar las ETL para cargar los ficheros a las tabla creadas previamente SRC.
+
+3. Generar paquete con la carga de todas las ETL y procedimiento en SRC. WF_SRC_XXX
+
+### Capa CATÁLOGOS (LKP)
+-       Extraer de la tabla SRC COVID los catálogos necesarios.
+-       Cargar del resto de tablas SRC los catálogos LKP.
+-       Generar proceso / paquete de carga LKP.
 
 **Pasos a ODI**
 
-1.      Fer enginyeria inversa dels fitxers.
+1. Crear tablas de los catálogos (LKP). Realizar ingeniería inversa de estas tablas.
 
-2.      Desenvolupar les ETLs per carregar els fitxers/procediments a les taules Source (SRC). Crear les taules SRC.
+2. Desarrollar las ETLs para cargar de las tablas SRC a las tablas de catálogo LKP.
 
-3.      Generar paquet amb la càrrega de totes les ETL per al Source (SRC).
-
-
-### Capa CATÀLEGS (LKP)
--       Extreure de la taula SRC COVID els catàlegs necessaris
--       Carregar de la resta de taules SRC els catàlegs
--       Generar procés/paquet de càrrega LKP
-
-**Pasos a ODI**
-
-1.      Crear taules dels catàlegs (LKP). Fer enginyeria inversa d’aquestes taules.
-
-2.      Desenvolupar les ETLs per carregar de les taules SRC a les taules de catàleg LKP.
-
-3.      Generar paquet amb la càrrega de totes les ETL per a Catàlegs LKP (LKP).
+3. Generar paquete con la carga de todas las ETL para Catálogos LKP (LKP).
 
 ### Capa ESTRELA, FETS (ODS)
--       Extreure de la taula SRC COVID les dades històriques/transaccionals
--       Extreure sol els codis, no les descripcions.
--       Generar lookups en el mapping de ODS.
--       Generar procés/paquet de càrrega ODS
+- Extraer de la tabla SRC COVID los datos históricos/transaccionales.
+- Extraer solo los códigos, no las descripciones.
+- Generar lookups en el mapeo de ODS.
+- Generar proceso/paquete de carga ODS.
 
 **Pasos a ODI**
-1.      Crear taula històrica/transaccional (ODS). Fer enginyeria inversa d’aquesta taula.
+1.      Crear tabla histórica/transaccional (ODS). Realizar ingeniería inversa de esta tabla.
 
-2.      Desenvolupar la ETL per carregar de les taules SRC a ODS.
+2.      Desarrollar la ETL para cargar de las tablas SRC a ODS.
 
-3.      Utilitzar els lookups per validar i carregar la informació dels catàlegs
+3.      Utilizar los lookups para validar y cargar la información de los catálogos.
 
-4.      Generar paquet amb la càrrega del  (ODS).
+4.      Generar paquete con la carga del (ODS).
 
 ### Final
 
@@ -172,20 +171,20 @@ El objetivo es **leer el modelo multidimensional** que ha sido creado y cargado 
 
    - **Si no se consigue conectividad**: En caso de no poder establecer una conexión directa entre Power BI y la base de datos en la máquina virtual, se puede optar por una solución alternativa. Esta consiste en **realizar una descarga del modelo multidimensional a archivos** (por ejemplo, en formato CSV o Excel). Una vez descargados los archivos, se podrá **leer** e **importar esos archivos** en Power BI para continuar con la creación de los informes y visualizaciones necesarias.
 
-### Detalle del proceso:
+### Detalle del proceso
 
 1. **Conexión directa con el modelo multidimensional**
-   -  Power BI permite conectarse directamente a bases de datos como Oracle, SQL Server, entre otras. Si la conexión con la máquina virtual es exitosa, se podrá importar directamente el modelo multidimensional desde la base de datos, lo que facilitará la carga de datos en Power BI. En este caso, los datos estarán organizados en tablas de hechos y dimensiones que pueden ser fácilmente visualizadas y analizadas.
+      -  Power BI permite conectarse directamente a bases de datos como Oracle, SQL Server, entre otras. Si la conexión con la máquina virtual es exitosa, se podrá importar directamente el modelo multidimensional desde la base de datos, lo que facilitará la carga de datos en Power BI. En este caso, los datos estarán organizados en tablas de hechos y dimensiones que pueden ser fácilmente visualizadas y analizadas.
 
 2. **En caso de no conseguir la conectividad**:
-   -  Si existen problemas técnicos para conectar Power BI con la base de datos, la alternativa será **exportar el modelo multidimensional** a archivos de texto (por ejemplo, archivos CSV o Excel). Estos archivos deben contener toda la información relevante, organizados por las diferentes dimensiones y hechos definidos en el modelo.
+      -  Si existen problemas técnicos para conectar Power BI con la base de datos, la alternativa será **exportar el modelo multidimensional** a archivos de texto (por ejemplo, archivos CSV o Excel). Estos archivos deben contener toda la información relevante, organizados por las diferentes dimensiones y hechos definidos en el modelo.
 
-   -  Luego, se importarán estos archivos en Power BI, donde se pueden definir relaciones entre las diferentes tablas de datos (por ejemplo, entre las tablas de hechos y dimensiones) para crear el modelo de datos en Power BI. Posteriormente, se podrán crear visualizaciones y análisis basados en esos datos.
+      -  Luego, se importarán estos archivos en Power BI, donde se pueden definir relaciones entre las diferentes tablas de datos (por ejemplo, entre las tablas de hechos y dimensiones) para crear el modelo de datos en Power BI. Posteriormente, se podrán crear visualizaciones y análisis basados en esos datos.
 
 3. **Generación del informe final**:
-   -  Con el modelo multidimensional leído y cargado en Power BI (ya sea de manera directa o importando los archivos), se procederá a **crear las visualizaciones** que respondan a las necesidades del informe final. Esto incluirá gráficos, tablas y otras representaciones visuales que permitan explorar las diferentes métricas y dimensiones de los datos (por ejemplo, número de casos, hospitalizaciones, ingresos en UCI, defunciones, etc.).
+      -  Con el modelo multidimensional leído y cargado en Power BI (ya sea de manera directa o importando los archivos), se procederá a **crear las visualizaciones** que respondan a las necesidades del informe final. Esto incluirá gráficos, tablas y otras representaciones visuales que permitan explorar las diferentes métricas y dimensiones de los datos (por ejemplo, número de casos, hospitalizaciones, ingresos en UCI, defunciones, etc.).
 
-   - También se podrán implementar **filtros y segmentaciones** basadas en dimensiones como la edad, el sexo, la provincia, etc., para que los usuarios del informe puedan analizar los datos de manera más flexible y detallada.
+      - También se podrán implementar **filtros y segmentaciones** basadas en dimensiones como la edad, el sexo, la provincia, etc., para que los usuarios del informe puedan analizar los datos de manera más flexible y detallada.
 
 Este proceso garantiza que el informe final no solo sea completo, sino que también sea interactivo y fácil de interpretar para los usuarios finales.
 
@@ -194,22 +193,22 @@ Este proceso garantiza que el informe final no solo sea completo, sino que tambi
 Una vez descargada la máquina virtual con todo el entorno preparado, se deben aplicar los conocimientos adquiridos durante el curso y desarrollar el análisis y diseño realizado en los pasos anteriores. El objetivo es **crear un modelo de base de datos multidimensional por capas** utilizando la base de datos Oracle en la máquina virtual proporcionada. El proceso se desglosa en los siguientes pasos:
 
 1. **Crear tablas que carguen los archivos al BI (SRC_XXX)**
-   - Se deben crear las **tablas de origen** que cargarán los archivos de datos en el sistema de **Business Intelligence (BI)**. Estas tablas se denominan **SRC_XXX**. Su función es almacenar los datos procedentes de diversas fuentes antes de que sean procesados y transformados. Asegurar la correcta carga y organización de los datos es esencial para que el sistema de BI pueda realizar los análisis de manera eficiente y precisa.
+      - Se deben crear las **tablas de origen** que cargarán los archivos de datos en el sistema de **Business Intelligence (BI)**. Estas tablas se denominan **SRC_XXX**. Su función es almacenar los datos procedentes de diversas fuentes antes de que sean procesados y transformados. Asegurar la correcta carga y organización de los datos es esencial para que el sistema de BI pueda realizar los análisis de manera eficiente y precisa.
 
 2. **Crear tablas de catálogos que carguen los archivos de la capa SRC_XXX a la capa LKP_XXX**
-   - A continuación, se deben crear las **tablas de catálogos** que gestionan el proceso de **transformación** de los datos. Estas tablas cargan los datos de la capa **SRC_XXX** a la capa **LKP_XXX** (capa de búsqueda o lookup). En esta capa, los datos provenientes de los archivos se transforman para ser normalizados o enriquecidos con valores adicionales, como claves de referencia, descripciones o códigos. Esto garantiza la consistencia y la integridad de los datos a lo largo de las diferentes etapas del proceso.
+      - A continuación, se deben crear las **tablas de catálogos** que gestionan el proceso de **transformación** de los datos. Estas tablas cargan los datos de la capa **SRC_XXX** a la capa **LKP_XXX** (capa de búsqueda o lookup). En esta capa, los datos provenientes de los archivos se transforman para ser normalizados o enriquecidos con valores adicionales, como claves de referencia, descripciones o códigos. Esto garantiza la consistencia y la integridad de los datos a lo largo de las diferentes etapas del proceso.
 
-   - Se debe incluir un **diagrama multidimensional de la extracción** como anexo, que representará visualmente cómo se mueven y transforman los datos entre las diferentes capas y cómo se estructuran las tablas dentro de cada capa.
+      - Se debe incluir un **diagrama multidimensional de la extracción** como anexo, que representará visualmente cómo se mueven y transforman los datos entre las diferentes capas y cómo se estructuran las tablas dentro de cada capa.
 
 3. **Crear tabla referente a la estrella que carga de las tablas SRC_XXX a la capa ODS_XXX**
-   - El siguiente paso implica la creación de una **tabla estrella** que cargue los datos desde las tablas **SRC_XXX** a la capa **ODS_XXX** (almacén de datos operacionales). En esta capa, los datos se consolidan y se almacenan para facilitar su análisis. En el modelo estrella, las tablas de hechos y dimensiones están organizadas de manera que facilitan las consultas rápidas y eficientes. La tabla estrella es crucial porque organiza la información de manera que permite un análisis multidimensional, ofreciendo una visión completa de los datos según varias dimensiones.
+      - El siguiente paso implica la creación de una **tabla estrella** que cargue los datos desde las tablas **SRC_XXX** a la capa **ODS_XXX** (almacén de datos operacionales). En esta capa, los datos se consolidan y se almacenan para facilitar su análisis. En el modelo estrella, las tablas de hechos y dimensiones están organizadas de manera que facilitan las consultas rápidas y eficientes. La tabla estrella es crucial porque organiza la información de manera que permite un análisis multidimensional, ofreciendo una visión completa de los datos según varias dimensiones.
 
-   - En este paso, se debe incluir un **diagrama multidimensional de la estrella** como anexo, que mostrará cómo las tablas de hechos y dimensiones se relacionan dentro del modelo estrella.
+      - En este paso, se debe incluir un **diagrama multidimensional de la estrella** como anexo, que mostrará cómo las tablas de hechos y dimensiones se relacionan dentro del modelo estrella.
 
 4. **Crear la ingesta de datos con ETL usando ODI según la solución analizada en el modelo anterior**
-   - A continuación, se debe crear el proceso de **ingesta de datos** usando la metodología **ETL (Extract, Transform, Load)**. Esto se llevará a cabo con la herramienta **Oracle Data Integrator (ODI)**, que permite extraer los datos de las fuentes originales (SRC_XXX), transformarlos según las reglas definidas en el modelo (LKP_XXX) y cargarlos en la base de datos de destino (ODS_XXX). 
+      - A continuación, se debe crear el proceso de **ingesta de datos** usando la metodología **ETL (Extract, Transform, Load)**. Esto se llevará a cabo con la herramienta **Oracle Data Integrator (ODI)**, que permite extraer los datos de las fuentes originales (SRC_XXX), transformarlos según las reglas definidas en el modelo (LKP_XXX) y cargarlos en la base de datos de destino (ODS_XXX). 
 
-   - El proceso ETL es crucial para garantizar que los datos se carguen correctamente en el sistema de datos multidimensional. ODI facilitará la automatización de este proceso, permitiendo transformar los datos de manera eficiente y almacenarlos de forma estructurada.
+      - El proceso ETL es crucial para garantizar que los datos se carguen correctamente en el sistema de datos multidimensional. ODI facilitará la automatización de este proceso, permitiendo transformar los datos de manera eficiente y almacenarlos de forma estructurada.
 
 5. **WF_XXX**
-   - Finalmente, se hace referencia a la creación de **WF_XXX**, que probablemente se refiere a un **workflow (flujo de trabajo)** asociado al proceso de integración de datos. Este flujo de trabajo es un conjunto de tareas o pasos definidos que se ejecutan en un orden específico para asegurar que el proceso ETL se complete correctamente. El workflow puede incluir tareas como validación de datos, ejecución de transformaciones y carga final de los datos.
+      - Finalmente, se hace referencia a la creación de **WF_XXX**, que probablemente se refiere a un **workflow (flujo de trabajo)** asociado al proceso de integración de datos. Este flujo de trabajo es un conjunto de tareas o pasos definidos que se ejecutan en un orden específico para asegurar que el proceso ETL se complete correctamente. El workflow puede incluir tareas como validación de datos, ejecución de transformaciones y carga final de los datos.
