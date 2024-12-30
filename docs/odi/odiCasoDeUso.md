@@ -27,14 +27,14 @@ La dimensión temporal se establecerá mediante un enlace a una base de datos SQ
 - **Catálogo del Estado de Alarma**  
 Además de las dimensiones anteriores, es necesario generar un catálogo para analizar la cantidad de personas que estuvieron afectadas o no por la Covid-19 durante los períodos de estado de alarma. Este catálogo incluirá los siguientes estados:
 
-   1. **Declaración del estado de alarma desde el 14 de marzo**: Representa el inicio del estado de alarma en España debido a la pandemia.
-   2. **Prórroga del estado de alarma desde el 27 de marzo**: Refleja la extensión del estado de alarma inicial.
-   3. **Prórroga del estado de alarma desde el 10 de abril**: Otra extensión del estado de alarma.
-   4. **Prórroga del estado de alarma desde el 24 de abril**: Continuación del estado de alarma.
-   5. **Prórroga del estado de alarma desde el 8 de mayo**: Nueva extensión del estado de alarma.
-   6. **Prórroga del estado de alarma desde el 22 de mayo**: Continuación del periodo de alarma.
-   7. **Prórroga del estado de alarma desde el 5 de junio**: Última prórroga del estado de alarma antes de su fin.
-   8. **99 - Fuera del estado de alarma**: Indica los casos fuera de los períodos de estado de alarma.
+      1. **Declaración del estado de alarma desde el 14 de marzo**: Representa el inicio del estado de alarma en España debido a la pandemia.
+      2. **Prórroga del estado de alarma desde el 27 de marzo**: Refleja la extensión del estado de alarma inicial.
+      3. **Prórroga del estado de alarma desde el 10 de abril**: Otra extensión del estado de alarma.
+      4. **Prórroga del estado de alarma desde el 24 de abril**: Continuación del estado de alarma.
+      5. **Prórroga del estado de alarma desde el 8 de mayo**: Nueva extensión del estado de alarma.
+      6. **Prórroga del estado de alarma desde el 22 de mayo**: Continuación del periodo de alarma.
+      7. **Prórroga del estado de alarma desde el 5 de junio**: Última prórroga del estado de alarma antes de su fin.
+      8. **99 - Fuera del estado de alarma**: Indica los casos fuera de los períodos de estado de alarma.
 
 ### **Objetivo Final**  
 El objetivo final de este proceso es que, en el resultado final, se pueda interpretar y analizar lo siguiente:
@@ -59,7 +59,7 @@ El objetivo final de este proceso es que, en el resultado final, se pueda interp
 
 ### Diagramas
 
-#### Diagrama catalogos
+#### Catalogos
 Se representa un ejemplo de como cargar el fichero Covid por las diferentes capas des de que es un fichero (fuente del dato)  hasta que llega a la tabla final, de dónde se obtiene la tabla de catalogo de Sexo y Grupo Edad.
 
 La fecha es un PLSQL que se carga con un procedimiento de ODI directamente a la tabla final que es el catalogo de fecha.
@@ -71,7 +71,7 @@ Las provincias se cargan a través del fichero ISO, se realizan las transformaci
 width="80%" />
 </div>
 
-#### Diagrama estrella
+#### Multidimensional
 Se representan la estrella como eje central y luego alrededor los diferentes catálogos que representan y detallan la información de análisis. 
 
 <div align="center">
@@ -144,6 +144,7 @@ Se prescinde de la creación de un documento formal de Análisis Funcional y Dis
 - Generar proceso/paquete de carga ODS.
 
 **Pasos a ODI**
+
 1.      Crear tabla histórica/transaccional (ODS). Realizar ingeniería inversa de esta tabla.
 
 2.      Desarrollar la ETL para cargar de las tablas SRC a ODS.
@@ -154,24 +155,20 @@ Se prescinde de la creación de un documento formal de Análisis Funcional y Dis
 
 ### Final
 
+**Pasos a ODI**
+
 1.      Generar paquete que cargue de una vez todas las capas: SRC, LKP y ODS.
 
 2.      Validamos que no haya errores.
 
 3.      Validamos que las tablas dades de taules:
 
-   3.1.    Que tinguin dades i siguin correctes
+   - Que tinguin dades i siguin correctes
 
-   3.2.    Que apleguen totes les dades que hi ha als fitxers: conteig al fitxer, src i ods.
+   - Que apleguen totes les dades que hi ha als fitxers: conteig al fitxer, src i ods.
 
-   3.3.    Que estan amb el format que es vol representar
+   - Que estan amb el format que es vol representar
 ## Visualización y respresentación con Power BI
-
-El objetivo es **leer el modelo multidimensional** que ha sido creado y cargado en la máquina virtual. Este modelo de datos debe ser utilizado para generar las visualizaciones necesarias para el informe final. El modelo multidimensional proporcionará una estructura organizada de los datos que facilitará su análisis y presentación a través de Power BI. 
-
-   - **Si no se consigue conectividad**: En caso de no poder establecer una conexión directa entre Power BI y la base de datos en la máquina virtual, se puede optar por una solución alternativa. Esta consiste en **realizar una descarga del modelo multidimensional a archivos** (por ejemplo, en formato CSV o Excel). Una vez descargados los archivos, se podrá **leer** e **importar esos archivos** en Power BI para continuar con la creación de los informes y visualizaciones necesarias.
-
-### Detalle del proceso
 
 1. **Conexión directa con el modelo multidimensional**
       -  Power BI permite conectarse directamente a bases de datos como Oracle, SQL Server, entre otras. Si la conexión con la máquina virtual es exitosa, se podrá importar directamente el modelo multidimensional desde la base de datos, lo que facilitará la carga de datos en Power BI. En este caso, los datos estarán organizados en tablas de hechos y dimensiones que pueden ser fácilmente visualizadas y analizadas.
@@ -185,8 +182,6 @@ El objetivo es **leer el modelo multidimensional** que ha sido creado y cargado 
       -  Con el modelo multidimensional leído y cargado en Power BI (ya sea de manera directa o importando los archivos), se procederá a **crear las visualizaciones** que respondan a las necesidades del informe final. Esto incluirá gráficos, tablas y otras representaciones visuales que permitan explorar las diferentes métricas y dimensiones de los datos (por ejemplo, número de casos, hospitalizaciones, ingresos en UCI, defunciones, etc.).
 
       - También se podrán implementar **filtros y segmentaciones** basadas en dimensiones como la edad, el sexo, la provincia, etc., para que los usuarios del informe puedan analizar los datos de manera más flexible y detallada.
-
-Este proceso garantiza que el informe final no solo sea completo, sino que también sea interactivo y fácil de interpretar para los usuarios finales.
 
 ## Resumen
 
