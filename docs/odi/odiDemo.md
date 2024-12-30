@@ -9,16 +9,20 @@ width="80%" />
 
 ## Puntos a seguir
 
-2.      Working with the ETL Project
+-       2.      Working with the ETL Project
 
-        2.1 The Example Environment
+        -       2.1 The Example Environment
 
-        2.2 The Data Models
-                2.2.1 Orders Application
-                 2.2.2 Parameters
-                2.2.3 Sales Administration – Oracle
+        -       2.2 The Data Models
 
-         2.3 Integration Challenges
+                -       2.2.1 Orders Application
+
+                -       2.2.2 Parameters
+
+                -       2.2.3 Sales Administration – Oracle
+
+        -       2.3 Integration Challenges
+        
 
 3.      Introduction to Using Oracle Data Integrator
 
