@@ -8,7 +8,7 @@ En aproximadamente 4 sesiones, trabajaremos en nuestro caso de uso utilizando es
 
 La visualización se realizará en etapas posteriores, con el objetivo de crear un diseño similar al de PowerBI presentado en la misma página web, para facilitar la comprensión e interpretación de los datos sobre la Covid-19.
 
-## Requisitos
+### Requisitos
 
 Se deben crear las siguientes dimensiones:
 
@@ -27,17 +27,17 @@ La dimensión temporal se establecerá mediante un enlace a una base de datos SQ
 - **Catálogo del Estado de Alarma**  
 Además de las dimensiones anteriores, es necesario generar un catálogo para analizar la cantidad de personas que estuvieron afectadas o no por la Covid-19 durante los períodos de estado de alarma. Este catálogo incluirá los siguientes estados:
 
-      1. **Declaración del estado de alarma desde el 14 de marzo**: Representa el inicio del estado de alarma en España debido a la pandemia.
-      2. **Prórroga del estado de alarma desde el 27 de marzo**: Refleja la extensión del estado de alarma inicial.
-      3. **Prórroga del estado de alarma desde el 10 de abril**: Otra extensión del estado de alarma.
-      4. **Prórroga del estado de alarma desde el 24 de abril**: Continuación del estado de alarma.
-      5. **Prórroga del estado de alarma desde el 8 de mayo**: Nueva extensión del estado de alarma.
-      6. **Prórroga del estado de alarma desde el 22 de mayo**: Continuación del periodo de alarma.
-      7. **Prórroga del estado de alarma desde el 5 de junio**: Última prórroga del estado de alarma antes de su fin.
-      8. **99 - Fuera del estado de alarma**: Indica los casos fuera de los períodos de estado de alarma.
+      a. **Declaración del estado de alarma desde el 14 de marzo**: Representa el inicio del estado de alarma en España debido a la pandemia.
+      b. **Prórroga del estado de alarma desde el 27 de marzo**: Refleja la extensión del estado de alarma inicial.
+      c. **Prórroga del estado de alarma desde el 10 de abril**: Otra extensión del estado de alarma.
+      d. **Prórroga del estado de alarma desde el 24 de abril**: Continuación del estado de alarma.
+      e. **Prórroga del estado de alarma desde el 8 de mayo**: Nueva extensión del estado de alarma.
+      f. **Prórroga del estado de alarma desde el 22 de mayo**: Continuación del periodo de alarma.
+      g. **Prórroga del estado de alarma desde el 5 de junio**: Última prórroga del estado de alarma antes de su fin.
+      h. **99 - Fuera del estado de alarma**: Indica los casos fuera de los períodos de estado de alarma.
 
 ### **Objetivo Final**  
-El objetivo final de este proceso es que, en el resultado final, se pueda interpretar y analizar lo siguiente:
+El objetivo final de este proceso es que respecto a la información recibida se pueda interpretar y analizar:
 
 - El **número de casos**, el **número de hospitalizaciones**, el **número de ingresos en UCI** y el **número de defunciones** de manera **diaria**.
 - Determinar si las personas han sido afectadas en alguno de los **períodos de estado de alarma** mencionados anteriormente, lo que permitirá hacer un análisis detallado sobre el impacto de las diferentes fases del estado de alarma en los casos de Covid-19.
@@ -48,7 +48,7 @@ El objetivo final de este proceso es que, en el resultado final, se pueda interp
 -     **Histórico**. El archivo contiene información detallada sobre la evolución de la pandemia de Covid-19 hasta el 28 de marzo de 2022. El archivo incluye datos sobre el número de casos confirmados, hospitalizaciones, ingresos en unidades de cuidados intensivos (UCI) y defunciones, segmentados por **sexo**, **edad** y **provincia de residencia**. Los datos abarcan todas las edades desde el inicio de la pandemia.
       -  <a href="../../assets/casos_hosp_uci_def_sexo_edad_provres.csv">Descargar casos COVID</a>
 
-- **Provincias**: **códigos de las provincias** en España. Al descargar los códigos en formato CSV, se ha encontrado un problema de **codificación de caracteres** que debe resolverse durante el proceso de **ETL (Extract, Transform, Load)**.
+- **Provincias**: **códigos de las provincias** en España. Al descargar los códigos en formato CSV, se ha encontrado un problema de **codificación de caracteres** que debe resolverse durante el proceso de ETL (Extract, Transform, Load).
       -  <a href="../../assets/provincies.csv">Descargar ISO 3166</a>
 
 -  **Fechas**: Consulta SQL para generar de forma dinámica el catálogo de fechas. 
@@ -88,25 +88,26 @@ width="80%"/>
 </div>
 
 ## Obtener y generar modelo multidimensional
-
 Se prescinde de la creación de un documento formal de Análisis Funcional y Diseño. Sin embargo, se considera esencial establecer una visión clara sobre la construcción del modelo de datos. Este modelo se basará en las necesidades específicas del informe final y en los conocimientos adquiridos a lo largo del curso. A continuación, se detallan los requisitos esenciales para esta etapa:
 
-### 1. **Modelo de Datos**
-   - **Identificación de entidades principales**: Es necesario identificar las entidades clave relacionadas con la temática de la epidemia de la Covid-19. Estas entidades podrían incluir casos, hospitalizaciones, ingresos en UCI, defunciones, sexo, edad, provincia, entre otras.
-   - **Establecimiento de relaciones**: Una vez identificadas las entidades, se debe definir cómo se relacionan entre sí. Esto es crucial para reflejar con precisión la complejidad de los datos epidemiológicos y asegurar que la base de datos tenga una estructura lógica y eficiente.
+### 1. **Modelo de datos**
+Es necesario identificar las entidades clave relacionadas con la epidemia de la Covid-19. Estas entidades podrían incluir casos, hospitalizaciones, ingresos en UCI, defunciones, sexo, edad, provincia, entre otras.
 
-### 2. **Variables y Atributos**
-   - **Definición de variables y atributos**: Es importante definir claramente las variables y los atributos necesarios para capturar toda la información relevante relacionada con la epidemia. Esto podría incluir variables como el número de casos, el número de hospitalizaciones, la distribución por edades y sexos, etc.
-   - **Claridad en la etiquetación de atributos**: Cada atributo debe estar bien etiquetado y debe ser representativo de la información que pretende capturar. Esto garantiza que los datos sean comprensibles y útiles para su posterior análisis.
+Una vez identificadas las entidades, se debe definir cómo se relacionan entre sí para asegurar que la base de datos tenga una estructura lógica y eficiente.
 
-### 3. **Jerarquías Temporales**
-   - **Establecimiento de jerarquías temporales**: Es necesario crear jerarquías temporales para representar correctamente la secuencia de los eventos relacionados con la epidemia. Estas jerarquías pueden incluir, por ejemplo, años, meses, semanas y días, permitiendo así un análisis detallado de la evolución de la pandemia a lo largo del tiempo.
+### 2. **Variables y atributos**
+Es importante definir claramente las variables y los atributos necesarios para capturar toda la información relevante relacionada con la epidemia. Esto podría incluir variables como el número de casos, el número de hospitalizaciones, la distribución por edades y sexos, etc.
+   
+Cada atributo debe estar bien etiquetado (*claridad en la etiquetación de atributos*) y debe ser representativo de la información. Esto garantiza que los datos sean comprensibles y útiles para su posterior análisis.
 
-### 4. **Normativas y Restricciones**
-   - **Consideración de normativas y restricciones**: Se deben tener en cuenta todas las normativas o restricciones específicas asociadas con la recopilación y el uso de las datos epidemiológicos. Esto puede incluir regulaciones sobre la protección de datos personales, el acceso a la información, y las políticas de confidencialidad y privacidad.
+### 3. **Jerarquías temporales**
+Es necesario crear jerarquías temporales para representar correctamente la secuencia de los eventos relacionados con la epidemia. Estas jerarquías pueden incluir, por ejemplo, años, meses, semanas y días, permitiendo así un análisis detallado de la evolución de la pandemia a lo largo del tiempo.
+
+### 4. **Normativas y restricciones**
+Se deben tener en cuenta todas las normativas o restricciones específicas asociadas con la recopilación y el uso de las datos epidemiológicos. Esto puede incluir regulaciones sobre la protección de datos personales, el acceso a la información, y las políticas de confidencialidad y privacidad.
 
 ### 5. **Metodología ETL**
-   - **Planificación de la metodología ETL**: Es fundamental planificar y describir detalladamente la metodología Extract, Transform, Load (ETL) que se seguirá para integrar los datos desde su origen hasta la base de datos analítica. Este proceso garantizará que los datos se extraigan correctamente de las fuentes originales, se transformen según las necesidades del análisis y se carguen adecuadamente en la base de datos final.
+Es fundamental planificar y describir detalladamente la metodología Extract, Transform, Load (ETL) que se seguirá para integrar los datos desde su origen hasta la base de datos analítica. Este proceso garantizará que los datos se extraigan correctamente de las fuentes originales, se transformen según las necesidades del análisis y se carguen adecuadamente en la base de datos final.
 
 ## ETL
 
