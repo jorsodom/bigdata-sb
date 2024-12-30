@@ -6,27 +6,27 @@
 ## ¿Qué es Oracle Data Integrator (ODI)?
 Es una plataforma de integración de datos que facilita la transferencia, transformación y carga de datos (ETL: Extract, Transform, Load) entre diferentes fuentes de datos. Está diseñada para manejar grandes volúmenes de datos y facilitar la integración en entornos de múltiples bases de datos, aplicaciones y sistemas.
 
-### Características principales:
+### Características principales
 
--   **Integración de datos en tiempo real y batch**:
+- [x] **Integración de datos en tiempo real y batch**:
    ODI permite realizar integraciones tanto en tiempo real como por lotes (batch). Esta flexibilidad es clave en escenarios donde los datos deben procesarse en tiempo real para análisis inmediatos o cuando los procesos pueden esperar un procesamiento más programado.
 
--   **Transformación de datos**:
+- [x] **Transformación de datos**:
    ODI ofrece un motor de transformación de datos de alta performance, que permite realizar transformaciones complejas de los datos durante el proceso de integración. Esto incluye operaciones como agregaciones, uniones, filtrado y más.
 
--   **Conectividad con múltiples fuentes y destinos**:
+- [x] **Conectividad con múltiples fuentes y destinos**:
    ODI soporta una amplia variedad de sistemas de bases de datos, aplicaciones y plataformas. Esto incluye Oracle Database, SQL Server, MySQL, y muchos otros sistemas tanto on-premise como en la nube. También puede integrarse con plataformas de Big Data como Hadoop, y soluciones en la nube como Oracle Cloud.
 
--   **Diseño gráfico y desarrollo fácil**:
+- [x] **Diseño gráfico y desarrollo fácil**:
    El desarrollo de procesos de integración en ODI es muy visual, con una interfaz gráfica de usuario (GUI) que permite diseñar flujos de datos sin necesidad de escribir código. Se utilizan objetos visuales como mappings, procedimientos y otros componentes que facilitan la construcción de los procesos de integración.
 
--   **Data Quality y validación**:
+- [x] **Data Quality y validación**:
    ODI incluye capacidades de validación de datos, asegurando que los datos que se están integrando sean precisos, completos y estén en el formato adecuado. Esta es una característica importante en procesos de integración de datos en entornos empresariales donde la calidad de los datos es crítica.
 
--   **Automatización y gestión de procesos**:
+- [x] **Automatización y gestión de procesos**:
    ODI permite la automatización de procesos de integración de datos mediante la planificación y ejecución de trabajos (jobs). También ofrece funcionalidades de monitoreo y auditoría para garantizar que los trabajos de integración se ejecuten de manera eficiente y sin errores.
 
--   **Integración con Oracle Ecosystem**:
+- [x] **Integración con Oracle Ecosystem**:
    ODI se integra de manera nativa con el ecosistema de Oracle, lo que significa que se puede utilizar de forma eficiente con otras soluciones de Oracle como Oracle Exadata, Oracle Warehouse Builder y Oracle Business Intelligence.
 
 ### Arquitectura
