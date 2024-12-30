@@ -9,86 +9,86 @@ width="80%" />
 
 ## Puntos a seguir
 
-- 2.      Working with the ETL Project
+                2.      Working with the ETL Project
 
-        * 2.1 The Example Environment
+                        2.1 The Example Environment
 
-        * 2.2 The Data Models
+                        2.2 The Data Models
 
-                * 2.2.1 Orders Application
+                                2.2.1 Orders Application
 
-                * 2.2.2 Parameters
+                                2.2.2 Parameters
 
-                * 2.2.3 Sales Administration – Oracle
+                                2.2.3 Sales Administration – Oracle
 
-        * 2.3 Integration Challenges
-
-
-- 3.      Introduction to Using Oracle Data Integrator
-
-        * 3.1 Using the ODI Studio Navigators
-
-                * 3.1.1 Starting Oracle Data Integrator Studio
-
-        * 3.2 Designer Navigator
-
-        * 3.3 Operator Navigator
+                        2.3 Integration Challenges
 
 
-- 4.      Working with Mappings
+                3.      Introduction to Using Oracle Data Integrator
 
-        * 4.1 Load TRG_CUSTOMER Mapping Example
+                        3.1 Using the ODI Studio Navigators
 
-                * 4.1.1 Purpose and Integration Requirements
+                                3.1.1 Starting Oracle Data Integrator Studio
 
-                * 4.1.2 Mapping Definition
+                        3.2 Designer Navigator
 
-                * 4.1.3 Creating the Mapping
+                        3.3 Operator Navigator
 
-        * 4.2 Load TRG_SALES Mapping Example
 
-                * 4.2.1 Purpose and Integration Requirements
+                4.      Working with Mappings
 
-                * 4.2.2 Mapping Definition
+                        4.1 Load TRG_CUSTOMER Mapping Example
 
-                * 4.2.3 Creating the Mapping
+                                4.1.1 Purpose and Integration Requirements
 
-- 6.      Working with Packages
+                                4.1.2 Mapping Definition
 
-        * 6.1 Introduction
+                                4.1.3 Creating the Mapping
 
-                * 6.1.1 Automating Data Integration Flows
+                        4.2 Load TRG_SALES Mapping Example
 
-                * 6.1.2 Packages
+                                4.2.1 Purpose and Integration Requirements
 
-        * 6.2 Load Sales Administration Package Example
+                                4.2.2 Mapping Definition
 
-                * 6.2.1 Purpose
+                                4.2.3 Creating the Mapping
 
-                * 6.2.2 Mappings Provided with Oracle Data Integrator
-                        
-                * 6.2.3 Problem Analysis
+                6.      Working with Packages
 
-                * 6.2.4 Creating the Package
+                        6.1 Introduction
 
-- 7.      Executing Your Developments and Reviewing the Results
+                                6.1.1 Automating Data Integration Flows
 
-        * 7.1 Executing the Load Sales Administration Package
+                                6.1.2 Packages
 
-                * 7.1.1 Run the Package
+                        6.2 Load Sales Administration Package Example
 
-                * 7.1.2 Follow the Execution of the Package in Operator Navigator
+                                6.2.1 Purpose
 
-                * 7.1.3 Interpreting the Results of the Load TRG_CUSTOMER Session Step
+                                6.2.2 Mappings Provided with Oracle Data Integrator
+                                        
+                                6.2.3 Problem Analysis
 
-- 8.      Deploying Integrated Applications
+                                6.2.4 Creating the Package
 
-        * 8.1 Introduction
+                7.      Executing Your Developments and Reviewing the Results
 
-        * 8.2 Scenario Creation
+                        7.1 Executing the Load Sales Administration Package
 
-        * 8.3 Run the Scenario
+                                7.1.1 Run the Package
 
-                * 8.3.1 Executing a Scenario from ODI Studio
+                                7.1.2 Follow the Execution of the Package in Operator Navigator
 
-        * 8.4 Follow the Execution of the Scenario
+                                7.1.3 Interpreting the Results of the Load TRG_CUSTOMER Session Step
+
+                8.      Deploying Integrated Applications
+
+                        8.1 Introduction
+
+                        8.2 Scenario Creation
+
+                        8.3 Run the Scenario
+
+                                8.3.1 Executing a Scenario from ODI Studio
+
+                        8.4 Follow the Execution of the Scenario
