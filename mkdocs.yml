@@ -27,9 +27,6 @@ theme:
   language: es
   features:
     - content.code.copy
-  icon:
-    admonition:
-      <type>:material/alert
 
 markdown_extensions:
   - def_list
