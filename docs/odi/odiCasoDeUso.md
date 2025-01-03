@@ -1,15 +1,11 @@
 # Case de uso COVID
-
 ## Enunciado
-
 El **Centro Nacional de Epidemiología** ha habilitado una sección específica en su página web para proporcionar información detallada sobre la evolución de la epidemia de la Covid-19 desde 2020. Esta plataforma no solo presenta informes y conclusiones internas, sino también acceso a las fuentes originales de datos que los respaldan. La documentación y los conjuntos de datos están disponibles en: [CNE Covid](https://cnecovid.isciii.es/covid19/#documentaci%C3%B3n-y-datos).
 
 En aproximadamente 4 sesiones, trabajaremos en nuestro caso de uso utilizando esta información. El proceso incluirá un proceso ETL con Oracle Data Integrator (ODI), seguido de la creación de un modelo multidimensional para almacenar los datos de manera eficiente en una base de datos analítica. Finalmente, realizaremos un análisis detallado con herramientas de generación de informes para explorar y explotar los datos analizados.
 
 La visualización se realizará en etapas posteriores, con el objetivo de crear un diseño similar al de PowerBI presentado en la misma página web, para facilitar la comprensión e interpretación de los datos sobre la Covid-19.
-
 ### Requisitos
-
 Se deben crear las siguientes dimensiones:
 
 - **Sexo**  
@@ -42,15 +38,12 @@ Además de las dimensiones anteriores, es necesario generar un catálogo para an
       7. Prórroga del estado de alarma desde el 5 de junio: Última prórroga del estado de alarma antes de su fin.
 
       99. Fuera del estado de alarma: Indica los casos fuera de los períodos de estado de alarma.
-
 ### Objetivo
 El objetivo final de este proceso es que respecto a la información recibida se pueda interpretar y analizar:
 
 - El **número de casos**, el **número de hospitalizaciones**, el **número de ingresos en UCI** y el **número de defunciones** de manera **diaria**.
 - Determinar si las personas han sido afectadas en alguno de los **períodos de estado de alarma** mencionados anteriormente, lo que permitirá hacer un análisis detallado sobre el impacto de las diferentes fases del estado de alarma en los casos de Covid-19.
-
 ## Recursos
-
 ### Ficheros
 -     **Histórico Covid**. El archivo contiene información detallada sobre la evolución de la pandemia de Covid-19 hasta el 28 de marzo de 2022. El archivo incluye datos sobre el número de casos confirmados, hospitalizaciones, ingresos en unidades de cuidados intensivos (UCI) y defunciones, segmentados por **sexo**, **edad** y **provincia de residencia**. Los datos abarcan todas las edades desde el inicio de la pandemia.
       -  <a href="../../assets/casos_hosp_uci_def_sexo_edad_provres.csv">Descarga histórico COVID-19</a>
@@ -65,7 +58,6 @@ El objetivo final de este proceso es que respecto a la información recibida se 
        -  <a href="../../assets/trams.csv">Descargar tramos</a>
 
 ### Diagramas
-
 #### Catalogos
 Se representa un ejemplo de como cargar el fichero Covid por las diferentes capas des de que es un fichero (fuente del dato)  hasta que llega a la tabla final, de dónde se obtiene la tabla de catalogo de Sexo y Grupo Edad.
 
@@ -93,7 +85,6 @@ Un ejemplo de como se quedará el modelo de datos lógico de ODI en vuestro proy
 <img src="../../img/odiModelTables.png" alt="ODI" 
 width="80%"/>
 </div>
-
 ## Obtener y generar modelo multidimensional
 Se prescinde de la creación de un documento formal de Análisis Funcional y Diseño. Sin embargo, se considera esencial establecer una visión clara sobre la construcción del modelo de datos. Este modelo se basará en las necesidades específicas del informe final y en los conocimientos adquiridos a lo largo del curso. A continuación, se detallan los requisitos esenciales para esta etapa:
 
@@ -118,7 +109,6 @@ Es fundamental planificar y describir detalladamente la metodología ETL que se 
 
 ## Proceso ETL
 Se describe a continuación las diferentes capas del modelo multidimensional en el cual se van a cargar los ficheros de datos que recibimos de la fuente de datos, las transformamos, las modelamos en un modelo analítico y preparamos estos datos para que puedan ser analizados y consultados por herramientas de reporting.
-
 ### Capa SOURCE: (SRC)
 -       Cargar fichero COVID
 -       Cargar ficheros propios para generar los catálogos
@@ -141,7 +131,6 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
       -     SRC_COVID
       -     SRC_PROVINCIA
       -     SRC_ESTAT_ALARMA
-
 ### Capa CATÁLOGOS: (LKP)
 -       Extraer de la tabla SRC COVID los catálogos necesarios.
 -       Generar procedimiento ODI para el catálogo de fecha
@@ -188,16 +177,14 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
 !!! note "Tabla ODS a crear"
 
       -     ODS_COVID
-
-### Proceso final
-
+### Final
 **Pasos a ODI**
 
-1.      Generar paquete que cargue de una vez todas las capas: SRC, LKP y ODS. *WF_TOTAL_XXX*
+1. Generar paquete que cargue de una vez todas las capas: SRC, LKP y ODS. *WF_TOTAL_XXX*
 
-2.      Validamos que no haya errores.
+2. Validamos que no haya errores.
 
-3.      Validamos que las tablas dades de taules:
+3. Validamos que las tablas dades de taules:
 
    - Que tinguin dades i siguin correctes
 
@@ -205,22 +192,20 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
 
    - Que estan amb el format que es vol representar
 ## Visualización y respresentación con Power BI
-
 1. **Conexión directa con el modelo multidimensional**
-      -  Power BI permite conectarse directamente a bases de datos como Oracle, SQL Server, entre otras. Si la conexión con la máquina virtual es exitosa, se podrá importar directamente el modelo multidimensional desde la base de datos, lo que facilitará la carga de datos en Power BI. En este caso, los datos estarán organizados en tablas de hechos y dimensiones que pueden ser fácilmente visualizadas y analizadas.
+Power BI permite conectarse directamente a bases de datos como Oracle, SQL Server, entre otras. Si la conexión con la máquina virtual es exitosa, se podrá importar directamente el modelo multidimensional desde la base de datos, lo que facilitará la carga de datos en Power BI. En este caso, los datos estarán organizados en tablas de hechos y dimensiones que pueden ser fácilmente visualizadas y analizadas.
 
-2. **En caso de no conseguir la conectividad**:
-      -  Si existen problemas técnicos para conectar Power BI con la base de datos, la alternativa será **exportar el modelo multidimensional** a archivos de texto (por ejemplo, archivos CSV o Excel). Estos archivos deben contener toda la información relevante, organizados por las diferentes dimensiones y hechos definidos en el modelo.
+2. **En caso de no conseguir la conectividad**
+Si existen problemas técnicos para conectar Power BI con la base de datos, la alternativa será **exportar el modelo multidimensional** a archivos de texto (por ejemplo, archivos CSV o Excel). Estos archivos deben contener toda la información relevante, organizados por las diferentes dimensiones y hechos definidos en el modelo.
 
-      -  Luego, se importarán estos archivos en Power BI, donde se pueden definir relaciones entre las diferentes tablas de datos (por ejemplo, entre las tablas de hechos y dimensiones) para crear el modelo de datos en Power BI. Posteriormente, se podrán crear visualizaciones y análisis basados en esos datos.
+Luego, se importarán estos archivos en Power BI, donde se pueden definir relaciones entre las diferentes tablas de datos (por ejemplo, entre las tablas de hechos y dimensiones) para crear el modelo de datos en Power BI. Posteriormente, se podrán crear visualizaciones y análisis basados en esos datos.
 
-3. **Generación del informe final**:
-      -  Con el modelo multidimensional leído y cargado en Power BI (ya sea de manera directa o importando los archivos), se procederá a **crear las visualizaciones** que respondan a las necesidades del informe final. Esto incluirá gráficos, tablas y otras representaciones visuales que permitan explorar las diferentes métricas y dimensiones de los datos (por ejemplo, número de casos, hospitalizaciones, ingresos en UCI, defunciones, etc.).
+3. **Generación del informe final**
+Con el modelo multidimensional leído y cargado en Power BI (ya sea de manera directa o importando los archivos), se procederá a **crear las visualizaciones** que respondan a las necesidades del informe final. Esto incluirá gráficos, tablas y otras representaciones visuales que permitan explorar las diferentes métricas y dimensiones de los datos (por ejemplo, número de casos, hospitalizaciones, ingresos en UCI, defunciones, etc.).
 
-      - También se podrán implementar **filtros y segmentaciones** basadas en dimensiones como la edad, el sexo, la provincia, etc., para que los usuarios del informe puedan analizar los datos de manera más flexible y detallada.
+También se podrán implementar **filtros y segmentaciones** basadas en dimensiones como la edad, el sexo, la provincia, etc., para que los usuarios del informe puedan analizar los datos de manera más flexible y detallada.
 
 ## Resumen
-
 Una vez descargada la máquina virtual con todo el entorno preparado, se deben aplicar los conocimientos adquiridos durante el curso y desarrollar el análisis y diseño realizado en los pasos anteriores. El objetivo es **crear un modelo de base de datos multidimensional por capas** utilizando la base de datos Oracle en la máquina virtual proporcionada. El proceso se desglosa en los siguientes pasos:
 
 1. **Crear tablas que carguen los archivos al BI (SRC_XXX)**
