@@ -118,10 +118,9 @@ Es fundamental planificar y describir detalladamente la metodología ETL que se 
 
 ## ETL
 
-### Capa SOURCE (SRC)
+### Capa SOURCE: (SRC)
 -       Cargar fichero COVID
 -       Cargar ficheros propios para generar los catálogos
--       Generar procedimiento ODI para el catálogo de fecha
 -       Generar proceso / paquete de carga SRC
 
 **Pasos en ODI**
@@ -137,8 +136,9 @@ Es fundamental planificar y describir detalladamente la metodología ETL que se 
       -     SRC_PROVINCIA
       -     SRC_ESTAT_ALARMA
 
-### Capa CATÁLOGOS (LKP)
+### Capa CATÁLOGOS: (LKP)
 -       Extraer de la tabla SRC COVID los catálogos necesarios.
+-       Generar procedimiento ODI para el catálogo de fecha
 -       Cargar del resto de tablas SRC los catálogos LKP.
 -       Generar proceso / paquete de carga LKP.
 
@@ -148,7 +148,7 @@ Es fundamental planificar y describir detalladamente la metodología ETL que se 
 
 2. Desarrollar las ETLs para cargar de las tablas SRC a las tablas de catálogo LKP.
 
-3. Generar paquete con la carga de todas las ETL para Catálogos LKP (LKP).
+3. Generar paquete con la carga de todas las ETL para catálogos LKP (LKP).
 
 !!! note "Tablas LKP a crear"
 
@@ -158,7 +158,7 @@ Es fundamental planificar y describir detalladamente la metodología ETL que se 
       -     LKP_ESTAT_ALARMA
       -     LKP_FECHA
 
-### Capa ESTRELLA, HECHOS (ODS)
+### Capa ESTRELLA: (ODS)
 - Extraer de la tabla SRC COVID los datos históricos/transaccionales.
 - Extraer solo los códigos, no las descripciones.
 - Generar lookups en el mapeo de ODS.
