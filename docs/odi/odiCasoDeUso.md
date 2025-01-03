@@ -1,4 +1,4 @@
-# Case de uso
+# Case de uso COVID
 
 ## Enunciado
 
