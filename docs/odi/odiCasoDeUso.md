@@ -132,7 +132,7 @@ Es fundamental planificar y describir detalladamente la metodología ETL que se 
 
 3. Generar paquete con la carga de todas las ETL y procedimiento en SRC. WF_SRC_XXX
 
-!!!   Ayuda (tablas SRC a crear):
+!!! note "Tablas SRC a crear"
       -     SRC_COVID
       -     SRC_PROVINCIA
       -     SRC_ESTAT_ALARMA
@@ -150,7 +150,7 @@ Es fundamental planificar y describir detalladamente la metodología ETL que se 
 
 3. Generar paquete con la carga de todas las ETL para Catálogos LKP (LKP).
 
-!!!   Ayuda (tablas LKP a crear):
+!!! note "Tablas LKP a crear"
 
       -     LKP_SEXO
       -     LKP_GRUPO_EDAD
@@ -174,7 +174,7 @@ Es fundamental planificar y describir detalladamente la metodología ETL que se 
 
 4.      Generar paquete con la carga del (ODS).
 
-!!!   Ayuda (tabla ODS a crear):
+!!! note "Tabla ODS a crear"
 
       -     ODS_COVID
 
