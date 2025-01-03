@@ -154,12 +154,6 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
 
 2. Desarrollar las ETLs para cargar de las tablas SRC a las tablas de catálogo LKP.
 
-!!! note "Filtros LKP Provincias"
-
-      -     SRC_PROVINCIA.CAT_SUB = 'province'
-
-      -     SUBSTR(SRC_PROVINCIA.CODIGO,4,LENGTH(SRC_PROVINCIA.CODIGO))
-
 3. Generar paquete con la carga de todas las ETL para catálogos LKP (LKP). *WF_LKP_XXX*
 
 !!! note "Tablas LKP a crear"
@@ -170,6 +164,11 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
       -     LKP_ESTAT_ALARMA
       -     LKP_FECHA
 
+!!! note "Filtros LKP Provincias"
+
+      -     SRC_PROVINCIA.CAT_SUB = 'province'
+
+      -     SUBSTR(SRC_PROVINCIA.CODIGO,4,LENGTH(SRC_PROVINCIA.CODIGO))
 ### Capa ESTRELLA: (ODS)
 - Extraer de la tabla SRC COVID los datos históricos/transaccionales.
 - Extraer solo los códigos, no las descripciones.
