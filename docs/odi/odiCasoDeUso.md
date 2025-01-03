@@ -130,7 +130,7 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
 
 2. Desarrollar las ETL para cargar los ficheros a las tabla creadas previamente SRC.
 
-3. Generar paquete con la carga de todas las ETL y procedimiento en SRC. WF_SRC_XXX
+3. Generar paquete con la carga de todas las ETL y procedimiento en SRC. *WF_SRC_XXX*
 
 !!! note "Tablas SRC a crear"
       -     SRC_COVID
@@ -149,7 +149,7 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
 
 2. Desarrollar las ETLs para cargar de las tablas SRC a las tablas de catálogo LKP.
 
-3. Generar paquete con la carga de todas las ETL para catálogos LKP (LKP).
+3. Generar paquete con la carga de todas las ETL para catálogos LKP (LKP). *WF_LKP_XXX*
 
 !!! note "Tablas LKP a crear"
 
@@ -173,7 +173,7 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
 
 3.      Utilizar los lookups para validar y cargar la información de los catálogos.
 
-4.      Generar paquete con la carga del (ODS).
+4.      Generar paquete con la carga del (ODS). *WF_ODS_XXX*
 
 !!! note "Tabla ODS a crear"
 
@@ -183,7 +183,7 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
 
 **Pasos a ODI**
 
-1.      Generar paquete que cargue de una vez todas las capas: SRC, LKP y ODS.
+1.      Generar paquete que cargue de una vez todas las capas: SRC, LKP y ODS. *WF_TOTAL_XXX*
 
 2.      Validamos que no haya errores.
 
