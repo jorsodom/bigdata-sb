@@ -27,19 +27,19 @@ La dimensión fecha se establecerá mediante un procedimiento SQL, donde se repr
 - **Estado de Alarma**  
 Además de las dimensiones anteriores, es necesario generar un catálogo para analizar la cantidad de personas que estuvieron afectadas o no por la Covid-19 durante los períodos de estado de alarma. Este catálogo incluirá los siguientes estados:
 
-       1. Declaración del estado de alarma desde el 14 de marzo: Representa el inicio del estado de alarma en España debido a la pandemia.
+      1. Declaración del estado de alarma desde el 14 de marzo: Representa el inicio del estado de alarma en España debido a la pandemia.
 
-       2. Prórroga del estado de alarma desde el 27 de marzo: Refleja la extensión del estado de alarma inicial.
+      2. Prórroga del estado de alarma desde el 27 de marzo: Refleja la extensión del estado de alarma inicial.
 
-       3. Prórroga del estado de alarma desde el 10 de abril: Otra extensión del estado de alarma.
+      3. Prórroga del estado de alarma desde el 10 de abril: Otra extensión del estado de alarma.
 
-       4. Prórroga del estado de alarma desde el 24 de abril: Continuación del estado de alarma.
+      4. Prórroga del estado de alarma desde el 24 de abril: Continuación del estado de alarma.
 
-       5. Prórroga del estado de alarma desde el 8 de mayo: Nueva extensión del estado de alarma.
+      5. Prórroga del estado de alarma desde el 8 de mayo: Nueva extensión del estado de alarma.
 
-       6. Prórroga del estado de alarma desde el 22 de mayo: Continuación del periodo de alarma.
+      6. Prórroga del estado de alarma desde el 22 de mayo: Continuación del periodo de alarma.
 
-       7. Prórroga del estado de alarma desde el 5 de junio: Última prórroga del estado de alarma antes de su fin.
+      7. Prórroga del estado de alarma desde el 5 de junio: Última prórroga del estado de alarma antes de su fin.
 
       99. Fuera del estado de alarma: Indica los casos fuera de los períodos de estado de alarma.
 
@@ -128,9 +128,11 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
 
 1. Hacer ingenieria inversa de los ficheros para obtener su estructura.
 
-2. Desarrollar las ETL para cargar los ficheros a las tabla creadas previamente SRC.
+2. Hacer ingenieria inversa de las tablas SRC creadas.
 
-3. Generar paquete con la carga de todas las ETL y procedimiento en SRC. *WF_SRC_XXX*
+3. Desarrollar las ETL para cargar los ficheros a las tabla creadas previamente SRC.
+
+4. Generar paquete con la carga de todas las ETL y procedimiento en SRC. *WF_SRC_XXX*
 
 !!! note "Tablas SRC a crear"
       -     SRC_COVID
