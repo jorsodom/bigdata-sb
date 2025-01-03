@@ -127,6 +127,9 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
 **Pasos en ODI**
 
 1. Hacer ingenieria inversa de los ficheros para obtener su estructura.
+      - Covid
+      - Estado alarma
+      - Provincia
 
 2. Hacer ingenieria inversa de las tablas SRC creadas.
 
