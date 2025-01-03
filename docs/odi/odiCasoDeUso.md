@@ -27,21 +27,21 @@ La dimensión fecha se establecerá mediante un procedimiento SQL, donde se repr
 - **Estado de Alarma**  
 Además de las dimensiones anteriores, es necesario generar un catálogo para analizar la cantidad de personas que estuvieron afectadas o no por la Covid-19 durante los períodos de estado de alarma. Este catálogo incluirá los siguientes estados:
 
-            a. **Declaración del estado de alarma desde el 14 de marzo**: Representa el inicio del estado de alarma en España debido a la pandemia.
+       1. Declaración del estado de alarma desde el 14 de marzo: Representa el inicio del estado de alarma en España debido a la pandemia.
 
-            b. **Prórroga del estado de alarma desde el 27 de marzo**: Refleja la extensión del estado de alarma inicial.
+       2. Prórroga del estado de alarma desde el 27 de marzo: Refleja la extensión del estado de alarma inicial.
 
-            c. **Prórroga del estado de alarma desde el 10 de abril**: Otra extensión del estado de alarma.
+       3. Prórroga del estado de alarma desde el 10 de abril: Otra extensión del estado de alarma.
 
-            d. **Prórroga del estado de alarma desde el 24 de abril**: Continuación del estado de alarma.
+       4. Prórroga del estado de alarma desde el 24 de abril: Continuación del estado de alarma.
 
-            e. **Prórroga del estado de alarma desde el 8 de mayo**: Nueva extensión del estado de alarma.
+       5. Prórroga del estado de alarma desde el 8 de mayo: Nueva extensión del estado de alarma.
 
-            f. **Prórroga del estado de alarma desde el 22 de mayo**: Continuación del periodo de alarma.
+       6. Prórroga del estado de alarma desde el 22 de mayo: Continuación del periodo de alarma.
 
-            g. **Prórroga del estado de alarma desde el 5 de junio**: Última prórroga del estado de alarma antes de su fin.
+       7. Prórroga del estado de alarma desde el 5 de junio: Última prórroga del estado de alarma antes de su fin.
 
-            h. **99 - Fuera del estado de alarma**: Indica los casos fuera de los períodos de estado de alarma.
+      99. Fuera del estado de alarma: Indica los casos fuera de los períodos de estado de alarma.
 
 ### Objetivo
 El objetivo final de este proceso es que respecto a la información recibida se pueda interpretar y analizar:
