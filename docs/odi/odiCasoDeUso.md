@@ -116,7 +116,7 @@ Se deben tener en cuenta todas las normativas o restricciones específicas asoci
 ### 5. **Metodología ETL**
 Es fundamental planificar y describir detalladamente la metodología ETL que se seguirá para integrar los datos desde su origen hasta la base de datos analítica. Este proceso garantizará que los datos se extraigan correctamente de las fuentes originales, se transformen según las necesidades del análisis y se carguen adecuadamente en la base de datos final.
 
-## ETL
+## Proceso ETL
 Se describe a continuación las diferentes capas del modelo multidimensional en el cual se van a cargar los ficheros de datos que recibimos de la fuente de datos, las transformamos, las modelamos en un modelo analítico y preparamos estos datos para que puedan ser analizados y consultados por herramientas de reporting.
 
 ### Capa SOURCE: (SRC)
@@ -153,6 +153,12 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
 1. Crear tablas de los catálogos (LKP). Realizar ingeniería inversa de estas tablas.
 
 2. Desarrollar las ETLs para cargar de las tablas SRC a las tablas de catálogo LKP.
+
+!!! note "Filtros LKP Provincias"
+
+      -     SRC_PROVINCIA.CAT_SUB = 'province'
+
+      -     SUBSTR(SRC_PROVINCIA.CODIGO,4,LENGTH(SRC_PROVINCIA.CODIGO))
 
 3. Generar paquete con la carga de todas las ETL para catálogos LKP (LKP). *WF_LKP_XXX*
 
