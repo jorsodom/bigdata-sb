@@ -4,7 +4,7 @@
 
 El **Centro Nacional de Epidemiología** ha habilitado una sección específica en su página web para proporcionar información detallada sobre la evolución de la epidemia de la Covid-19 desde 2020. Esta plataforma no solo presenta informes y conclusiones internas, sino también acceso a las fuentes originales de datos que los respaldan. La documentación y los conjuntos de datos están disponibles en: [CNE Covid](https://cnecovid.isciii.es/covid19/#documentaci%C3%B3n-y-datos).
 
-En aproximadamente 4 sesiones, trabajaremos en nuestro caso de uso utilizando esta información. El proceso incluirá un proceso ETL (Extract, Transform, Load) con Oracle Data Integrator (ODI), seguido de la creación de un modelo multidimensional para almacenar los datos de manera eficiente en una base de datos analítica. Finalmente, realizaremos un análisis detallado con herramientas de generación de informes para explorar y explotar los datos analizados.
+En aproximadamente 4 sesiones, trabajaremos en nuestro caso de uso utilizando esta información. El proceso incluirá un proceso ETL con Oracle Data Integrator (ODI), seguido de la creación de un modelo multidimensional para almacenar los datos de manera eficiente en una base de datos analítica. Finalmente, realizaremos un análisis detallado con herramientas de generación de informes para explorar y explotar los datos analizados.
 
 La visualización se realizará en etapas posteriores, con el objetivo de crear un diseño similar al de PowerBI presentado en la misma página web, para facilitar la comprensión e interpretación de los datos sobre la Covid-19.
 
@@ -13,35 +13,35 @@ La visualización se realizará en etapas posteriores, con el objetivo de crear 
 Se deben crear las siguientes dimensiones:
 
 - **Sexo**  
-Esta dimensión se creará a partir de los datos proporcionados en el archivo fuente. La variable "Sexo" representará el género de las personas afectadas por la epidemia de la Covid-19, permitiendo segmentar los casos, hospitalizaciones, ingresos en UCI y defunciones según este atributo.
+Esta dimensión se creará a partir de los datos proporcionados en el archivo fuente histórico del Covid (cogiendo los diferentes tipos de valores para el código Sexo). La variable "Sexo" representará el género de las personas afectadas por la epidemia de la Covid-19, permitiendo segmentar los casos, hospitalizaciones, ingresos en UCI y defunciones según este atributo.
 
 - **Grupo de Edad**  
-La dimensión "Grupo de Edad" se creará utilizando los datos del archivo fuente. Los grupos de edad se dividirán en categorías relevantes, como pueden ser menores de 18 años, 18-40 años, 41-60 años, 61-80 años, y mayores de 80 años. Esto permitirá analizar la distribución de los casos y otros eventos en función de la edad de los afectados.
+La dimensión "Grupo de Edad" se creará utilizando los datos del archivo fuente histórico del Covid (cogiendo los diferentes tipos de valores para el código Grupo Edad). Los grupos de edad se dividirán en categorías relevantes, como pueden ser menores de 18 años, 18-40 años, 41-60 años, 61-80 años, y mayores de 80 años. Esto permitirá analizar la distribución de los casos y otros eventos en función de la edad de los afectados.
 
 - **Provincia**  
-Esta dimensión se generará a partir del archivo que se mencionó anteriormente, que contiene los códigos y nombres de las provincias. La dimensión de **Provincia** permitirá segmentar los datos según la ubicación geográfica de los afectados, facilitando el análisis regional de la epidemia.
+Esta dimensión se generará a partir del archivo de provincias, que contiene los códigos y nombres de las provincias. La dimensión de **Provincia** permitirá segmentar los datos según la ubicación geográfica de los afectados, facilitando el análisis regional de la epidemia.
 
-- **Temporal**  
-La dimensión temporal se establecerá mediante un enlace a una base de datos SQL, donde se representarán los eventos en función del tiempo. Esta dimensión se utilizará para organizar y analizar los datos epidemiológicos en función de fechas específicas, lo que facilitará el análisis a lo largo del tiempo.
+- **Fecha**  
+La dimensión fecha se establecerá mediante un procedimiento SQL, donde se representarán los eventos en función del tiempo. Esta dimensión se utilizará para organizar y analizar los datos epidemiológicos en función de fechas específicas, lo que facilitará el análisis a lo largo del tiempo.
 
-- **Catálogo del Estado de Alarma**  
+- **Estado de Alarma**  
 Además de las dimensiones anteriores, es necesario generar un catálogo para analizar la cantidad de personas que estuvieron afectadas o no por la Covid-19 durante los períodos de estado de alarma. Este catálogo incluirá los siguientes estados:
 
-      a. **Declaración del estado de alarma desde el 14 de marzo**: Representa el inicio del estado de alarma en España debido a la pandemia.
+            a. **Declaración del estado de alarma desde el 14 de marzo**: Representa el inicio del estado de alarma en España debido a la pandemia.
 
-      b. **Prórroga del estado de alarma desde el 27 de marzo**: Refleja la extensión del estado de alarma inicial.
+            b. **Prórroga del estado de alarma desde el 27 de marzo**: Refleja la extensión del estado de alarma inicial.
 
-      c. **Prórroga del estado de alarma desde el 10 de abril**: Otra extensión del estado de alarma.
+            c. **Prórroga del estado de alarma desde el 10 de abril**: Otra extensión del estado de alarma.
 
-      d. **Prórroga del estado de alarma desde el 24 de abril**: Continuación del estado de alarma.
+            d. **Prórroga del estado de alarma desde el 24 de abril**: Continuación del estado de alarma.
 
-      e. **Prórroga del estado de alarma desde el 8 de mayo**: Nueva extensión del estado de alarma.
+            e. **Prórroga del estado de alarma desde el 8 de mayo**: Nueva extensión del estado de alarma.
 
-      f. **Prórroga del estado de alarma desde el 22 de mayo**: Continuación del periodo de alarma.
+            f. **Prórroga del estado de alarma desde el 22 de mayo**: Continuación del periodo de alarma.
 
-      g. **Prórroga del estado de alarma desde el 5 de junio**: Última prórroga del estado de alarma antes de su fin.
+            g. **Prórroga del estado de alarma desde el 5 de junio**: Última prórroga del estado de alarma antes de su fin.
 
-      h. **99 - Fuera del estado de alarma**: Indica los casos fuera de los períodos de estado de alarma.
+            h. **99 - Fuera del estado de alarma**: Indica los casos fuera de los períodos de estado de alarma.
 
 ### Objetivo
 El objetivo final de este proceso es que respecto a la información recibida se pueda interpretar y analizar:
@@ -52,16 +52,16 @@ El objetivo final de este proceso es que respecto a la información recibida se 
 ## Recursos
 
 ### Ficheros
--     **Histórico**. El archivo contiene información detallada sobre la evolución de la pandemia de Covid-19 hasta el 28 de marzo de 2022. El archivo incluye datos sobre el número de casos confirmados, hospitalizaciones, ingresos en unidades de cuidados intensivos (UCI) y defunciones, segmentados por **sexo**, **edad** y **provincia de residencia**. Los datos abarcan todas las edades desde el inicio de la pandemia.
-      -  <a href="../../assets/casos_hosp_uci_def_sexo_edad_provres.csv">Descargar casos COVID</a>
+-     **Histórico Covid**. El archivo contiene información detallada sobre la evolución de la pandemia de Covid-19 hasta el 28 de marzo de 2022. El archivo incluye datos sobre el número de casos confirmados, hospitalizaciones, ingresos en unidades de cuidados intensivos (UCI) y defunciones, segmentados por **sexo**, **edad** y **provincia de residencia**. Los datos abarcan todas las edades desde el inicio de la pandemia.
+      -  <a href="../../assets/casos_hosp_uci_def_sexo_edad_provres.csv">Descarga histórico COVID-19</a>
 
-- **Provincias**: **códigos de las provincias** en España. Al descargar los códigos en formato CSV, se ha encontrado un problema de **codificación de caracteres** que debe resolverse durante el proceso de ETL (Extract, Transform, Load).
+- **Provincias**: Códigos de las provincias en España. Al descargar los códigos en formato CSV, se ha encontrado un problema de **codificación de caracteres** que debe resolverse durante el proceso de ETL.
       -  <a href="../../assets/provincies.csv">Descargar ISO 3166</a>
 
 -  **Fechas**: Consulta SQL para generar de forma dinámica el catálogo de fechas. 
       -  <a href="../../assets/Proc Data Cataleg.sql">Descargar SQL</a>
 
-- **Tramos**: Representa los diferentes tramos por los que se pasa en el estado de alarma para poder clasificarlos y agruparlos.
+- **Tramos estado alarma**: Representa los diferentes tramos por los que se pasa en el estado de alarma para poder clasificarlos y agruparlos.
        -  <a href="../../assets/trams.csv">Descargar tramos</a>
 
 ### Diagramas
