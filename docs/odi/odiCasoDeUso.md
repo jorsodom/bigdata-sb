@@ -114,7 +114,7 @@ Es necesario crear jerarquías temporales para representar correctamente la secu
 Se deben tener en cuenta todas las normativas o restricciones específicas asociadas con la recopilación y el uso de las datos epidemiológicos. Esto puede incluir regulaciones sobre la protección de datos personales, el acceso a la información, y las políticas de confidencialidad y privacidad.
 
 ### 5. **Metodología ETL**
-Es fundamental planificar y describir detalladamente la metodología Extract, Transform, Load (ETL) que se seguirá para integrar los datos desde su origen hasta la base de datos analítica. Este proceso garantizará que los datos se extraigan correctamente de las fuentes originales, se transformen según las necesidades del análisis y se carguen adecuadamente en la base de datos final.
+Es fundamental planificar y describir detalladamente la metodología ETL que se seguirá para integrar los datos desde su origen hasta la base de datos analítica. Este proceso garantizará que los datos se extraigan correctamente de las fuentes originales, se transformen según las necesidades del análisis y se carguen adecuadamente en la base de datos final.
 
 ## ETL
 
@@ -132,6 +132,11 @@ Es fundamental planificar y describir detalladamente la metodología Extract, Tr
 
 3. Generar paquete con la carga de todas las ETL y procedimiento en SRC. WF_SRC_XXX
 
+!!!   Ayuda (tablas SRC a crear):
+      -     SRC_COVID
+      -     SRC_PROVINCIA
+      -     SRC_ESTAT_ALARMA
+
 ### Capa CATÁLOGOS (LKP)
 -       Extraer de la tabla SRC COVID los catálogos necesarios.
 -       Cargar del resto de tablas SRC los catálogos LKP.
@@ -144,6 +149,14 @@ Es fundamental planificar y describir detalladamente la metodología Extract, Tr
 2. Desarrollar las ETLs para cargar de las tablas SRC a las tablas de catálogo LKP.
 
 3. Generar paquete con la carga de todas las ETL para Catálogos LKP (LKP).
+
+!!!   Ayuda (tablas LKP a crear):
+
+      -     LKP_SEXO
+      -     LKP_GRUPO_EDAD
+      -     LKP_PROVINCIA
+      -     LKP_ESTAT_ALARMA
+      -     LKP_FECHA
 
 ### Capa ESTRELLA, HECHOS (ODS)
 - Extraer de la tabla SRC COVID los datos históricos/transaccionales.
@@ -160,6 +173,10 @@ Es fundamental planificar y describir detalladamente la metodología Extract, Tr
 3.      Utilizar los lookups para validar y cargar la información de los catálogos.
 
 4.      Generar paquete con la carga del (ODS).
+
+!!!   Ayuda (tabla ODS a crear):
+
+      -     ODS_COVID
 
 ### Proceso final
 
