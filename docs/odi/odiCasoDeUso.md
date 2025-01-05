@@ -169,12 +169,12 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
       -     SRC_PROVINCIA.CAT_SUB = 'province'
 
       -     SUBSTR(SRC_PROVINCIA.CODIGO,4,LENGTH(SRC_PROVINCIA.CODIGO))
-
+<div align="center">
 <video width="640"  controls>
     <source src="../../vid/ODI12c-CasoUsoODILKP1.mp4" type="video/mp4">
 </video>
 </div>
-
+<div align="center">
 <video width="640"  controls>
     <source src="../../vid/ODI12c-CasoUsoODILKP2.mp4" type="video/mp4">
 </video>
@@ -200,7 +200,7 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
 !!! note "Tabla ODS a crear"
 
       -     ODS_COVID
-
+<div align="center">
  <video width="640"  controls>
 <source src="../../vid/ODI12c-CasoUsoODIODS.mp4" type="video/mp4">
 </video>
