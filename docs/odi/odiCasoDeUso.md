@@ -134,12 +134,12 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
 
 <div align="center">
 <video width="640"  controls>
-    <source src="../../vid/ODI12c-CasoUsoSRC1.mp4" type="video/mp4">
+    <source src="../../vid/ODI12c-CasoUsoODISRC1.mp4" type="video/mp4">
 </video>
 </div>
 <div align="center">
 <video width="640"  controls>
-    <source src="../../vid/ODI12c-CasoUsoSRC2.mp4" type="video/mp4">
+    <source src="../../vid/ODI12c-CasoUsoODISRC2.mp4" type="video/mp4">
 </video>
 </div>
 ### Capa CATÁLOGOS: (LKP)
