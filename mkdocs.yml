@@ -18,7 +18,7 @@ nav:
    # - Caso uso API: nifi/nifiCasoUsoAPI.md
     #- Caso uso MongoDB: nifi/nifiCasoUsoMongoDB.md
    # - Caso de uso con PostgreSQL: nifi/nifiCasoUsoPostgreSQL.md
-  - ETL con ODI: 
+  #- ETL con ODI: 
   #  - Introducción: odi/odiIntroduccion.md
   #  - Demo: odi/odiDemo.md
   #  - Caso de uso: odi/odiCasoDeUso.md
