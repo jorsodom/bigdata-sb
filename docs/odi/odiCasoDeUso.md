@@ -131,6 +131,11 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
       -     SRC_COVID
       -     SRC_PROVINCIA
       -     SRC_ESTAT_ALARMA
+
+<video width="640"  controls>
+    <source src="../../vid/ODI12c-CasoUsoSRC.mp4" type="video/mp4">
+</video>
+
 ### Capa CATÁLOGOS: (LKP)
 -       Extraer de la tabla SRC COVID los catálogos necesarios.
 -       Generar procedimiento ODI para el catálogo de fecha
