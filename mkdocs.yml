@@ -14,10 +14,10 @@ nav:
     - Práctica 6: nifi/nifiPractica6.md
     - Práctica 7: nifi/nifiPractica7.md
     - Práctica 8: nifi/nifiPractica8.md
-   # - Caso de uso con Hadoop: nifi/nifiCasoUsoHadoop.md
+    - Caso de uso con Hadoop: nifi/nifiCasoUsoHadoop.md
    # - Caso uso API: nifi/nifiCasoUsoAPI.md
     #- Caso uso MongoDB: nifi/nifiCasoUsoMongoDB.md
-    - Caso de uso con PostgreSQL: nifi/nifiCasoUsoPostgreSQL.md
+   # - Caso de uso con PostgreSQL: nifi/nifiCasoUsoPostgreSQL.md
   #- ETL con ODI: 
   #  - Introducción: odi/odiIntroduccion.md
   #  - Demo: odi/odiDemo.md
