@@ -183,6 +183,10 @@ insertando
 width="80%" />
 </div>
 
+## Driver JDBC PostgreSQL
+
+-  <a href="../../assets/postgresql-42.7.4.jar">Descargar postgresql-42.7.4</a>
+
 ## ENTREGABLE 
 
 Hay que exportar la practica con un Processor Group que genera un .json y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P7_NomAlumnoApellidos.xml*
