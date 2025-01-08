@@ -118,10 +118,16 @@ width="80%" />
 
 La estructura de la tabla destino es la siguiente
 
-<div align="center">
-<img src="../../img/NiFiP7.12.png" alt="Practica 7" 
-width="80%" />
-</div>
+```sql
+CREATE TABLE tbl_users (
+    title VARCHAR(255),
+    first VARCHAR(255),
+    last VARCHAR(255),
+    email VARCHAR(255),
+    created_on VARCHAR(255)
+);
+```
+
 
 Volvemos al espacio de trabajo y conectamos el processor “*ConverJSONtoSQL*” al 
 “*PutSQL*” y configuramos el tipo de relación que tendrán, en este caso “*sql*”
