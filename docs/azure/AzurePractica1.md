@@ -29,7 +29,7 @@ La práctica 1 se dividide en 3 partes:
 - [x] Configuraremos el simulador Raspberry Pi.  
 - [x] Ejecutaremos una aplicación de ejemplo en la Raspberry Pi para enviar datos del sensor al Centro IoT Hub.  
 #### Crear centro IoT
--       Creamos un nuevo recurso **centro de IoT**.
+-       Creamos un nuevo recurso ****Centro de IoT****.
 <div align="center">
 <img src="../../img/azurep1_5.png" alt="Azure p1" 
 width="80%"/>
@@ -39,28 +39,29 @@ width="80%"/>
 <img src="../../img/azurep1_6.png" alt="Azure p1" 
 width="80%"/>
 </div>
--       Rellenamos los campos: Suscripción, Grupo de recursos, nombre de la instancia, región y Nivel. Después seleccionamos “Siguiente: Redes”.  
+-       Rellenamos los campos: Suscripción, Grupo de recursos, nombre de la instancia, región y Nivel. Después seleccionamos “**Siguiente: Redes**”.  
 <div align="center"><img src="../../img/azurep1_7.png" alt="Azure p1" width="80%"/></div>
 -       Seleccionamos “Acceso público”.  
 <div align="center"><img src="../../img/azurep1_8.png" alt="Azure p1" width="80%"/></div>
 -       Seleccionamos “Siguiente: Administración”. Lo dejamos por defecto. No tocamos ningún parámetro.  
 <div align="center"><img src="../../img/azurep1_9.png" alt="Azure p1" width="80%" />
 </div>
--       Seleccionamos “Siguiente: Etiquetas”. No introducimos nada. O, si deseas etiquetar el recurso, introduce el Nombre / Valor para luego buscar el recurso a través de la etiqueta.  
--       Seleccionamos “Siguiente: Revisar y crear”. Revisamos que todo esté correcto.  
--       Llegados a este punto, ya podemos crear el recurso Centro de IoT. Hacemos clic en “Create/Crear”. Tardará un tiempo en implementarse el recurso. Mientras tanto, en el espacio de notificaciones podemos observar el progreso hasta que finalice.  
+-       Seleccionamos “**Siguiente: Etiquetas**”. No introducimos nada. O, si deseas etiquetar el recurso, introduce el Nombre / Valor para luego buscar el recurso a través de la etiqueta.  
+-       Seleccionamos “**Siguiente: Revisar y crear**”. Revisamos que todo esté correcto.  
+-       Llegados a este punto, ya podemos crear el recurso Centro de IoT. Hacemos clic en “**Create/Crear**”. Tardará un tiempo en implementarse el recurso. Mientras tanto, en el espacio de notificaciones podemos observar el progreso hasta que finalice.  
 <div align="center"><img src="../../img/azurep1_10.png" alt="Azure p1" width="80%" /></div>
 <div align="center"><img src="../../img/azurep1_11.png" alt="Azure p1" width="80%" /></div>
+
 #### Nuevo dispositivo IoT
--       En el menú de navegación del Centro de IoT, seleccionamos “Dispositivos” y luego seleccionamos “Agregar dispositivo”.  
--       En “Crear un dispositivo”, proporcionamos un nombre para el nuevo dispositivo, como por ejemplo: “RaspberryInput” y no es necesario modificar ningún otro parámetro. Seleccionamos “Guardar”. Esta acción crea una nueva identidad del dispositivo para el Centro de IoT.  
--       Dejamos activada la opción “Generar claves automáticamente” para las Claves primarias y secundarias, que se generan de forma automática.  
--       Después de crear el dispositivo, lo abrimos desde la lista del panel de Dispositivos.  
-        - Copiamos la “Cadena de conexión principal o String” (el código del dispositivo utiliza esta cadena de conexión para comunicarse con el Centro IoT).  
+-       En el menú de navegación del Centro de IoT, seleccionamos “**Dispositivos**” y luego seleccionamos “**Agregar dispositivo**”.  
+-       En “**Crear un dispositivo**”, proporcionamos un nombre para el nuevo dispositivo, como por ejemplo: “RaspberryInput” y no es necesario modificar ningún otro parámetro. Seleccionamos “**Guardar**”. Esta acción crea una nueva identidad del dispositivo para el Centro de IoT.  
+-       Dejamos activada la opción “**Generar claves automáticamente**” para las claves primarias y secundarias, que se generan de forma automática.  
+-       Después de crear el dispositivo, lo abrimos desde la lista del panel de *Dispositivos*.  
+-       Copiamos la “**Cadena de conexión principal o String**” (*el código del dispositivo utiliza esta cadena de conexión para comunicarse con el Centro IoT*).  
 
 !!! note "Nota" 
 
-        De forma predeterminada, las Claves y las cadenas de conexión están enmascaradas porque son información confidencial. Si se hace clic en el ícono del ojo, se muestran. No es necesario mostrarlas para copiarlas.  
+De forma predeterminada, las claves y las cadenas de conexión están enmascaradas porque son información confidencial. Si se hace clic en el ícono del ojo, se muestran. No es necesario mostrarlas para copiarlas.  
 
 #### Simulador
 <div align="center">
@@ -71,18 +72,19 @@ width="80%" />
 
 Hay tres áreas en este simulador:  
 
-        -     **Circuito**: El circuito predeterminado consiste en una Raspberry Pi conectada a un sensor BME280 y un LED. No se puede modificar.  
+-     **Circuito**: El circuito predeterminado consiste en una Raspberry Pi conectada a un sensor BME280 y un LED. No se puede modificar.  
 
-        -     **Área de codificación**: Un editor de código en línea para programar con Raspberry Pi. La aplicación de ejemplo predeterminada permite recopilar datos del sensor BME280 y enviarlos a Azure IoT Hub. La aplicación es totalmente compatible con dispositivos reales. 
+ -     **Área de codificación**: Un editor de código en línea para programar con Raspberry Pi. La aplicación de ejemplo predeterminada permite recopilar datos del sensor BME280 y enviarlos a Azure IoT Hub. La aplicación es totalmente compatible con dispositivos reales. 
 
-        -     **Ventana de consola integrada**: Muestra la salida del código. En la parte superior aparecen tres botones:  
-                -     **Run (Ejecutar)**: Ejecuta la aplicación en el área de codificación.  
-                -     **Reset (Restablecer)**: Restablece el área de codificación a la aplicación de ejemplo predeterminada.  
-                -     **Fold/Expand (Comprimir/Expandir)**: A la derecha hay un botón para plegar o expandir la ventana de la   consola.  
+-     **Ventana de consola integrada**: Muestra la salida del código. En la parte superior aparecen tres botones:  
+        -     **Run (Ejecutar)**: Ejecuta la aplicación en el área de codificación.  
+        -     **Reset (Restablecer)**: Restablece el área de codificación a la aplicación de ejemplo predeterminada.  
+        -     **Fold/Expand (Comprimir/Expandir)**: A la derecha hay un botón para plegar o expandir la ventana de la consola.  
+
 #### Ejecución en simulador
--       Sobre el código por defecto del simulador web, modificamos la linia 15 dónde pone "Your IoT hub device connection string" para la cadena de conexión que hemos generado en Azure IoT Hub antes.
+-       Sobre el código por defecto del simulador web, modificamos la linia 15 dónde pone "*Your IoT hub device connection string*" para la cadena de conexión que hemos generado en Azure IoT Hub antes.
 <div align="center"><img src="../../img/azurep1_2.png" alt="Azure p1" width="80%" /></div>
--       Seleccionar "Ejecutar" o escribir "npm start" para ejecutar.
+-       Seleccionar "**Ejecutar**" o escribir "**npm start**" para ejecutar.
 Debemos de revisar el resultado del sensor y los mensajes generados.
 <div align="center"><img src="../../img/azurep1_3.png" alt="Azure p1" width="80%" /></div>
 ## P1.2. Conectar Raspberry Pi a Azure Centro IoT y Enrutamiento a una Cuenta de Almacenamiento (Storage Account)
