@@ -15,7 +15,7 @@ Vamos a conectar dispositivos a la nube sin ningún problema con Azure Centro Io
 <img src="../../img/azurep1_1.png" alt="Azure p1" 
 width="80%" />
 </div>
-La práctica 1 se dividide en 3 partes:
+La **práctica 1* se dividide en **3 partes**:
 
 - [**P1.1.** Conectar Raspberry Pi a Azure Centro IoT](https://jorsodom.github.io/bigdata-sb/azure/AzurePractica1/#p11-conectar-raspberry-pi-a-azure-centro-iot)  
 
@@ -63,9 +63,8 @@ width="80%"/>
 -       Copiamos la “**Cadena de conexión principal o String**” (*el código del dispositivo utiliza esta cadena de conexión para comunicarse con el Centro IoT*).  
 <div align="center"><img src="../../img/azurep1_16.png" alt="Azure p1" width="80%" /></div>
 
-!!! note "Nota" 
-
-De forma predeterminada, las claves y las cadenas de conexión están enmascaradas porque son información confidencial. Si se hace clic en el ícono del ojo, se muestran. No es necesario mostrarlas para copiarlas.  
+!!! note "Nota"
+      - De forma predeterminada, las claves y las cadenas de conexión están enmascaradas porque son información confidencial. Si se hace clic en el ícono del ojo, se muestran. No es necesario mostrarlas para copiarlas.
 
 ### Simulador
 <div align="center">
@@ -75,12 +74,16 @@ width="80%" />
 - **Enlace**: [Raspberry Pi Azure IoT Web Simulator](https://azure-samples.github.io/raspberry-pi-web-simulator/#GetStarted)
 
 Hay tres áreas en este simulador:  
-        - **Circuito**: El circuito predeterminado consiste en una Raspberry Pi conectada a un sensor BME280 y un LED. No se puede modificar.  
-        - **Área de codificación**: Un editor de código en línea para programar con Raspberry Pi. La aplicación de ejemplo predeterminada permite recopilar datos del sensor BME280 y enviarlos a Azure IoT Hub. La aplicación es totalmente compatible con dispositivos reales. 
-        - **Ventana de consola integrada**: Muestra la salida del código. En la parte superior aparecen tres botones:  
-                - **Run (Ejecutar)**: Ejecuta la aplicación en el área de codificación.  
-                - **Reset (Restablecer)**: Restablece el área de codificación a la aplicación de ejemplo predeterminada.  
-                - **Fold/Expand (Comprimir/Expandir)**: A la derecha hay un botón para plegar o expandir la ventana de la consola.  
+
+- **Circuito**: El circuito predeterminado consiste en una Raspberry Pi conectada a un sensor BME280 y un LED. No se puede modificar.  
+
+- **Área de codificación**: Un editor de código en línea para programar con Raspberry Pi. La aplicación de ejemplo predeterminada permite recopilar datos del sensor BME280 y enviarlos a Azure IoT Hub. La aplicación es totalmente compatible con dispositivos reales. 
+
+- **Ventana de consola integrada**: Muestra la salida del código. En la parte superior aparecen tres botones: 
+
+        - **Run (Ejecutar)**: Ejecuta la aplicación en el área de codificación.  
+        - **Reset (Restablecer)**: Restablece el área de codificación a la aplicación de ejemplo predeterminada.  
+        - **Fold/Expand (Comprimir/Expandir)**: A la derecha hay un botón para plegar o expandir la ventana de la consola.  
 
 ### Ejecución en simulador
 -       Sobre el código por defecto del simulador web, **modificamos** la linia 15 dónde pone "*Your IoT hub device connection string*" para la cadena de conexión que hemos generado en Azure IoT Hub antes.
