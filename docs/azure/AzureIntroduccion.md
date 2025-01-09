@@ -22,4 +22,4 @@ Azure es una plataforma en la nube diseñada para simplificar el proceso de crea
 
 ## Azure Products
 
--  <a href="[../../assets/postgresql-42.7.4.jar](https://azure.microsoft.com/es-es/products/?msockid=1db093de04ef66ce297b86e7055667a3)">Directorio de productos de Azure</a>
+- [Directorio productos Azure](https://azure.microsoft.com/es-es/products/?msockid=1db093de04ef66ce297b86e7055667a3)
