@@ -4,6 +4,7 @@ Vamos a conectar dispositivos a la nube sin ningún problema con Azure Centro Io
 - Utilizaremos un simulador de Raspberry Pi.  
 
 **¿Qué vamos a hacer?**  
+
 - [x] Crear un Centro IoT.  
 - [x] Registrar un nuevo dispositivo en el Centro IoT para conectarlo con la Raspberry Pi.  
 - [x] Configurar el simulador Raspberry Pi.  
@@ -16,7 +17,9 @@ Vamos a conectar dispositivos a la nube sin ningún problema con Azure Centro Io
 width="80%" />
 </div>
 **P1.1.** Conectar Raspberry Pi a Azure Centro IoT
+
 **P1.2.** Conectar Raspberry Pi a Azure Centro IoT y Enrutamiento a una Cuenta de Almacenamiento (Storage Account)
+
 **P1.3.** Conectar Raspberry Pi a Azure Centro IoT y Enrutamiento a una Aplicación Lógica y envío de correos
 
 
@@ -54,11 +57,11 @@ width="80%" />
 </div>
 6. Seleccionamos “Siguiente: Etiquetas”. No introducimos nada. O, si deseas etiquetar el recurso, introduce el Nombre / Valor para luego buscar el recurso a través de la etiqueta.  
 7. Seleccionamos “Siguiente: Revisar y crear”. Revisamos que todo esté correcto.  
+8. Llegados a este punto, ya podemos crear el recurso Centro de IoT. Hacemos clic en “Create/Crear”. Tardará un tiempo en implementarse el recurso. Mientras tanto, en el espacio de notificaciones podemos observar el progreso hasta que finalice.  
 <div align="center">
 <img src="../../img/azurep1_10.png" alt="Azure p1" 
 width="80%" />
 </div>
-8. Llegados a este punto, ya podemos crear el recurso Centro de IoT. Hacemos clic en “Create/Crear”. Tardará un tiempo en implementarse el recurso. Mientras tanto, en el espacio de notificaciones podemos observar el progreso hasta que finalice.  
 <div align="center">
 <img src="../../img/azurep1_11.png" alt="Azure p1" 
 width="80%" />
@@ -70,9 +73,8 @@ width="80%" />
    - Dejamos activada la opción “Generar claves automáticamente” para las Claves primarias y secundarias, que se generan de forma automática.  
 3. Después de crear el dispositivo, lo abrimos desde la lista del panel de Dispositivos.  
    - Copiamos la “Cadena de conexión principal o String” (el código del dispositivo utiliza esta cadena de conexión para comunicarse con el Centro IoT).  
-!!! Note "Nota"
-
-De forma predeterminada, las Claves y las cadenas de conexión están enmascaradas porque son información confidencial. Si se hace clic en el ícono del ojo, se muestran. No es necesario mostrarlas para copiarlas.  
+!!! Note "Nota" 
+        De forma predeterminada, las Claves y las cadenas de conexión están enmascaradas porque son información confidencial. Si se hace clic en el ícono del ojo, se muestran. No es necesario mostrarlas para copiarlas.  
 
 #### Simulador
 <div align="center">
