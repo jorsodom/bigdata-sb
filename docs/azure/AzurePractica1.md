@@ -93,5 +93,88 @@ Debemos de revisar el resultado del sensor y los mensajes generados.
 <div align="center"><img src="../../img/azurep1_3.png" alt="Azure p1" width="80%" /></div>
 
 ## P1.2. Conectar Raspberry Pi a Azure Centro IoT y Enrutamiento a una Cuenta de Almacenamiento (Storage Account)
+### Introducción
+- [x] Creamos una cuenta de almacenamiento "Blob Storage Account".
+- [x] Creamos un punto de conexión personalizado para que la cuenta de almacenamiento enrute los mensajes desde el Centro IoT.
+- [x] Revisamos los mensajes del dispositivo en el "Blob Storage Account".
+
+### Conexión con dispositivo
+Acopiado este punto, vamos a recuperar los mensajes recibidos en el Azure Centre IoT a través de un componente de Azure llamado "enrutamiento de mensajes" para almacenarlos en una Storage Account para poder explotarlos posteriormente.
+1. Vamos al Azure Centro IoT en el portal Azure.
+2. Seleccionamos "**Directivas de acceso compartido**" en la sección "*Configuración de seguridad*".
+3. Seleccionamos la directiva "**iothubowner**".
+4. Copiamos el contenido de la "*cadena de conexión principal / string*"
+5. Ahora utilizaremos esta cadena de conexión para configurar el Explorador del Centro IoT. Hay que descargar e instalar el herramiento: [Releases · Azure/azure-iot-explorer (github.com)](https://github.com/Azure/azure-iot-explorer/releases)
+        -       Abrimos el aplicativo "**Azure IoT Explorer**".
+        -       Seleccionamos "**Connect via IoT Hub connection string**". Y añadimos un nuevo dispositivo.
+        -       Peguemos la cadena de conexión copiada anteriormente (iothubowner)
+        -       Seleccionamos "Guardar".
+        -       Ya conectados al Centro IoT, veremos un listado de los dispositivos. Seleccionamos lo creado.
+        -       Seleccionamos "Telemetría".
+        -       Con el dispositivo en ejecución, seleccionamos "Start". Si el dispositivo no se está ejecutando, no veremos la telemetría. 
+        -       h.	Si todo esta funcionando, debemos visualizar los mensages que llegan al dispoisitvo, el mas reciente en la parte superior.
+        -       Todos los mensajes reúnen al punto de conexión integrado predeterminado del Centro IoT. A continuación, vamos a crear un punto de conexión personalizado y enrutar algunos de los mensajes al conde de almacenamiento en función de las propiedades del mensaje.
+
+!!! note "Observación"
+
+        Observem els missatges entrants durant uns segons per comprovar que veiem diferents paràmetres. Després, podem parar el dispositiu.
+
+!!! note "Nota"
+
+        Los mensajes dejarán de aparecer en el Explorador IoT por que solo van al punto de conexión integrado cuando no coinciden con ninguna otra ruta en el Centro IoT
+
+### Crear cuenta de almacenamiento (Storage Account)
+
+Creamos un "Storage Account" y un contenedor dentro que tendrá todos los mensajes del dispositivo que se asoman a la misma.
+1. Abrimos el Portal Azure y buscamos "Cuentas de almacenamiento"
+2. Seleccionamos "Crear".
+3. Proporcionamos los siguientes valores para la "Cuentas de almacenamiento": Suscripción, Grupos de recursos, Número del a cuenta de almacenamiento y Rendimiento.
+4. Seleccionamos "Revisar y crear".
+5. Una vez completada la validación, seleccionamos "Crear".
+6. Una vez finalizada la implementación, seleccionamos "Ir al recurso" o lo buscamos a través del portal.
+7. En el menú de la "cuenta de almacenamiento", seleccionamos "Contenedores en la sección Almacenamiento de datos".
+8. Seleccionamos "+ Contenedor" para crear un nuevo contenedor.
+9. Proporcionaremos un nombre para el contenedor y seleccionamos "Crear".
+
+### Enrutamiento a una cuenta de almacenamiento
+Vamos a definir un nuevo punto de conexión que apunta a la "cuenta de almacenamiento" que me creado. 
+A continuación, creamos una ruta sin ningún filtro a los mensajes y lo enrutamos en el punto de conexión de la "cuenta de almacenamiento"
+
+!!! note "Nota"
+        Se pueden escribir datos en el Blob Storage con formato Apache Avro (predeterminado) o JSON. El formato de codificación solo se puede establecer en el momento en el que se configura el punto de conexión del Blob Storage. No se puede cambiar el formato en un punto de conexión que ya está configurado. Cuando se utiliza codificación JSON, se debe establecer contentType en JSON y contentEncoding en UTF-8 en las propiedades del sistema de mensajes.
+
+1. En Azure Portal, vamos hasta el Centro IoT.
+2. Seleccionamos "Enrutamiento de mensajes".
+3. En la pestaña "Rutas", seleccionamos "+ Agregar".
+4. Seleccionamos en "Agregar punto de conexión" junto al campo "Extremo" y seleccionamos "Almacenamiento" en el menu desplegable.
+5. Proporcionamos la información para el nuevo punto de conexión: Número, Contenedor de Azure Storage y Encoding.
+6. Aceptamos los valores predeterminados para el resto de parámetros y seleccionamos "Crear".
+ 
+7. Seguimos con la creación de la nueva ruta. Hemos agregado el punto de conexión al "Storage Account". Proporcionaremos la siguiente información para la nueva ruta:
+8. Guardamos
+Una vez creada la ruta en el Centro IoT y habilitada, iniciará inmediatamente el derrumbamiento de mensajes que cumpliendo la condición de la consulta del punto de conexión definido.
+
+### Supervisión 
+Volvamos a la sesión del explorador IoT. Recordemos que el explorador IoT supervisa el punto de conexión integrado para el centro IoT. Significa que ahora debería ver solo mensajes que no se enrutan mediante la ruta personalizada creada.
+Volvemos a iniciar el simulador y la telemetría. Observamos los mensajes entrantes durante unos instantes (si hay)
+
+### Visualización de mensages en la cuenta de almacenamiento
+
+Comprobamos los mensajes están apretando al "Storage account":
+1. En Azure Portal, vamos a "cuenta de almacenamiento".
+2. Seleccionamos "Contenedores" en la sección de "Almacenamiento".
+3. Seleccionamos el contenedor.
+4. Debe haber una carpeta con el nombre del centro IoT. Exploramos en profundidad la estructura hasta que reúnamos a ficheros avro.
+5. Seleccionamos el fichero avro y, a continuación, lo descargamos. Y confirmamos que contiene mensajes del dispositivo establecido en el "enrutamiento".
+6. Paremos el simulador.
+
+### Ejercicio
+
+En el "enrutamiento" creado en el "Centro IoT" hacia el Storage Account, se pueden definir condiciones que filtran los mensajes que irán destinados al Storage Account.
+Con la documentación de Microsoft: [Consulta sobre el enrutamiento de mensajes de Azure IoT Hub | Microsoft Learn](https://learn.microsoft.com/es-es/azure/iot-hub/iot-hub-devguide-routing-query-syntax)
+
+Generar un filtro que destine solo mensajes filtrados por alguna de sus características del JSON devuelto.
+
+
 ## P1.3. Conectar Raspberry Pi a Azure Centro IoT y Enrutamiento a una Aplicación Lógica y envío de correos
 
