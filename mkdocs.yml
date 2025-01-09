@@ -16,12 +16,15 @@ nav:
     - Práctica 8: nifi/nifiPractica8.md
     - Caso de uso con Hadoop: nifi/nifiCasoUsoHadoop.md
    # - Caso uso API: nifi/nifiCasoUsoAPI.md
-    #- Caso uso MongoDB: nifi/nifiCasoUsoMongoDB.md
+   # - Caso uso MongoDB: nifi/nifiCasoUsoMongoDB.md
    # - Caso de uso con PostgreSQL: nifi/nifiCasoUsoPostgreSQL.md
   #- ETL con ODI: 
   #  - Introducción: odi/odiIntroduccion.md
   #  - Demo: odi/odiDemo.md
   #  - Caso de uso: odi/odiCasoDeUso.md
+   - Microsoft Azure: 
+     - Introducción: azure/AzureIntroduccion.md
+     - Práctica 1: azure/AzurePractica1.md
 theme:
   name: material
   language: es
