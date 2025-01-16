@@ -106,6 +106,7 @@ Acopiado este punto, vamos a recuperar los mensajes recibidos en el Azure Centre
 3. Seleccionamos la directiva "**iothubowner**".
 4. Copiamos el contenido de la "*cadena de conexión principal / string*"
 5. Ahora utilizaremos esta cadena de conexión para configurar el Explorador del Centro IoT. Hay que descargar e instalar el herramiento: [Releases · Azure/azure-iot-explorer (github.com)](https://github.com/Azure/azure-iot-explorer/releases)
+
         -       Abrimos el aplicativo "**Azure IoT Explorer**".
         -       Seleccionamos "**Connect via IoT Hub connection string**". Y añadimos un nuevo dispositivo.
         -       Peguemos la cadena de conexión copiada anteriormente (iothubowner)
