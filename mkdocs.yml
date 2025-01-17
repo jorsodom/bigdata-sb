@@ -17,11 +17,11 @@ nav:
     - Caso de uso con Hadoop: nifi/nifiCasoUsoHadoop.md
     - Práctica 10: nifi/nifiPractica10.md
    # - Caso uso MongoDB: nifi/nifiCasoUsoMongoDB.md
-    - Caso de uso con PostgreSQL: nifi/nifiCasoUsoPostgreSQL.md
-  - ETL con ODI: 
-    - Introducción: odi/odiIntroduccion.md
-    - Demo: odi/odiDemo.md
-    - Caso de uso: odi/odiCasoDeUso.md
+  #  - Caso de uso con PostgreSQL: nifi/nifiCasoUsoPostgreSQL.md
+  #- ETL con ODI: 
+  #  - Introducción: odi/odiIntroduccion.md
+  #  - Demo: odi/odiDemo.md
+  #  - Caso de uso: odi/odiCasoDeUso.md
   #- Microsoft Azure: 
   #   - Introducción: azure/AzureIntroduccion.md
   #   - Práctica 1: azure/AzurePractica1.md
