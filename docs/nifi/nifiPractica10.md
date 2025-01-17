@@ -17,8 +17,6 @@ c) Haz que tome el JSON y lo guarde en MongoDB.
 d) Haz que tome el CSV aplanado del punto anterior y lo guarde en PostgreSQL.  
 e) Haz que tome el CSV y lo guarde en MongoDB.  
 
-Realiza un documento PDF con las capturas necesarias para demostrar que el sistema funciona correctamente y entrégalo junto con el Flow Definition.
-
 ## Notas
 -   Como la carpeta de entrada es la misma, deberás filtrar los procesadores **GetFile** por extensión. 
 
@@ -39,4 +37,4 @@ width="80%" />
 
 ## Entregable
 
-Hay que exportar la practica a un .json y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P10_NomAlumnoApellidos.xml*
+Realiza un documento PDF con las capturas necesarias para demostrar que el sistema funciona correctamente y entrégalo junto con el Flow Definition.
