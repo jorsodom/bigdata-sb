@@ -3,12 +3,13 @@
 En la práctica anterior de la API del INE consultamos la encuesta de población activa. Vamos a continuar con esta práctica leyendo los datos con NiFi.
 
 Recordemos que es necesario averiguar el código para realizar esta consulta, y nos devolverá un JSON:  
-*http://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/<código serie>?nult=<número datos>*
+
+!!! note "Recordar"
+    http://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/<código serie>?nult=<número datos>
 
 Ahora transferiremos estos datos para prepararlos para su uso futuro.
 
 Vamos a utilizar, como en la práctica, dos carpetas: una donde dejaremos los archivos de origen y otra donde dejaremos la transformación.
-
 ## Ejercicio
 
 a) Haz que tome el JSON, lo transforme y lo guarde como CSV.  
