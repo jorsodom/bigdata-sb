@@ -16,6 +16,7 @@ nav:
     - Práctica 8: nifi/nifiPractica8.md
     - Caso de uso con Hadoop: nifi/nifiCasoUsoHadoop.md
     - Práctica 10: nifi/nifiPractica10.md
+    - Caso de uso Meteo: nifi/nifiCasoUsoMeteo.md
    # - Caso uso MongoDB: nifi/nifiCasoUsoMongoDB.md
   #  - Caso de uso con PostgreSQL: nifi/nifiCasoUsoPostgreSQL.md
   #- ETL con ODI: 
