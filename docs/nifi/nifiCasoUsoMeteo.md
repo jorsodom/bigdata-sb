@@ -9,9 +9,13 @@ Por ejemplo, para acceder a la predicción meteorológica de Xàtiva lo accedemo
 En nuestro caso, nos piden que guardemos un histórico de varios datos en intervalos de X minutos (para que sea más vivo lo haremos de 1 minuto). 
 
 Los datos que nos piden guardar son los siguientes:
+
 -   Temperatura
+
 -   Humedad
+
 -   Precipitación
+
 -   Viento
 
 En concreto, nos piden que en cada minuto almacenemos valor mínimo y máximo de cada uno de estos valores salvo sobre precipitaciones que guardemos las precipitaciones del intervalo de tiempo y el total del día (último valor recibido). Esto lo realizaremos recogiendo datos cada X tiempo, que en nuestro caso puede ser cada 5 segundos, de forma que al final nos encontramos en que vamos recibiendo datos y agrupamos varios de ellos para obtener datos a partir de operaciones como media, máximo y mínimo.
@@ -30,6 +34,11 @@ Los pasos que vamos a seguir deberían ser mas o menos los siguientes
 5.	Almacenamos datos en la base de datos
 
 Para todo este proceso los **Processors** que vamos a necesitar son: 
+
+- **InvokeHTTP**:
+   - **URL:** La URL de la API proporcionada:  
+     `https://www.el-tiempo.net/api/json/v2/provincias/46/municipios/46145`
+   - **Método HTTP:** `GET`
 
 -   **JoltTransformJSON**: Este procesador se utiliza para transformar un archivo JSON utilizando una especificación Jolt.  Nos quedamos solo con los 4 campos indicados del JSONobtenido.
 -   **MergeContent**: Nos permite agrupar una cantidad determinada de elementos en uno solo, o sea X JSON en uno único.
