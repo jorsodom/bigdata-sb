@@ -3,6 +3,7 @@
 La web el-tiempo.net tiene un API desde el la podemos consultar información meteorológica, tanto datos en tiempo real como previsiones.
 
 Por ejemplo, para acceder a la predicción meteorológica de Xàtiva lo accedemos a través de la URL: 
+
 - [El tiempo](https://www.el-tiempo.net/api/json/v2/provincias/46/municipios/46145)
 
 En nuestro caso, nos piden que guardemos un histórico de varios datos en intervalos de X minutos (para que sea más vivo lo haremos de 1 minuto). 
