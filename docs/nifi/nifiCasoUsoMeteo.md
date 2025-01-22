@@ -35,11 +35,7 @@ Los pasos que vamos a seguir deberían ser mas o menos los siguientes
 
 Para todo este proceso los **Processors** que vamos a necesitar son: 
 
-- **InvokeHTTP**:
-   - **URL:** La URL de la API proporcionada:  
-     `https://www.el-tiempo.net/api/json/v2/provincias/46/municipios/46145`
-   - **Método HTTP:** `GET`
-
+-   **InvokeHTTP**: Este procesador realiza la petición HTTP a la URL de la API especificando el método necesario para obtener los datos.
 -   **JoltTransformJSON**: Este procesador se utiliza para transformar un archivo JSON utilizando una especificación Jolt.  Nos quedamos solo con los 4 campos indicados del JSONobtenido.
 -   **MergeContent**: Nos permite agrupar una cantidad determinada de elementos en uno solo, o sea X JSON en uno único.
 -   **ExecuteScript**: Permite ejecución de Scripts. Vamos a utilizar un Script para realizar los cálculos.
