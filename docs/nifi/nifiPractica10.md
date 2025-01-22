@@ -6,7 +6,7 @@ Recordemos que es necesario averiguar el código para realizar esta consulta, y 
 
 **Recordar**
 
--   http://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/<código serie>?nult=<número datos>
+[http://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/<código serie>?nult=<número datos>](http://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/<código serie>?nult=<número datos>)
 
 Ahora transferiremos estos datos para prepararlos para su uso futuro.
 
