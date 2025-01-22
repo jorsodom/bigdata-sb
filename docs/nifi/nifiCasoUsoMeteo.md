@@ -99,11 +99,6 @@ if (flowFile != null) {
 }
 ```
 
-<div align="center">
-<img src="../../img/NiFiP10.1.png" alt="Practica 7" 
-width="80%" />
-</div>
-
 ## Entregable
 
 Realiza un documento PDF con las capturas necesarias para demostrar que el sistema funciona correctamente y entrégalo junto con el Flow Definition.
