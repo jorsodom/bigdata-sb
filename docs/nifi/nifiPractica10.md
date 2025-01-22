@@ -4,8 +4,9 @@ En la práctica anterior de la API del INE consultamos la encuesta de población
 
 Recordemos que es necesario averiguar el código para realizar esta consulta, y nos devolverá un JSON:  
 
-!!! note "Recordar"
-    http://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/<código serie>?nult=<número datos>
+**Recordar**
+
+-   http://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/<código serie>?nult=<número datos>
 
 Ahora transferiremos estos datos para prepararlos para su uso futuro.
 
