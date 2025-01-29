@@ -6,17 +6,23 @@ En la práctica que hicimos sobre la API del INE, consultamos la encuesta de pob
 **Objetivo:** Consultar la API del INE para obtener los datos en formato JSON y luego guardarlos en un archivo local.
 
 **Configurar `InvokeHTTP`**:
+
     - **URL:** `http://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/<cod serie>?nult=<num dades>`
+
     - **Método HTTP:** `GET`
+
     - **Propiedades adicionales:**  Asegúrate de que se ha configurado correctamente el manejo de errores (por ejemplo, reintentos y tiempo de espera).
 
 **Guardar el JSON en un archivo con `PutFile`**:
+
     - **Directorio de destino:** Elige la carpeta donde deseas almacenar los archivos JSON.
+
     - **Nombre del archivo:** Puede ser dinámico o fijo (por ejemplo, `datos.json`).
 
 Este paso recogerá la respuesta de la API y la almacenará como un archivo JSON en el sistema de archivos.
 
 ## Aplanar el JSON y guardarlo como CSV
+
 **Processor a usar:** `JoltTransformJSON` y `ConvertRecord`
 
 **Aplanar el JSON con `JoltTransformJSON`**:
