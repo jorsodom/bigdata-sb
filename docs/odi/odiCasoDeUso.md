@@ -142,6 +142,10 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
     <source src="../../vid/ODI12c-CasoUsoODISRC2.mp4" type="video/mp4">
 </video>
 </div>
+
+!!! note Modulos conocimiento
+      Todos los IKM deben configurarse como IKM Control Append, con la opción TRUNCATE = TRUE y FLOW_CONTROL = FALSE. Para que en cada ejecución la tabla final se trunque y no valide las restricciones. 
+
 ### Capa CATÁLOGOS: (LKP)
 -       Extraer de la tabla SRC COVID los catálogos necesarios.
 -       Generar procedimiento ODI para el catálogo de fecha
@@ -180,6 +184,8 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
 </video>
 </div>
 
+!!! note Modulos conocimiento
+      Todos los IKM deben configurarse como IKM Control Append, con la opción TRUNCATE = TRUE y FLOW_CONTROL = FALSE. Para que en cada ejecución la tabla final se trunque y no valide las restricciones. 
 
 ### Capa ESTRELLA: (ODS)
 - Extraer de la tabla SRC COVID los datos históricos/transaccionales.
@@ -219,6 +225,10 @@ Se describe a continuación las diferentes capas del modelo multidimensional en 
    - Que apleguen totes les dades que hi ha als fitxers: conteig al fitxer, src i ods.
 
    - Que estan amb el format que es vol representar
+
+!!! note Modulos conocimiento
+      Todos los IKM deben configurarse como IKM Control Append, con la opción TRUNCATE = TRUE y FLOW_CONTROL = FALSE. Para que en cada ejecución la tabla final se trunque y no valide las restricciones. 
+
 ## Visualización y respresentación con Power BI
 1. **Conexión directa con el modelo multidimensional**
 Power BI permite conectarse directamente a bases de datos como Oracle, SQL Server, entre otras. Si la conexión con la máquina virtual es exitosa, se podrá importar directamente el modelo multidimensional desde la base de datos, lo que facilitará la carga de datos en Power BI. En este caso, los datos estarán organizados en tablas de hechos y dimensiones que pueden ser fácilmente visualizadas y analizadas.
