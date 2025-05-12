@@ -1,10 +1,9 @@
-# Previa Big Data
+# Consulta previa Big Data
 
 <div align="center">
-<img src="https://cursoshazerta.es/wp-content/uploads/Que-es-el-Big-Data-y-por-que-es-importante.jpg" alt="BigData" width="10%" />
+<img src="https://cursoshazerta.es/wp-content/uploads/Que-es-el-Big-Data-y-por-que-es-importante.jpg" alt="BigData" width="80%" />
 </div>
 
-## Consulta previa Big Data
 Para vosotros, ¿qué es el Big Data? ¿Cómo lo definiríais en 3 palabras?
 
 Deberéis introducir, de forma anónima, tres palabras que, según vuestra opinión, definan el concepto de Big Data.

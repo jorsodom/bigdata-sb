@@ -1,4 +1,4 @@
-site_name: CES Sistemes de Big Data
+site_name: CES Big Data
 site_url: https://jorsodom.github.io/bigdata-sb/
 
 
@@ -6,7 +6,7 @@ nav:
   - Inicio: index.md
   - Big Data con Hadoop: 
     - Consulta previa Big Data: hadoop/PreviaBigData.md
-    - Introducción Big Data: hadoop/IntroBigData.md
+    - ¿Que és el Big Data?: hadoop/IntroBigData.md
   - Ingesta de datos con NiFi: 
     - Introducción: nifi/nifiIntroduccion.md
     - Práctica 1: nifi/nifiPractica1.md
