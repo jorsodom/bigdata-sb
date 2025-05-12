@@ -4,10 +4,10 @@ site_url: https://jorsodom.github.io/bigdata-sb/
 
 nav:
   - Inicio: index.md
-  - Big Data con Hadoop: 
-    - Consulta previa Big Data: hadoop/PreviaBigData.md
-    - ¿Que és el Big Data?: hadoop/IntroBigData.md
-    - Hadoop Introducción: hadoop/HadoopIntro.md
+  #- Big Data con Hadoop: 
+    - 0. Consulta previa Big Data: hadoop/PreviaBigData.md
+    - 0.1 Big Data Introducción : hadoop/IntroBigData.md
+    - 1. Hadoop Introducción: hadoop/HadoopIntro.md
   - Ingesta de datos con NiFi: 
     - Introducción: nifi/nifiIntroduccion.md
     - Práctica 1: nifi/nifiPractica1.md
