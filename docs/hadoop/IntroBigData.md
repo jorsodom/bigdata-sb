@@ -1,8 +1,10 @@
-# ¿Qué es el Big Data?
+# Introducción Big Data
 
 <div align="center">
 <img src="https://cursoshazerta.es/wp-content/uploads/Que-es-el-Big-Data-y-por-que-es-importante.jpg" alt="BigData" width="10%" />
 </div>
+
+## ¿Qué es el Big Data?
 
 El Big Data se define como la convergencia y gestión de enormes volúmenes de datos, tanto estructurados como no estructurados. Hablamos de una cantidad masiva de información que se genera y almacena continuamente en nuestra sociedad digital.
 
@@ -22,7 +24,7 @@ Cada día se crean petabytes (millones de gigabytes) de datos procedentes de mú
 
 La finalidad del Big Data no es solo almacenar esta gran cantidad de datos, sino procesarlos y analizarlos para extraer información valiosa que facilite la toma de decisiones, optimice procesos y genere nuevas oportunidades de negocio.
 
-# Las Tres V’s del Big Data
+## Las Tres V’s del Big Data
 Para entender la dimensión y los retos que plantea el Big Data, es esencial conocer sus tres características fundamentales, conocidas como las tres V's:
 
 - **Volumen**: Se refiere a la inmensa cantidad de datos generados cada segundo.
@@ -31,7 +33,7 @@ Para entender la dimensión y los retos que plantea el Big Data, es esencial con
 
 - **Variedad**: La diversidad de formatos y fuentes de los datos, que pueden ser estructurados (bases de datos) o no estructurados (vídeos, textos, imágenes).
 
-# La necesidad de nuevas tecnologías
+## La necesidad de nuevas tecnologías
 Las tecnologías tradicionales de almacenamiento y procesamiento de datos no son capaces de manejar estas cantidades y características de información. Por ello, se han desarrollado soluciones específicas dentro del ámbito del Big Data, que permiten:
 
 - Gestionar grandes volúmenes de datos distribuidos en múltiples servidores.
