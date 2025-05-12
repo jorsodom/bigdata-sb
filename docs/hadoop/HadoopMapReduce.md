@@ -41,15 +41,17 @@ Mucho más eficiente y escalable.
 
 #### Componentes V2 (YARN):
 
-**ResourceManager (RM)**:
+- **ResourceManager (RM)**:
 
   * Es el maestro de YARN.
   * Gestiona los recursos globales del clúster.
-**NodeManager (NM)**:
+
+- **NodeManager (NM)**:
 
   * Corre en cada nodo esclavo.
   * Administra recursos y contenedores en el nodo específico.
-**ApplicationMaster (AM)**:
+
+- **ApplicationMaster (AM)**:
 
   * Uno por cada aplicación o trabajo lanzado.
   * Gestiona la vida y planificación del trabajo concreto.
@@ -90,7 +92,7 @@ Mucho más eficiente y escalable.
 
 ## 4. Comparativa
 
-| MapaReduce V1                     | YARN (V2)                             |
+| MapReduce V1                     | YARN (V2)                             |
 | --------------------------------- | ------------------------------------- |
 | Solo Batch                        | Batch + streaming + ML                |
 | Mala escalabilidad (>5000 nodos)  | Escala a miles de nodos sin problemas |
@@ -101,7 +103,7 @@ Mucho más eficiente y escalable.
 
 ## 5. Prácticas recomendadas
 
-| Práctica       | Qué Aprenderás                                                                              |
+| Práctica       | Qué haremos                                                                              |
 | -------------- | ------------------------------------------------------------------------------------------- |
 | **Práctica 8** | Configuración de YARN, asignación de recursos, y cómo lanzar trabajos MapReduce sobre YARN. |
 | **Práctica 9** | MapReduce con WordCount |
@@ -112,6 +114,7 @@ Mucho más eficiente y escalable.
 ## 6. ¿Por qué YARN mejora MapReduce?
 
 En **V1**, todo dependía del JobTracker, creando un *cuello de botella*.
+
 En **V2 (YARN)**:
   * El ResourceManager solo asigna recursos.
   * Cada ApplicationMaster gestiona su propia aplicación ➔ paralelismo y escalabilidad.
@@ -136,6 +139,6 @@ YARN (MapReduce V2):
 ```
 
 <div align="center">
-<img src="../../img/hadoop/hadoop_MapReduce.png" alt="HadoopMapReduce" 
+<img src="../../img/hadoop/hadoop_mapreduce.png" alt="HadoopMapReduce" 
 width="80%" />
 </div>
