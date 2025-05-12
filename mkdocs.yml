@@ -9,6 +9,7 @@ nav:
   #  - 0.1 Big Data Introducción : hadoop/IntroBigData.md
   #  - 1. Introducción: hadoop/HadoopIntro.md
      - 2. HDFS: hadoop/HadoopHDFS.md
+     - 3. MapReduce: hadoop/HadoopMapReduce.md
      
   - Ingesta de datos con NiFi: 
     - Introducción: nifi/nifiIntroduccion.md
