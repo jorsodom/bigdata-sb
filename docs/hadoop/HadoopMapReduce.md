@@ -17,20 +17,17 @@
 
 * **Monolítica**: gestiona tanto la computación como los recursos del clúster.
 * **Solo** soporta trabajos tipo *batch* (procesamiento por lotes).
-* Tiene problemas de:
-
+Tiene problemas de:
   * **Escalabilidad** ➔ falla al superar \~5000 nodos.
   * **Rendimiento** ➔ mal desempeño en aplicaciones interactivas o en tiempo real.
   * **Gestión de recursos** ➔ centralizada y limitada.
 
 #### Componentes V1:
 
-* **JobTracker** (Maestro):
-
+**JobTracker** (Maestro):
   * Gestiona la planificación y ejecución de trabajos MapReduce.
   * Asigna recursos y monitoriza tareas.
-* **TaskTracker** (Esclavo):
-
+**TaskTracker** (Esclavo):
   * Ejecuta las tareas asignadas por el JobTracker.
   * Informa sobre el estado de las tareas.
 
@@ -38,21 +35,21 @@
 
 ### MapReduce V2 (YARN)
 
-* Introduce **YARN** (*Yet Another Resource Negotiator*), que separa la gestión de recursos y el procesamiento.
-* Admite otros modelos de procesamiento, no solo batch: streaming, SQL interactivo, machine learning, etc.
-* Mucho más eficiente y escalable.
+Introduce **YARN** (*Yet Another Resource Negotiator*), que separa la gestión de recursos y el procesamiento.
+Admite otros modelos de procesamiento, no solo batch: streaming, SQL interactivo, machine learning, etc.
+Mucho más eficiente y escalable.
 
 #### Componentes V2 (YARN):
 
-* **ResourceManager (RM)**:
+**ResourceManager (RM)**:
 
   * Es el maestro de YARN.
   * Gestiona los recursos globales del clúster.
-* **NodeManager (NM)**:
+**NodeManager (NM)**:
 
   * Corre en cada nodo esclavo.
   * Administra recursos y contenedores en el nodo específico.
-* **ApplicationMaster (AM)**:
+**ApplicationMaster (AM)**:
 
   * Uno por cada aplicación o trabajo lanzado.
   * Gestiona la vida y planificación del trabajo concreto.
@@ -66,9 +63,9 @@
 
 ---
 
-## 3. Funcionamiento Detallado de MapReduce
+## 3. Funcionamiento detallado de MapReduce
 
-### Fases:
+### Fases
 
 #### 1. **Map**
 
@@ -91,7 +88,7 @@
 
 ---
 
-## 4. Limitaciones y Soluciones
+## 4. Comparativa
 
 | MapaReduce V1                     | YARN (V2)                             |
 | --------------------------------- | ------------------------------------- |
@@ -102,19 +99,20 @@
 
 ---
 
-## 5. Prácticas Recomendadas
+## 5. Prácticas recomendadas
 
 | Práctica       | Qué Aprenderás                                                                              |
 | -------------- | ------------------------------------------------------------------------------------------- |
 | **Práctica 8** | Configuración de YARN, asignación de recursos, y cómo lanzar trabajos MapReduce sobre YARN. |
+| **Práctica 9** | MapReduce con WordCount |
+| **Práctica 10** | MapReduce con "Contar palabras.java" |
 
 ---
 
-## 6. Ampliación: ¿Por qué YARN mejora MapReduce?
+## 6. ¿Por qué YARN mejora MapReduce?
 
-* En **V1**, todo dependía del JobTracker, creando un *cuello de botella*.
-* En **V2 (YARN)**:
-
+En **V1**, todo dependía del JobTracker, creando un *cuello de botella*.
+En **V2 (YARN)**:
   * El ResourceManager solo asigna recursos.
   * Cada ApplicationMaster gestiona su propia aplicación ➔ paralelismo y escalabilidad.
 
@@ -122,7 +120,7 @@ Además, frameworks modernos como **Apache Spark** se ejecutan sobre YARN, aprov
 
 ---
 
-## 7. Resumen Visual Simplificado
+## 7. Resumen visual
 
 ```
 MapReduce V1:
