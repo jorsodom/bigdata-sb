@@ -13,23 +13,23 @@ nav:
      
   - Ingesta de datos con NiFi: 
     - Introducción: nifi/nifiIntroduccion.md
-    - Práctica 1: nifi/nifiPractica1.md
-    - Práctica 2: nifi/nifiPracticacd 2.md
-    - Práctica 3: nifi/nifiPractica3.md
-    - Práctica 4: nifi/nifiPractica4.md
-    - Práctica 5: nifi/nifiPractica5.md
-    - Práctica 6: nifi/nifiPractica6.md
-    - Práctica 7: nifi/nifiPractica7.md
-    - Práctica 8: nifi/nifiPractica8.md
-    - Práctica 10: nifi/nifiPractica10.md
-    - Caso de uso con Hadoop: nifi/nifiCasoUsoHadoop.md
-    - Caso de uso Meteo: nifi/nifiCasoUsoMeteo.md
+   # - Práctica 1: nifi/nifiPractica1.md
+   # - Práctica 2: nifi/nifiPracticacd 2.md
+   # - Práctica 3: nifi/nifiPractica3.md
+   # - Práctica 4: nifi/nifiPractica4.md
+   # - Práctica 5: nifi/nifiPractica5.md
+   # - Práctica 6: nifi/nifiPractica6.md
+   # - Práctica 7: nifi/nifiPractica7.md
+   # - Práctica 8: nifi/nifiPractica8.md
+   # - Práctica 10: nifi/nifiPractica10.md
+   # - Caso de uso con Hadoop: nifi/nifiCasoUsoHadoop.md
+   # - Caso de uso Meteo: nifi/nifiCasoUsoMeteo.md
   #  - Caso uso API: nifi/nifiCasoUsoAPI.md
   #  - Caso de uso con PostgreSQL: nifi/nifiCasoUsoPostgreSQL.md
-  - ETL con ODI: 
-    - Introducción: odi/odiIntroduccion.md
-    - Demo: odi/odiDemo.md
-    - Caso de uso: odi/odiCasoDeUso.md
+  #- ETL con ODI: 
+  #  - Introducción: odi/odiIntroduccion.md
+  #  - Demo: odi/odiDemo.md
+  #  - Caso de uso: odi/odiCasoDeUso.md
   #- Microsoft Azure: 
   #   - Introducción: azure/AzureIntroduccion.md
   #   - Práctica 1: azure/AzurePractica1.md
@@ -66,4 +66,4 @@ extra:
       encuentran lo que buscan. Con su consentimiento, nos ayuda a
       mejorar nuestra documentación.
 
-copyright: Copyright &copy; 2022- 2025 Jorge Soro & Sergio Rey
+copyright: Copyright &copy; 2022- 2026 
