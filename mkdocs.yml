@@ -11,6 +11,8 @@ nav:
   #  - 2. HDFS: hadoop/HadoopHDFS.md
   #  - 3. MapReduce: hadoop/HadoopMapReduce.md
      
+
+  - Presentacions, nuvol conceptes i infografía: presentacions.md
   - Ingesta de datos con NiFi: 
     - Introducción: nifi/nifiIntroduccion.md
     - Práctica 1: nifi/nifiPractica1.md
