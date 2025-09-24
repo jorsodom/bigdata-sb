@@ -12,7 +12,7 @@ nav:
   #  - 3. MapReduce: hadoop/HadoopMapReduce.md
      
 
-  - Presentación, nube conceptos y infografía: presentacions.md
+  #- Presentación, nube conceptos y infografía: presentacions.md
   - Ingesta de datos con NiFi: 
     - Introducción: nifi/nifiIntroduccion.md
     - Práctica 1: nifi/nifiPractica1.md
