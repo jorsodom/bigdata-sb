@@ -3,7 +3,7 @@
 ## ¿Que es el Data Analytics?
 
 <div align="center">
-<img src="../../img/dataanalytics-1.png"  alt="reporting" 
+<img src="../../img/dataanalytics-1.png"  alt="Data Analytics"
 width="80%" />
 </div>
 
@@ -15,7 +15,7 @@ través de toma de decisiones más eficaz
 y basadas en la experiencia del cliente.
 
 <div align="center">
-<img src="../../img/dataanalytics-2.png"  alt="reporting" 
+<img src="../../img/dataanalytics-2.png"  alt="Data Analytics"
 width="70%" />
 </div>
 
@@ -24,7 +24,7 @@ width="70%" />
 -   Data Analyst
 
 <div align="center">
-<img src="../../img/dataanalytics-3.png"  alt="reporting" 
+<img src="../../img/dataanalyst-3.png"  alt="Data Analytics"
 width="70%" />
 </div>
 
@@ -33,7 +33,7 @@ width="70%" />
 -   Data Engineer
 
 <div align="center">
-<img src="../../img/dataanalytics-4.png"  alt="reporting" 
+<img src="../../img/dataanalyst-4.png"  alt="Data Analytics"
 width="70%" />
 </div>
 
@@ -42,7 +42,7 @@ width="70%" />
 -   Data Scientist
 
 <div align="center">
-<img src="../../img/dataanalytics-5.png"  alt="reporting" 
+<img src="../../img/dataanalyst-5.png"  alt="Data Analytics" 
 width="70%" />
 </div>
 
@@ -51,7 +51,7 @@ width="70%" />
 -   Data Architect
 
 <div align="center">
-<img src="../../img/dataanalytics-6.png"  alt="reporting" 
+<img src="../../img/dataanalyst-6.png"  alt="Data Analytics"
 width="70%" />
 </div>
 
@@ -60,7 +60,7 @@ width="70%" />
 -   Business Analyst
 
 <div align="center">
-<img src="../../img/dataanalytics-7.png"  alt="reporting" 
+<img src="../../img/dataanalyst-7.png"  alt="Data Analytics"
 width="70%" />
 </div>
 
@@ -83,14 +83,14 @@ sobre un conjunto de datos son verdaderas o falsas
 ## Tipos
 
 <div align="center">
-<img src="../../img/dataanalytics-8.png"  alt="reporting" 
+<img src="../../img/dataanalyst-8.png"  alt="Data Analytics"
 width="80%" />
 </div>
 
 ### Analítica descriptiva
 
 <div align="center">
-<img src="../../img/dataanalytics-9.png"  alt="reporting" 
+<img src="../../img/dataanalyst-9.png"  alt="Data Analytics"
 width="70%" />
 </div>
 
@@ -109,7 +109,7 @@ ventas de una organización.
 
 ### Analítica diagnóstica
 <div align="center">
-<img src="../../img/dataanalytics-9.png"  alt="reporting" 
+<img src="../../img/dataanalyst-9.png"  alt="Data Analytics"
 width="70%" />
 </div>
 
@@ -126,7 +126,7 @@ estos eventos.
 ### Analítica predictiva
 
 <div align="center">
-<img src="../../img/dataanalytics-10.png"  alt="reporting" 
+<img src="../../img/dataanalyst-10.png"  alt="Data Analytics"
 width="70%" />
 </div>
 
@@ -146,7 +146,7 @@ regresión.
 
 ### Analítica presctiptiva
 <div align="center">
-<img src="../../img/dataanalytics-11.png"  alt="reporting" 
+<img src="../../img/dataanalyst-11.png"  alt="Data Analytics"
 width="70%" />
 </div>
 
@@ -171,7 +171,7 @@ organizaciones pueden calcular la
 probabilidad de otros resultados.
 
 <div align="center">
-<img src="../../img/dataanalytics-12.png"  alt="reporting" 
+<img src="../../img/dataanalyst-12.png"  alt="Data Analytics"
 width="70%" />
 </div>
 
@@ -294,7 +294,7 @@ Podemos ver según el prestigioso cuadrante de Gatner en 2025
 las herramientas de analítica de datos mas utilizadas.
 
 <div align="center">
-<img src="../../img/dataanalytics-13.png"  alt="reporting" 
+<img src="../../img/dataanalytics-13.png"  alt="Data Analytics"
 width="70%" />
 </div>
 
