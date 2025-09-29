@@ -70,7 +70,6 @@ width="80%" />
 
 ### Sistema ETL
 
-●Proceso de extracción y carga de la información desde las distintas fuentes origen al Datawarehouse. Incluye las siguientes fases:
 
 ○Extracción: elaboración de interfaces entre sistemas operacionales orígenes de datos
 ○Transformación: validación de los datos extraídos, transformándolos al formato deseado
@@ -81,10 +80,11 @@ width="80%" />
 ### Datawarehouse
 Se soporta sobre el modelo físico dimensional diferente de los sistemas de bases de datos que están basados en el modelo Entidad-Relación (E/R). Este modelo contiene la misma información que el modelo E/R pero agrupa los datos con el objetivo de ganar una mayor comprensión para el usuario y garantizar la ejecución rápida y eficiente de las consultas.
 
-●Existen dos tecnologías para implementar dicho modelo:
+Existen dos tecnologías para implementar dicho modelo:
 
-○MultidimensionalOLAP (MOLAP): se indexa los datos directamente en un modelo multidimensional (cubos) en el cual todas las posibles combinaciones de los datos ya están calculadas en una celda
-○RelationalOLAP (ROLAP): implementa las estructuras dimensionales mediante bases de datos con modelos relacionales. 
+● MultidimensionalOLAP (MOLAP): se indexa los datos directamente en un modelo multidimensional (cubos) en el cual todas las posibles combinaciones de los datos ya están calculadas en una celda
+
+● RelationalOLAP (ROLAP): implementa las estructuras dimensionales mediante bases de datos con modelos relacionales. 
 
 ---
 
@@ -96,14 +96,14 @@ width="80%" />
 </div>
 
 **DSS (Decisión Support System)**:
-○Informes dinámicos, normalmente para representar un indicador o un grupo de indicadores relacionados funcionalmente en tablas de datos.
-○Además de estos informes predefinidos, los usuarios con capacidades de análisis podrán crear sus propios informes y obtener respuestas en demandas de información puntuales.
+Informes dinámicos, normalmente para representar un indicador o un grupo de indicadores relacionados funcionalmente en tablas de datos.
+Además de estos informes predefinidos, los usuarios con capacidades de análisis podrán crear sus propios informes y obtener respuestas en demandas de información puntuales.
 
-●**EIS (Executive Information System)**:
-○Informes estáticos, predefinidos, fáciles de manejar y orientados a los directores. Son informes muy visuales (normalmente se utilizan exclusivamente gráficos) y con un nivel alto de agregación de la información. Deben estar orientados a la gestión estratégica.
+**EIS (Executive Information System)**:
+Informes estáticos, predefinidos, fáciles de manejar y orientados a los directores. Son informes muy visuales (normalmente se utilizan exclusivamente gráficos) y con un nivel alto de agregación de la información. Deben estar orientados a la gestión estratégica.
 
-●**BSC (Balance Scored Card)**:
-○Informes estáticos para la gestión estratégica de la empresa. Permite medir el rendimiento de áreas o personas mediante el análisis de diversos de un conjunto de indicadores con valores objetivo y pesos.
+**BSC (Balance Scored Card)**:
+Informes estáticos para la gestión estratégica de la empresa. Permite medir el rendimiento de áreas o personas mediante el análisis de diversos de un conjunto de indicadores con valores objetivo y pesos.
 
 ## Modelo lógico
 
@@ -119,6 +119,7 @@ Información registrada sobre una venta:
 <img src="../../img/introbi-4.png"  alt="reporting" 
 width="80%" />
 </div>
+
 <div align="center">
 <img src="../../img/introbi-5.png"  alt="reporting" 
 width="80%" />
@@ -127,9 +128,9 @@ width="80%" />
 ## Modelo multidimensional
 En un esquema multidimensional se representa una actividad que es objeto de análisis (hecho) y las dimensiones que caracterizan la actividad (dimensiones).
 
-●La información relevante sobre el hecho (actividad) se representa por un conjunto de indicadores.
+- [x] La información relevante sobre el hecho (actividad) se representa por un conjunto de indicadores.
 
-●La información descriptiva de cada dimensión se representa por un conjunto de atributos (atributos de dimensión).
+- [x] La información descriptiva de cada dimensión se representa por un conjunto de atributos (atributos de dimensión).
 
 <div align="center">
 <img src="../../img/introbi-6.png"  alt="reporting" 
