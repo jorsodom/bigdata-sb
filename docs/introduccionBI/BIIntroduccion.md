@@ -2,6 +2,12 @@
 
 
 ## Sistema operacional (OLTP)
+
+<div align="center">
+<img src="../../img/introbi-11.png"  alt="reporting" 
+width="80%" />
+</div>
+
 Generalmente, la información que se quiere investigar sobre un cierto dominio de la organización se encuentra en bases de datos y otras fuentes muy diversas, tanto internas como externas.
 
 - [x] Muchas de estas fuentes son las que se utilizan para el trabajo transaccional diario (conocido como OLTP, On-Line Transactional Processing).
@@ -19,6 +25,11 @@ Problemas para realizar el análisis en este sistema (OLTP):
 -  La base de datos está diseñada para el trabajo transaccional, no para el análisis de los datos.
 
 ## Sistema analítico (OLAP)
+
+<div align="center">
+<img src="../../img/introbi-1.png"  alt="reporting" 
+width="80%" />
+</div>
 
 Disponer de una base de datos que permita extraer conocimiento de la información histórica almacenada en la organización.
 
@@ -45,6 +56,11 @@ Algunas características:
 -  Sistema OLAP (On-Line Analitical Procesing)
 
 ## OLTP vs OLAP
+
+<div align="center">
+<img src="../../img/introbi-8.png"  alt="reporting" 
+width="80%" />
+</div>
 
 | **Característica**                | **Operacional (OLTP)**                          | **Datawarehouse (OLAP)**                                             |
 |-----------------------------------|------------------------------------------------|-----------------------------------------------------------------------|
@@ -119,6 +135,8 @@ Información registrada sobre una venta:
 width="80%" />
 </div>
 
+---
+
 <div align="center">
 <img src="../../img/introbi-5.png"  alt="reporting" 
 width="80%" />
@@ -136,6 +154,18 @@ En un esquema multidimensional se representa una actividad que es objeto de aná
 width="80%" />
 </div>
 
+## Business Intelligence
+
+<div align="center">
+<img src="../../img/introbi-7.png"  alt="reporting" 
+width="80%" />
+</div>
+
+Business Intelligence suele definirse como la transformación de los datos de la compañía en conocimiento para obtener una ventaja competitiva.
+Desde un punto de vista más pragmático, y asociándolo directamente a las tecnologías de la información, podemos definir Business Intelligence como:
+
+El conjunto de metodologías, aplicaciones y tecnologías que permiten reunir, depurar y transformar datos de los sistemas transaccionales e información desestructurada (interna y externa a la compañía) en información estructurada, para su explotación directa (reporting, análisis OLAP...) o para su análisis y conversión en conocimiento soporte a la toma de decisiones sobre el negocio.
+
 ## Terminología
 
 | **Concepto**         | **Descripción**                                                                 |
@@ -151,19 +181,6 @@ width="80%" />
 | **Datamart**          | Subconjunto departamental de un Datawarehouse corporativo o almacén de datos enfocado en un área específica, utilizado para el análisis y la toma de decisiones. |
 | **Drill Down / Up**   | Navegar dentro de la información, desde niveles más altos a niveles más bajos o viceversa. |
 | **DataMining**        | Búsqueda de patrones de comportamiento dentro de los datos, ya sea en un Datawarehouse o cualquier otra fuente de información. |
-
-## Business Intelligence
-
-Business Intelligencesuele definirse como la transformación de los datos de la compañía en conocimiento para obtener una ventaja competitiva.
-Desde un punto de vista más pragmático, y asociándolo directamente a las tecnologías de la información, podemos definir Business Intelligence como:
-
-El conjunto de metodologías, aplicaciones y tecnologías que permiten reunir, depurar y transformar datos de los sistemas transaccionales e información desestructurada (interna y externa a la compañía) en información estructurada, para su explotación directa (reporting, análisis OLAP...) o para su análisis y conversión en conocimiento soporte a la toma de decisiones sobre el negocio.
-
-<div align="center">
-<img src="../../img/introbi-7.png"  alt="reporting" 
-width="80%" />
-</div>
-
 
 ## Herramientas
 
