@@ -2,65 +2,71 @@
 
 
 ## Sistema operacional (OLTP)
-● Generalmente, la información que se quiere investigar sobre un cierto dominio de la organización se encuentra en bases de datos y otras fuentes muy diversas, tanto internas como externas.
+Generalmente, la información que se quiere investigar sobre un cierto dominio de la organización se encuentra en bases de datos y otras fuentes muy diversas, tanto internas como externas.
 
-● Muchas de estas fuentes son las que se utilizan para el trabajo transaccional diario (conocido como OLTP, On-Line Transactional Processing).
+- [x] Muchas de estas fuentes son las que se utilizan para el trabajo transaccional diario (conocido como OLTP, On-Line Transactional Processing).
 
-● Sobre estas mismas bases de datos de trabajo ya se puede extraer conocimiento (visión tradicional).
+- [x] Sobre estas mismas bases de datos de trabajo ya se puede extraer conocimiento (visión tradicional).
 
 Problemas para realizar el análisis en este sistema (OLTP):
 
-● La información se encuentra en varias y heterogéneas bases de datos y, en consecuencia, no se puede explotar en conjunto.
+- [] La información se encuentra en varias y heterogéneas bases de datos y, en consecuencia, no se puede explotar en conjunto.
 
-● Solo es posible el análisis de los datos actuales, no mantiene valores históricos para tratar evolutivos.
+- [] Solo es posible el análisis de los datos actuales, no mantiene valores históricos para tratar evolutivos.
 
-● Se obstaculiza el trabajo transaccional diario de los sistemas de información originales, no permite el análisis on-line.
+- [] Se obstaculiza el trabajo transaccional diario de los sistemas de información originales, no permite el análisis on-line.
 
-● La base de datos está diseñada para el trabajo transaccional, no para el análisis de los datos.
+- [] La base de datos está diseñada para el trabajo transaccional, no para el análisis de los datos.
 
 ## Sistema analítico (OLAP)
 
-Motivación: Disponer de una base de datos que permita extraer conocimiento de la información histórica almacenada en la organización.
+Disponer de una base de datos que permita extraer conocimiento de la información histórica almacenada en la organización.
 
 Objetivos:
-●Análisis de la organización
-●Previsiones de evolución
-●Diseño de estrategias
 
+- [x] Análisis de la organización
+
+- [x] Previsiones de evolución
+
+- [x] Diseño de estrategias
 
 <div align="center">
-<img src="../../img/estructura-flowfile-nifi.png" alt="FlowFile" 
+<img src="../../img/" alt="FlowFile" 
 width="50%" />
 </div>
 
-●Almacén de datos para el análisis y toma de decisiones.
-●Permite realizar análisis on-line, por lo que aumenta el poder de toma de decisiones por parte de los responsables en cuestión
-●Unifica información dispersa de diversos sistemas operacionales
-●Contiene la información relevante de la organización
-●Diseños orientados a conceptos de negocio manejados por el usuario
-●Sistema OLAP (On-Line Analitical Procesing)
+● Almacén de datos para el análisis y toma de decisiones.
 
+● Permite realizar análisis on-line, por lo que aumenta el poder de toma de decisiones por parte de los responsables en cuestión
+
+● Unifica información dispersa de diversos sistemas operacionales
+
+● Contiene la información relevante de la organización
+
+● Diseños orientados a conceptos de negocio manejados por el usuario
+
+● Sistema OLAP (On-Line Analitical Procesing)
 
 ## OLTP vs OLAP
 
 | **Característica**                | **Operacional (OLTP)**                          | **Datawarehouse (OLAP)**                                             |
 |-----------------------------------|------------------------------------------------|-----------------------------------------------------------------------|
-| Tipo de datos                      | Almacén de datos actuales                       | Almacén de datos históricos                                          |
-| Nivel de detalle                   | Almacena datos al detalle                       | Almacena datos al detalle y datos agregados a distintos niveles      |
-| Tamaño de la base de datos         | Bases de datos medianas                         | Bases de datos grandes                                               |
-| Naturaleza de los datos            | Los datos son actuales                          | Los datos son estáticos                                              |
-| Tipo de procesos                    | Los procesos son repetitivos                    | Los procesos no son previsibles                                      |
-| Tiempo de respuesta                 | Tiempo de respuesta pequeño                     | Tiempo de respuesta variable                                         |
-| Tipo de decisiones que soporta      | Soporta decisiones diarias                      | Soporta decisiones estratégicas                                      |
-
-
+| **Tipo de datos**                      | Almacén de datos actuales                       | Almacén de datos históricos                                         |
+| **Nivel de detalle**                   | Almacena datos al detalle                       | Almacena datos al detalle y datos agregados a distintos niveles      |
+| **Tamaño de la base de datos**         | Bases de datos medianas                         | Bases de datos grandes                                             |
+| **Naturaleza de los datos**            | Los datos son actuales                          | Los datos son estáticos*                                              |
+| **Tipo de procesos**                    | Los procesos son repetitivos                    | Los procesos no son previsibles                                      |
+| **Tiempo de respuesta**                 | Tiempo de respuesta pequeño                     | Tiempo de respuesta variable                                        |
+| **Tipo de decisiones que soporta**      | Soporta decisiones diarias                      | Soporta decisiones estratégicas                                      |
 
 ## Componentes de un sistema BI
 
 <div align="center">
 <img src="../../img/introbi-2.png" alt="componentesBI" 
-width="50%" />
+width="80%" />
 </div>
+
+---
 
 ### Sistema ETL
 
@@ -70,6 +76,8 @@ width="50%" />
 ○Transformación: validación de los datos extraídos, transformándolos al formato deseado
 ○Carga: cargar físicamente los datos extraídos de los sistemas operacionales y ya transformados en el modelo de datos del Datawarehouse
 
+---
+
 ### Datawarehouse
 Se soporta sobre el modelo físico dimensional diferente de los sistemas de bases de datos que están basados en el modelo Entidad-Relación (E/R). Este modelo contiene la misma información que el modelo E/R pero agrupa los datos con el objetivo de ganar una mayor comprensión para el usuario y garantizar la ejecución rápida y eficiente de las consultas.
 
@@ -78,13 +86,13 @@ Se soporta sobre el modelo físico dimensional diferente de los sistemas de base
 ○MultidimensionalOLAP (MOLAP): se indexa los datos directamente en un modelo multidimensional (cubos) en el cual todas las posibles combinaciones de los datos ya están calculadas en una celda
 ○RelationalOLAP (ROLAP): implementa las estructuras dimensionales mediante bases de datos con modelos relacionales. 
 
-
+---
 
 ### Presentación
 
 <div align="center">
 <img src="../../img/introbi-3.png"  alt="reporting" 
-width="50%" />
+width="80%" />
 </div>
 
 **DSS (Decisión Support System)**:
@@ -105,29 +113,28 @@ width="50%" />
 
 **Actividad objeto de análisis**: ventas de productos.
 Información registrada sobre una venta:
-“del producto“X” se han vendido en el almacén“nro.1” el día17/2/2008, 5 unidadespor un importede 100 euros.”
+“del producto“X” se han vendido en el almacén“nro.1” el día 17/2/2008, 5 unidadespor un importede 100 euros.”
 
 <div align="center">
 <img src="../../img/introbi-4.png"  alt="reporting" 
-width="50%" />
+width="80%" />
 </div>
 <div align="center">
 <img src="../../img/introbi-5.png"  alt="reporting" 
-width="50%" />
+width="80%" />
 </div>
 
 ## Modelo multidimensional
 En un esquema multidimensional se representa una actividad que es objeto de análisis (hecho) y las dimensiones que caracterizan la actividad (dimensiones).
-●
-La información relevante sobre el hecho (actividad) se representa por un conjunto de indicadores.
-●
-La información descriptiva de cada dimensión se representa por un conjunto de atributos (atributos de dimensión).
+
+●La información relevante sobre el hecho (actividad) se representa por un conjunto de indicadores.
+
+●La información descriptiva de cada dimensión se representa por un conjunto de atributos (atributos de dimensión).
 
 <div align="center">
 <img src="../../img/introbi-6.png"  alt="reporting" 
-width="50%" />
+width="80%" />
 </div>
-
 
 ## Terminología
 
@@ -154,7 +161,7 @@ El conjunto de metodologías, aplicaciones y tecnologías que permiten reunir, d
 
 <div align="center">
 <img src="../../img/introbi-7.png"  alt="reporting" 
-width="50%" />
+width="80%" />
 </div>
 
 
