@@ -13,6 +13,7 @@ nav:
      
 
   - Introducción BI: introduccionBI/BIIntroduccion.md
+  - Análisis de datos: introduccionBI/analitica.md
   #- Presentación, nube conceptos y infografía: presentacions.md
   - Ingesta de datos con NiFi: 
     - Introducción: nifi/nifiIntroduccion.md
