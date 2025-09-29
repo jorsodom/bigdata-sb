@@ -10,13 +10,13 @@ Generalmente, la información que se quiere investigar sobre un cierto dominio d
 
 Problemas para realizar el análisis en este sistema (OLTP):
 
-- [] La información se encuentra en varias y heterogéneas bases de datos y, en consecuencia, no se puede explotar en conjunto.
+-  La información se encuentra en varias y heterogéneas bases de datos y, en consecuencia, no se puede explotar en conjunto.
 
-- [] Solo es posible el análisis de los datos actuales, no mantiene valores históricos para tratar evolutivos.
+-  Solo es posible el análisis de los datos actuales, no mantiene valores históricos para tratar evolutivos.
 
-- [] Se obstaculiza el trabajo transaccional diario de los sistemas de información originales, no permite el análisis on-line.
+-  Se obstaculiza el trabajo transaccional diario de los sistemas de información originales, no permite el análisis on-line.
 
-- [] La base de datos está diseñada para el trabajo transaccional, no para el análisis de los datos.
+-  La base de datos está diseñada para el trabajo transaccional, no para el análisis de los datos.
 
 ## Sistema analítico (OLAP)
 
@@ -30,22 +30,19 @@ Objetivos:
 
 - [x] Diseño de estrategias
 
-<div align="center">
-<img src="../../img/" alt="FlowFile" 
-width="50%" />
-</div>
+Algunas características:
 
-● Almacén de datos para el análisis y toma de decisiones.
+-  Almacén de datos para el análisis y toma de decisiones.
 
-● Permite realizar análisis on-line, por lo que aumenta el poder de toma de decisiones por parte de los responsables en cuestión
+-  Permite realizar análisis on-line, por lo que aumenta el poder de toma de decisiones por parte de los responsables en cuestión
 
-● Unifica información dispersa de diversos sistemas operacionales
+-  Unifica información dispersa de diversos sistemas operacionales
 
-● Contiene la información relevante de la organización
+-  Contiene la información relevante de la organización
 
-● Diseños orientados a conceptos de negocio manejados por el usuario
+-  Diseños orientados a conceptos de negocio manejados por el usuario
 
-● Sistema OLAP (On-Line Analitical Procesing)
+-  Sistema OLAP (On-Line Analitical Procesing)
 
 ## OLTP vs OLAP
 
@@ -71,9 +68,11 @@ width="80%" />
 ### Sistema ETL
 
 
-○Extracción: elaboración de interfaces entre sistemas operacionales orígenes de datos
-○Transformación: validación de los datos extraídos, transformándolos al formato deseado
-○Carga: cargar físicamente los datos extraídos de los sistemas operacionales y ya transformados en el modelo de datos del Datawarehouse
+**Extracción**: elaboración de interfaces entre sistemas operacionales orígenes de datos
+
+**Transformación**: validación de los datos extraídos, transformándolos al formato deseado
+
+**Carga**: cargar físicamente los datos extraídos de los sistemas operacionales y ya transformados en el modelo de datos del Datawarehouse
 
 ---
 
@@ -82,9 +81,9 @@ Se soporta sobre el modelo físico dimensional diferente de los sistemas de base
 
 Existen dos tecnologías para implementar dicho modelo:
 
-● MultidimensionalOLAP (MOLAP): se indexa los datos directamente en un modelo multidimensional (cubos) en el cual todas las posibles combinaciones de los datos ya están calculadas en una celda
+- [x] MultidimensionalOLAP (MOLAP): se indexa los datos directamente en un modelo multidimensional (cubos) en el cual todas las posibles combinaciones de los datos ya están calculadas en una celda
 
-● RelationalOLAP (ROLAP): implementa las estructuras dimensionales mediante bases de datos con modelos relacionales. 
+- [x] RelationalOLAP (ROLAP): implementa las estructuras dimensionales mediante bases de datos con modelos relacionales. 
 
 ---
 
