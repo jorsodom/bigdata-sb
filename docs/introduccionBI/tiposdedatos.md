@@ -21,6 +21,11 @@ width="80%" />
 
 Los **datos estructurados** son aquellos que **siguen un formato fijo y bien definido**, normalmente almacenados en tablas con filas y columnas.  Cada elemento de información se ubica en un campo específico y tiene un tipo de dato predeterminado.
 
+<div align="center">
+<img src="../../img/introbi-tipos-2.png"  alt="Tipos de datos" 
+width="60%" />
+</div>
+
 ### Características
 - Organización rígida y bien definida.
 - Fácil acceso mediante **consultas SQL** u otros lenguajes estructurados.
@@ -47,6 +52,11 @@ Los **datos estructurados** son aquellos que **siguen un formato fijo y bien def
 ## Datos semiestructurados
 
 Los **datos semiestructurados** contienen **información organizada**, pero **no siguen una estructura rígida** como las bases de datos tradicionales. Aunque no se ajustan a un esquema fijo, incluyen **etiquetas o delimitadores** que facilitan su comprensión y análisis.
+
+<div align="center">
+<img src="../../img/introbi-tipos-3.png"  alt="Tipos de datos" 
+width="60%" />
+</div>
 
 ### Características
 - Estructura flexible y adaptable a distintos tipos de datos.
@@ -76,6 +86,15 @@ Los **datos semiestructurados** contienen **información organizada**, pero **no
 ## Datos no estructurados
 
 Los **datos no estructurados** no siguen ningún modelo predefinido ni contienen una organización clara. Representan la mayor parte de la información generada actualmente, especialmente en entornos digitales y redes sociales.
+
+<div align="center">
+<img src="../../img/introbi-tipos-4.png"  alt="Tipos de datos" 
+width="60%" />
+</div>
+<div align="center">
+<img src="../../img/introbi-tipos-5.png"  alt="Tipos de datos" 
+width="60%" />
+</div>
 
 ### Características
 - Sin esquema fijo, cada archivo o documento puede tener un formato diferente.
@@ -120,36 +139,18 @@ Los **datos no estructurados** no siguen ningún modelo predefinido ni contienen
 Cada tipo de dato requiere un enfoque específico en su gestión.
 
 - **Estructurados**:
-  - Bases de datos relacionales (SQL).
-  - Data Warehouses para análisis empresarial.
-
-<div align="center">
-<img src="../../img/introbi-tipos-2.png"  alt="Tipos de datos" 
-width="60%" />
-</div>
+    - Bases de datos relacionales (SQL).
+    - Data Warehouses para análisis empresarial.
 
 - **Semiestructurados**:
     - Bases de datos **NoSQL** (MongoDB, Cassandra).
     - Herramientas de integración y transformación (ETL/ELT).
 
-<div align="center">
-<img src="../../img/introbi-tipos-3.png"  alt="Tipos de datos" 
-width="60%" />
-</div>
 
 - **No estructurados**:
     - Sistemas de archivos distribuidos como **Hadoop HDFS**.
     - **Data Lakes** para almacenamiento masivo.
     - Algoritmos de IA y ML para análisis avanzado.
-
-<div align="center">
-<img src="../../img/introbi-tipos-4.png"  alt="Tipos de datos" 
-width="60%" />
-</div>
-<div align="center">
-<img src="../../img/introbi-tipos-5.png"  alt="Tipos de datos" 
-width="60%" />
-</div>
 
 ---
 
