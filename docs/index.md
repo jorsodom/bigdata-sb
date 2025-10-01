@@ -4,13 +4,13 @@ Los sistemas de Big Data se refieren al conjunto de herramientas, tecnologías y
 
 ## Componentes Claves
 
-- **Recopilación de Datos**: Los sistemas de Big Data capturan datos de diversas fuentes educativas, incluyendo plataformas de aprendizaje en línea, evaluaciones, interacciones en clase y dispositivos personales.
+- **Recopilación de datos**: Los sistemas de Big Data capturan datos de diversas fuentes educativas, incluyendo plataformas de aprendizaje en línea, evaluaciones, interacciones en clase y dispositivos personales.
 
-- **Almacenamiento de Datos**: Utilizan infraestructuras como bases de datos distribuidas y almacenamiento en la nube para gestionar grandes volúmenes de datos de forma segura y escalable.
+- **Almacenamiento de datos**: Utilizan infraestructuras como bases de datos distribuidas y almacenamiento en la nube para gestionar grandes volúmenes de datos de forma segura y escalable.
 
-- **Análisis y Procesamiento de Datos**: Emplean algoritmos avanzados y técnicas de análisis de datos como minería de datos, análisis predictivo y aprendizaje automático para transformar datos en información útil.
+- **Análisis y procesamiento de datos**: Emplean algoritmos avanzados y técnicas de análisis de datos como minería de datos, análisis predictivo y aprendizaje automático para transformar datos en información útil.
 
-- **Visualización de Datos**: Herramientas que representan los datos de forma gráfica para facilitar la interpretación y toma de decisiones, ayudando a los docentes y administradores a identificar patrones y tendencias.
+- **Visualización de datos**: Herramientas que representan los datos de forma gráfica para facilitar la interpretación y toma de decisiones, ayudando a los docentes y administradores a identificar patrones y tendencias.
 
 ## Profesores
 
