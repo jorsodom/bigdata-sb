@@ -1,8 +1,11 @@
 # Tipos de Datos
 
 En el ámbito de la **ingeniería de datos** y el **Big Data**, los datos se clasifican principalmente en tres tipos:  
+
 - **estructurados**, 
+
 - **semiestructurados** y
+
 - **no estructurados**. 
 
 Esta clasificación ayuda a definir la estrategia de almacenamiento, procesamiento y análisis que se debe aplicar en cada caso.
@@ -117,7 +120,6 @@ Los **datos no estructurados** no siguen ningún modelo predefinido ni contienen
 Cada tipo de dato requiere un enfoque específico en su gestión.
 
 - **Estructurados**:
-
   - Bases de datos relacionales (SQL).
   - Data Warehouses para análisis empresarial.
 
