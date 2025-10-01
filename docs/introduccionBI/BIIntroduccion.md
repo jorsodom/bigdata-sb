@@ -1,4 +1,7 @@
-# Introducción BI
+# Introducción Bussines Intelligence (BI)
+
+Para entender el mundo del BI, hay que llegar a conocer cuales son los sistemas de bases de datos mas importantes
+y sus características. Por eso, vamos a revisar los sistemas operacionales, transaccionales y noSQL.
 
 
 ## Sistema operacional (OLTP)
@@ -55,22 +58,39 @@ Algunas características:
 
 -  Sistema OLAP (On-Line Analitical Procesing)
 
-## OLTP vs OLAP
+## Sistema NoSQL
+
+Se refiere a un conjunto de sistemas de gestión de bases de datos que **no siguen estrictamente el modelo relacional** (tablas con filas y columnas). Fueron creadas para manejar grandes volúmenes de datos, de forma rápida, flexible y escalable, algo que a veces las bases de datos SQL tradicionales no logran con la misma eficiencia.
+
+Algunas características:
+
+-  No usan tablas fijas como en SQL (pueden ser documentos, grafos, pares clave-valor, etc.).
+
+-  Escalabilidad horizontal → se pueden repartir los datos en muchos servidores (clústeres) fácilmente.
+
+-  Alta velocidad de lectura y escritura, útil para apps en tiempo real (redes sociales, e-commerce, videojuegos online).
+
+-  Estructura flexible → permiten trabajar con datos semi-estructurados (JSON, XML) o sin esquema definido.
+
+-  Consistencia eventual → en muchos casos priorizan la disponibilidad y la velocidad sobre la consistencia estricta (a diferencia de SQL, que es muy rígido con transacciones).
+
+## OLTP vs OLAP vs NoSQL
 
 <div align="center">
 <img src="../../img/introbi-8.png"  alt="reporting" 
 width="80%" />
 </div>
 
-| **Característica**                | **Operacional (OLTP)**                          | **Datawarehouse (OLAP)**                                             |
-|-----------------------------------|------------------------------------------------|-----------------------------------------------------------------------|
-| **Tipo de datos**                      | Almacén de datos actuales                       | Almacén de datos históricos                                         |
-| **Nivel de detalle**                   | Almacena datos al detalle                       | Almacena datos al detalle y datos agregados a distintos niveles      |
-| **Tamaño de la base de datos**         | Bases de datos medianas                         | Bases de datos grandes                                             |
-| **Naturaleza de los datos**            | Los datos son actuales                          | Los datos son estáticos*                                              |
-| **Tipo de procesos**                    | Los procesos son repetitivos                    | Los procesos no son previsibles                                      |
-| **Tiempo de respuesta**                 | Tiempo de respuesta pequeño                     | Tiempo de respuesta variable                                        |
-| **Tipo de decisiones que soporta**      | Soporta decisiones diarias                      | Soporta decisiones estratégicas                                      |
+| **Característica**                | **Operacional (OLTP)**                          | **Datawarehouse (OLAP)**                                             | **NoSQL**                                                                 |
+|-----------------------------------|------------------------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------|
+| **Tipo de datos**                 | Almacén de datos actuales                       | Almacén de datos históricos                                           | Datos flexibles: documentos, clave-valor, grafos, columnas distribuidas    |
+| **Nivel de detalle**              | Almacena datos al detalle                       | Almacena datos al detalle y agregados a distintos niveles             | Puede almacenar datos al detalle o agregados, sin esquema fijo             |
+| **Tamaño de la base de datos**    | Bases de datos medianas                         | Bases de datos grandes                                                | Bases de datos muy grandes y distribuidas                                  |
+| **Naturaleza de los datos**       | Los datos son actuales                          | Los datos son estáticos                                               | Los datos son semi-estructurados, dinámicos o no estructurados             |
+| **Tipo de procesos**              | Los procesos son repetitivos                    | Los procesos no son previsibles                                       | Procesos distribuidos, consultas flexibles y adaptables                    |
+| **Tiempo de respuesta**           | Tiempo de respuesta pequeño                     | Tiempo de respuesta variable                                          | Alta velocidad de lectura/escritura, escalable horizontalmente             |
+| **Tipo de decisiones que soporta**| Soporta decisiones diarias                      | Soporta decisiones estratégicas                                       | Soporta decisiones operativas y en tiempo real (apps web, IoT, Big Data)   |
+                                    |
 
 ## Componentes de un sistema BI
 
