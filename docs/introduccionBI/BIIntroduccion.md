@@ -31,7 +31,7 @@ Problemas para realizar el análisis en este sistema (OLTP):
 
 <div align="center">
 <img src="../../img/introbi-1.png"  alt="reporting" 
-width="80%" />
+width="70%" />
 </div>
 
 Disponer de una base de datos que permita extraer conocimiento de la información histórica almacenada en la organización.
@@ -103,12 +103,13 @@ width="80%" />
 
 ### Sistema ETL
 
+En un sistema ETL, las fases esenciales son las siguientes:
 
-**Extracción**: elaboración de interfaces entre sistemas operacionales orígenes de datos
+-   **Extracción**: elaboración de interfaces entre sistemas operacionales orígenes de datos
 
-**Transformación**: validación de los datos extraídos, transformándolos al formato deseado
+-   **Transformación**: validación de los datos extraídos, transformándolos al formato deseado
 
-**Carga**: cargar físicamente los datos extraídos de los sistemas operacionales y ya transformados en el modelo de datos del Datawarehouse
+-   **Carga**: cargar físicamente los datos extraídos de los sistemas operacionales y ya transformados en el modelo de datos del Datawarehouse
 
 ---
 
@@ -130,6 +131,8 @@ Existen dos tecnologías para implementar dicho modelo:
 width="80%" />
 </div>
 
+En la capa de presentación de los datos, puede tener diferentes enfoques.
+
 **DSS (Decisión Support System)**:
 Informes dinámicos, normalmente para representar un indicador o un grupo de indicadores relacionados funcionalmente en tablas de datos.
 Además de estos informes predefinidos, los usuarios con capacidades de análisis podrán crear sus propios informes y obtener respuestas en demandas de información puntuales.
@@ -141,6 +144,8 @@ Informes estáticos, predefinidos, fáciles de manejar y orientados a los direct
 Informes estáticos para la gestión estratégica de la empresa. Permite medir el rendimiento de áreas o personas mediante el análisis de diversos de un conjunto de indicadores con valores objetivo y pesos.
 
 ## Modelo lógico
+
+Existe un modelo lógico a definir que representa el análisis de los datos y que no tiene el por qué ser igual que el modelo físico de la base de datos.
 
 **Ejemplo**
 
@@ -174,7 +179,7 @@ En un esquema multidimensional se representa una actividad que es objeto de aná
 width="80%" />
 </div>
 
-## Business Intelligence
+## Business Intelligence (BI)
 
 <div align="center">
 <img src="../../img/introbi-7.png"  alt="reporting" 
@@ -213,7 +218,7 @@ Aunque el proceso ETL se puede realizar con distintas herramientas, en entornos 
 
 ## Herramientas
 
-### 🧠 Herramientas de Business Intelligence (BI)
+### 🧠 Herramientas de BI
 Estas herramientas permiten **analizar, visualizar y presentar datos** para apoyar la **toma de decisiones estratégicas y operativas**.
 
 - **Tableau** – Visualización de datos interactiva y potente, ideal para análisis avanzados.  
@@ -222,13 +227,9 @@ Estas herramientas permiten **analizar, visualizar y presentar datos** para apoy
 - **Looker (Google)** – BI en la nube, enfocado en análisis colaborativo.  
 - **MicroStrategy** – Plataforma empresarial de análisis y visualización.  
 - **SAP BusinessObjects** – BI empresarial con integración en SAP.  
-- **Domo** – BI en la nube con enfoque en colaboración y gestión empresarial.  
 - **IBM Cognos Analytics** – BI con capacidades avanzadas de reportes y analítica.  
-- **Sisense** – BI enfocado en datos complejos y grandes volúmenes.  
-- **Zoho Analytics** – BI en la nube, accesible y flexible.  
 - **Metabase** – BI open source, sencilla y colaborativa.  
 - **Redash** – Open source para visualización y consultas SQL.  
-- **Apache Superset** – Plataforma de BI open source moderna y escalable.  
 - **Elasticsearch (con Kibana)** – Motor de búsqueda y analítica en tiempo real, ideal para dashboards y monitoreo.
 
 ---
@@ -245,17 +246,11 @@ Herramientas enfocadas en **integrar datos** desde diversas fuentes hacia **Data
 - **AWS Glue** – ETL serverless administrado por Amazon Web Services.  
 - **Azure Data Factory** – ETL en la nube dentro del ecosistema Azure.  
 - **Google Cloud Dataflow** – ETL basado en Apache Beam para Google Cloud.  
-- **Fivetran** – Integración automatizada de datos con conectores listos para usar.  
-- **Stitch** – Integración sencilla y rápida en la nube.  
-- **Airbyte** – ETL open source moderno y flexible.  
-- **Matillion** – ETL optimizado para Data Warehouses modernos en la nube.  
-- **Singer** – Framework open source para mover datos entre sistemas.  
-- **Luigi** – Librería open source en Python para flujos de trabajo ETL complejos.  
 - **Apache Kafka (Streaming)** – Procesamiento y transporte de datos en tiempo real.  
 
 ---
 
-### 🔍 Herramientas de Búsqueda y Analítica de Datos
+### 🔍 Herramientas de búsqueda y analítica de datos
 Estas herramientas se enfocan en **indexación**, **búsqueda** y **análisis avanzado de datos**.
 
 - **Elasticsearch** – Motor de búsqueda y analítica distribuido, ideal para grandes volúmenes de datos.  
@@ -266,8 +261,8 @@ Estas herramientas se enfocan en **indexación**, **búsqueda** y **análisis av
 
 ### 📌 Recomendaciones
 
-- **BI Empresarial:** Tableau, Power BI, Qlik.  
-- **ETL Empresarial:** ODI, Informatica PowerCenter, Talend.  
+- **BI empresarial:** Tableau, Power BI, Qlik.  
+- **ETL empresarial:** ODI, Informatica PowerCenter, Talend.  
 - **ETL Open Source:** Apache NiFi, Pentaho, Airbyte.  
 - **Nube:** AWS Glue, Azure Data Factory, Google Dataflow.  
-- **Analítica y Búsqueda:** Elasticsearch + Kibana + Logstash (ELK Stack).  
+- **Analítica y búsqueda:** Elasticsearch + Kibana + Logstash (ELK Stack).  
