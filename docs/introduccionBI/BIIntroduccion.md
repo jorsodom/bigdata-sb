@@ -166,6 +166,15 @@ Desde un punto de vista más pragmático, y asociándolo directamente a las tecn
 
 El conjunto de metodologías, aplicaciones y tecnologías que permiten reunir, depurar y transformar datos de los sistemas transaccionales e información desestructurada (interna y externa a la compañía) en información estructurada, para su explotación directa (reporting, análisis OLAP...) o para su análisis y conversión en conocimiento soporte a la toma de decisiones sobre el negocio.
 
+## Características de un en entorno Big Data frente entornos BI
+Aunque el proceso ETL se puede realizar con distintas herramientas, en entornos de **Big Data** se requieren capacidades especiales para manejar la complejidad y volumen de datos:
+
+- **Flexibilidad en los formatos**: debe poder procesar datos estructurados, semiestructurados y no estructurados.
+- **Escalabilidad y tolerancia a fallos**: el sistema debe crecer según la demanda y continuar funcionando aunque haya errores.
+- **Conectores para múltiples fuentes de datos**: integración con diferentes sistemas y tecnologías.
+
+---
+
 ## Terminología
 
 | **Concepto**         | **Descripción**                                                                 |
