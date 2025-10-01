@@ -4,7 +4,7 @@
 
 <div align="center">
 <img src="../../img/introbi-0.jpg"  alt="reporting" 
-width="80%" />
+width="60%" />
 </div>
 
 
@@ -19,7 +19,7 @@ width="80%" />
 
 <div align="center">
 <img src="../../img/introbi-01.jpg"  alt="reporting" 
-width="80%" />
+width="60%" />
 </div>
 
 
