@@ -12,7 +12,7 @@ nav:
   #  - 3. MapReduce: hadoop/HadoopMapReduce.md
      
 
-  - Presentación: presentacions.md
+  - Presentación: introduccionBI/presentacions.md
   - Introducción BI: introduccionBI/BIIntroduccion.md
   - Análisis de datos: introduccionBI/analitica.md
   - Introducción ETL: introduccionBI/ETLintroduccion.md
