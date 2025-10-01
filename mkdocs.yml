@@ -12,12 +12,12 @@ nav:
   #  - 3. MapReduce: hadoop/HadoopMapReduce.md
      
 
+  - Presentación, nube conceptos y infografía: presentacions.md
   - Introducción BI: introduccionBI/BIIntroduccion.md
   - Análisis de datos: introduccionBI/analitica.md
-  #- Introducción ETL: introduccionBI/ETLintroduccion.md
-  #- Tipos datos: introduccionBI/tiposdedatos.md
-  #- Presentación, nube conceptos y infografía: presentacions.md
-  - Ingesta de datos con NiFi: 
+  - Introducción ETL: introduccionBI/ETLintroduccion.md
+  - Tipos datos: introduccionBI/tiposdedatos.md
+  #- Ingesta de datos con NiFi: 
     - Introducción: nifi/nifiIntroduccion.md
     - Práctica 1: nifi/nifiPractica1.md
     - Práctica 2: nifi/nifiPracticacd 2.md
@@ -32,7 +32,7 @@ nav:
     - Caso de uso Meteo: nifi/nifiCasoUsoMeteo.md
     - Caso uso API: nifi/nifiCasoUsoAPI.md
     - Caso de uso con PostgreSQL: nifi/nifiCasoUsoPostgreSQL.md
-  - ETL con ODI: 
+  #- ETL con ODI: 
     - Introducción: odi/odiIntroduccion.md
     - Demo: odi/odiDemo.md
     - Caso de uso: odi/odiCasoDeUso.md

@@ -2,6 +2,11 @@
 
 ## Ingesta de datos
 
+<div align="center">
+<img src="../../img/introbi-ETL-2.png"  alt="reporting" 
+width="80%" />
+</div>
+
 La **ingesta de datos** es el proceso de **obtener, guardar y procesar datos** provenientes de diferentes fuentes.  
 Este proceso se puede realizar en cualquier lenguaje de programación y en distintos sistemas, pero cuando trabajamos en **entornos de Big Data**, comienzan a aparecer retos importantes relacionados con el volumen, la variedad y la velocidad de los datos.
 
@@ -28,7 +33,7 @@ Características clave:
 - Dividida en **fases** con objetivos claros.  
 - Define una **secuencia de tecnologías** para cada etapa.  
 - Considera el rendimiento:  
-  - Las **dades no s'analitzen on es creen** (no se analizan en el sistema donde se generan).  
+  - Los datos no se analizan en el sistema donde se generan.  
   - Uso diferenciado de **sistemas OLTP** y **OLAP**:  
     - **OLTP** (*Online Transaction Processing*): orientado a la gestión y actualización rápida de datos transaccionales.  
     - **OLAP** (*Online Analytical Processing*): orientado al análisis de grandes volúmenes de datos para la toma de decisiones.
@@ -74,12 +79,17 @@ Para manejar la complejidad de entornos de Big Data, se debe:
 
 ## Extracción, Transformación y Carga (ETL)
 
+<div align="center">
+<img src="../../img/introbi-ETL-1.png"  alt="reporting" 
+width="80%" />
+</div>
+
 La **ETL (Extracción, Transformación y Carga)** es un proceso fundamental en la ingeniería de datos y constituye un **tipo específico de pipeline**.  
 Su objetivo es **obtener datos de diversas fuentes**, transformarlos para adaptarlos a las necesidades de análisis y finalmente **cargarlos** en un sistema de destino, como un **Data Warehouse** o un **Data Lake**.
 
 ---
 
-### Características de una ETL en entornos Big Data
+### Características de una ETL en entornos Big Data frente entornos BI
 Aunque el proceso ETL se puede realizar con distintas herramientas, en entornos de **Big Data** se requieren capacidades especiales para manejar la complejidad y volumen de datos:
 
 - **Flexibilidad en los formatos**: debe poder procesar datos estructurados, semiestructurados y no estructurados.
@@ -89,10 +99,16 @@ Aunque el proceso ETL se puede realizar con distintas herramientas, en entornos 
 ---
 
 ### Orígenes de datos
+
+<div align="center">
+<img src="../../img/introbi-ETL-3.png"  alt="reporting" 
+width="80%" />
+</div>
+
 Las fuentes de datos pueden ser muy variadas, lo que aumenta la complejidad del proceso de extracción. Algunos ejemplos incluyen:
 
 - Archivos **Excel (XLS, XLSX)**
-- Documentos **PDF** con información estructurada o semiestructurada
+- Documentos **PDF**
 - Archivos de texto **TXT**
 - Archivos **CSV**
 - **Bases de datos relacionales** (SQL)
@@ -112,6 +128,12 @@ Durante la fase de extracción, es fundamental seguir ciertos principios para ev
 ---
 
 ### Fase de Transformación
+
+<div align="center">
+<img src="../../img/introbi-ETL-4.png"  alt="reporting" 
+width="80%" />
+</div>
+
 En esta etapa se procesan los datos para prepararlos para el análisis.  
 Algunas tareas comunes incluyen:
 
@@ -149,6 +171,13 @@ La etapa final de una ETL es la **carga de los datos transformados** en el siste
 ---
 
 ### Flujo general de una ETL
+
+<div align="center">
+<img src="../../img/introbi-ETL-5.png"  alt="reporting" 
+width="80%" />
+</div>
+
+
 1. **Extracción (Extract)**  
    - Captura de datos desde diferentes fuentes.  
    - Debe ser rápida, eficiente y sin afectar el rendimiento del sistema original.
@@ -174,6 +203,11 @@ El proceso ETL permite que las organizaciones dispongan de datos:
 
 ## Soluciones Comerciales ETL
 
+<div align="center">
+<img src="../../img/introbi-ETL-6.png"  alt="reporting" 
+width="80%" />
+</div>
+
 Existen diversas herramientas comerciales especializadas en **procesos ETL** que facilitan la **extracción, transformación y carga de datos**.  
 Estas soluciones suelen ofrecer interfaces visuales, conectores listos para usar y funcionalidades avanzadas de integración, escalabilidad y seguridad.
 
@@ -194,7 +228,7 @@ Las herramientas comerciales suelen incluir:
 
 ---
 
-### Ejemplos de soluciones comerciales ETL
+### Ejemplos de soluciones comerciales ETL (no open source)
 
 A continuación, se presentan algunas de las herramientas más utilizadas en la industria:
 

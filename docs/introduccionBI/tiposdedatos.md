@@ -4,6 +4,11 @@ En el ámbito de la **ingeniería de datos** y el **Big Data**, los datos se cla
 **estructurados**, **semiestructurados** y **no estructurados**.  
 Esta clasificación ayuda a definir la estrategia de almacenamiento, procesamiento y análisis que se debe aplicar en cada caso.
 
+<div align="center">
+<img src="../../img/introbi-tipos-1.png"  alt="Tipos de datos" 
+width="80%" />
+</div>
+
 ---
 
 ## 1. Datos estructurados
@@ -112,14 +117,36 @@ Representan la mayor parte de la información generada actualmente, especialment
 Cada tipo de dato requiere un enfoque específico en su gestión:
 
 - **Estructurados**:  
+
+<div align="center">
+<img src="../../img/introbi-tipos-2.png"  alt="Tipos de datos" 
+width="80%" />
+</div>
+
   - Bases de datos relacionales (SQL).
   - Data Warehouses para análisis empresarial.
 
 - **Semiestructurados**:  
+
+<div align="center">
+<img src="../../img/introbi-tipos-3.png"  alt="Tipos de datos" 
+width="80%" />
+</div>
+
   - Bases de datos **NoSQL** (MongoDB, Cassandra).
   - Herramientas de integración y transformación (ETL/ELT).
 
 - **No estructurados**:  
+
+<div align="center">
+<img src="../../img/introbi-tipos-4.png"  alt="Tipos de datos" 
+width="80%" />
+</div>
+<div align="center">
+<img src="../../img/introbi-tipos-5.png"  alt="Tipos de datos" 
+width="80%" />
+</div>
+
   - Sistemas de archivos distribuidos como **Hadoop HDFS**.
   - **Data Lakes** para almacenamiento masivo.
   - Algoritmos de IA y ML para análisis avanzado.
