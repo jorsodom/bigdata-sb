@@ -30,5 +30,5 @@ width="60%" />
 ## Reflexión y discusión
 A través de la siguiente infografia, reflexionar sobre la evolución y hacía donde creeis que vamos.
 <div align="center">
-<img src="../../img/infografiabi.png" alt="infografia" width="25%" />
+<img src="../../img/infografiabi.png" alt="infografia" width="100%" />
 </div>

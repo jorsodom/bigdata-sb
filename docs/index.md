@@ -2,7 +2,7 @@
 
 Los sistemas de Big Data se refieren al conjunto de herramientas, tecnologías y métodos que permiten la recopilación, almacenamiento, análisis y visualización de grandes volúmenes de datos generados. Estos sistemas recopilan y analizan datos de múltiples fuentes como plataformas de aprendizaje en línea, sistemas de gestión, redes sociales, dispositivos móviles y sensores, con el fin de obtener información relevante que apoye la toma de decisiones.
 
-## Componentes Claves
+## Componentes claves
 
 - **Recopilación de datos**: Los sistemas de Big Data capturan datos de diversas fuentes educativas, incluyendo plataformas de aprendizaje en línea, evaluaciones, interacciones en clase y dispositivos personales.
 
