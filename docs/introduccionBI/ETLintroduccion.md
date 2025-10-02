@@ -201,7 +201,7 @@ El proceso ETL permite que las organizaciones dispongan de datos:
 
 > Una ETL bien diseñada es la base para cualquier estrategia de **analítica de datos** o **Big Data**, asegurando que la información llegue en el formato y momento adecuado para la toma de decisiones.
 
-## Soluciones Comerciales ETL
+## Soluciones comerciales ETL
 
 <div align="center">
 <img src="../../img/introbi-ETL-6.png"  alt="reporting" 
@@ -213,7 +213,7 @@ Estas soluciones suelen ofrecer interfaces visuales, conectores listos para usar
 
 ---
 
-### Características comunes de las soluciones comerciales ETL
+### Características comunes
 Las herramientas comerciales suelen incluir:
 
 - **Interfaces gráficas intuitivas** para diseñar y gestionar pipelines.
@@ -228,7 +228,7 @@ Las herramientas comerciales suelen incluir:
 
 ---
 
-### Ejemplos de soluciones comerciales ETL (no open source)
+### Ejemplos (no open source)
 
 A continuación, se presentan algunas de las herramientas más utilizadas en la industria:
 
