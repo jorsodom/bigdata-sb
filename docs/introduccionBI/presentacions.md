@@ -28,7 +28,7 @@ width="60%" />
 [Ejercicio mentimeter]([https://www.menti.com/al7x52rbebkr])
 
 ## Reflexión y discusión
-A través de la siguiente infografia, reflexionar sobre la evolución y hacía donde creeis que vamos.
+A través de la siguiente infografia, reflexionar sobre las finalidades del BI y hacía donde creeis que vamos.
 <div align="center">
 <img src="../../img/infografiabi.png" alt="infografia" width="100%" />
 </div>
