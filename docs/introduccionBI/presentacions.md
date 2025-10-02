@@ -25,7 +25,7 @@ width="60%" />
 
 ## Nuve de conceptos inicial
 
-[Ejercicio mentimeter]([https://](https://www.menti.com/al7x52rbebkr))
+[Ejercicio mentimeter]([https://www.menti.com/al7x52rbebkr])
 
 ## Reflexión y discusión
 A través de la siguiente infografia, reflexionar sobre la evolución y hacía donde creeis que vamos.
