@@ -33,7 +33,7 @@ A través de la siguiente infografia, reflexionar sobre las finalidades del BI y
 <img src="../../img/infografiabi.png" alt="infografia" width="100%" />
 </div>
 
-# Evaluación de la asignatura
+## Evaluación de la asignatura
 
 La evaluación se realizará a través de las siguientes actividades:
 
