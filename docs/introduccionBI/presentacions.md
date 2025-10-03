@@ -25,7 +25,7 @@ width="60%" />
 
 ## Nuve de conceptos inicial
 
-  *[https://www.menti.com/al7x52rbebkr](Ejercicio mentimeter)* 
+  *[https://www.menti.com/al7x52rbebkr](Ejercicio Mentimeter)* 
 
 ## Reflexión y discusión
 A través de la siguiente infografia, reflexionar sobre las finalidades del BI y hacía donde creeis que vamos.
