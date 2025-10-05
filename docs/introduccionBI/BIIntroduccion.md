@@ -19,13 +19,13 @@ Generalmente, la información que se quiere investigar sobre un cierto dominio d
 
 Problemas para realizar el análisis en este sistema (OLTP):
 
--  La información se encuentra en varias y heterogéneas bases de datos y, en consecuencia, no se puede explotar en conjunto.
+-  La información se encuentra en varias y heterogéneas bases de datos y, en consecuencia, **no se puede explotar en conjunto**.
 
--  Solo es posible el análisis de los datos actuales, no mantiene valores históricos para tratar evolutivos.
+-  Solo es posible el análisis de los datos actuales, **no suele mantener valores históricos** para analizar históricos y evolutivos.
 
--  Se obstaculiza el trabajo transaccional diario de los sistemas de información originales, no permite el análisis on-line.
+-  Se **dificulta** el trabajo transaccional diario de los sistemas de información originales, no permite el análisis on-line.
 
--  La base de datos está diseñada para el trabajo transaccional, no para el análisis de los datos.
+-  La base de datos **está diseñada para el trabajo transaccional**, no para el análisis de los datos.
 
 ## Sistema analítico (OLAP)
 
@@ -34,29 +34,29 @@ Problemas para realizar el análisis en este sistema (OLTP):
 width="70%" />
 </div>
 
-Disponer de una base de datos que permita extraer conocimiento de la información histórica almacenada en la organización.
+Disponer de una base de datos que permita **extraer conocimiento de la información histórica** almacenada en la organización.
 
 Objetivos:
 
 - [x] Análisis de la organización
 
-- [x] Previsiones de evolución
+- [x] Análisis históricos
 
-- [x] Diseño de estrategias
+- [x] Diseño de planes estratégicos
 
 Algunas características:
 
--  Almacén de datos para el análisis y toma de decisiones.
+-  **Almacén de datos para el análisis** y toma de decisiones.
 
--  Permite realizar análisis on-line, por lo que aumenta el poder de toma de decisiones por parte de los responsables en cuestión
+-  **Permite realizar análisis on-line**, por lo que aumenta el poder de toma de decisiones por parte de los responsables en cuestión
 
--  Unifica información dispersa de diversos sistemas operacionales
+-  **Unifica** información dispersa de diversos sistemas operacionales
 
--  Contiene la información relevante de la organización
+-  Contiene la **información relevante** de la organización
 
--  Diseños orientados a conceptos de negocio manejados por el usuario
+-  Diseños **orientados a conceptos de negocio** manejados por el usuario
 
--  Sistema OLAP (On-Line Analitical Procesing)
+-  Sistema **OLAP** (On-Line Analitical Procesing)
 
 ## Sistema NoSQL
 
@@ -64,15 +64,15 @@ Se refiere a un conjunto de sistemas de gestión de bases de datos que **no sigu
 
 Algunas características:
 
--  No usan tablas fijas como en SQL (pueden ser documentos, grafos, pares clave-valor, etc.).
+-  **No usan tablas fijas** como en SQL (pueden ser documentos, grafos, pares clave-valor, etc.).
 
--  Escalabilidad horizontal → se pueden repartir los datos en muchos servidores (clústeres) fácilmente.
+-  **Escalabilidad horizontal** → se pueden repartir los datos en muchos servidores (clústeres) fácilmente.
 
--  Alta velocidad de lectura y escritura, útil para apps en tiempo real (redes sociales, e-commerce, videojuegos online).
+-  **Alta velocidad de lectura y escritura**, útil para apps en tiempo real (redes sociales, e-commerce, videojuegos online).
 
--  Estructura flexible → permiten trabajar con datos semi-estructurados (JSON, XML) o sin esquema definido.
+-  **Estructura flexible** → permiten trabajar con datos semi-estructurados (JSON, XML) o sin esquema definido.
 
--  Consistencia eventual → en muchos casos priorizan la disponibilidad y la velocidad sobre la consistencia estricta (a diferencia de SQL, que es muy rígido con transacciones).
+-  Consistencia eventual → en muchos casos **priorizan la disponibilidad y la velocidad sobre la consistencia** estricta (a diferencia de SQL, que es muy rígido con transacciones).
 
 ## OLTP vs OLAP vs NoSQL
 
@@ -113,17 +113,6 @@ En un sistema ETL, las fases esenciales son las siguientes:
 
 ---
 
-### Datawarehouse
-Se soporta sobre el modelo físico dimensional diferente de los sistemas de bases de datos que están basados en el modelo Entidad-Relación (E/R). Este modelo contiene la misma información que el modelo E/R pero agrupa los datos con el objetivo de ganar una mayor comprensión para el usuario y garantizar la ejecución rápida y eficiente de las consultas.
-
-Existen dos tecnologías para implementar dicho modelo:
-
-- [x] MultidimensionalOLAP (MOLAP): se indexa los datos directamente en un modelo multidimensional (cubos) en el cual todas las posibles combinaciones de los datos ya están calculadas en una celda
-
-- [x] RelationalOLAP (ROLAP): implementa las estructuras dimensionales mediante bases de datos con modelos relacionales. 
-
----
-
 ### Presentación
 
 <div align="center">
@@ -135,13 +124,13 @@ En la capa de presentación de los datos, puede tener diferentes enfoques.
 
 **DSS (Decisión Support System)**:
 Informes dinámicos, normalmente para representar un indicador o un grupo de indicadores relacionados funcionalmente en tablas de datos.
-Además de estos informes predefinidos, los usuarios con capacidades de análisis podrán crear sus propios informes y obtener respuestas en demandas de información puntuales.
+Además de estos informes predefinidos, **los usuarios con capacidades de análisis** podrán crear sus propios informes y obtener respuestas en demandas de información puntuales.
 
 **EIS (Executive Information System)**:
-Informes estáticos, predefinidos, fáciles de manejar y orientados a los directores. Son informes muy visuales (normalmente se utilizan exclusivamente gráficos) y con un nivel alto de agregación de la información. Deben estar orientados a la gestión estratégica.
+Informes estáticos, predefinidos, **fáciles de manejar y orientados a los directores**. Son informes muy visuales (normalmente se utilizan exclusivamente gráficos) y con un nivel alto de agregación de la información. Deben estar orientados a la gestión estratégica.
 
 **BSC (Balance Scored Card)**:
-Informes estáticos para la gestión estratégica de la empresa. Permite medir el rendimiento de áreas o personas mediante el análisis de diversos de un conjunto de indicadores con valores objetivo y pesos.
+Informes estáticos para la gestión estratégica de la empresa. **Permite medir el rendimiento de áreas o personas** mediante el análisis de diversos de un conjunto de indicadores con valores objetivo y pesos.
 
 ## Modelo lógico
 
@@ -186,10 +175,10 @@ width="80%" />
 width="80%" />
 </div>
 
-Business Intelligence suele definirse como la transformación de los datos de la compañía en conocimiento para obtener una ventaja competitiva.
+Business Intelligence suele definirse como **la transformación de los datos de la compañía en conocimiento para obtener una ventaja competitiva**.
 Desde un punto de vista más pragmático, y asociándolo directamente a las tecnologías de la información, podemos definir Business Intelligence como:
 
-El conjunto de metodologías, aplicaciones y tecnologías que permiten reunir, depurar y transformar datos de los sistemas transaccionales e información desestructurada (interna y externa a la compañía) en información estructurada, para su explotación directa (reporting, análisis OLAP...) o para su análisis y conversión en conocimiento soporte a la toma de decisiones sobre el negocio.
+> **El conjunto de metodologías, aplicaciones y tecnologías que permiten reunir, depurar y transformar datos de los sistemas transaccionales e información desestructurada (interna y externa a la compañía) en información estructurada, para su explotación directa (reporting, análisis OLAP...) o para su análisis y conversión en conocimiento soporte a la toma de decisiones sobre el negocio.**
 
 ## Características de un en entorno Big Data frente entornos BI
 Aunque el proceso ETL se puede realizar con distintas herramientas, en entornos de **Big Data** se requieren capacidades especiales para manejar la complejidad y volumen de datos:
