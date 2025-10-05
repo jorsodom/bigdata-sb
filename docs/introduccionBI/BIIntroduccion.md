@@ -1,6 +1,6 @@
 # Introducción Bussines Intelligence (BI)
 
-Para entender el mundo del BI, hay que llegar a conocer cuales son los sistemas de bases de datos mas importantes
+Para entender el mundo del BI, hay que llegar a conocer cuáles son los sistemas de bases de datos más importantes
 y sus características. Por eso, vamos a revisar los sistemas operacionales, transaccionales y noSQL.
 
 
@@ -195,7 +195,7 @@ El conjunto de metodologías, aplicaciones y tecnologías que permiten reunir, d
 Aunque el proceso ETL se puede realizar con distintas herramientas, en entornos de **Big Data** se requieren capacidades especiales para manejar la complejidad y volumen de datos:
 
 - **Flexibilidad en los formatos**: debe poder procesar datos estructurados, semiestructurados y no estructurados.
-- **Escalabilidad y tolerancia a fallos**: el sistema debe crecer según la demanda y continuar funcionando aunque haya errores.
+- **Escalabilidad y tolerancia a fallos**: el sistema debe crecer según la demanda y continuar funcionando, aunque haya errores.
 - **Conectores para múltiples fuentes de datos**: integración con diferentes sistemas y tecnologías.
 
 ---

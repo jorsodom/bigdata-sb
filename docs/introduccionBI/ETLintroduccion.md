@@ -89,15 +89,6 @@ Su objetivo es **obtener datos de diversas fuentes**, transformarlos para adapta
 
 ---
 
-### Características de una ETL en entornos Big Data frente entornos BI
-Aunque el proceso ETL se puede realizar con distintas herramientas, en entornos de **Big Data** se requieren capacidades especiales para manejar la complejidad y volumen de datos:
-
-- **Flexibilidad en los formatos**: debe poder procesar datos estructurados, semiestructurados y no estructurados.
-- **Escalabilidad y tolerancia a fallos**: el sistema debe crecer según la demanda y continuar funcionando aunque haya errores.
-- **Conectores para múltiples fuentes de datos**: integración con diferentes sistemas y tecnologías.
-
----
-
 ### Orígenes de datos
 
 <div align="center">

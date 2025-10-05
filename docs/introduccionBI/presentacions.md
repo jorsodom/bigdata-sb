@@ -23,12 +23,12 @@ width="60%" />
 </div>
 
 
-## Nuve de conceptos inicial
+## Nube de conceptos inicial
 
   *[https://www.menti.com/al7x52rbebkr](Ejercicio Mentimeter)* 
 
 ## Reflexión y discusión
-A través de la siguiente infografia, reflexionar sobre las finalidades del BI y hacía donde creeis que vamos.
+A través de la siguiente infografía, reflexionar sobre las finalidades del BI y hacía donde creéis que vamos.
 <div align="center">
 <img src="../../img/infografiabi.png" alt="infografia" width="100%" />
 </div>
