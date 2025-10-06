@@ -194,9 +194,13 @@ empresariales
 -   La preparación de datos es el proceso de **generación de perfiles,de limpieza y transformación de los datos** para prepararlos para el modelado y la visualización.
 
 -   La preparación de datos consiste en:
+
 ○ garantizar la **integridad de los datos**,
+
 ○ **corregir datos incorrectos o inexactos**,
+
 ○ identificar los **datos que falten**,
+
 ○ convertir datos de una estructura o hacer que los **datos sean más legibles**.
 
 -   Las garantías de privacidad y seguridad también son
@@ -205,10 +209,14 @@ importantes. Estas pueden incluir la anonimización de los datos para evitar que
 ### 2. Modelado
 
 El modelado de datos **es el proceso de determinar cómo se relacionan las tablas entre sí**.
+
 -   Este proceso se realiza mediante la definición y creación de relaciones entre las tablas.
+
 -   A partir de ahí, puede mejorar el modelo si define métricas y agrega cálculos personalizados para enriquecer los datos.
+
 -   Un modelo de datos eficaz hace que los informes sean más precisos, permite que los datos se exploren de manera
 más rápida y eficaz, reduce la duración del proceso de creación de informes y simplifica el mantenimiento futuro del informe.
+
 -   Un modelo mal diseñado puede tener un impacto negativo en la precisión general y el rendimiento del informe.
 
 ### 3. Visualización
