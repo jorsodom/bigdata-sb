@@ -12,7 +12,7 @@ Existen dos enfoques principales para la instalación de los Sistemas de Big Dat
 ## Capas lógicas y zonas de la arquitectura
 
 <div align="center">
-<img src="../../img/multidimensional-04"  alt="Data Analytics"
+<img src="../../img/multidimensional-04.png"  alt="Entornos"
 width="70%" />
 </div>
 
@@ -27,7 +27,7 @@ Existen diversas capas donde se procesan y almacenan los datos dentro de una arq
 ## Modelo analítico multidimensional en la nube (Estándar)
 
 <div align="center">
-<img src="../../img/multidimensional-05"  alt="Data Analytics"
+<img src="../../img/multidimensional-05.png"  alt="Entornos"
 width="70%" />
 </div>
 
@@ -43,6 +43,6 @@ Para los entornos *Cloud*, se identifican zonas de flujo de datos basadas en la 
 
 
 <div align="center">
-<img src="../../img/multidimensional-03"  alt="Data Analytics"
+<img src="../../img/multidimensional-03.png"  alt="Entornos"
 width="70%" />
 </div>
