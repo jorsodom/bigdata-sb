@@ -1,6 +1,6 @@
 Los entornos se clasifican tanto por su ubicación física (instalación) como por las capas lógicas que gestionan el flujo y la calidad de los datos.
 
-# Entornos
+## Entornos
 
 Existen dos enfoques principales para la instalación de los Sistemas de Big Data y BI:
 
@@ -9,7 +9,7 @@ Existen dos enfoques principales para la instalación de los Sistemas de Big Dat
 | **On-premise** | Implica una **instalación local**. Requiere una infraestructura complicada, un alto coste y mantenimiento constante. |
 | **Cloud** (Nube) | Implica una **instalación remota**. Ofrece **reducción de costes**, **mantenimiento automatizado** y **escalabilidad**. |
 
-# Capas lógicas y zonas de la arquitectura
+## Capas lógicas y zonas de la arquitectura
 
 <div align="center">
 <img src="../../img/multidimensional-04"  alt="Data Analytics"
@@ -24,7 +24,7 @@ Existen diversas capas donde se procesan y almacenan los datos dentro de una arq
 *   **Data Mart (DM):** Es un **conjunto de tablas multidimensionales** que representan un **subconjunto de datos** de la empresa (por ejemplo, el departamento de recursos humanos o secretaría).
 *   **AUDIT ZONE:** Zona de base de datos utilizada para guardar los **logs de los procesos y ejecuciones** que se desean registrar para un control más robusto de la solución.
 
-# Modelo analítico multidimensional en la nube (Estándar)
+## Modelo analítico multidimensional en la nube (Estándar)
 
 <div align="center">
 <img src="../../img/multidimensional-05"  alt="Data Analytics"
