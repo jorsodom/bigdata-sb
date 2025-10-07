@@ -13,14 +13,14 @@ nav:
      
 
   - Presentación: introduccionBI/presentacions.md
-  - Introducción: 
+  - UD1. Introducción: 
     - Introducción BI: introduccionBI/BIIntroduccion.md
     - Análisis de datos: introduccionBI/analitica.md
     - Introducción ETL: introduccionBI/ETLintroduccion.md
     - Tipos datos: introduccionBI/tiposdedatos.md
-  - Entornos y modelado: 
+  - UD2. Entornos y modelado: 
       - Tipos de entornos y arquitecturas de datos: multidimensional/entornos.md
-      - Modelado: multidimensional/multidimensional.md
+      - Modelo multidimensional (OLAP): multidimensional/multidimensional.md
   #- Multidimensional: multidimensional/multidimensional.md
   #- Ingesta de datos con NiFi: 
   #  - Introducción: nifi/nifiIntroduccion.md
