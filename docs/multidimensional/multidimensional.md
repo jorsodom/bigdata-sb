@@ -41,10 +41,10 @@ Este esquema es **más complejo** y se presenta cuando las dimensiones están **
 
 ### Recursos adicionales
 
-<video width="640"  controls>
-    <source src="https://www.youtube.com/watch?v=jJG0INtiOa8" type="video/mp4">
-</video>
-</div>
+::youtube{video_id="jJG0INtiOa8"}
+
+::youtube{video_id="vGYCo59QNQQ"}
+
 
 <video width="640"  controls>
     <source src="https://www.youtube.com/watch?v=vGYCo59QNQQ" type="video/mp4">
