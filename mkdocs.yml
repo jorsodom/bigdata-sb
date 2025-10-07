@@ -60,6 +60,10 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 
+plugins:
+  - search
+  - mkdocs-video
+
 extra:
   social:
     - icon: fontawesome/brands/linkedin
