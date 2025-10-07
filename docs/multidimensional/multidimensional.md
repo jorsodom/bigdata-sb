@@ -41,15 +41,9 @@ Este esquema es **más complejo** y se presenta cuando las dimensiones están **
 
 ### Recursos adicionales
 
-<video width="640"  controls>
-    <source src="https://www.youtube.com/watch?v=jJG0INtiOa8" type="video/mp4">
-</video>
-</div>
+[Bases de datos: Diseño de un cubo OLAP (Ejemplo 1)](https://www.youtube.com/watch?v=jJG0INtiOa8)
 
-<video width="640"  controls>
-    <source src="https://www.youtube.com/watch?v=vGYCo59QNQQ" type="video/mp4">
-</video>
-</div>
+[Bases de datos: Diseño de un cubo OLAP (Ejemplo 2)](https://www.youtube.com/watch?v=vGYCo59QNQQ)
 
 ---
 
