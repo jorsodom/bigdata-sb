@@ -19,7 +19,7 @@ nav:
     - Introducción ETL: introduccionBI/ETLintroduccion.md
     - Tipos datos: introduccionBI/tiposdedatos.md
   - Entornos y modelado: 
-      - Entornos: multidimensional/entornos.md
+      - Tipos de entornos y arquitecturas de datos: multidimensional/entornos.md
       - Modelado: multidimensional/multidimensional.md
   #- Multidimensional: multidimensional/multidimensional.md
   #- Ingesta de datos con NiFi: 
