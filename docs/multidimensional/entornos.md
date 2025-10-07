@@ -6,8 +6,8 @@ Existen dos enfoques principales para la instalación de los Sistemas de Big Dat
 
 | Entorno | Características |
 | :--- | :--- |
-| **On-premise** | Implica una **instalación local** (on l’empresa). Requiere una infraestructura complicada, un alto costo y mantenimiento constante. |
-| **Cloud** (Nube) | Implica una **instalación remota** (al núvol). Ofrece **reducción de costos**, **mantenimiento automatizado** y **escalabilidad**. |
+| **On-premise** | Implica una **instalación local**. Requiere una infraestructura complicada, un alto coste y mantenimiento constante. |
+| **Cloud** (Nube) | Implica una **instalación remota**. Ofrece **reducción de costes**, **mantenimiento automatizado** y **escalabilidad**. |
 
 # Capas lógicas y zonas de la arquitectura
 
