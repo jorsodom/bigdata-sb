@@ -17,6 +17,7 @@ nav:
   - Análisis de datos: introduccionBI/analitica.md
   - Introducción ETL: introduccionBI/ETLintroduccion.md
   - Tipos datos: introduccionBI/tiposdedatos.md
+  - Multidimensional: multidimensional/multidimensional.md
   #- Ingesta de datos con NiFi: 
   #  - Introducción: nifi/nifiIntroduccion.md
   #  - Práctica 1: nifi/nifiPractica1.md
