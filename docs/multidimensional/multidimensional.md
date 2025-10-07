@@ -45,16 +45,18 @@ Este esquema es **más complejo** y se presenta cuando las dimensiones están **
 
 Para construir el **Modelo Multidimensional de Compras**, se deben seguir los pasos de la metodología analítica, identificando el hecho, los indicadores y las dimensiones necesarias para responder a las preguntas gerenciales.
 
+Dado el siguiente modelo de datos transaccional:
+
 <div align="center">
 <img src="../../img/modelomultidimensional-01.png"  alt="Data Analytics"
 width="70%" />
 </div>
 
-## 1. Identifica las Taulas de Hechos
+## 1. Identifica las tablas de Hechos
 
 El hecho principal objeto de análisis en este contexto es:
 
-*   **Hecho (Fact):** **Compras** (registrando la adquisición de bienes o servicios).
+*   **Hecho (Fact):** 
 
 ## 2. Identifica posibles Hechos y sus posibles calculos
 
@@ -62,54 +64,36 @@ Los cálculos (o métricas) son los valores numéricos que la gerencia desearía
 
 | Criterio | Ejemplos de Indicadores (Medidas) |
 | :--- | :--- |
-| **Cuantificación** | **Número de unidades** compradas |
-| **Financiero** | **Costo total** de la compra, **Costo promedio** |
-| **Contable** | Impuestos aplicados, Descuentos obtenidos |
+| **Cuantificación** |  |
+| **Financiero** |  |
+| **Contable** |  |
 
 ## 3. Identifica las Dimensions/Catalogos
 
 Las dimensiones definen las perspectivas de análisis para desagregar los indicadores de Compras (el contexto de *quién*, *qué*, *cuándo* y *dónde*).
 
-| Dimensión Común | Atributos Descriptivos Típicos |
+| Dimensión | Atributos descriptivos |
 | :--- | :--- |
-| **Tiempo/Calendario** | Fecha de compra, Mes, Trimestre, Año (Dimensión temporal base). |
-| **Producto/Ítem** | Nombre del producto, Categoría, Marca, Tipo de ítem. |
-| **Proveedor** | Nombre del proveedor, País de origen, Tipo de proveedor. |
-| **Geográfica/Almacén** | Ubicación de la recepción (Almacén, País, Ciudad, Provincia). |
-| **Empleado/Comprador**| Nombre del empleado, Departamento. |
 
-*Nota: Identificar jerarquías (por ejemplo, Año derivado del Periodo Académico o Continente derivado del País) dentro de estas dimensiones es clave para el diseño.*
+*Nota: Identificar jerarquías dentro de estas dimensiones es clave para el diseño.*
 
 ## 4. Construir el modelo multidimensional
 
 El diseño recomendado es el **Esquema en Estrella**, debido a su simplicidad para las consultas analíticas.
 
-**Estructura:**
+## 5. Describe textualmente el modelo y que contiene
 
-La tabla central de **Hechos (Compras)** contendrá los indicadores (Costo Total, Cantidad Comprada) y las claves foráneas que se conectan a cada una de las dimensiones identificadas (Dimensión Tiempo, Dimensión Proveedor, Dimensión Producto, etc.).
+*   **Contenido:** 
+*   **Análisis:**
+*   **Beneficio:**
 
-*   **Tabla de Hechos (Fact\_Compras):**
-    *   `ID_Hecho\_Compra` (Clave Sustituta)
-    *   `ID\_Tiempo` (FK a Dim\_Tiempo)
-    *   `ID\_Proveedor` (FK a Dim\_Proveedor)
-    *   `ID\_Producto` (FK a Dim\_Producto)
-    *   `Costo\_Total` (Métrica)
-    *   `Cantidad\_Comprada` (Métrica)
-
-*   **Tablas de Dimensiones (Dim\_Proveedor, Dim\_Producto, Dim\_Tiempo, etc.):** Contienen la información descriptiva.
-
-## 5. Descriu textualment el model y que conté
-
-El modelo multidimensional de Compras está diseñado como un **Esquema en Estrella** (o Copo de Nieve, si se normalizan las dimensiones). El propósito de este modelo es analizar los **hechos de compra** (la actividad central del negocio).
-
-*   **Contenido:** El modelo se centra en el hecho **Compra**, midiendo indicadores como el **costo total** y la **cantidad de unidades** adquiridas.
-*   **Análisis:** Estos indicadores pueden ser analizados según diferentes perspectivas, como **cuándo** se compró (Dimensión Tiempo), **qué** se compró (Dimensión Producto) y **a quién** se le compró (Dimensión Proveedor).
-*   **Beneficio:** Permite a los gerentes generar informes dinámicos y responder a preguntas como: "¿Cuánto gastamos en la Categoría X de productos durante el último trimestre, y a qué proveedores?".
-
-## 6. Analitza altres possibilitats de dissenys
+## 6. Analizar otras posibilidades de diseños
 
 Además del diseño base, se pueden considerar alternativas para mejorar la eficiencia del análisis:
 
-1.  **Esquema en Copo de Nieve (*Snowflake*):** Si se requiere reducir la redundancia en las dimensiones, se podría normalizar una dimensión. Por ejemplo, la Dimensión Proveedor podría separarse en una tabla de Proveedores y una tabla de Ubicaciones Geográficas del Proveedor.
-2.  **Data Marts (DM):** Si este modelo de Compras es solo una parte de un *Data Warehouse* más grande (que incluye Ventas, Inventario, etc.), podría definirse como un **Data Mart** específico para el departamento de Compras.
-3.  **Capas Agregadas:** Se pueden incluir tablas con **datos precalculados** (*agregados*). Por ejemplo, una tabla agregada podría contener el "Costo Total Mensual por Categoría de Producto" para acelerar los informes de resumen.
+1.  **Data Marts (DM):** 
+2.  **Capas Agregadas:** 
+
+### ENTREGABLE 
+
+Hay que facilitar un documento con todos los puntos del ejercicio y el diseño. 
