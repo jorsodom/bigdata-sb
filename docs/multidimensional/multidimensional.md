@@ -39,7 +39,7 @@ Este esquema es **más complejo** y se presenta cuando las dimensiones están **
 
 *   **Desventaja:** La tabla de hechos **no está relacionada directamente** a todas las tablas que componen el modelo de datos, lo que requiere uniones (JOINs) encadenadas y más complejas. Su objetivo principal es **disminuir el almacenamiento**.
 
-### Recursos adicionales
+## Recursos adicionales
 
 [Bases de datos: Diseño de un cubo OLAP (Ejemplo 1)](https://www.youtube.com/watch?v=jJG0INtiOa8)
 
