@@ -39,6 +39,18 @@ Este esquema es **más complejo** y se presenta cuando las dimensiones están **
 
 *   **Desventaja:** La tabla de hechos **no está relacionada directamente** a todas las tablas que componen el modelo de datos, lo que requiere uniones (JOINs) encadenadas y más complejas. Su objetivo principal es **disminuir el almacenamiento**.
 
+### Recursos adicionales
+
+<video width="640"  controls>
+    <source src="https://www.youtube.com/watch?v=jJG0INtiOa8" type="video/mp4">
+</video>
+</div>
+
+<video width="640"  controls>
+    <source src="https://www.youtube.com/watch?v=vGYCo59QNQQ" type="video/mp4">
+</video>
+</div>
+
 ---
 
 ## EJERCICIO. Diseño del modelo Multidimensional de Compras
