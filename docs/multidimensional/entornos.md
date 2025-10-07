@@ -13,7 +13,7 @@ Existen dos enfoques principales para la instalación de los Sistemas de Big Dat
 
 <div align="center">
 <img src="../../img/multidimensional-04.png"  alt="Entornos"
-width="70%" />
+width="80%" />
 </div>
 
 Existen diversas capas donde se procesan y almacenan los datos dentro de una arquitectura de DW:
@@ -28,7 +28,7 @@ Existen diversas capas donde se procesan y almacenan los datos dentro de una arq
 
 <div align="center">
 <img src="../../img/multidimensional-05.png"  alt="Entornos"
-width="70%" />
+width="90%" />
 </div>
 
 
@@ -44,5 +44,5 @@ Para los entornos *Cloud*, se identifican zonas de flujo de datos basadas en la 
 
 <div align="center">
 <img src="../../img/multidimensional-03.png"  alt="Entornos"
-width="70%" />
+width="100%" />
 </div>
