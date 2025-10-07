@@ -13,10 +13,14 @@ nav:
      
 
   - Presentación: introduccionBI/presentacions.md
-  - Introducción BI: introduccionBI/BIIntroduccion.md
-  - Análisis de datos: introduccionBI/analitica.md
-  - Introducción ETL: introduccionBI/ETLintroduccion.md
-  - Tipos datos: introduccionBI/tiposdedatos.md
+  - Introducción: 
+    - Introducción BI: introduccionBI/BIIntroduccion.md
+    - Análisis de datos: introduccionBI/analitica.md
+    - Introducción ETL: introduccionBI/ETLintroduccion.md
+    - Tipos datos: introduccionBI/tiposdedatos.md
+  - Entornos y modelado: 
+      - Entornos: multidimensional/entornos.md
+      - Modelado: multidimensional/multidimensional.md
   #- Multidimensional: multidimensional/multidimensional.md
   #- Ingesta de datos con NiFi: 
   #  - Introducción: nifi/nifiIntroduccion.md
