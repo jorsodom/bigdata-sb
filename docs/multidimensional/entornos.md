@@ -11,7 +11,12 @@ Existen dos enfoques principales para la instalación de los Sistemas de Big Dat
 
 # Capas lógicas y zonas de la arquitectura
 
-Las fuentes describen diversas capas donde se procesan y almacenan los datos dentro de una arquitectura de DW:
+<div align="center">
+<img src="../../img/multidimensional-04"  alt="Data Analytics"
+width="70%" />
+</div>
+
+Existen diversas capas donde se procesan y almacenan los datos dentro de una arquitectura de DW:
 
 *   **Staging Area:** Es una zona de base de datos **temporal** donde se extrae la información. Aquí no se suele hacer **ninguna transformación**, y la información se trunca/inserta continuamente.
 *   **ODS (Operational Data Store):** Una zona de base de datos donde la información se **prepara en un modelo multidimensional** con tablas maestras y estrellas.
@@ -21,6 +26,12 @@ Las fuentes describen diversas capas donde se procesan y almacenan los datos den
 
 # Modelo analítico multidimensional en la nube (Estándar)
 
+<div align="center">
+<img src="../../img/multidimensional-05"  alt="Data Analytics"
+width="70%" />
+</div>
+
+
 Para los entornos *Cloud*, se identifican zonas de flujo de datos basadas en la calidad y el estado de la información, que suelen denominarse Bronce, Silver y Gold:
 
 | Zona | Nombre y Propósito |
@@ -29,3 +40,9 @@ Para los entornos *Cloud*, se identifican zonas de flujo de datos basadas en la 
 | **Silver** | **HISTORY ZONE (10):** Almacena una copia histórica de cada extracción realizada, tanto en formato persistente como en base de datos. |
 | **Silver** | **CURRENT ZONE (15):** Mantiene el último estado de los datos, ya **limpios y con las transformaciones necesarias**, en un modelo Datalake/Deltalake. |
 | **Gold** | **CONSUME ZONE (30):** La zona final donde el modelo de base de datos (ej., SQL Server) está **preparado para realizar el análisis posterior** con herramientas de BI como PowerBI o Microstrategy. |
+
+
+<div align="center">
+<img src="../../img/multidimensional-03"  alt="Data Analytics"
+width="70%" />
+</div>
