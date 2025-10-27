@@ -21,7 +21,7 @@ nav:
   - UD2. Entornos y modelado: 
       - Tipos de entornos y arquitecturas de datos: multidimensional/entornos.md
       - Modelo multidimensional (OLAP): multidimensional/multidimensional.md
-  - UD3. Bases de datos NoSQL con MongoDB: https://aules.edu.gva.es/fp/mod/url/view.php?id=9434987
+  - UD3. Bases de datos NoSQL con MongoDB: https://alapvi.github.io/sbd/
   - UD4. Ingesta de datos con NiFi: 
       - Introducción: nifi/nifiIntroduccion.md
   #  - Práctica 1: nifi/nifiPractica1.md
