@@ -25,7 +25,7 @@ nav:
   - UD4. Ingesta de datos con NiFi: 
       - Introducción: nifi/nifiIntroduccion.md
       - Ejemplos: nifi/nifiEjemplos.md
-  #  - Práctica 1: nifi/nifiPractica1.md
+      - Práctica 1: nifi/nifiPractica1.md
   #  - Práctica 2: nifi/nifiPractica2.md
   #  - Práctica 3: nifi/nifiPractica3.md
   #  - Práctica 4: nifi/nifiPractica4.md
