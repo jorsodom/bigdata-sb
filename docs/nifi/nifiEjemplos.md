@@ -5,13 +5,13 @@ Permite integrar sistemas, mover datos entre fuentes, limpiar información y orq
 
 ---
 
-## 🏢 1. Integración de Sistemas Empresariales
+## 🏢 1. Integración de sistemas empresariales
 
 ### 🔁 Sincronización de datos entre bases de datos
 - Replicar registros de una base PostgreSQL hacia un MongoDB o ElasticSearch en tiempo real.  
 - **Procesadores sugeridos:** `QueryDatabaseTable`, `PutMongo`, `PutElasticsearch`
 
-### 🧱 ETL para Data Warehouse / Lago de Datos
+### 🧱 ETL para Data Warehouse / lago de datos
 - Extraer datos desde sistemas transaccionales (ERP, CRM), transformarlos y cargarlos en un lago de datos (S3, GCS o HDFS).  
 - **Procesadores:** `FetchFile`, `UpdateAttribute`, `PutS3Object`
 
@@ -21,7 +21,7 @@ Permite integrar sistemas, mover datos entre fuentes, limpiar información y orq
 
 ---
 
-## 🌐 2. IoT y Streaming de Datos
+## 🌐 2. IoT y streaming de datos
 
 ### 🌡️ Ingesta de datos de sensores en tiempo real
 - Recibir datos desde MQTT, procesarlos (normalización, limpieza) y almacenarlos en una base de series temporales (InfluxDB, TimescaleDB).  
@@ -33,7 +33,7 @@ Permite integrar sistemas, mover datos entre fuentes, limpiar información y orq
 
 ---
 
-## 💬 3. Automatización y Notificaciones
+## 💬 3. Automatización y notificaciones
 
 ### 📁 Monitoreo de carpetas y alertas
 - Detectar la llegada de nuevos archivos y enviar notificaciones (correo, Slack, Teams).  
@@ -57,13 +57,13 @@ Permite integrar sistemas, mover datos entre fuentes, limpiar información y orq
 
 ---
 
-## 🤖 5. Casos de Uso Avanzados
+## 🤖 5. Casos de uso avanzados
 
 ### 🧠 Orquestación de flujos de Machine Learning
 - Automatizar la preparación de datos, ejecutar un modelo y publicar los resultados.  
 - **Procesadores:** `ExecuteStreamCommand`, `ExecuteScript`, `PutDatabaseRecord`
 
-### 🔒 Data Masking / Anonimización
+### 🔒 Data Masking / anonimización
 - Aplicar reglas de anonimización o enmascaramiento de datos sensibles.  
 - **Procesadores:** `UpdateRecord`, `ReplaceText`, `RouteOnAttribute`
 
@@ -72,7 +72,7 @@ Permite integrar sistemas, mover datos entre fuentes, limpiar información y orq
 
 ---
 
-## ⚙️ 6. Ejemplos de Proyectos
+## ⚙️ 6. Ejemplos de proyectos
 
 | Proyecto | Descripción | Integraciones Clave |
 |-----------|--------------|--------------------|
