@@ -73,7 +73,7 @@ Queremos remplazar en el contenido del fichero generado por unos valores separad
 por comas. Y guardamos. Para ello, hay que cambiar las siguientes propiedades:
 
 **Search Value**: `(?s)(^.*$)`
-**Replacement Value**: `(?s)(^.*$)`
+**Replacement Value**: `a,b,c,d`
 
 <div align="center">
 <img src="../../img/NiFiP2.9.png" alt="Práctica 2" 
