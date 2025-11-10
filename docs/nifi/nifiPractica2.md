@@ -70,7 +70,9 @@ width="80%" />
 </div>
 
 Queremos remplazar en el contenido del fichero generado por unos valores separados 
-por comas. Y guardamos
+por comas. Y guardamos.
+
+**La transformación**: `(?s)(^.*$)`
 
 <div align="center">
 <img src="../../img/NiFiP2.9.png" alt="Práctica 2" 
