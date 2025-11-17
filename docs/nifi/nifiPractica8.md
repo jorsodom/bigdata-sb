@@ -96,4 +96,4 @@ reiniciar NiFi, además que ayuda a corregir posibles errores de manera rápida 
 
 ## ENTREGABLE 
 
-Hay que exportar la practica con un Processor Group que genera un .json y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P8_NomAlumnoApellidos.xml*
+Hay que exportar la practica con un Processor Group que genera un .xml (.json si es versión NiFi 2.0) y entregarlo en Aules con el número de la práctica y el nombreApellidos. Por ejemplo:  *P8_NomAlumnoApellidos.xml*
