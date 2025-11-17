@@ -192,7 +192,7 @@ width="80%" />
 
 ## Instalar PostgreSQL
 
-<a href="[../../assets/postgresql-42.7.4.jar](https://www.postgresql.org/download/linux/ubuntu/)">Instalar en Linux PostgreSQL</a>
+<a href="https://www.postgresql.org/download/linux/ubuntu/">Instalar en Linux PostgreSQL</a>
 
 ## Driver JDBC PostgreSQL
 
