@@ -38,7 +38,7 @@ width="80%" />
 
 *Nota: Existen templates de ejemplo que podemos descargar e importar a nuestra instancia local para practicar o utilizar para un desarrollo. Lo podéis encontrar en el siguiente enlace: 
 
-[Examples templates](https://cwiki.apache.org/confluence/display/nifi/example+dataflow+templates*)
+[Examples templates](https://cwiki.apache.org/confluence/display/nifi/example+dataflow+templates)
 
 Vamos a acceder a la anterior página web y descargar un template.
 
