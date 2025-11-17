@@ -38,10 +38,9 @@ width="80%" />
 
 *Nota: Existen templates de ejemplo que podemos descargar e importar a nuestra instancia local para practicar o utilizar para un desarrollo. Lo podéis encontrar en el siguiente enlace: 
 
-[cwiki](https://cwiki.apache.org/confluence/display/nifi/example+dataflow+templates*)
+[Examples templates](https://cwiki.apache.org/confluence/display/nifi/example+dataflow+templates*)
 
-Vamos a acceder a la anterior página web y descargar un template. Por ejemplo, el 
-“*Retry Count Loop*”.
+Vamos a acceder a la anterior página web y descargar un template.
 
 Nos quedaría ahora importarlo a nuestro entorno de desarrollo. Accedemos al botón 
 “*Upload Template*” y seleccionamos el fichero descargado “Retry_Count_Loop.xml” a 
