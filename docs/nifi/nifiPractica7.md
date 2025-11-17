@@ -91,6 +91,8 @@ width="80%" />
 width="80%" />
 </div>
 
+*NOTA: Revisar ANEXOS para configurar el driver.*
+
 *Hacemos clic* en el botón de configuración y cuando salga la ventana vamos a 
 propiedades y rellenamos las siguientes propiedades:
 
