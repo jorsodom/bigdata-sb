@@ -5,7 +5,8 @@ services.
 
 Vamos a realizar el siguiente caso de uso para validar esta funcionalidad.
 
-*NOTA: Para esta práctica es necesario tener una base de datos PostgreSQL disponible*
+*NOTA: Para esta práctica es necesario tener una base de datos PostgreSQL disponible. En ANEXOS 
+teneis una descripción de como instalar la base de datos.*
 
 Añadimos un nuevo processor “*GenerateFlowFile*”. Lo configuramos para que genere 
 un fichero cada 10 segundos y en propiedades en el CustomText le ponemos lo 
@@ -189,7 +190,15 @@ insertando
 width="80%" />
 </div>
 
+## Instalar PostgreSQL
+
+<a href="[../../assets/postgresql-42.7.4.jar](https://www.postgresql.org/download/linux/ubuntu/)">Instalar en Linux PostgreSQL</a>
+
 ## Driver JDBC PostgreSQL
+
+Lo ideal es guardar el driver JDBC en el path de NiFi de Drivers. Aunque también
+lo podeis dejar en un path localizado. Lo importante es saber dónde lo teneis
+ubicado para cuando lo configureis, poner el path y el .jar. 
 
 -  <a href="../../assets/postgresql-42.7.4.jar">Descargar postgresql-42.7.4</a>
 
