@@ -3,24 +3,39 @@ Instalar Power BI Desktop desde la web oficial para poder modelar y visualizar l
 
 [PowerBI Desktop descarga](https://download.microsoft.com/download/8/8/0/880bca75-79dd-466a-927d-1abf1f5454b0/PBIDesktopSetup_x64.exe)
 
-## 1. Exportar datos OracleSQL a .csv con separador ";"
-Desde la base de datos Oracle, exportar las tablas necesarias a ficheros `.csv` utilizando el delimitador ";" o "," para garantizar compatibilidad con procesos de carga posteriores.
+## 1. Exportar datos OracleSQL
+Desde la base de datos Oracle, exportar las tablas necesarias a ficheros `.csv` utilizando el delimitador `;` o `,` para garantizar compatibilidad con procesos de carga posteriores.
 
 ## 2. Exportar los ficheros fuera de la VM
-Copiar los ficheros ".csv" generados desde la máquina virtual a un entorno accesible (local o almacenamiento en la nube) para su posterior ingestión.
+Copiar los ficheros `.csv` generados desde la máquina virtual a un entorno accesible (local o almacenamiento en la nube) para su posterior ingestión.
 Subirlos a una storage account o s3.
+
+<div align="center">
+<img src="../../img/pbi_covid_storageaccount.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
 
 ## 3. Crear base de datos SQL Server en Azure o utilizar la ya existente
 Provisionar una base de datos en Azure de tipo relacional, SQL Server o reutilizar una ya disponible para almacenar los datos migrados.
 
-## 4. Crear un esquema covid
+<div align="center">
+<img src="../../img/pbi_covid_sqlserverazure.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
+
+## 4. Crear un esquema
 Definir un esquema lógico para organizar las tablas relacionadas con el proyecto:
-    ```sql
-    CREATE SCHEMA COVID;
+    `sql
+    CREATE SCHEMA COVID; `
 
 ## 5. Crear tablas según el script create tables
 
 Ejecutar el script de creación de tablas en la base de datos para definir la estructura.
+
+<div align="center">
+<img src="../../img/pbi_covid_dbbeaver.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
 
     `DROP TABLE COVID.LKP_SEXO;
 
@@ -96,7 +111,14 @@ Ejecutar el script de creación de tablas en la base de datos para definir la es
 ## 6. Importar datos de los ficheros
 
 Cargar los datos desde los .csv en las tablas correspondientes del esquema COVID, validando formatos y tipos de datos.
+
 Creando un proceso data factory con actividades de copia. Dónde el origen será un csv con conexión al storage account y el destino el SQL Server.
+
+<div align="center">
+<img src="../../img/pbi_covid_datafactory.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
+
 
 ## 7. Obtener string de conexión a la base de datos (y credenciales)
 
