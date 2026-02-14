@@ -25,8 +25,8 @@ width="80%" />
 
 ## 4. Crear un esquema
 Definir un esquema lógico para organizar las tablas relacionadas con el proyecto:
-    `sql
-    CREATE SCHEMA COVID; `
+
+    `CREATE SCHEMA COVID; `
 
 ## 5. Crear tablas según el script create tables
 
@@ -125,6 +125,41 @@ width="80%" />
 Recuperar la cadena de conexión, usuario y contraseña desde el portal de Azure o la configuración del servidor para permitir la conexión desde herramientas como Power BI.
 
 > Nota: la base de datos debe estar abierta a internet para permitir el acceso sin restricciones. 
+
+
+## 8. Crear nueva conexión en PBI a la bbdd
+
+Abrimos la aplicación de Power BI. Seleccionamos origen de datos `SQL Server`. Seleccionamos modo "Direct Import".
+
+<div align="center">
+<img src="../../img/pbi_covid_pbi1_.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
+
+Hay que introducir el servidor y la base de datos (ver anexo). Luego aplicamos en siguiente. Elegimos la opción Base de Datos y introducimos usuario y contraseña. Y conectamos.
+
+<div align="center">
+<img src="../../img/pbi_covid_pbi2_.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
+
+
+Saldrá la lista de tablas a importar, seleccionamos las deseadas. Y hacemos clic en "Cargar". Esta acción realizará la carga de datos en el proyecto que lee de la base de datos en la nube. 
+
+
+<div align="center">
+<img src="../../img/pbi_covid_pbi3_.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
+
+
+Aparecerá un panel en la derecha dónde se listarán las tablas cargadas, con todos sus atributos. 
+
+<div align="center">
+<img src="../../img/pbi_covid_pbi4_.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
+
 
 ## Anexos
 
