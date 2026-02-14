@@ -127,7 +127,7 @@ Recuperar la cadena de conexión, usuario y contraseña desde el portal de Azure
 > Nota: la base de datos debe estar abierta a internet para permitir el acceso sin restricciones. 
 
 
-## 8. Crear nueva conexión en PBI a la bbdd
+## 8. Crear nueva conexión en PBI a la bbdd y importar datos
 
 Abrimos la aplicación de Power BI. Seleccionamos origen de datos `SQL Server`. Seleccionamos modo "Direct Import".
 
@@ -144,7 +144,7 @@ width="80%" />
 </div>
 
 
-Saldrá la lista de tablas a importar, seleccionamos las deseadas. Y hacemos clic en "Cargar". Esta acción realizará la carga de datos en el proyecto que lee de la base de datos en la nube. 
+Saldrá la lista de tablas a importar, seleccionamos las deseadas. Y hacemos clic en `Cargar`. Esta acción realizará la carga de datos en el proyecto que lee de la base de datos en la nube. 
 
 
 <div align="center">
@@ -159,6 +159,41 @@ Aparecerá un panel en la derecha dónde se listarán las tablas cargadas, con t
 <img src="../../img/pbi_covid_pbi4.png" alt="pbi caso de uso" 
 width="80%" />
 </div>
+
+
+## 9. Definimos el modelo y tipados
+
+En el menu del a izquierda, vamos a `Vista Modelo` y tenemos que establecer las relaciones según el modelo multidimensional.
+
+Conforme vamos estableciendo las relaciones, relacionando por los códigos nos damos cuenta que todas ellas son 1...N, dado que en los registros de la estrella
+pueden aparecer N valores de una dimensión.
+
+Hay que establecer las relaciones de la siguiente manera:
+
+| Columna Origen   | Tabla Origen | Columna Destino   | Tabla Destino        |
+|------------------|--------------|-------------------|----------------------|
+| C_DATA           | ODS_COVID    | C_DATA            | LKP_FECHA            |
+| C_PROVINCIA      | ODS_COVID    | C_PROVINCIA       | LKP_PROVINCIA        |
+| C_SEXO           | ODS_COVID    | C_SEXO            | LKP_SEXO             |
+| C_GRUPO_EDAD     | ODS_COVID    | C_GRUPO_EDAD      | LKP_GRUPO_EDAD       |
+| C_ESTAT_ALARMA   | ODS_COVID    | C_ESTAT_ALARMA    | LKP_ESTAT_ALARMA     |
+
+
+<div align="center">
+<img src="../../img/pbi_covid_pbi5.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
+
+Ahora nos seleccionamos en el menu de la izquierda `Vista Informe`, y en el menu de la derecha dónde aparecen las tablas y columnas, seleccionamos la tabla LKP_FECHA y hacemos clic botón derecho y entramos en `editar consulta`. Saldrá una nueva ventana dónde es posible editar la tabla/consulta.
+
+Aquí seleccionaremos la columna D_DATA y le damos dónde pone `ABC` a la izquierda del nombre la columna y le decimos que le ponga formato fecha (sin horas). Y hacemos `clic en aplicar y cerrar`.
+
+<div align="center">
+<img src="../../img/pbi_covid_pbi6.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
+
+
 
 
 ## Anexos
