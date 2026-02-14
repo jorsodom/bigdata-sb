@@ -42,6 +42,7 @@ nav:
       - Introducción: odi/odiIntroduccion.md
       - Demo: odi/odiDemo.md
       - Caso de uso: odi/odiCasoDeUso.md
+      - PBI caso de uso: pbi/covid.md
       
   #- Microsoft Azure: 
   #   - Introducción: azure/AzureIntroduccion.md
