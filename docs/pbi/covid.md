@@ -238,11 +238,11 @@ width="80%" />
 - **Filas:** `Grupo Edad`  
 - **Columnas:** `Sexo`  
 - **Valores:**  
-  - `IncidenciaAcumulada`  
-  - `Hospitalizaciones`  
-  - `HospitalizacionesUCI`  
-  - `Defunciones`  
-  - `TasaLetalidad`  
+    - `IncidenciaAcumulada`  
+    - `Hospitalizaciones`  
+    - `HospitalizacionesUCI`  
+    - `Defunciones`  
+    - `TasaLetalidad`  
 
 <div align="center">
 <img src="../../img/pbi_covid_pbi9.png" alt="pbi caso de uso" 
@@ -290,14 +290,21 @@ width="80%" />
 #### Creación de medidas en `ODS_COVID`
 Crear las siguientes medidas agregadas (SUM):
 
-    `IncidenciaAcumulada = SUM('COVID ODS_COVID'[F_NUM_CASOS])
+    IncidenciaAcumulada = SUM('COVID ODS_COVID'[F_NUM_CASOS])
+
     Defunciones = SUM('COVID ODS_COVID'[F_NUM_DEF])
+
     Hospitalizaciones =  SUM('COVID ODS_COVID'[F_NUM_HOSP])
+
     HospitalizacionesUCI = SUM('COVID ODS_COVID'[F_NUM_UCI])
+
     TasaHospitalizacion = DIVIDE([Hospitalizaciones], [IncidenciaAcumulada])
+
     TasaUCI = DIVIDE([HospitalizacionesUCI], [Hospitalizaciones])
+
     TasaLetalidad = DIVIDE([Defunciones], [IncidenciaAcumulada])
-    IndiceGravedad = DIVIDE([Hospitalizaciones] + (2 * [HospitalizacionesUCI]) + (3 * [Defunciones]),[IncidenciaAcumulada])`
+
+    IndiceGravedad = DIVIDE([Hospitalizaciones] + (2 * [HospitalizacionesUCI]) + (3 * [Defunciones]),[IncidenciaAcumulada])
 
 
 ## Anexos
@@ -309,4 +316,4 @@ Descargar DB Beaver Community para conectar fácilmente al SQL Server
 
 ### String sql server jorge
 
-jdbc:sqlserver://bbddjorge.database.windows.net:1433;database=jorgebbdd;user=AQUIELUSER@bbddjorge;password=AQUILAPASSWORD;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    jdbc:sqlserver://bbddjorge.database.windows.net:1433;database=jorgebbdd;user=AQUIELUSER@bbddjorge;password=AQUILAPASSWORD;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
