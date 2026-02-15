@@ -124,7 +124,9 @@ width="80%" />
 
 Recuperar la cadena de conexión, usuario y contraseña desde el portal de Azure o la configuración del servidor para permitir la conexión desde herramientas como Power BI.
 
-> Nota: la base de datos debe estar abierta a internet para permitir el acceso sin restricciones. 
+!!! note "Apertura firewall"
+
+    La base de datos debe estar abierta a internet para permitir el acceso sin restricciones. 
 
 
 ## 8. Crear nueva conexión en PBI a la bbdd y importar datos
@@ -195,7 +197,13 @@ width="80%" />
 
 ## 10. Desarrollamos visualizaciones y transformaciones
 
+Los gráficos se realizan para transformar los datos en información comprensible que permita responder preguntas clave de negocio de forma rápida y visual. En lugar de revisar tablas con muchos valores, las visualizaciones permiten identificar tendencias, comparar segmentos (como edad o sexo) y detectar patrones de gravedad o evolución temporal.
+
+Así, cada gráfico ayuda a responder cuestiones concretas, por ejemplo: cómo evoluciona la incidencia en el tiempo, qué grupos de población han sido más afectados o si las medidas adoptadas (como los tramos de estado de alarma) han tenido impacto. En definitiva, los gráficos facilitan la toma de decisiones al convertir los datos en insights claros y accionables.
+
+
 ### Visualización 1: Incidencia acumulada
+**Objetivo**: Identificar mensualmente la incidencia acumulada.
 **Tipo:** Gráfico de líneas  
 
 - **Eje X:** `C_ANY_MES` de `LKP_FECHA`  
@@ -209,7 +217,8 @@ width="80%" />
 ---
 
 ### Visualización 2: Incidencia acumulada por grupo de edad
-**Tipo:** Gráfico de líneas  
+**Objetivo**: Identificar mensualmente la incidencia acumulada por grupo de edad.
+**Tipo:** Gráfico de líneas.  
 
 - **Eje X:** `C_ANY_MES` de `LKP_FECHA`  
 - **Eje Y:** `IncidenciaAcumulada` (medida creada)  
@@ -221,8 +230,10 @@ width="80%" />
 </div>
 ---
 
-### Visualización 3: Matriz de gravedad (qué perfiles fueron más afectados)
-**Tipo:** Matriz  
+### Visualización 3: Matriz de gravedad
+
+**Objetivo**:  Identificar qué perfiles fueron más afectados.
+**Tipo:** Matriz. 
 
 - **Filas:** `Grupo Edad`  
 - **Columnas:** `Sexo`  
@@ -241,6 +252,9 @@ width="80%" />
 ---
 
 ### Visualización 4: Mapa
+**Objetivo**:  Identificar hospitalizaciones y defunciones según la provincia.
+**Tipo:** Mapa.
+
 Para habilitar el componente de mapas y mapas coropléticos:
 
 1. Ir a **Archivo > Opciones y configuración > Opciones**  
@@ -276,14 +290,14 @@ width="80%" />
 #### Creación de medidas en `ODS_COVID`
 Crear las siguientes medidas agregadas (SUM):
 
--   IncidenciaAcumulada = SUM('COVID ODS_COVID'[F_NUM_CASOS])
--   Defunciones = SUM('COVID ODS_COVID'[F_NUM_DEF])
--   Hospitalizaciones =  SUM('COVID ODS_COVID'[F_NUM_HOSP])
--   HospitalizacionesUCI = SUM('COVID ODS_COVID'[F_NUM_UCI])
--   TasaHospitalizacion = DIVIDE([Hospitalizaciones], [IncidenciaAcumulada])
--   TasaUCI = DIVIDE([HospitalizacionesUCI], [Hospitalizaciones])
--   TasaLetalidad = DIVIDE([Defunciones], [IncidenciaAcumulada])
--   IndiceGravedad = DIVIDE([Hospitalizaciones] + (2 * [HospitalizacionesUCI]) + (3 * [Defunciones]),[IncidenciaAcumulada])
+    `IncidenciaAcumulada = SUM('COVID ODS_COVID'[F_NUM_CASOS])
+    Defunciones = SUM('COVID ODS_COVID'[F_NUM_DEF])
+    Hospitalizaciones =  SUM('COVID ODS_COVID'[F_NUM_HOSP])
+    HospitalizacionesUCI = SUM('COVID ODS_COVID'[F_NUM_UCI])
+    TasaHospitalizacion = DIVIDE([Hospitalizaciones], [IncidenciaAcumulada])
+    TasaUCI = DIVIDE([HospitalizacionesUCI], [Hospitalizaciones])
+    TasaLetalidad = DIVIDE([Defunciones], [IncidenciaAcumulada])
+    IndiceGravedad = DIVIDE([Hospitalizaciones] + (2 * [HospitalizacionesUCI]) + (3 * [Defunciones]),[IncidenciaAcumulada])`
 
 
 ## Anexos
