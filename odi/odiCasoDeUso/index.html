@@ -1,0 +1,2218 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jorsodom.github.io/bigdata-sb/odi/odiCasoDeUso/">
+      
+      
+        <link rel="prev" href="../odiDemo/">
+      
+      
+        <link rel="next" href="../../pbi/covid/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Caso de uso - CES Big Data</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#case-de-uso-covid" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="CES Big Data" class="md-header__button md-logo" aria-label="CES Big Data" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CES Big Data
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Caso de uso
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CES Big Data" class="md-nav__button md-logo" aria-label="CES Big Data" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CES Big Data
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccionBI/presentacions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD1. Introducción
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD1. Introducción
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccionBI/BIIntroduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción BI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccionBI/analitica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análisis de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccionBI/ETLintroduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción ETL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccionBI/tiposdedatos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tipos datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD2. Entornos y modelado
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD2. Entornos y modelado
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multidimensional/entornos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tipos de entornos y arquitecturas de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multidimensional/multidimensional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo multidimensional (OLAP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://alapvi.github.io/sbd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD3. Bases de datos NoSQL con MongoDB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD4. Ingesta de datos con NiFi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD4. Ingesta de datos con NiFi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiIntroduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiEjemplos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejemplos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiCasoUsoHadoop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Caso de uso con Hadoop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiCasoUsoAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Caso uso API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD5. ETL con ODI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD5. ETL con ODI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../odiIntroduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../odiDemo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Caso de uso
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Caso de uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enunciado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ficheros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ficheros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagramas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagramas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagramas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#catalogos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Catalogos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multidimensional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multidimensional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtener-y-generar-modelo-multidimensional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtener y generar modelo multidimensional
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Obtener y generar modelo multidimensional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-modelo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Modelo de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variables-y-atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Variables y atributos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-jerarquias-temporales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Jerarquías temporales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-normativas-y-restricciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Normativas y restricciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-metodologia-etl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Metodología ETL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proceso-etl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso ETL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proceso ETL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capa-source-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa SOURCE: (SRC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-catalogos-lkp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa CATÁLOGOS: (LKP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-estrella-ods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa ESTRELLA: (ODS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizacion-y-respresentacion-con-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización y respresentación con Power BI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pbi/covid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PBI caso de uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enunciado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ficheros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ficheros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagramas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagramas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagramas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#catalogos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Catalogos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multidimensional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multidimensional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtener-y-generar-modelo-multidimensional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtener y generar modelo multidimensional
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Obtener y generar modelo multidimensional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-modelo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Modelo de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variables-y-atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Variables y atributos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-jerarquias-temporales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Jerarquías temporales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-normativas-y-restricciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Normativas y restricciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-metodologia-etl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Metodología ETL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proceso-etl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso ETL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proceso ETL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capa-source-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa SOURCE: (SRC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-catalogos-lkp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa CATÁLOGOS: (LKP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-estrella-ods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capa ESTRELLA: (ODS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizacion-y-respresentacion-con-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización y respresentación con Power BI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="case-de-uso-covid">Case de uso COVID</h1>
+<h2 id="enunciado">Enunciado</h2>
+<p>El <strong>Centro Nacional de Epidemiología</strong> ha habilitado una sección específica en su página web para proporcionar información detallada sobre la evolución de la epidemia de la Covid-19 desde 2020. Esta plataforma no solo presenta informes y conclusiones internas, sino también acceso a las fuentes originales de datos que los respaldan. La documentación y los conjuntos de datos están disponibles en: <a href="https://cnecovid.isciii.es/covid19/#documentaci%C3%B3n-y-datos">CNE Covid</a>.</p>
+<p>En aproximadamente 4 sesiones, trabajaremos en nuestro caso de uso utilizando esta información. El proceso incluirá un proceso ETL con Oracle Data Integrator (ODI), seguido de la creación de un modelo multidimensional para almacenar los datos de manera eficiente en una base de datos analítica. Finalmente, realizaremos un análisis detallado con herramientas de generación de informes para explorar y explotar los datos analizados.</p>
+<p>La visualización se realizará en etapas posteriores, con el objetivo de crear un diseño similar al de PowerBI presentado en la misma página web, para facilitar la comprensión e interpretación de los datos sobre la Covid-19.</p>
+<h3 id="requisitos">Requisitos</h3>
+<p>Se deben crear las siguientes dimensiones:</p>
+<ul>
+<li>
+<p><strong>Sexo</strong><br />
+Esta dimensión se creará a partir de los datos proporcionados en el archivo fuente histórico del Covid (cogiendo los diferentes tipos de valores para el código Sexo). La variable "Sexo" representará el género de las personas afectadas por la epidemia de la Covid-19, permitiendo segmentar los casos, hospitalizaciones, ingresos en UCI y defunciones según este atributo.</p>
+</li>
+<li>
+<p><strong>Grupo de Edad</strong><br />
+La dimensión "Grupo de Edad" se creará utilizando los datos del archivo fuente histórico del Covid (cogiendo los diferentes tipos de valores para el código Grupo Edad). Los grupos de edad se dividirán en categorías relevantes, como pueden ser menores de 18 años, 18-40 años, 41-60 años, 61-80 años, y mayores de 80 años. Esto permitirá analizar la distribución de los casos y otros eventos en función de la edad de los afectados.</p>
+</li>
+<li>
+<p><strong>Provincia</strong><br />
+Esta dimensión se generará a partir del archivo de provincias, que contiene los códigos y nombres de las provincias. La dimensión de <strong>Provincia</strong> permitirá segmentar los datos según la ubicación geográfica de los afectados, facilitando el análisis regional de la epidemia.</p>
+</li>
+<li>
+<p><strong>Fecha</strong><br />
+La dimensión fecha se establecerá mediante un procedimiento SQL, donde se representarán los eventos en función del tiempo. Esta dimensión se utilizará para organizar y analizar los datos epidemiológicos en función de fechas específicas, lo que facilitará el análisis a lo largo del tiempo.</p>
+</li>
+<li>
+<p><strong>Estado de Alarma</strong><br />
+Además de las dimensiones anteriores, es necesario generar un catálogo para analizar la cantidad de personas que estuvieron afectadas o no por la Covid-19 durante los períodos de estado de alarma. Este catálogo incluirá los siguientes estados:</p>
+<ol>
+<li>
+<p>Declaración del estado de alarma desde el 14 de marzo: Representa el inicio del estado de alarma en España debido a la pandemia.</p>
+</li>
+<li>
+<p>Prórroga del estado de alarma desde el 27 de marzo: Refleja la extensión del estado de alarma inicial.</p>
+</li>
+<li>
+<p>Prórroga del estado de alarma desde el 10 de abril: Otra extensión del estado de alarma.</p>
+</li>
+<li>
+<p>Prórroga del estado de alarma desde el 24 de abril: Continuación del estado de alarma.</p>
+</li>
+<li>
+<p>Prórroga del estado de alarma desde el 8 de mayo: Nueva extensión del estado de alarma.</p>
+</li>
+<li>
+<p>Prórroga del estado de alarma desde el 22 de mayo: Continuación del periodo de alarma.</p>
+</li>
+<li>
+<p>Prórroga del estado de alarma desde el 5 de junio: Última prórroga del estado de alarma antes de su fin.</p>
+</li>
+<li>
+<p>Fuera del estado de alarma: Indica los casos fuera de los períodos de estado de alarma.</p>
+</li>
+</ol>
+<h3 id="objetivo">Objetivo</h3>
+<p>El objetivo final de este proceso es que respecto a la información recibida se pueda interpretar y analizar:</p>
+</li>
+<li>
+<p>El <strong>número de casos</strong>, el <strong>número de hospitalizaciones</strong>, el <strong>número de ingresos en UCI</strong> y el <strong>número de defunciones</strong> de manera <strong>diaria</strong>.</p>
+</li>
+<li>Determinar si las personas han sido afectadas en alguno de los <strong>períodos de estado de alarma</strong> mencionados anteriormente, lo que permitirá hacer un análisis detallado sobre el impacto de las diferentes fases del estado de alarma en los casos de Covid-19.</li>
+</ul>
+<h2 id="recursos">Recursos</h2>
+<h3 id="ficheros">Ficheros</h3>
+<ul>
+<li>
+<p><strong>Histórico Covid</strong>. El archivo contiene información detallada sobre la evolución de la pandemia de Covid-19 hasta el 28 de marzo de 2022. El archivo incluye datos sobre el número de casos confirmados, hospitalizaciones, ingresos en unidades de cuidados intensivos (UCI) y defunciones, segmentados por <strong>sexo</strong>, <strong>edad</strong> y <strong>provincia de residencia</strong>. Los datos abarcan todas las edades desde el inicio de la pandemia.</p>
+<ul>
+<li><a href="../../assets/casos_hosp_uci_def_sexo_edad_provres.csv">Descarga histórico COVID-19</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Provincias</strong>: Códigos de las provincias en España. Al descargar los códigos en formato CSV, se ha encontrado un problema de <strong>codificación de caracteres</strong> que debe resolverse durante el proceso de ETL.</p>
+<ul>
+<li><a href="../../assets/provincies.csv">Descargar ISO 3166</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Fechas</strong>: Consulta SQL para generar de forma dinámica el catálogo de fechas. </p>
+<ul>
+<li><a href="../../assets/Proc Data Cataleg.sql">Descargar SQL</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Tramos estado alarma</strong>: Representa los diferentes tramos por los que se pasa en el estado de alarma para poder clasificarlos y agruparlos.</p>
+<ul>
+<li><a href="../../assets/trams.csv">Descargar tramos</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="diagramas">Diagramas</h3>
+<h4 id="catalogos">Catalogos</h4>
+<p>Se representa un ejemplo de como cargar el fichero Covid por las diferentes capas des de que es un fichero (fuente del dato)  hasta que llega a la tabla final, de dónde se obtiene la tabla de catalogo de Sexo y Grupo Edad.</p>
+<p>La fecha es un PLSQL que se carga con un procedimiento de ODI directamente a la tabla final que es el catalogo de fecha.</p>
+<p>Las provincias se cargan a través del fichero ISO, se realizan las transformaciones pertinentes y luego se carga a la tabla final de Provincia. </p>
+<div align="center">
+<img src="../../img/odiModelFiles.png" alt="ODI" 
+width="80%" />
+</div>
+
+<h4 id="multidimensional">Multidimensional</h4>
+<p>Se representan la estrella como eje central y luego alrededor los diferentes catálogos que representan y detallan la información de análisis. </p>
+<div align="center">
+<img src="../../img/odiModelEstrella.png" alt="ODI" 
+width="80%" />
+</div>
+
+<h4 id="modelos">Modelos</h4>
+<p>Un ejemplo de como se quedará el modelo de datos lógico de ODI en vuestro proyecto. Dónde vemos el modeo FILE_COVID es dónde se encuentran los ficheros definidos del COVID y el resto son las tablas Oracle. Se clasifican los modelos por tecnología. </p>
+<div align="center">
+<img src="../../img/odiModelTables.png" alt="ODI" 
+width="80%"/>
+</div>
+<h2 id="obtener-y-generar-modelo-multidimensional">Obtener y generar modelo multidimensional</h2>
+<p>Se prescinde de la creación de un documento formal de Análisis Funcional y Diseño. Sin embargo, se considera esencial establecer una visión clara sobre la construcción del modelo de datos. Este modelo se basará en las necesidades específicas del informe final y en los conocimientos adquiridos a lo largo del curso. A continuación, se detallan los requisitos esenciales para esta etapa:</p>
+<h3 id="1-modelo-de-datos">1. <strong>Modelo de datos</strong></h3>
+<p>Es necesario identificar las entidades clave relacionadas con la epidemia de la Covid-19. Estas entidades podrían incluir casos, hospitalizaciones, ingresos en UCI, defunciones, sexo, edad, provincia, entre otras.</p>
+<p>Una vez identificadas las entidades, se debe definir cómo se relacionan entre sí para asegurar que la base de datos tenga una estructura lógica y eficiente.</p>
+<h3 id="2-variables-y-atributos">2. <strong>Variables y atributos</strong></h3>
+<p>Es importante definir claramente las variables y los atributos necesarios para capturar toda la información relevante relacionada con la epidemia. Esto podría incluir variables como el número de casos, el número de hospitalizaciones, la distribución por edades y sexos, etc.</p>
+<p>Cada atributo debe estar bien etiquetado (<em>claridad en la etiquetación de atributos</em>) y debe ser representativo de la información. Esto garantiza que los datos sean comprensibles y útiles para su posterior análisis.</p>
+<h3 id="3-jerarquias-temporales">3. <strong>Jerarquías temporales</strong></h3>
+<p>Es necesario crear jerarquías temporales para representar correctamente la secuencia de los eventos relacionados con la epidemia. Estas jerarquías pueden incluir, por ejemplo, años, meses, semanas y días, permitiendo así un análisis detallado de la evolución de la pandemia a lo largo del tiempo.</p>
+<h3 id="4-normativas-y-restricciones">4. <strong>Normativas y restricciones</strong></h3>
+<p>Se deben tener en cuenta todas las normativas o restricciones específicas asociadas con la recopilación y el uso de las datos epidemiológicos. Esto puede incluir regulaciones sobre la protección de datos personales, el acceso a la información, y las políticas de confidencialidad y privacidad.</p>
+<h3 id="5-metodologia-etl">5. <strong>Metodología ETL</strong></h3>
+<p>Es fundamental planificar y describir detalladamente la metodología ETL que se seguirá para integrar los datos desde su origen hasta la base de datos analítica. Este proceso garantizará que los datos se extraigan correctamente de las fuentes originales, se transformen según las necesidades del análisis y se carguen adecuadamente en la base de datos final.</p>
+<h2 id="proceso-etl">Proceso ETL</h2>
+<p>Se describe a continuación las diferentes capas del modelo multidimensional en el cual se van a cargar los ficheros de datos que recibimos de la fuente de datos, las transformamos, las modelamos en un modelo analítico y preparamos estos datos para que puedan ser analizados y consultados por herramientas de reporting.</p>
+<h3 id="capa-source-src">Capa SOURCE: (SRC)</h3>
+<ul>
+<li>Cargar fichero COVID</li>
+<li>Cargar ficheros propios para generar los catálogos</li>
+<li>Generar proceso / paquete de carga SRC</li>
+</ul>
+<p><strong>Pasos en ODI</strong></p>
+<ol>
+<li>
+<p>Hacer ingenieria inversa de los ficheros para obtener su estructura.</p>
+<ul>
+<li>Covid</li>
+<li>Estado alarma</li>
+<li>Provincia</li>
+</ul>
+</li>
+<li>
+<p>Hacer ingenieria inversa de las tablas SRC creadas.</p>
+</li>
+<li>
+<p>Desarrollar las ETL para cargar los ficheros a las tabla creadas previamente SRC.</p>
+</li>
+<li>
+<p>Generar paquete con la carga de todas las ETL y procedimiento en SRC. <em>WF_SRC_XXX</em></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Tablas SRC a crear</p>
+<ul>
+<li>SRC_COVID</li>
+<li>SRC_PROVINCIA</li>
+<li>SRC_ESTAT_ALARMA</li>
+</ul>
+</div>
+<div align="center">
+<video width="640"  controls>
+    <source src="../../vid/ODI12c-CasoUsoODISRC1.mp4" type="video/mp4">
+</video>
+</div>
+<div align="center">
+<video width="640"  controls>
+    <source src="../../vid/ODI12c-CasoUsoODISRC2.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="admonition note modulos conocimiento">
+<p class="admonition-title">Note</p>
+<p>Todos los IKM deben configurarse como IKM Control Append, con la opción TRUNCATE = TRUE y FLOW_CONTROL = FALSE. Para que en cada ejecución la tabla final se trunque y no valide las restricciones. </p>
+</div>
+<h3 id="capa-catalogos-lkp">Capa CATÁLOGOS: (LKP)</h3>
+<ul>
+<li>Extraer de la tabla SRC COVID los catálogos necesarios.</li>
+<li>Generar procedimiento ODI para el catálogo de fecha</li>
+<li>Cargar del resto de tablas SRC los catálogos LKP.</li>
+<li>Generar proceso / paquete de carga LKP.</li>
+</ul>
+<p><strong>Pasos a ODI</strong></p>
+<ol>
+<li>
+<p>Crear tablas de los catálogos (LKP). Realizar ingeniería inversa de estas tablas.</p>
+</li>
+<li>
+<p>Desarrollar las ETLs para cargar de las tablas SRC a las tablas de catálogo LKP.</p>
+</li>
+<li>
+<p>Generar paquete con la carga de todas las ETL para catálogos LKP (LKP). <em>WF_LKP_XXX</em></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Tablas LKP a crear</p>
+<ul>
+<li>LKP_SEXO</li>
+<li>LKP_GRUPO_EDAD</li>
+<li>LKP_PROVINCIA</li>
+<li>LKP_ESTAT_ALARMA</li>
+<li>LKP_FECHA</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Filtros LKP Provincias</p>
+<ul>
+<li>
+<p>SRC_PROVINCIA.CAT_SUB = 'province'</p>
+</li>
+<li>
+<p>SUBSTR(SRC_PROVINCIA.CODIGO,4,LENGTH(SRC_PROVINCIA.CODIGO))</p>
+</li>
+</ul>
+</div>
+<div align="center">
+<video width="640"  controls>
+    <source src="../../vid/ODI12c-CasoUsoODILKP1.mp4" type="video/mp4">
+</video>
+</div>
+<div align="center">
+<video width="640"  controls>
+    <source src="../../vid/ODI12c-CasoUsoODILKP2.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="admonition note modulos conocimiento">
+<p class="admonition-title">Note</p>
+<p>Todos los IKM deben configurarse como IKM Control Append, con la opción TRUNCATE = TRUE y FLOW_CONTROL = FALSE. Para que en cada ejecución la tabla final se trunque y no valide las restricciones. </p>
+</div>
+<h3 id="capa-estrella-ods">Capa ESTRELLA: (ODS)</h3>
+<ul>
+<li>Extraer de la tabla SRC COVID los datos históricos/transaccionales.</li>
+<li>Extraer solo los códigos, no las descripciones.</li>
+<li>Generar lookups en el mapeo de ODS.</li>
+<li>Generar proceso/paquete de carga ODS.</li>
+</ul>
+<p><strong>Pasos a ODI</strong></p>
+<ol>
+<li>
+<p>Crear tabla histórica/transaccional (ODS). Realizar ingeniería inversa de esta tabla.</p>
+</li>
+<li>
+<p>Desarrollar la ETL para cargar de las tablas SRC a ODS.</p>
+</li>
+<li>
+<p>Utilizar los lookups para validar y cargar la información de los catálogos.</p>
+</li>
+<li>
+<p>Generar paquete con la carga del (ODS). <em>WF_ODS_XXX</em></p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Tabla ODS a crear</p>
+<ul>
+<li>ODS_COVID</li>
+</ul>
+</div>
+<div align="center">
+ <video width="640"  controls>
+<source src="../../vid/ODI12c-CasoUsoODIODS.mp4" type="video/mp4">
+</video>
+</div>
+<h3 id="final">Final</h3>
+<p><strong>Pasos a ODI</strong></p>
+<ol>
+<li>
+<p>Generar paquete que cargue de una vez todas las capas: SRC, LKP y ODS. <em>WF_TOTAL_XXX</em></p>
+</li>
+<li>
+<p>Validamos que no haya errores.</p>
+</li>
+<li>
+<p>Validamos que las tablas dades de taules:</p>
+</li>
+<li>
+<p>Que tinguin dades i siguin correctes</p>
+</li>
+<li>
+<p>Que apleguen totes les dades que hi ha als fitxers: conteig al fitxer, src i ods.</p>
+</li>
+<li>
+<p>Que estan amb el format que es vol representar</p>
+</li>
+</ol>
+<div class="admonition note modulos conocimiento">
+<p class="admonition-title">Note</p>
+<p>Todos los IKM deben configurarse como IKM Control Append, con la opción TRUNCATE = TRUE y FLOW_CONTROL = FALSE. Para que en cada ejecución la tabla final se trunque y no valide las restricciones. </p>
+</div>
+<h2 id="visualizacion-y-respresentacion-con-power-bi">Visualización y respresentación con Power BI</h2>
+<ol>
+<li>
+<p><strong>Conexión directa con el modelo multidimensional</strong>
+Power BI permite conectarse directamente a bases de datos como Oracle, SQL Server, entre otras. Si la conexión con la máquina virtual es exitosa, se podrá importar directamente el modelo multidimensional desde la base de datos, lo que facilitará la carga de datos en Power BI. En este caso, los datos estarán organizados en tablas de hechos y dimensiones que pueden ser fácilmente visualizadas y analizadas.</p>
+</li>
+<li>
+<p><strong>En caso de no conseguir la conectividad</strong>
+Si existen problemas técnicos para conectar Power BI con la base de datos, la alternativa será <strong>exportar el modelo multidimensional</strong> a archivos de texto (por ejemplo, archivos CSV o Excel). Estos archivos deben contener toda la información relevante, organizados por las diferentes dimensiones y hechos definidos en el modelo.</p>
+</li>
+</ol>
+<p>Luego, se importarán estos archivos en Power BI, donde se pueden definir relaciones entre las diferentes tablas de datos (por ejemplo, entre las tablas de hechos y dimensiones) para crear el modelo de datos en Power BI. Posteriormente, se podrán crear visualizaciones y análisis basados en esos datos.</p>
+<ol>
+<li><strong>Generación del informe final</strong>
+Con el modelo multidimensional leído y cargado en Power BI (ya sea de manera directa o importando los archivos), se procederá a <strong>crear las visualizaciones</strong> que respondan a las necesidades del informe final. Esto incluirá gráficos, tablas y otras representaciones visuales que permitan explorar las diferentes métricas y dimensiones de los datos (por ejemplo, número de casos, hospitalizaciones, ingresos en UCI, defunciones, etc.).</li>
+</ol>
+<p>También se podrán implementar <strong>filtros y segmentaciones</strong> basadas en dimensiones como la edad, el sexo, la provincia, etc., para que los usuarios del informe puedan analizar los datos de manera más flexible y detallada.</p>
+<h2 id="resumen">Resumen</h2>
+<p>Una vez descargada la máquina virtual con todo el entorno preparado, se deben aplicar los conocimientos adquiridos durante el curso y desarrollar el análisis y diseño realizado en los pasos anteriores. El objetivo es <strong>crear un modelo de base de datos multidimensional por capas</strong> utilizando la base de datos Oracle en la máquina virtual proporcionada. El proceso se desglosa en los siguientes pasos:</p>
+<ol>
+<li>
+<p><strong>Crear tablas que carguen los archivos al BI (SRC_XXX)</strong></p>
+<ul>
+<li>Se deben crear las <strong>tablas de origen</strong> que cargarán los archivos de datos en el sistema de <strong>Business Intelligence (BI)</strong>. Estas tablas se denominan <strong>SRC_XXX</strong>. Su función es almacenar los datos procedentes de diversas fuentes antes de que sean procesados y transformados. Asegurar la correcta carga y organización de los datos es esencial para que el sistema de BI pueda realizar los análisis de manera eficiente y precisa.</li>
+</ul>
+</li>
+<li>
+<p><strong>Crear tablas de catálogos que carguen los archivos de la capa SRC_XXX a la capa LKP_XXX</strong></p>
+<ul>
+<li>
+<p>A continuación, se deben crear las <strong>tablas de catálogos</strong> que gestionan el proceso de <strong>transformación</strong> de los datos. Estas tablas cargan los datos de la capa <strong>SRC_XXX</strong> a la capa <strong>LKP_XXX</strong> (capa de búsqueda o lookup). En esta capa, los datos provenientes de los archivos se transforman para ser normalizados o enriquecidos con valores adicionales, como claves de referencia, descripciones o códigos. Esto garantiza la consistencia y la integridad de los datos a lo largo de las diferentes etapas del proceso.</p>
+</li>
+<li>
+<p>Se debe incluir un <strong>diagrama multidimensional de la extracción</strong> como anexo, que representará visualmente cómo se mueven y transforman los datos entre las diferentes capas y cómo se estructuran las tablas dentro de cada capa.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Crear tabla referente a la estrella que carga de las tablas SRC_XXX a la capa ODS_XXX</strong></p>
+<ul>
+<li>
+<p>El siguiente paso implica la creación de una <strong>tabla estrella</strong> que cargue los datos desde las tablas <strong>SRC_XXX</strong> a la capa <strong>ODS_XXX</strong> (almacén de datos operacionales). En esta capa, los datos se consolidan y se almacenan para facilitar su análisis. En el modelo estrella, las tablas de hechos y dimensiones están organizadas de manera que facilitan las consultas rápidas y eficientes. La tabla estrella es crucial porque organiza la información de manera que permite un análisis multidimensional, ofreciendo una visión completa de los datos según varias dimensiones.</p>
+</li>
+<li>
+<p>En este paso, se debe incluir un <strong>diagrama multidimensional de la estrella</strong> como anexo, que mostrará cómo las tablas de hechos y dimensiones se relacionan dentro del modelo estrella.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Crear la ingesta de datos con ETL usando ODI según la solución analizada</strong></p>
+<ul>
+<li>
+<p>Se debe crear el proceso de <strong>ingesta de datos</strong> usando <strong>ETL</strong>. Utilizando <strong>Oracle Data Integrator (ODI)</strong>, extraemos los datos de las fuentes originales y los almacenamos en tablas con las transformaciones pertinentes <em>SRC_XXX</em>, luego se obtienen también los catálogos <em>LKP_XXX</em> y definitivamente generamos la tabla estrella que contiene todo el histórico <em>ODS_XXX</em>. </p>
+</li>
+<li>
+<p>El proceso ETL es crucial para garantizar que los datos se carguen correctamente en el sistema de datos multidimensional. ODI facilitará la automatización de este proceso, permitiendo transformar los datos de manera eficiente y almacenarlos de forma estructurada.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>WF_XXX</strong></p>
+<ul>
+<li>Finalmente, se hace referencia a la creación de <strong>WF_XXX</strong> asociado al proceso de integración de datos. Este flujo de trabajo es un conjunto de tareas o pasos definidos que se ejecutan en un orden específico para asegurar que el proceso ETL se complete correctamente. El workflow puede incluir tareas como validación de datos, ejecución de transformaciones y carga final de los datos. Con lo que añadiremos de forma secuencial todos los objetos creados. </li>
+</ul>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022- 2026
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/jorsodom/" target="_blank" rel="noopener" title="Jorge Soro" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento Cookie</h4>
+<p>Utilizamos cookies para reconocer sus visitas repetidas y preferencias, así como para medir la eficacia de nuestra documentación y si los usuarios encuentran lo que buscan. Con su consentimiento, nos ayuda a mejorar nuestra documentación.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

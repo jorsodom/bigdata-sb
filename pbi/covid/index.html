@@ -1,0 +1,2121 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jorsodom.github.io/bigdata-sb/pbi/covid/">
+      
+      
+        <link rel="prev" href="../../odi/odiCasoDeUso/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>PBI caso de uso - CES Big Data</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#0-descargar-power-bi" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="CES Big Data" class="md-header__button md-logo" aria-label="CES Big Data" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CES Big Data
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PBI caso de uso
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CES Big Data" class="md-nav__button md-logo" aria-label="CES Big Data" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CES Big Data
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccionBI/presentacions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD1. Introducción
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD1. Introducción
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccionBI/BIIntroduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción BI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccionBI/analitica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análisis de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccionBI/ETLintroduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción ETL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduccionBI/tiposdedatos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tipos datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD2. Entornos y modelado
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD2. Entornos y modelado
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multidimensional/entornos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tipos de entornos y arquitecturas de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multidimensional/multidimensional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo multidimensional (OLAP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://alapvi.github.io/sbd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD3. Bases de datos NoSQL con MongoDB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD4. Ingesta de datos con NiFi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD4. Ingesta de datos con NiFi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiIntroduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiEjemplos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejemplos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiPractica8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiCasoUsoHadoop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Caso de uso con Hadoop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nifi/nifiCasoUsoAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Caso uso API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD5. ETL con ODI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD5. ETL con ODI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../odi/odiIntroduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../odi/odiDemo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../odi/odiCasoDeUso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Caso de uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PBI caso de uso
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PBI caso de uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-descargar-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Descargar Power BI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-exportar-datos-oraclesql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Exportar datos OracleSQL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-exportar-los-ficheros-fuera-de-la-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Exportar los ficheros fuera de la VM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-crear-base-de-datos-sql-server-en-azure-o-utilizar-la-ya-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Crear base de datos SQL Server en Azure o utilizar la ya existente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-crear-un-esquema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Crear un esquema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-crear-tablas-segun-el-script-create-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Crear tablas según el script create tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-importar-datos-de-los-ficheros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Importar datos de los ficheros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-obtener-string-de-conexion-a-la-base-de-datos-y-credenciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Obtener string de conexión a la base de datos (y credenciales)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-crear-nueva-conexion-en-pbi-a-la-bbdd-y-importar-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Crear nueva conexión en PBI a la bbdd y importar datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-definimos-el-modelo-y-tipados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Definimos el modelo y tipados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-desarrollamos-visualizaciones-y-transformaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Desarrollamos visualizaciones y transformaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Desarrollamos visualizaciones y transformaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-1-incidencia-acumulada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización 1: Incidencia acumulada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-2-incidencia-acumulada-por-grupo-de-edad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización 2: Incidencia acumulada por grupo de edad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-3-matriz-de-gravedad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización 3: Matriz de gravedad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-4-mapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización 4: Mapa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transformaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transformaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cambio-de-tipo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cambio de tipo de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-medidas-en-ods_covid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación de medidas en ODS_COVID
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#db-beaver-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DB Beaver Community
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-sql-server-jorge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String sql server jorge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-descargar-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Descargar Power BI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-exportar-datos-oraclesql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Exportar datos OracleSQL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-exportar-los-ficheros-fuera-de-la-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Exportar los ficheros fuera de la VM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-crear-base-de-datos-sql-server-en-azure-o-utilizar-la-ya-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Crear base de datos SQL Server en Azure o utilizar la ya existente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-crear-un-esquema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Crear un esquema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-crear-tablas-segun-el-script-create-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Crear tablas según el script create tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-importar-datos-de-los-ficheros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Importar datos de los ficheros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-obtener-string-de-conexion-a-la-base-de-datos-y-credenciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Obtener string de conexión a la base de datos (y credenciales)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-crear-nueva-conexion-en-pbi-a-la-bbdd-y-importar-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Crear nueva conexión en PBI a la bbdd y importar datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-definimos-el-modelo-y-tipados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Definimos el modelo y tipados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-desarrollamos-visualizaciones-y-transformaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Desarrollamos visualizaciones y transformaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Desarrollamos visualizaciones y transformaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-1-incidencia-acumulada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización 1: Incidencia acumulada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-2-incidencia-acumulada-por-grupo-de-edad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización 2: Incidencia acumulada por grupo de edad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-3-matriz-de-gravedad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización 3: Matriz de gravedad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion-4-mapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualización 4: Mapa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transformaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transformaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cambio-de-tipo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cambio de tipo de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-medidas-en-ods_covid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación de medidas en ODS_COVID
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#db-beaver-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DB Beaver Community
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-sql-server-jorge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String sql server jorge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>PBI caso de uso</h1>
+
+<h2 id="0-descargar-power-bi">0. Descargar Power BI</h2>
+<p>Instalar Power BI Desktop desde la web oficial para poder modelar y visualizar los datos posteriormente.</p>
+<p><a href="https://download.microsoft.com/download/8/8/0/880bca75-79dd-466a-927d-1abf1f5454b0/PBIDesktopSetup_x64.exe">PowerBI Desktop descarga</a></p>
+<h2 id="1-exportar-datos-oraclesql">1. Exportar datos OracleSQL</h2>
+<p>Desde la base de datos Oracle, exportar las tablas necesarias a ficheros <code>.csv</code> utilizando el delimitador <code>;</code> o <code>,</code> para garantizar compatibilidad con procesos de carga posteriores.</p>
+<h2 id="2-exportar-los-ficheros-fuera-de-la-vm">2. Exportar los ficheros fuera de la VM</h2>
+<p>Copiar los ficheros <code>.csv</code> generados desde la máquina virtual a un entorno accesible (local o almacenamiento en la nube) para su posterior ingestión.
+Subirlos a una storage account o s3.</p>
+<div align="center">
+<img src="../../img/pbi_covid_storageaccount.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+
+<h2 id="3-crear-base-de-datos-sql-server-en-azure-o-utilizar-la-ya-existente">3. Crear base de datos SQL Server en Azure o utilizar la ya existente</h2>
+<p>Provisionar una base de datos en Azure de tipo relacional, SQL Server o reutilizar una ya disponible para almacenar los datos migrados.</p>
+<div align="center">
+<img src="../../img/pbi_covid_sqlserverazure.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+
+<h2 id="4-crear-un-esquema">4. Crear un esquema</h2>
+<p>Definir un esquema lógico para organizar las tablas relacionadas con el proyecto:</p>
+<div class="language-text highlight"><pre><span></span><code>CREATE SCHEMA COVID;
+</code></pre></div>
+<h2 id="5-crear-tablas-segun-el-script-create-tables">5. Crear tablas según el script create tables</h2>
+<p>Ejecutar el script de creación de tablas en la base de datos para definir la estructura.</p>
+<div align="center">
+<img src="../../img/pbi_covid_dbbeaver.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+
+<div class="language-text highlight"><pre><span></span><code>DROP TABLE COVID.LKP_SEXO;
+
+CREATE TABLE COVID.LKP_SEXO (
+C_SEXO VARCHAR(150),
+SEXO VARCHAR(150),
+FECHA_ACT VARCHAR(150)
+);
+
+DROP TABLE COVID.LKP_GRUPO_EDAD;
+
+CREATE TABLE COVID.LKP_GRUPO_EDAD (
+C_GRUPO_EDAD VARCHAR(150),
+GRUPO_EDAD VARCHAR(150),
+FECHA_ACT VARCHAR(150)
+);
+
+DROP TABLE COVID.LKP_PROVINCIA;
+
+CREATE TABLE COVID.LKP_PROVINCIA (
+C_PROVINCIA VARCHAR(150),
+PROVINCIA VARCHAR(150),
+FECHA_ACT VARCHAR(150)
+);
+
+DROP TABLE COVID.LKP_ESTAT_ALARMA;
+
+CREATE TABLE COVID.LKP_ESTAT_ALARMA (
+C_ESTAT_ALARMA INT NOT NULL,
+ESTAT_ALARMA VARCHAR(150),
+FECHA_ACT VARCHAR(150)
+);
+
+DROP TABLE COVID.LKP_FECHA;
+
+CREATE TABLE COVID.LKP_FECHA (
+C_DATA VARCHAR(25) NOT NULL,
+D_DATA VARCHAR(150),
+C_DIA VARCHAR(150),
+D_CURTA_DIA VARCHAR(150),
+D_LLARGA_DIA VARCHAR(150),
+C_DIA_SETMANA VARCHAR(150),
+C_MES VARCHAR(150),
+C_ANY_MES VARCHAR(150),
+D_CURTA_MES VARCHAR(150),
+D_LLARGA_MES VARCHAR(150),
+C_SETMANA VARCHAR(150),
+C_TRIMESTRE VARCHAR(150),
+C_SEMESTRE VARCHAR(150),
+C_ANY VARCHAR(150),
+C_DIA_NATURAL VARCHAR(150),
+C_DIA_FESTIU VARCHAR(150),
+C_DIA_FEINA VARCHAR(150),
+ID_CARREGA  VARCHAR(150),
+FECHA_ACT VARCHAR(150)
+);
+
+DROP TABLE COVID.ODS_COVID;
+
+CREATE TABLE COVID.ODS_COVID (
+C_DATA VARCHAR(150),
+C_PROVINCIA VARCHAR(150),
+C_SEXO VARCHAR(150),
+C_GRUP_EDAT VARCHAR(150),
+C_ESTAT_ALARMA VARCHAR(150),
+F_NUM_CASOS  VARCHAR(150),
+F_NUM_HOSP  VARCHAR(150),
+F_NUM_UCI VARCHAR(150),
+F_NUM_DEF VARCHAR(150),
+FECHA_ACT VARCHAR(150)
+);
+</code></pre></div>
+<h2 id="6-importar-datos-de-los-ficheros">6. Importar datos de los ficheros</h2>
+<p>Cargar los datos desde los .csv en las tablas correspondientes del esquema COVID, validando formatos y tipos de datos.</p>
+<p>Creando un proceso data factory con actividades de copia. Dónde el origen será un csv con conexión al storage account y el destino el SQL Server.</p>
+<div align="center">
+<img src="../../img/pbi_covid_datafactory.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+
+<h2 id="7-obtener-string-de-conexion-a-la-base-de-datos-y-credenciales">7. Obtener string de conexión a la base de datos (y credenciales)</h2>
+<p>Recuperar la cadena de conexión, usuario y contraseña desde el portal de Azure o la configuración del servidor para permitir la conexión desde herramientas como Power BI.</p>
+<div class="admonition note">
+<p class="admonition-title">Apertura firewall</p>
+<p>La base de datos debe estar abierta a internet para permitir el acceso sin restricciones. </p>
+</div>
+<h2 id="8-crear-nueva-conexion-en-pbi-a-la-bbdd-y-importar-datos">8. Crear nueva conexión en PBI a la bbdd y importar datos</h2>
+<p>Abrimos la aplicación de Power BI. Seleccionamos origen de datos <code>SQL Server</code>. Seleccionamos modo "Direct Import".</p>
+<div align="center">
+<img src="../../img/pbi_covid_pbi1.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+
+<p>Hay que introducir el servidor y la base de datos (ver anexo). Luego aplicamos en siguiente. Elegimos la opción Base de Datos y introducimos usuario y contraseña. Y conectamos.</p>
+<div align="center">
+<img src="../../img/pbi_covid_pbi2.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+
+<p>Saldrá la lista de tablas a importar, seleccionamos las deseadas. Y hacemos clic en <code>Cargar</code>. Esta acción realizará la carga de datos en el proyecto que lee de la base de datos en la nube. </p>
+<div align="center">
+<img src="../../img/pbi_covid_pbi3.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+
+<p>Aparecerá un panel en la derecha dónde se listarán las tablas cargadas, con todos sus atributos. </p>
+<div align="center">
+<img src="../../img/pbi_covid_pbi4.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+
+<h2 id="9-definimos-el-modelo-y-tipados">9. Definimos el modelo y tipados</h2>
+<p>En el menu del a izquierda, vamos a <code>Vista Modelo</code> y tenemos que establecer las relaciones según el modelo multidimensional.</p>
+<p>Conforme vamos estableciendo las relaciones, relacionando por los códigos nos damos cuenta que todas ellas son 1...N, dado que en los registros de la estrella
+pueden aparecer N valores de una dimensión.</p>
+<p>Hay que establecer las relaciones de la siguiente manera:</p>
+<table>
+<thead>
+<tr>
+<th>Columna Origen</th>
+<th>Tabla Origen</th>
+<th>Columna Destino</th>
+<th>Tabla Destino</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C_DATA</td>
+<td>ODS_COVID</td>
+<td>C_DATA</td>
+<td>LKP_FECHA</td>
+</tr>
+<tr>
+<td>C_PROVINCIA</td>
+<td>ODS_COVID</td>
+<td>C_PROVINCIA</td>
+<td>LKP_PROVINCIA</td>
+</tr>
+<tr>
+<td>C_SEXO</td>
+<td>ODS_COVID</td>
+<td>C_SEXO</td>
+<td>LKP_SEXO</td>
+</tr>
+<tr>
+<td>C_GRUPO_EDAD</td>
+<td>ODS_COVID</td>
+<td>C_GRUPO_EDAD</td>
+<td>LKP_GRUPO_EDAD</td>
+</tr>
+<tr>
+<td>C_ESTAT_ALARMA</td>
+<td>ODS_COVID</td>
+<td>C_ESTAT_ALARMA</td>
+<td>LKP_ESTAT_ALARMA</td>
+</tr>
+</tbody>
+</table>
+<div align="center">
+<img src="../../img/pbi_covid_pbi5.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+
+<p>Ahora seleccionamos en el menu de la izquierda <code>Vista Informe</code>, y en el menu de la derecha dónde aparecen las tablas y columnas, seleccionamos la tabla LKP_FECHA y hacemos clic botón derecho y entramos en <code>editar consulta</code>. Saldrá una nueva ventana dónde es posible editar la tabla/consulta.</p>
+<p>Aquí seleccionaremos la columna D_DATA y le damos dónde pone <code>ABC</code> a la izquierda del nombre la columna y le decimos que le ponga formato fecha (sin horas). Y hacemos <code>clic en aplicar y cerrar</code>.</p>
+<div align="center">
+<img src="../../img/pbi_covid_pbi6.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+
+<h2 id="10-desarrollamos-visualizaciones-y-transformaciones">10. Desarrollamos visualizaciones y transformaciones</h2>
+<p>Los gráficos se realizan para transformar los datos en información comprensible que permita responder preguntas clave de negocio de forma rápida y visual. En lugar de revisar tablas con muchos valores, las visualizaciones permiten identificar tendencias, comparar segmentos (como edad o sexo) y detectar patrones de gravedad o evolución temporal.</p>
+<p>Así, cada gráfico ayuda a responder cuestiones concretas, por ejemplo: cómo evoluciona la incidencia en el tiempo, qué grupos de población han sido más afectados o si las medidas adoptadas (como los tramos de estado de alarma) han tenido impacto. En definitiva, los gráficos facilitan la toma de decisiones al convertir los datos en insights claros y accionables.</p>
+<h3 id="visualizacion-1-incidencia-acumulada">Visualización 1: Incidencia acumulada</h3>
+<p><strong>Objetivo</strong>: Identificar mensualmente la incidencia acumulada.
+<strong>Tipo:</strong> Gráfico de líneas  </p>
+<ul>
+<li><strong>Eje X:</strong> <code>C_ANY_MES</code> de <code>LKP_FECHA</code>  </li>
+<li><strong>Eje Y:</strong> <code>IncidenciaAcumulada</code> (medida creada)</li>
+</ul>
+<div align="center">
+<img src="../../img/pbi_covid_pbi7.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+
+<hr />
+<h3 id="visualizacion-2-incidencia-acumulada-por-grupo-de-edad">Visualización 2: Incidencia acumulada por grupo de edad</h3>
+<p><strong>Objetivo</strong>: Identificar mensualmente la incidencia acumulada por grupo de edad.
+<strong>Tipo:</strong> Gráfico de líneas.  </p>
+<ul>
+<li><strong>Eje X:</strong> <code>C_ANY_MES</code> de <code>LKP_FECHA</code>  </li>
+<li><strong>Eje Y:</strong> <code>IncidenciaAcumulada</code> (medida creada)  </li>
+<li><strong>Leyenda:</strong> <code>Grupo Edad</code></li>
+</ul>
+<div align="center">
+<img src="../../img/pbi_covid_pbi8.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+<hr />
+<h3 id="visualizacion-3-matriz-de-gravedad">Visualización 3: Matriz de gravedad</h3>
+<p><strong>Objetivo</strong>:  Identificar qué perfiles fueron más afectados.
+<strong>Tipo:</strong> Matriz. </p>
+<ul>
+<li><strong>Filas:</strong> <code>Grupo Edad</code>  </li>
+<li><strong>Columnas:</strong> <code>Sexo</code>  </li>
+<li><strong>Valores:</strong>  <ul>
+<li><code>IncidenciaAcumulada</code>  </li>
+<li><code>Hospitalizaciones</code>  </li>
+<li><code>HospitalizacionesUCI</code>  </li>
+<li><code>Defunciones</code>  </li>
+<li><code>TasaLetalidad</code>  </li>
+</ul>
+</li>
+</ul>
+<div align="center">
+<img src="../../img/pbi_covid_pbi9.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+
+<hr />
+<h3 id="visualizacion-4-mapa">Visualización 4: Mapa</h3>
+<p><strong>Objetivo</strong>:  Identificar hospitalizaciones y defunciones según la provincia.
+<strong>Tipo:</strong> Mapa.</p>
+<p>Para habilitar el componente de mapas y mapas coropléticos:</p>
+<ol>
+<li>Ir a <strong>Archivo &gt; Opciones y configuración &gt; Opciones</strong>  </li>
+<li>Seleccionar <strong>Global &gt; Seguridad</strong>  </li>
+<li>Activar los visuales de mapa y mapa coroplético  </li>
+<li>Cerrar y volver a abrir Power BI</li>
+</ol>
+<div align="center">
+<img src="../../img/pbi_covid_pbi10.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+
+<ul>
+<li><strong>Ubicación:</strong> <code>Provincia</code>  </li>
+<li><strong>Tamaño burbuja:</strong> <code>Hospitalizaciones</code>  </li>
+<li><strong>Información sobre la herraienta:</strong> <code>Defunciones</code>  </li>
+</ul>
+<div align="center">
+<img src="../../img/pbi_covid_pbi11.png" alt="pbi caso de uso" 
+width="100%" />
+</div>
+
+<h3 id="transformaciones">Transformaciones</h3>
+<h4 id="cambio-de-tipo-de-datos">Cambio de tipo de datos</h4>
+<ul>
+<li>Todas las columnas <code>F_NUM_*</code> deben ser de tipo <strong>Número entero</strong>.  </li>
+<li>Pasos:<ol>
+<li>Ir a <strong>Editar consultas</strong>  </li>
+<li>Cambiar el tipo de datos de las columnas <code>F_NUM_*</code> a <em>Número entero</em>  </li>
+<li><strong>Cerrar y aplicar</strong></li>
+</ol>
+</li>
+</ul>
+<hr />
+<h4 id="creacion-de-medidas-en-ods_covid">Creación de medidas en <code>ODS_COVID</code></h4>
+<p>Crear las siguientes medidas agregadas (SUM):</p>
+<div class="language-text highlight"><pre><span></span><code>IncidenciaAcumulada = SUM(&#39;COVID ODS_COVID&#39;[F_NUM_CASOS])
+
+Defunciones = SUM(&#39;COVID ODS_COVID&#39;[F_NUM_DEF])
+
+Hospitalizaciones =  SUM(&#39;COVID ODS_COVID&#39;[F_NUM_HOSP])
+
+HospitalizacionesUCI = SUM(&#39;COVID ODS_COVID&#39;[F_NUM_UCI])
+
+TasaHospitalizacion = DIVIDE([Hospitalizaciones], [IncidenciaAcumulada])
+
+TasaUCI = DIVIDE([HospitalizacionesUCI], [Hospitalizaciones])
+
+TasaLetalidad = DIVIDE([Defunciones], [IncidenciaAcumulada])
+
+IndiceGravedad = DIVIDE([Hospitalizaciones] + (2 * [HospitalizacionesUCI]) + (3 * [Defunciones]),[IncidenciaAcumulada])
+</code></pre></div>
+<h2 id="anexos">Anexos</h2>
+<h3 id="db-beaver-community">DB Beaver Community</h3>
+<p>Descargar DB Beaver Community para conectar fácilmente al SQL Server </p>
+<p><a href="https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe">DB Beaver Community</a></p>
+<h3 id="string-sql-server-jorge">String sql server jorge</h3>
+<div class="language-text highlight"><pre><span></span><code>jdbc:sqlserver://bbddjorge.database.windows.net:1433;database=jorgebbdd;user=AQUIELUSER@bbddjorge;password=AQUILAPASSWORD;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022- 2026
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/jorsodom/" target="_blank" rel="noopener" title="Jorge Soro" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento Cookie</h4>
+<p>Utilizamos cookies para reconocer sus visitas repetidas y preferencias, así como para medir la eficacia de nuestra documentación y si los usuarios encuentran lo que buscan. Con su consentimiento, nos ayuda a mejorar nuestra documentación.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
