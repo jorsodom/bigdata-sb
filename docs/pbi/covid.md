@@ -26,7 +26,7 @@ width="80%" />
 ## 4. Crear un esquema
 Definir un esquema lógico para organizar las tablas relacionadas con el proyecto:
 
-    `CREATE SCHEMA COVID; `
+    CREATE SCHEMA COVID; 
 
 ## 5. Crear tablas según el script create tables
 
@@ -37,7 +37,7 @@ Ejecutar el script de creación de tablas en la base de datos para definir la es
 width="80%" />
 </div>
 
-    `DROP TABLE COVID.LKP_SEXO;
+    DROP TABLE COVID.LKP_SEXO;
 
     CREATE TABLE COVID.LKP_SEXO (
     C_SEXO VARCHAR(150),
@@ -106,7 +106,7 @@ width="80%" />
     F_NUM_UCI VARCHAR(150),
     F_NUM_DEF VARCHAR(150),
     FECHA_ACT VARCHAR(150)
-    );`
+    );
 
 ## 6. Importar datos de los ficheros
 
@@ -184,7 +184,7 @@ Hay que establecer las relaciones de la siguiente manera:
 width="80%" />
 </div>
 
-Ahora nos seleccionamos en el menu de la izquierda `Vista Informe`, y en el menu de la derecha dónde aparecen las tablas y columnas, seleccionamos la tabla LKP_FECHA y hacemos clic botón derecho y entramos en `editar consulta`. Saldrá una nueva ventana dónde es posible editar la tabla/consulta.
+Ahora seleccionamos en el menu de la izquierda `Vista Informe`, y en el menu de la derecha dónde aparecen las tablas y columnas, seleccionamos la tabla LKP_FECHA y hacemos clic botón derecho y entramos en `editar consulta`. Saldrá una nueva ventana dónde es posible editar la tabla/consulta.
 
 Aquí seleccionaremos la columna D_DATA y le damos dónde pone `ABC` a la izquierda del nombre la columna y le decimos que le ponga formato fecha (sin horas). Y hacemos `clic en aplicar y cerrar`.
 
@@ -193,7 +193,98 @@ Aquí seleccionaremos la columna D_DATA y le damos dónde pone `ABC` a la izquie
 width="80%" />
 </div>
 
+## 10. Desarrollamos visualizaciones y transformaciones
 
+### Visualización 1: Incidencia acumulada
+**Tipo:** Gráfico de líneas  
+
+- **Eje X:** `C_ANY_MES` de `LKP_FECHA`  
+- **Eje Y:** `IncidenciaAcumulada` (medida creada)
+
+<div align="center">
+<img src="../../img/pbi_covid_pbi7.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
+
+---
+
+### Visualización 2: Incidencia acumulada por grupo de edad
+**Tipo:** Gráfico de líneas  
+
+- **Eje X:** `C_ANY_MES` de `LKP_FECHA`  
+- **Eje Y:** `IncidenciaAcumulada` (medida creada)  
+- **Leyenda:** `Grupo Edad`
+
+<div align="center">
+<img src="../../img/pbi_covid_pbi8.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
+---
+
+### Visualización 3: Matriz de gravedad (qué perfiles fueron más afectados)
+**Tipo:** Matriz  
+
+- **Filas:** `Grupo Edad`  
+- **Columnas:** `Sexo`  
+- **Valores:**  
+  - `IncidenciaAcumulada`  
+  - `Hospitalizaciones`  
+  - `HospitalizacionesUCI`  
+  - `Defunciones`  
+  - `TasaLetalidad`  
+
+<div align="center">
+<img src="../../img/pbi_covid_pbi9.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
+
+---
+
+### Visualización 4: Mapa
+Para habilitar el componente de mapas y mapas coropléticos:
+
+1. Ir a **Archivo > Opciones y configuración > Opciones**  
+2. Seleccionar **Global > Seguridad**  
+3. Activar los visuales de mapa y mapa coroplético  
+4. Cerrar y volver a abrir Power BI
+
+<div align="center">
+<img src="../../img/pbi_covid_pbi10.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
+
+- **Ubicación:** `Provincia`  
+- **Tamaño burbuja:** `Hospitalizaciones`  
+- **Información sobre la herraienta:** `Defunciones`  
+
+<div align="center">
+<img src="../../img/pbi_covid_pbi11.png" alt="pbi caso de uso" 
+width="80%" />
+</div>
+
+### Transformaciones
+
+#### Cambio de tipo de datos
+- Todas las columnas `F_NUM_*` deben ser de tipo **Número entero**.  
+- Pasos:
+  1. Ir a **Editar consultas**  
+  2. Cambiar el tipo de datos de las columnas `F_NUM_*` a *Número entero*  
+  3. **Cerrar y aplicar**
+
+---
+
+#### Creación de medidas en `ODS_COVID`
+Crear las siguientes medidas agregadas (SUM):
+
+```DAX
+IncidenciaAcumulada = SUM('COVID ODS_COVID'[F_NUM_CASOS])
+Defunciones = SUM('COVID ODS_COVID'[F_NUM_DEF])
+Hospitalizaciones =  SUM('COVID ODS_COVID'[F_NUM_HOSP])
+HospitalizacionesUCI = SUM('COVID ODS_COVID'[F_NUM_UCI])
+TasaHospitalizacion = DIVIDE([Hospitalizaciones], [IncidenciaAcumulada])
+TasaUCI = DIVIDE([HospitalizacionesUCI], [Hospitalizaciones])
+TasaLetalidad = DIVIDE([Defunciones], [IncidenciaAcumulada])
+IndiceGravedad = DIVIDE([Hospitalizaciones] + (2 * [HospitalizacionesUCI]) + (3 * [Defunciones]),[IncidenciaAcumulada])
 
 
 ## Anexos
