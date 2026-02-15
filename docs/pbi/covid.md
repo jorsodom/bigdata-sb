@@ -267,24 +267,23 @@ width="80%" />
 #### Cambio de tipo de datos
 - Todas las columnas `F_NUM_*` deben ser de tipo **Número entero**.  
 - Pasos:
-  1. Ir a **Editar consultas**  
-  2. Cambiar el tipo de datos de las columnas `F_NUM_*` a *Número entero*  
-  3. **Cerrar y aplicar**
+    1. Ir a **Editar consultas**  
+    2. Cambiar el tipo de datos de las columnas `F_NUM_*` a *Número entero*  
+    3. **Cerrar y aplicar**
 
 ---
 
 #### Creación de medidas en `ODS_COVID`
 Crear las siguientes medidas agregadas (SUM):
 
-```DAX
-IncidenciaAcumulada = SUM('COVID ODS_COVID'[F_NUM_CASOS])
-Defunciones = SUM('COVID ODS_COVID'[F_NUM_DEF])
-Hospitalizaciones =  SUM('COVID ODS_COVID'[F_NUM_HOSP])
-HospitalizacionesUCI = SUM('COVID ODS_COVID'[F_NUM_UCI])
-TasaHospitalizacion = DIVIDE([Hospitalizaciones], [IncidenciaAcumulada])
-TasaUCI = DIVIDE([HospitalizacionesUCI], [Hospitalizaciones])
-TasaLetalidad = DIVIDE([Defunciones], [IncidenciaAcumulada])
-IndiceGravedad = DIVIDE([Hospitalizaciones] + (2 * [HospitalizacionesUCI]) + (3 * [Defunciones]),[IncidenciaAcumulada])
+-   IncidenciaAcumulada = SUM('COVID ODS_COVID'[F_NUM_CASOS])
+-   Defunciones = SUM('COVID ODS_COVID'[F_NUM_DEF])
+-   Hospitalizaciones =  SUM('COVID ODS_COVID'[F_NUM_HOSP])
+-   HospitalizacionesUCI = SUM('COVID ODS_COVID'[F_NUM_UCI])
+-   TasaHospitalizacion = DIVIDE([Hospitalizaciones], [IncidenciaAcumulada])
+-   TasaUCI = DIVIDE([HospitalizacionesUCI], [Hospitalizaciones])
+-   TasaLetalidad = DIVIDE([Defunciones], [IncidenciaAcumulada])
+-   IndiceGravedad = DIVIDE([Hospitalizaciones] + (2 * [HospitalizacionesUCI]) + (3 * [Defunciones]),[IncidenciaAcumulada])
 
 
 ## Anexos
