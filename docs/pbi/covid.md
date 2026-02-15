@@ -12,7 +12,7 @@ Subirlos a una storage account o s3.
 
 <div align="center">
 <img src="../../img/pbi_covid_storageaccount.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 
 ## 3. Crear base de datos SQL Server en Azure o utilizar la ya existente
@@ -20,7 +20,7 @@ Provisionar una base de datos en Azure de tipo relacional, SQL Server o reutiliz
 
 <div align="center">
 <img src="../../img/pbi_covid_sqlserverazure.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 
 ## 4. Crear un esquema
@@ -34,7 +34,7 @@ Ejecutar el script de creación de tablas en la base de datos para definir la es
 
 <div align="center">
 <img src="../../img/pbi_covid_dbbeaver.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 
     DROP TABLE COVID.LKP_SEXO;
@@ -116,7 +116,7 @@ Creando un proceso data factory con actividades de copia. Dónde el origen será
 
 <div align="center">
 <img src="../../img/pbi_covid_datafactory.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 
 
@@ -135,14 +135,14 @@ Abrimos la aplicación de Power BI. Seleccionamos origen de datos `SQL Server`. 
 
 <div align="center">
 <img src="../../img/pbi_covid_pbi1.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 
 Hay que introducir el servidor y la base de datos (ver anexo). Luego aplicamos en siguiente. Elegimos la opción Base de Datos y introducimos usuario y contraseña. Y conectamos.
 
 <div align="center">
 <img src="../../img/pbi_covid_pbi2.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 
 
@@ -151,7 +151,7 @@ Saldrá la lista de tablas a importar, seleccionamos las deseadas. Y hacemos cli
 
 <div align="center">
 <img src="../../img/pbi_covid_pbi3.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 
 
@@ -159,7 +159,7 @@ Aparecerá un panel en la derecha dónde se listarán las tablas cargadas, con t
 
 <div align="center">
 <img src="../../img/pbi_covid_pbi4.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 
 
@@ -183,7 +183,7 @@ Hay que establecer las relaciones de la siguiente manera:
 
 <div align="center">
 <img src="../../img/pbi_covid_pbi5.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 
 Ahora seleccionamos en el menu de la izquierda `Vista Informe`, y en el menu de la derecha dónde aparecen las tablas y columnas, seleccionamos la tabla LKP_FECHA y hacemos clic botón derecho y entramos en `editar consulta`. Saldrá una nueva ventana dónde es posible editar la tabla/consulta.
@@ -192,7 +192,7 @@ Aquí seleccionaremos la columna D_DATA y le damos dónde pone `ABC` a la izquie
 
 <div align="center">
 <img src="../../img/pbi_covid_pbi6.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 
 ## 10. Desarrollamos visualizaciones y transformaciones
@@ -211,7 +211,7 @@ Así, cada gráfico ayuda a responder cuestiones concretas, por ejemplo: cómo e
 
 <div align="center">
 <img src="../../img/pbi_covid_pbi7.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 
 ---
@@ -226,7 +226,7 @@ width="80%" />
 
 <div align="center">
 <img src="../../img/pbi_covid_pbi8.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 ---
 
@@ -246,7 +246,7 @@ width="80%" />
 
 <div align="center">
 <img src="../../img/pbi_covid_pbi9.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 
 ---
@@ -264,7 +264,7 @@ Para habilitar el componente de mapas y mapas coropléticos:
 
 <div align="center">
 <img src="../../img/pbi_covid_pbi10.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 
 - **Ubicación:** `Provincia`  
@@ -273,7 +273,7 @@ width="80%" />
 
 <div align="center">
 <img src="../../img/pbi_covid_pbi11.png" alt="pbi caso de uso" 
-width="80%" />
+width="100%" />
 </div>
 
 ### Transformaciones
